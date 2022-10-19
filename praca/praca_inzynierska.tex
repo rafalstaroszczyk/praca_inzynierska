@@ -45,6 +45,8 @@
 
 \numberwithin{equation}{section}
 
+\newcommand{\dbar}{d\hspace*{-0.08em}\bar{}\hspace*{0.1em}}
+
 % Problemy:
 % W spisie kropki przy section
 % Odpowiednie przerwy miedzy akapitami
@@ -106,11 +108,23 @@
 	
 	\section{Wstęp}
 	\subsection{Definicje i prawa}
-	
+	\begin{description}
+		\item[Energia wewnętrzna] U; suma wszytkich energii kinetycznych oraz potencjalnych cząstek składających się na ciało
+		\item[Praca] W; energia dostarczona do układu poprzez siły makroskopowe
+		\item[Ciepło] Q; energia dostarczona do układu poprzez oddziaływania inne niż praca
+		\item[Entropia (termodynamika klasyczna)] S; funkcja stanu układu; wielkość opisująca samorzutność przemian w systemie; wprowadzona po raz pierwszy przez Clausiusa jako \(dS=\frac{\dbar Q^\circ}{T}\) \cite{orlik}
+		\item[Entropia (termodynamika statystyczna)] S; wielkość opisująca ilość mikrostanów przypisanych danemu makrostanowi; wprowadzona przez Boltzmanna: \(S=k_B\ln{\Omega}\) \cite{landau}
+		\item[0 Zasada Termodynamiki] Jeżeli układy A i C są w równowadze termodynamicznej oraz B i C to A i B są w równowadze termodynamicznej
+		\item[I Zasada Termodynamiki] Zwiększenie energii wewnętrznej może nastąpić poprzez pracę lub ciepło; \(dU=\dbar Q+\dbar W\)
+		\item[II Zasada Termodynamiki] w układach izolowanych następuje wzrost entropii lub pozostaje ona stała (poza wyjątkiem fluktuacji); entropia podukładu może maleć \cite{landau}
+		\item[III Zasada Termodynamiki] entropia kryształów doskonałych dąży do zera, gdy temperatura dąży do zera
+	\end{description}
 	\subsection{Zarys historyczny}
 	Termodynamika równowagowa zajmuje się procesami, w których ignoruje się upływ czasu, a przemiana jest kwazistatyczna. Oznacza to, że każdy stan pośredni można traktować jako stan równowagi termodynamicznej. Model taki jest wystarczający do opisu większości procesów. Można więc powiedzieć, że termodynamikę równowagową interesuje stan początkowy oraz końcowy. \par
 	Termodynamika nierównowagowa jednak zajmuje się dokładnie tym, co się dzieje w trakcie rzeczywistej przemiany i jest ona konieczna do opisu reakcji oscylacyjnych. Pierwsze przesłanki o istnieniu takowych sięgają końca XIX wieku. Były to reakcje w układach heterogenicznych, jak na przykład pierścienie Lieseganga lub oscylacje prądu płynącego przez ogniwo galwaniczne. Wyjaśnienie tych zjawisk wymagało, aby układ byl heterogeniczny i było w zgodzie z entropią Boltzmanna, według której spontaniczna organizacja jest niemożliwa. \cite{orlik}\par
-	Pierwszy model teoretyczny został przedstawiony przez Alfreda Lotka \cite{lotka}. Przez długi czas uważano, że nie mogą one przedstawiać rzeczywistych reakcji, ponieważ łamią II Z.T. według Boltzmanna. Jednak w 1921r. pokazano w reakcji Bray'a-Liebhafky'ego, że reakcje oscylacyjne w układach homogenicznych są możliwę. Jest to reakcja rokładu nadtlenku wodoru katalizowana jodanem (V). Jeszcze większy wpływ na rozwój termodynamiki nierównowagowej w kinetyce chemicznej były reakcje Biełousowa-Żabotyńskiego. Pierwszą reakcją z tej grupy została zaobserwowanaw 1959 w mieszaninie bromianu (V) potasu, siarczanie (VI) ceru (IV), kwasu malonowego oraz kwasu cytrynowego w rozcieńczonym kwasie siarkowym (VI). Została ona odkryta jako nieorganiczny analog cyklu Krebsa \cite{belousov_hist}. Istnienie takich reakcji jest jednak niezgodne z oryginalną definicją entropii Boltzmanna. 
+	Pierwszy model teoretyczny został przedstawiony przez Alfreda Lotka \cite{lotka}. Przez długi czas uważano, że nie mogą one przedstawiać rzeczywistych reakcji, ponieważ łamią II Z.T. według Boltzmanna. Jednak w 1921r. pokazano w reakcji Bray'a-Liebhafky'ego, że reakcje oscylacyjne w układach homogenicznych są możliwę. Jest to reakcja rokładu nadtlenku wodoru katalizowana jodanem (V). Jeszcze większy wpływ na rozwój termodynamiki nierównowagowej w kinetyce chemicznej były reakcje Biełousowa-Żabotyńskiego. Pierwszą reakcją z tej grupy została zaobserwowanaw 1959 w mieszaninie bromianu (V) potasu, siarczanie (VI) ceru (IV), kwasu malonowego oraz kwasu cytrynowego w rozcieńczonym kwasie siarkowym (VI). Została ona odkryta jako nieorganiczny analog cyklu Krebsa \cite{belousov_hist}. Istnienie takich reakcji jest jednak niezgodne z oryginalną definicją entropii Boltzmanna. \par
+	Innym zjawiskiem wyjaśnionym dzięki rozwoju termodynamiki nierównowagowej jest życie i ewolucja. Niepoprawne użycie II Z.T. może doprowadzić do wniosku, że powstanie złożonej struktury z chaosu powinno być niemożliwe. Wyjaśnienie takie błędnie wykorzystuje to prawo ignorując fakt, że układy biologiczne jak i cała Ziemia nie są układami izolowanymi. \par
+	
 	
 	\subsubsection{Podpodsekcja 1.1.1}
 	\blindtext
