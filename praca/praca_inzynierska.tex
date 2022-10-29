@@ -126,25 +126,55 @@
 	Innym zjawiskiem wyjaśnionym dzięki rozwoju termodynamiki nierównowagowej jest życie i ewolucja. Niepoprawne użycie II Z.T. może doprowadzić do wniosku, że powstanie złożonej struktury z chaosu powinno być niemożliwe. Wyjaśnienie takie błędnie wykorzystuje to prawo ignorując fakt, że układy biologiczne jak i cała Ziemia nie są układami izolowanymi. \par
 	
 	\subsection{Generacja entropii}
-	II Zasada Termodynamiki odnosi nie do układów zamkniętych, za które można uznać cały wszechświat. Na entropię całego wszechświata składa się więc entropia układu oraz otoczenia: 
-	\begin{equation}\label{entropia_uniwersum}
-		dS_{uniw}=dS_{uk}+dS_{ot}\geq 0
-	\end{equation}
-	W układach izolowanych \(dS_{ot}=0\), więc równanie \eqref{entropia_uniwersum} przyjmuje postać: 
-	\begin{equation}\label{entropia_uniwersum_izolowany}
-		dS_{uniw}=dS_{uk}\geq 0
+	II Zasada Termodynamiki odnosi się do układów zamkniętych.
+	\begin{equation}\label{entropia_izolowany}
+		dS_{uk}\geq 0
 	\end{equation}
 	Wynika z niego, że w układach izolowanych entropia zawsze rośnie, a zatem spontaniczne uporządkowanie stabilnych struktur nie jest możliwe. \par
-	Zmianę entropii układu można zapisać jako wynikającą z przepływu ciepła oraz samorzutnej generacji entropii: \[dS_{uk}=d_{e}S+d_{i}S_{uk}\]
+	Zmianę entropii układu można zapisać jako wynikającą z przepływu ciepła oraz samorzutnej generacji entropii: 
+	\begin{equation}
+		dS_{uk}=d_{e}S+d_{i}S_{uk}
+	\end{equation}
+	Dla układu zamkniętego: \(d_{e}S=0\), stąd wykorzystując \eqref{entropia_izolowany}:
+	\begin{equation}
+		dS_{uk}=d_{i}S_{uk}
+	\end{equation}
 	gdzie
 	\begin{description}
-		\item[\(dS_{uniw}\)] zmiana entropii wszechświata
-		\item[\(dS_{ot}\)] zmiana entropi otoczenia
 		\item[\(dS_{uk}\)] całkowita zmiana entropii układu
 		\item[\(d_{e}S=\frac{\dbar Q}{T_{uk}}\)] zmiana wynikająca z przepływu ciepła
 		\item[\(d_{i}S_{uk}\geq 0\)] zmiana wynikająca z produkcji entropii
 	\end{description}
-	
+	Dla każdego układu produkcja entropii jest dodatnia. Wynika z tego argumentu także, że jest to prawdziłe dla każdego podukładu należącego do danego układu niezależnie od jego wielkości. Zasada ta ma więc charakter lokalny. 
+	\subsection{Termodynamika liniowa i nieliniowa}
+	W ogólności natężenie przepływów termodynamicznych jest dowolną funkcją bodźców termodynamicznych: 
+	\[J=f\left(X\right)\]
+	Rozwinięcie w szereg Taylora tej funkcji wokół \(X_{0}\) jest
+	\begin{equation}\label{ogolne_natezenie}
+		J_{i}=J_{i}^{eq}+\sum_{k=1}^{n}\left[\frac{\partial J_{i}}{\partial X_{k}}\left(X_{k}-X_{k}^{eq}\right)\right]+\sum_{k=1}^{n}\left[\frac{1}{2}\frac{\partial^{2} J_{i}}{\partial X_{k}^{2}}\left(X_{k}-X_{k}^{eq}\right)^{2}\right]+\ldots
+	\end{equation}
+	gdzie:
+	\begin{description}
+		\item[\(J\), \(J^{eq}\)] natężenie przepływów termodynamicznych oraz to natężenie w stanie równowagi
+		\item[\(X\), \(X^{eq}\)] bodziec termodynamiczny i bodziec w stanie równowagi
+	\end{description}
+	Wiadomo, że \(J_{i}^{eq}=0\) oraz \(X_{k}^{eq}=0\), ponieważ jest to stan równowagi. \par
+	W stanach zbliżonych do stanu równowagi można ograniczyć równanie \eqref{ogolne_natezenie} do następującego: 
+	\begin{equation}\label{natezenie_liniowe}
+		J_{i}=\sum_{k=1}^{n}\left[\frac{\partial J_{i}}{\partial X_{k}}X_{k}\right]
+	\end{equation}
+	Zapiszmy \(\frac{\partial J_{i}}{\partial X_{k}}\) jako \(L_{ik}\)
+	\begin{equation}
+		J_{i}=\sum_{k=1}^{n}L_{ik}X_{k}
+	\end{equation}
+	Natężenie przepływu może zależeć tylko od bodźca sprzężonego jak w prawie Fouriera \(\left(\boldsymbol{J}_{q}=-k\nabla T\right)\), Ficka \(\left(\boldsymbol{J}_{C}=-D\nabla C\right)\), są to wtedy procesy proste \cite{orlik}. Mogą one też zależeć od innych bodźców, przykładowo efekt Seebecka oraz Peltiera:
+	\begin{gather}
+		\boldsymbol{Q}=L_{qq}\Delta T+L_{qI}\Delta \phi \\
+		\boldsymbol{I}=L_{Iq}\Delta T+L_{II}\Delta \phi
+	\end{gather}\cite{Ceynowa2008}
+	Występują w nich procesy krzyżowe; różnica temperatury wywołuje przepływ prądu oraz różnica potencjału elektrycznego wywołuje przepływ ciepła.
+	Okazuje się, że współczynniki krzyżowe są sobie równe: \(L_{qI}=L_{Iq}\). Jest to reguła przemienności Onsagera, która została udowodniona doświadczalnie oraz na podstawie fizyki statystycznej. 
+	% produkcja entropii
 	
 	\subsubsection{Podpodsekcja 1.1.1}
 	\blindtext
