@@ -177,21 +177,29 @@
 	% produkcja entropii
 	Jednak w chemii termodynamika liniowa nie opisuje dobrze szybkości zachodzenia reakcji chemicznych, których prędkość zazwyczaj zależy od wyższych potęg stężenia związków. \par
 	
+	Termodynamika liniowa ma zastosowanie w większości przypadków technicznych, jednak nie są one w stanie opisać reakcji chemicznych, których szybkość zależy od wyższych niż 1 potęg stężenia składników. \par
+	Po zaprzestaniu wymuszania nierównowagi układ dąży do stanu równowagi z minimalną zerową produkcją entropii. Przy utrzymaniu stałego bodźca termodynamicznego układ dąży do stanu stacjonarnego o minimalnej dodatniej produkcji entropii. \par
+	Rozwijając entropię \(s\left(E\right)\) po zakłóceniu \(\delta E\)w szereg Taylora otrzymujemy:
+	\begin{equation}
+		S=S^\circ+\left(\frac{\partial S}{\partial E}\right)^\circ \delta E+\frac{1}{2}\left(\frac{\partial^{2}S}{\partial E^{2}}\right)^\circ \left(\delta E\right)^2 + \ldots
+	\end{equation}
+	W stanie równowagi \(\left(\frac{\partial S}{\partial E}\right)^\circ=0\). Ograniczając szereg do wyrazu drugiego rzędu mamy:
+	\begin{equation}
+		S=S^\circ+\frac{1}{2}\left(\frac{\partial^{2}S}{\partial E^{2}}\right)^\circ \left(\delta E\right)^2=S^\circ+\frac{1}{2} \delta E\left(\frac{\partial \delta S}{\partial E}\right)^\circ=S^\circ+\frac{1}{2}\delta^{2}S
+	\end{equation}
+	Ze względu na maksimum entropii w stanie równowagi: \(\left(\delta^2 S\right)^\circ<0\)
+	Można powiązać tą zależność z generacją entropii: 
+	\begin{equation}
+		\frac{\partial}{\partial t}\left(S-S^\circ\right)=\frac{1}{2}\frac{\partial}{\partial t}\delta^2 S=\sum_{i=1}^{n}J_{i}X_{i}=\sigma\geq0
+	\end{equation}
+	
+	
 	\subsubsection{Podpodsekcja 1.1.1}
 	%\blindtext
 	\section{Sekcja 2}
 	%\blindtext
 	\section{Sekcja 3}
 	%\blindtext
-	\begin{table}
-	\centering
-		\begin{tabular}{|cc|}
-			1 & 2 \\
-			3 & 4 
-		\end{tabular}
-		\caption{Tabela 1}
-		\label{table:1}
-	\end{table}
 	\section{Sekcja 4}
 	%\blindtext 
 	\pagebreak
