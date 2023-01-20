@@ -16,6 +16,11 @@
 \usepackage{sectsty}
 \usepackage{etoolbox}
 \usepackage[font=small]{caption}
+\usepackage{physics}
+\usepackage[version=4]{mhchem}
+\usepackage{gensymb}
+\usepackage{mathrsfs}
+\usepackage{xfrac}
 
 %\usepackage{titling}
 \usepackage{anyfontsize}
@@ -88,25 +93,32 @@
 	\begin{table}[H]
 	\begin{tabular}{@{} ll}
 		\(T\) & Temperatura \\
-		\(V\) & Objętość \\
-		\(p\) & Ciśnienie \\
-		\(E\) & Energia \\
 		\(S\) & Entropia \\
-		\(W=E+pV\) & Entalpia \\
-		\(F=E-TS\) & Energia swobodna \\
-		\(\Phi=E-TS+pV\) & Potencjał termodynamiczny (entalpia swobodna) \\
-		\(\Omega=-pV\) & Wielki potencjał termodynamiczny \\
+		\(p\) & Ciśnienie \\
+		\(V\) & Objętość \\
+		\(A\) & Powinowactwo chemiczne \\
+		\(\xi\) & Liczba postępu reakcji \\
+		\(s\) & Entropia na jednostkę objętości \\
+		\(\mathscr{S}\) & Entropia na mol \\
+		\(U\) & Energia wewnętrzna \\
+		\(H=U+pV\) & Entalpia \\
+		\(F=U-TS\) & Energia swobodna \\
+		\(G=H-TS\) & Entalpia swobodna \\
+		\(u, h, f, g\) & Energia, Entalpia, Energia swobodna oraz Entalpia swobodna na jednostkę objętości \\
+		\(\mathscr{U, H, F, G}\) & Energia, Entalpia, Energia swobodna oraz Entalpia swobodna na mol \\
 		\(C_{p}, C_{V}\) & Pojemności cieplne (\(c_{p}, c_{V}\) ciepła własciwe) \\
 		\(N\) & Liczba cząsteczek (cząstek) \\
-		\(\mu\) & Potencjał chemiczny \\
-		\(\alpha\) & Współczynnik napięcia powierzchniowego \\
-		\(s\) & Pole powierzchni rozdziału faz
+		\(\mu\) & Potencjał chemiczny
 	\end{tabular}
 	\end{table}
 	\setlength{\parindent}{1.25cm}
 	\pagebreak
 	
 	\section{Wstęp}
+	
+	Oscylacyjne reakcje chemiczne są przykładem procesu samoorganizacji w układach z reakcją chemiczną. W trakcie przebiegu takiej reakcji możemy zaobserwować oscylacyjne zmiany stężenia niektórych reagentów pojawiających się w czasie jej przebiegu. Zwykle są to przejściowe związki chemiczne, które pojawiają się w mechanizmie reakcji pomiędzy substratami a produktami. Zjawisko takiej samoorganizacji obserwujemy tylko wówczas, gdy układ z reakcją chemiczną jest w stanie dalekim od stanu równowagi termodynamicznej. \par
+	Te oscylacyjne zmiany stężenia niektórych reagentów w oscylacyjnej reakcji chemicznej mogą odbywać się jednocześnie i tak samo w całej objętości układu, wówczas mówimy o powstaniu czasowej struktury dyssypatywnej. Jeśli stężenia tych reagentów zmieniają się zarówno w czasie jak i przestrzeni
+	
 	\subsection{Definicje i prawa}
 	\begin{description}
 		\item[Energia wewnętrzna] U; suma wszytkich energii kinetycznych oraz potencjalnych cząstek składających się na ciało
@@ -192,9 +204,51 @@
 	\begin{equation}
 		\frac{\partial}{\partial t}\left(S-S^\circ\right)=\frac{1}{2}\frac{\partial}{\partial t}\delta^2 S=\sum_{i=1}^{n}J_{i}X_{i}=\sigma\geq0
 	\end{equation}
+	\subsection{Szybkość reakcji}
 	
+	Reakcje chemiczne można podzielić na dwie kategorie. Są to reakcje homogeniczne, czyli takie zachodzące w jednej fazie, oraz reakcje heterogeniczne, czyli między związkami w różnych fazach i zachodzące na granicy między nimi. Szybkość reakcji heterogenicznych jest trudniejsza do opisania, ponieważ zależy od szybkości dyfuzji, powierzchni rozdzielenia i innych czynników. %do uzupelnienia
+	Szybkość reakcji homogenicznej w stałej temperaturze jest funkcją stężeń reagentów. Można ją wyrazić dla stałej objętości jako: 
+	\begin{equation}
+		v=\frac{1}{\nu_i}\dv{c_i}{t}
+	\end{equation}
+	Jest to wielkość niezależna od konkretnego reagenta. Można tak zdefiniowaną szybkość reakcji powiązać z szybkością zmiany liczby postępu reakcji:
+	\begin{gather}
+		v=\frac{1}{\nu_{i}}\dv{c_{i}}{t} \\
+		\dd{c_{i}}=\frac{\dd{n_{i}}}{V} \\
+		\dd{n_{i}}=\nu_{i}\dd{\xi} \\
+		v=\frac{1}{V}\dv{\xi}{t}
+	\end{gather}
+	Dla reacji chemicznej w postaci ogólnej
+	\begin{equation*}
+		x_{1}X_{1}+x_{2}X_{2}+\ldots \rightarrow y_{1}Y_{1}+y_{2}Y_{2}+\ldots
+	\end{equation*}
+	szybkość ta ma ogólną postać:
+	\begin{equation*}
+		v=f\left(x_{1}, x_{2}, \ldots, y_{1}, y_{2}, \ldots\right)
+	\end{equation*}
+	Odpowiednie wzory są wyznaczane empirycznie i znacząca część z nich okazuje się mieć prostszą formę tej zależności:
+	\begin{equation*}
+		v=k x_{1}^{\alpha_1}x_{2}^{\alpha_2}\ldots y_{1}^{\beta_1}y_{2}^{\beta_2}\ldots
+	\end{equation*}
+	Przykładowe reakcje i ich szybkości reakcji:
+	\begin{align*}
+		&\ce{2N2O2 -> 4NO2 + O2} &&v=k\left[\ce{N2O2}\right] \\
+		&\ce{CH3COCH3 + I2 -> CH3COCH2I + HI} &&v=k\left[\ce{CH3COCH3}\right] \\
+		&\ce{H2 + Br2 -> 2HBr} &&v=\frac{k_{1}\left[\ce{H2}\right]\left[\ce{Br2}\right]^{\sfrac{1}{2}}}{1+k_{2}\sfrac{\left[\ce{HBr}\right]}{\left[\ce{Br2}\right]}}
+	\end{align*}
+	Każdą z tych reakcji można rozdzielić na szereg występujących jednocześnie reakcji elementarnych. Przykładowo dla syntezy bromowodoru z cząsteczkowego wodoru i bromu:
+	\begin{align*}
+		&\ce{H2 + Br2 -> 2HBr} &&\text{reakcja sumaryczna} \\
+		&\ce{Br2 -> 2Br^{.}} &&\text{reakcja elementarna} \\
+		&\ce{Br^{.} + H2 -> HBr + H^{.}} &&\text{reakcja elementarna} \\
+		&\ce{H^{.} + Br2 -> HBr + Br^{.}} &&\text{reakcja elementarna}
+	\end{align*}
+	Jednak analogiczna reakcja syntezy jodowodoru przebiega w sposób bezpośredni: 
+	\begin{align*}
+		&\ce{H2 + I2 -> 2HI}
+	\end{align*}
+	co oznacza, że każdą reakcję należy rozpatrywać osobno. \cite{pigon1}
 	
-	\subsubsection{Podpodsekcja 1.1.1}
 	%\blindtext
 	\section{Sekcja 2}
 	%\blindtext
@@ -215,5 +269,133 @@
 	\pagebreak
 	\section*{Dodatek A}
 	\addcontentsline{toc}{section}{Dodatek A}
+	\begin{gather}
+		\dd{u}=T\dd{s}-p\dd{V}+\sum_{i}\mu_{i}\dd{n_{i}}; \dd{V}=0 \label{dod A: 1} \\
+		\dd{s}=\frac{1}{T}\dd{u}-\sum_{i}\frac{\mu_{i}}{T}\dd{n_{i}} \label{dod A: 2} \\
+		\dv{s}{t}=\frac{1}{T}\dv{u}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t} \label{dod A: 3} \\
+		\vb{J}_{s}=\frac{1}{T}\vb{J}_{u}-\sum_{i}\frac{\mu_{i}}{T}\vb{J}_{i} \label{dod A: 4}
+	\end{gather}
+	Równania ciągłości:
+	\begin{gather}
+		\dv{s}{t}=-\div{\vb{J}_{s}}+\sigma \label{dod A: 5} \\
+		\dv{u}{t}=-\div{\vb{J}_{u}} \label{dod A: 6} \\
+		\dv{n_{i}}{t}=-\div{\vb{J}_{i}}+\dv{n_{i;reak}}{t}; \dd{n_{i;reak}}=\sum_{r}\nu_{ir}\dd{\xi_{r}} \label{dod A: 7} \\
+		\dv{n_{i}}{t}=-\div{\vb{J}_{i}}+\sum_{r}\nu_{ir}\dv{\xi_{r}}{t} \label{dod A: 8}
+	\end{gather}
+	Podstawiając \eqref{dod A: 4}, \eqref{dod A: 6} oraz \eqref{dod A: 8} do \eqref{dod A: 5} otrzymujemy: 
+	\begin{equation} \label{dod A: 9}
+		\dv{s}{t}=\frac{1}{T}\dv{u}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}+\left[\vb{J}_{u}\vdot\grad{\frac{1}{T}}-\sum_{i}\vb{J}_{i}\cdot\grad{\frac{\mu_{i}}{T}}-\frac{1}{T}\sum_{r}\sum_{i}\nu_{ir}\mu_{i}\dv{\xi_{r}}{t}\right]+\sigma
+	\end{equation}
+	Wprowadzamy pojęcie powinowactwa chemicznego: 
+	\begin{equation}
+		A_{r}=-\sum_{i}\nu_{ir}\mu_{i} \\
+	\end{equation}
+	Równanie \eqref{dod A: 9} przybiera postać:
+	\begin{equation}
+		\dv{s}{t}=\frac{1}{T}\dv{u}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}+\left[\vb{J}_{u}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}\right]+\sigma
+	\end{equation}
+	Otrzymujemy z porównania tego wzoru z \eqref{dod A: 3}:
+	\begin{equation}
+		\sigma=\vb{J}_{u}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}
+	\end{equation}
+	Z analogicznego wyprowadzenia dla entalpii i założenia stałego ciśnienia:
+	\begin{equation}
+		\sigma=\vb{J}_{h}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}
+	\end{equation}
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|c|c|}
+		\hline
+		Proces & Przepływ & Siła termodynamiczna \\
+		\hline
+		Transport energii & \(\vb{J}_u\) & \(\grad{\left(\frac{1}{T}\right)}\) \\
+		Transport entalpii & \(\vb{J}_h\) & \(\grad{\left(\frac{1}{T}\right)}\) \\
+		Dyfuzja & \(\vb{J}_i\) & \(-\grad{\left(\frac{\mu_{i}}{T}\right)}\) \\
+		Reakcja chemiczna & \(J_{r}=\dv{\xi_{r}}{t}\) & \(\frac{A_r}{T}\) \\
+		\hline
+	\end{tabular}
+	\end{table}
+	\pagebreak
+	\section{Dodatek B}
+	\begin{gather}
+		U=U\left(S, V, \xi\right) \\
+		H=H\left(S, p, \xi\right) \\
+		F=F\left(T, V, \xi\right) \\
+		G=G\left(T, p, \xi\right)
+	\end{gather}
+	\begin{gather}
+		\dd{U}=T\dd{S}-p\dd{V}-A\dd{\xi} \\
+		\dd{H}=T\dd{S}+V\dd{p}-A\dd{\xi} \\
+		\dd{F}=-S\dd{T}-p\dd{V}-A\dd{\xi} \\
+		\dd{G}=-S\dd{T}+V\dd{p}-A\dd{\xi}
+	\end{gather}
+	Pochodne cząstkowe:
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		\(\left(\pdv{U}{S}\right)_{V, \xi}=T\) & \(\left(\pdv{U}{V}\right)_{S, \xi}=-p\) & \(\left(\pdv{U}{\xi}\right)_{S, V}=-A\) \\
+		\(\left(\pdv{H}{S}\right)_{p, \xi}=T\) & \(\left(\pdv{H}{p}\right)_{S, \xi}=V\) & \(\left(\pdv{H}{\xi}\right)_{S, p}=-A\) \\
+		\(\left(\pdv{F}{T}\right)_{V, \xi}=-S\) & \(\left(\pdv{F}{V}\right)_{T, \xi}=-p\) & \(\left(\pdv{F}{\xi}\right)_{T, V}=-A\) \\
+		\(\left(\pdv{G}{T}\right)_{p, \xi}=-S\) & \(\left(\pdv{G}{p}\right)_{T, \xi}=V\) & \(\left(\pdv{G}{\xi}\right)_{T, p}=-A\) \\
+	\end{tabular}
+	\end{table}
+	U, H, F, G są funkcjami stanu, więc pochodne mieszane są sobie równe:
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		\(\left(\pdv{T}{V}\right)_{S, \xi}=-\left(\pdv{p}{S}\right)_{V, \xi}\) & \(\left(\pdv{T}{\xi}\right)_{S, V}=-\left(\pdv{A}{S}\right)_{V, \xi}\) & \(\left(\pdv{p}{\xi}\right)_{S, V}=\left(\pdv{A}{V}\right)_{S, \xi}\) \\
+		\(\left(\pdv{T}{p}\right)_{S, \xi}=\left(\pdv{V}{S}\right)_{p, \xi}\) & \(\left(\pdv{T}{\xi}\right)_{S, p}=-\left(\pdv{A}{S}\right)_{p, \xi}\) & \(\left(\pdv{V}{\xi}\right)_{S, p}=-\left(\pdv{A}{p}\right)_{S, \xi}\) \\
+		\(\left(\pdv{S}{V}\right)_{T, \xi}=\left(\pdv{p}{T}\right)_{V, \xi}\) & \(\left(\pdv{S}{\xi}\right)_{T, V}=\left(\pdv{A}{T}\right)_{V, \xi}\) & \(\left(\pdv{p}{\xi}\right)_{T, V}=\left(\pdv{A}{V}\right)_{T, \xi}\) \\
+		\(\left(\pdv{S}{p}\right)_{T, \xi}=-\left(\pdv{V}{T}\right)_{p, \xi}\) & \(\left(\pdv{S}{\xi}\right)_{T, p}=\left(\pdv{A}{T}\right)_{p, \xi}\) & \(\left(\pdv{V}{\xi}\right)_{T, p}=-\left(\pdv{A}{p}\right)_{T, \xi}\)
+	\end{tabular}
+	\end{table}
+	Pochodne po temperaturze:
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{ll}
+		\(\left(\pdv{U}{T}\right)_{V, \xi}=C_{V, \xi}\) & \(\left(\pdv{S}{T}\right)_{V, \xi}=\frac{C_{V, \xi}}{T}\) \\
+		\(\left(\pdv{H}{T}\right)_{p, \xi}=C_{p, \xi}\) & \(\left(\pdv{S}{T}\right)_{p, \xi}=\frac{C_{p, \xi}}{T}\) \\
+		\(\left(\pdv{F}{T}\right)_{V, \xi}=-S\) & \(\left(\pdv{A}{T}\right)_{V, \xi}=\Delta_{r}S_{V}\) \\
+		\(\left(\pdv{G}{T}\right)_{p, \xi}=-S\) & \(\left(\pdv{A}{T}\right)_{p, \xi}=\Delta_{r}S_{p}\)
+	\end{tabular}
+	\end{table}
+	\begin{gather}
+		A\dd{\xi}=T\dd{S}-\dd{U}-p\dd{V} \\
+		A\dd{\xi}=T\dd{S}-\dd{H}+V\dd{p}
+	\end{gather}
+	Podstawiając do tego odpowiednio: 
+	\begin{gather}
+	\begin{split}
+		\dd{S}=\left(\pdv{S}{T}\right)_{V, \xi}\dd{T}+\left(\pdv{S}{V}\right)_{T, \xi}\dd{V}+\left(\pdv{S}{\xi}\right)_{T, V}\dd{\xi} \\
+		\dd{U}=\left(\pdv{U}{T}\right)_{V, \xi}\dd{T}+\left(\pdv{U}{V}\right)_{T, \xi}\dd{V}+\left(\pdv{U}{\xi}\right)_{T, V}\dd{\xi}
+	\end{split} \\
+	\begin{split}
+		\dd{S}=\left(\pdv{S}{T}\right)_{p, \xi}\dd{T}+\left(\pdv{S}{p}\right)_{T, \xi}\dd{p}+\left(\pdv{S}{\xi}\right)_{T, p}\dd{\xi} \\
+		\dd{H}=\left(\pdv{H}{T}\right)_{p, \xi}\dd{T}+\left(\pdv{H}{p}\right)_{T, \xi}\dd{p}+\left(\pdv{H}{\xi}\right)_{T, p}\dd{\xi}
+	\end{split}
+	\end{gather}
+	otrzymujemy:
+	\begin{multline}
+		A\dd{\xi}=\left[T\left(\dv{S}{T}\right)_{V, \xi}-\left(\pdv{U}{T}\right)_{V, \xi}\right]\dd{T}+\left[T\left(\dv{S}{V}\right)_{T, \xi}-\left(\pdv{U}{V}\right)_{T, \xi}-p\right]\dd{V} \\
+		+\left[T\left(\dv{S}{\xi}\right)_{T, V}-\left(\pdv{U}{\xi}\right)_{T, V}\right]\dd{\xi}
+	\end{multline}
+	\begin{multline}
+		A\dd{\xi}=\left[T\left(\dv{S}{T}\right)_{p, \xi}-\left(\pdv{H}{T}\right)_{p, \xi}\right]\dd{T}+\left[T\left(\dv{S}{p}\right)_{T, \xi}-\left(\pdv{H}{p}\right)_{T, \xi}+V\right]\dd{p} \\
+		+\left[T\left(\dv{S}{\xi}\right)_{T, p}-\left(\pdv{U}{\xi}\right)_{T, p}\right]\dd{\xi}
+	\end{multline}
+	Wyrażenia przy każdej różniczce powinny być sobie równe:
+	\begin{gather}
+		T\left(\dv{S}{T}\right)_{V, \xi}-\left(\pdv{U}{T}\right)_{V, \xi}=0 \\
+		T\left(\dv{S}{V}\right)_{T, \xi}-\left(\pdv{U}{V}\right)_{T, \xi}-p=0 \\
+		A=T\left(\dv{S}{\xi}\right)_{T, V}-\left(\pdv{U}{\xi}\right)_{T, V} \\
+		T\left(\dv{S}{T}\right)_{p, \xi}-\left(\pdv{H}{T}\right)_{p, \xi}=0 \\
+		T\left(\dv{S}{p}\right)_{T, \xi}-\left(\pdv{H}{p}\right)_{T, \xi}+V=0 \\
+		A=T\left(\dv{S}{\xi}\right)_{T, p}-\left(\pdv{U}{\xi}\right)_{T, p}
+	\end{gather}
+	Stosując wzory wynikające z równych pochodnych mieszanych możemy to przekształcic do: 
+	\begin{gather}
+		\left(\pdv{U}{V}\right)_{T, \xi}=-p+T\left(\pdv{p}{T}\right)_{V, \xi} \\
+		\left(\pdv{H}{p}\right)_{T, \xi}=V-T\left(\pdv{V}{T}\right)_{p, \xi}
+	\end{gather}
 	\pagebreak
 \end{document}
