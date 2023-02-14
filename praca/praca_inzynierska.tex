@@ -255,7 +255,81 @@
 		\ce{RCOOC2H5 + 2H2O ->[H3O+] RCOO- + C2H5OH + H3O+}
 	\end{center}
 	
-	
+	\section{praca wlasna}
+	\subsection{modele}
+	\subsubsection{lotka}
+	\begin{center}
+		\ce{A ->[k_1] X} \\
+		\ce{X + Y ->[k_2] 2Y} \\
+		\ce{Y ->[k_3] produkty}
+	\end{center}
+	\begin{gather}
+		\dv{[X]}{t}=k_{1}[A]-k_{2}[X][Y] \\
+		\dv{[Y]}{t}=k_{2}[X][Y]-k_{3}[Y]
+	\end{gather}
+	\subsubsection{lotka-volterra}
+	\begin{center}
+		\ce{A + X ->[k_1] 2X} \\
+		\ce{X + Y ->[k_2] 2Y} \\
+		\ce{Y ->[k_3] produkty}
+	\end{center}
+	\begin{gather}
+		\dv{[X]}{t}=k_{1}[A][X]-k_{2}[X][Y] \\
+		\dv{[Y]}{t}=k_{2}[X][Y]-k_{3}[Y]
+	\end{gather}
+	\subsubsection{bruskelator}
+	\begin{center}
+		\ce{A ->[k_1] X} \\
+		\ce{2X + Y ->[k_2] 3X} \\
+		\ce{B + X ->[k_3] D + Y} \\
+		\ce{X ->[k_4] E}
+	\end{center}
+	\begin{gather}
+		\dv{[X]}{t}=k_{1}[A]+k_{2}[X]^{2}[Y]-k_{3}[B][X]-k_{4}[X] \\
+		\dv{[Y]}{t}=-k_{2}[X]^{2}[Y]+k_{3}[B][X]
+	\end{gather}
+	\subsection{metody różniczkowe}
+	Układ równań liniowych pierwszego rzędu o stałych współczynnikach ma w ogólności rozwiązanie analityczne \cite{palczewski}
+	\begin{gather}
+		\dv{X(t)}{t}=RX(t) \\
+		X(t)=\exp(Rt)X(0)
+	\end{gather}
+	Rozpatrywane układy jednak nie mają rozwiązania analitycznego i należy je rozwiązać metodami numerycznymi. \par
+	\begin{table}[H]\label{tab:schematy}
+		\centering
+		\begin{tabular}{|l|l|c|c|}
+			\hline
+			 & Wzór & \(p\) & \(A_{p+1}\) \\
+			\hline
+			1 & \(y_{n+1}=y_{n}+hy'_{n}\) & \(1\) & \(\frac{1}{2}\) \\
+			\hline
+			2 & \(y_{n+1}=y_{n}+\frac{h}{2}(3y'_{n}-y'_{n-1})\) & \(2\) & \(\frac{5}{12}\) \\
+			\hline
+			3 & \(y_{n+1}=y_{n}+\frac{h}{12}(23y'_{n}-16y'_{n-1}+5y'_{n-2})\) & \(3\) & \(\frac{3}{8}\) \\
+			\hline
+			4 & \(y_{n+1}=y_{n}+\frac{h}{24}(55y'_{n}-59y'_{n-1}+37y'_{n-2}-9y'_{n-3})\) & \(4\) & \(\frac{251}{720}\) \\
+			\hline
+			5 & \(y_{n+1}=y_{n-3}+\frac{4h}{3}(2y'_{n}-y'_{n-1}+2y'_{n-2})\) & \(4\) & \(\frac{14}{45}\) \\
+			\hline
+		\end{tabular}
+		\caption{Schematy różnicowe}
+	\end{table}
+	gdzie \(h\) jest krokiem czasowym, \(p\) to najwyższa wykładnik potęgi \(h^{s}\), przy których współczynnik wynosi \(0\), a \(A_{p+1}\) jest współczynnikiem przy kolejnej potędze.
+	\begin{figure}[H]\label{img:lotka}
+		\centering
+		\includegraphics{lotka.png}
+		\caption{Model Lotki; \(k_{1}=k_{2}=k_{3}=A=1\)}
+	\end{figure}
+	\begin{figure}[H]\label{img:lotka_volterra}
+		\centering
+		\includegraphics{lotka_volterra.png}
+		\caption{Model Lotki-Volterry; \(k_{1}=k_{2}=k_{3}=A=1\)}
+	\end{figure}
+	\begin{figure}[H]\label{img:brusselator}
+		\centering
+		\includegraphics{brusselator.png}
+		\caption{Model brusselator; \(k_{1}=k_{2}=k_{3}=k_{4}=A=1\)}
+	\end{figure}
 	%\blindtext
 	\section{Sekcja 2}
 	%\blindtext
