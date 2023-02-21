@@ -13,6 +13,7 @@
 \usepackage{float}
 \usepackage{multirow}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{sectsty}
 \usepackage{etoolbox}
 \usepackage[font=small]{caption}
@@ -21,6 +22,7 @@
 \usepackage{gensymb}
 \usepackage{mathrsfs}
 \usepackage{xfrac}
+\usepackage{array}
 
 %\usepackage{titling}
 \usepackage{anyfontsize}
@@ -51,6 +53,10 @@
 \numberwithin{equation}{section}
 
 \newcommand{\dbar}{d\hspace*{-0.08em}\bar{}\hspace*{0.1em}}
+
+%\newcolumntype{L}{>{\(}l<{\)}}
+%\newcolumntype{C}{>{\(}c<{\)}}
+%\newcolumntype{R}{>{\(}r<{\)}}
 
 % Problemy:
 % W spisie kropki przy section
@@ -117,20 +123,11 @@
 	\section{Wstęp}
 	
 	Oscylacyjne reakcje chemiczne są przykładem procesu samoorganizacji w układach z reakcją chemiczną. W trakcie przebiegu takiej reakcji możemy zaobserwować oscylacyjne zmiany stężenia niektórych reagentów pojawiających się w czasie jej przebiegu. Zwykle są to przejściowe związki chemiczne, które pojawiają się w mechanizmie reakcji pomiędzy substratami a produktami. Zjawisko takiej samoorganizacji obserwujemy tylko wówczas, gdy układ z reakcją chemiczną jest w stanie dalekim od stanu równowagi termodynamicznej. \par
-	Te oscylacyjne zmiany stężenia niektórych reagentów w oscylacyjnej reakcji chemicznej mogą odbywać się jednocześnie i tak samo w całej objętości układu, wówczas mówimy o powstaniu czasowej struktury dyssypatywnej. Jeśli stężenia tych reagentów zmieniają się zarówno w czasie jak i przestrzeni
+	Te oscylacyjne zmiany stężenia niektórych reagentów w oscylacyjnej reakcji chemicznej mogą odbywać się jednocześnie i tak samo w całej objętości układu, wówczas mówimy o powstaniu czasowej struktury dyssypatywnej. Jeśli stężenia tych reagentów zmieniają się zarówno w czasie jak i przestrzeni, wówczas mówimy o czasowo-przestrzennych strukturach dyssypatywnych. W tym drugim przypadku zaobserwujemy falę stężenia reagenta, która będzie przemieszczać się poprzez cała objętość układu. W trzecim przypadku te zmiany stężeń dotyczą tylko objętości układu, wówczas mówimy o przestrzennej strukturze dyssypatywnej. Wraz z osiągnięciem równowagi termodynamicznej w układzie opisane struktury zanikają. 
 	
-	\subsection{Definicje i prawa}
-	\begin{description}
-		\item[Energia wewnętrzna] U; suma wszytkich energii kinetycznych oraz potencjalnych cząstek składających się na ciało
-		\item[Praca] W; energia dostarczona do układu poprzez siły makroskopowe
-		\item[Ciepło] Q; energia dostarczona do układu poprzez oddziaływania inne niż praca
-		\item[Entropia (termodynamika klasyczna)] S; funkcja stanu układu; wielkość opisująca samorzutność przemian w systemie; wprowadzona po raz pierwszy przez Clausiusa jako \(dS=\frac{\dbar Q^\circ}{T}\) \cite{orlik}
-		\item[Entropia (termodynamika statystyczna)] S; wielkość opisująca ilość mikrostanów przypisanych danemu makrostanowi; wprowadzona przez Boltzmanna: \(S=k_B\ln{\Omega}\) \cite{landau}
-		\item[0 Zasada Termodynamiki] Jeżeli układy A i C są w równowadze termodynamicznej oraz B i C to A i B są w równowadze termodynamicznej
-		\item[I Zasada Termodynamiki] Zwiększenie energii wewnętrznej może nastąpić poprzez pracę lub ciepło; \(dU=\dbar Q+\dbar W\)
-		\item[II Zasada Termodynamiki] w układach izolowanych następuje wzrost entropii lub pozostaje ona stała (poza wyjątkiem fluktuacji); entropia podukładu może maleć \cite{landau}
-		\item[III Zasada Termodynamiki] entropia kryształów doskonałych dąży do zera, gdy temperatura dąży do zera
-	\end{description}
+	% Wkleić przypadki struktur
+	
+	
 	\subsection{Zarys historyczny}
 	Termodynamika równowagowa zajmuje się procesami, w których ignoruje się upływ czasu, a przemiana jest kwazistatyczna. Oznacza to, że każdy stan pośredni można traktować jako stan równowagi termodynamicznej. Model taki jest wystarczający do opisu większości procesów. Można więc powiedzieć, że termodynamikę równowagową interesuje stan początkowy oraz końcowy. \par
 	Termodynamika nierównowagowa jednak zajmuje się dokładnie tym, co się dzieje w trakcie rzeczywistej przemiany i jest ona konieczna do opisu reakcji oscylacyjnych. Pierwsze przesłanki o istnieniu takowych sięgają końca XIX wieku. Były to reakcje w układach heterogenicznych, jak na przykład pierścienie Lieseganga lub oscylacje prądu płynącego przez ogniwo galwaniczne. Wyjaśnienie tych zjawisk wymagało, aby układ byl heterogeniczny i było w zgodzie z entropią Boltzmanna, według której spontaniczna organizacja jest niemożliwa. \cite{orlik}\par
@@ -288,6 +285,352 @@
 		\dv{[X]}{t}=k_{1}[A]+k_{2}[X]^{2}[Y]-k_{3}[B][X]-k_{4}[X] \\
 		\dv{[Y]}{t}=-k_{2}[X]^{2}[Y]+k_{3}[B][X]
 	\end{gather}
+	\subsection{stabilnosc rozwiazan}
+	Na potrzeby analizy można zredukować ilość parametrów danych równań różniczkowych stosując odpowiednie podstawienia. Najpierw należy wyznaczyć współrzędne punktu stacjonarnego. Analiza zostanie przedstawiona na przykładzie modelu Lotki, ale analogiczne wyprowadzenie można przeprowadzić dla każdego z tych modeli. W stanie stacjonarnym \(\dv{[X]}{t}=\dv{[Y]}{t}=0\)
+	\begin{gather}
+		k_{1}[A]-k_{2}[X]_{st}[Y]_{st}=0 \\
+		k_{2}[X]_{st}[Y]_{st}-k_{3}[Y]_{st}=0
+	\end{gather}
+	Rozwiązując ten układ równań otrzymujemy
+	\begin{gather}
+		[X]_{st}=\frac{k_{3}}{k_{2}} \\
+		[Y]_{st}=\frac{k_{1}[A]}{k_{3}}
+	\end{gather}
+	Wprowadzamy podstawienie
+	\begin{align*}
+		& x=\frac{[X]}{[X]_{st}} && y=\frac{[Y]}{[Y]_{st}} && \tau=k_{3}t && a=\frac{k_{1}k_{2}[A]}{k_{3}^{2}}
+	\end{align*}
+	i otrzymujemy po przekształceniach dla modelu Lotki:
+	\begin{gather}
+		\dv{x}{\tau}=a-axy \\
+		\dv{y}{\tau}=xy-y
+	\end{gather}
+	Analogicznie dla modelu Lotki-Volterry:
+	\begin{gather}
+		\dv{x}{\tau}=ax-axy \\
+		\dv{y}{\tau}=xy-y
+	\end{gather}
+	oraz modelu brusselator:
+	\begin{gather}
+		\dv{x}{\tau}=1+ax^{2}y-ax-x \\
+		\dv{y}{\tau}=-bx^{2}y+bx
+	\end{gather}
+	Tak przygotowane równania mają stan stacjonarny w \(x=y=1\), co wynika z definicji. Zostaną one wykorzystane do numerycznego rozwiązania równań, ale na potrzeby analizy wprowadzam podstawienie
+	\begin{align*}
+		& \gamma=x-1 && \vartheta=y-1
+	\end{align*}
+	Co przesuwa stan stacjonarny do \(\gamma=\vartheta=0\). Otrzymujemy dla modelu Lotki:
+	\begin{gather}
+		\dv{\gamma}{\tau}=-a\gamma\vartheta-a\gamma-a\vartheta \\
+		\dv{\vartheta}{\tau}=\gamma\vartheta+\gamma
+	\end{gather}
+	Dla modelu Lotki-Volterry:
+	\begin{gather}
+		\dv{\gamma}{\tau}=-a\gamma\vartheta-a\vartheta \\
+		\dv{\vartheta}{\tau}=\gamma\vartheta+\gamma
+	\end{gather}
+	Dla modelu brusselator:
+	\begin{gather}
+		\dv{\gamma}{\tau}=a\gamma^{2}\vartheta+a\gamma^{2}+2a\gamma\vartheta+a\gamma+a\vartheta-\gamma \\
+		\dv{\vartheta}{\tau}=-b\gamma^{2}\vartheta-b\gamma^{2}-2b\gamma\vartheta-b\gamma-b\vartheta
+	\end{gather}
+	Istnienie punktu stacjonarnego nie oznacza, że jest on atraktorem. Badanie charakteru punktu stacjonarnego układu równań rózniczkowych nieliniowych jest trudne, ale można wprowadzić pewne uproszczenie i zlinearyzować ten układ. Oznacza to rozwiniecie funcji po prawej stronie równań w szereg Taylora i ograniczenie go do elementu liniowego. Działanie to jest uzasadnione tym, że badamy jedynie najbliższe otoczenie i kolejne składniki mają mniejszy wkład im bliżej punktu stacjonarnego. \par
+	Po linearyzacji otrzymujemy dla modelu Lotki:
+	\begin{gather}
+		\dv{\gamma}{\tau}=-a\gamma-a\vartheta \\
+		\dv{\vartheta}{\tau}=\gamma
+	\end{gather}
+	Dla modelu Lotki-Volterry:
+	\begin{gather}
+		\dv{\gamma}{\tau}=-a\vartheta \\
+		\dv{\vartheta}{\tau}=\gamma
+	\end{gather}
+	Dla modelu brusselator:
+	\begin{gather}
+		\dv{\gamma}{\tau}=(a-1)\gamma+a\vartheta \\
+		\dv{\vartheta}{\tau}=-b\gamma-b\vartheta
+	\end{gather}
+	Można teraz badać stany stabilne metodami równań różniczkowych liniowych. Stabilność zależy od wartości własnych macierzy stałych. Dla modelu Lotki:
+	\begin{gather}
+		\det
+		\begin{pmatrix}
+			-a-\lambda & -a \\
+			1 & -\lambda
+		\end{pmatrix}
+		=\lambda^{2}+a\lambda+a=0 \\
+		\lambda_{1}+\lambda_{2}=-a \\
+		\lambda_{1}\lambda_{2}=a
+	\end{gather}
+	Dla modelu Lotki-Volterry:
+	\begin{gather}
+		\det
+		\begin{pmatrix}
+			-\lambda & -a \\
+			1 & -\lambda
+		\end{pmatrix}
+		=\lambda^{2}+a=0 \\
+		\lambda_{1}+\lambda_{2}=0 \\
+		\lambda_{1}\lambda_{2}=a
+	\end{gather}
+	Dla modelu brusselator:
+	\begin{gather}
+		\det
+		\begin{pmatrix}
+			a-1-\lambda & a \\
+			-b & -b-\lambda
+		\end{pmatrix}
+		=\lambda^{2}+(-a+b+1)\lambda+b=0 \\
+		\lambda_{1}+\lambda_{2}=a-b-1 \\
+		\lambda_{1}\lambda_{2}=b
+	\end{gather}
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|}\cline{1-4}
+			& \(\lambda_{1}+\lambda_{2}<0\) & \(\lambda_{1}+\lambda_{2}=0\) & \(\lambda_{1}+\lambda_{2}>0\) \\ \cline{1-4}
+			\(\left(\frac{\lambda_{1}+\lambda_{2}}{2}\right)^{2}<\lambda_{1}\lambda_{2}\) & 
+			\begin{tabular}{c} %11
+				\(\lambda_{1}, \lambda_{2}\in\mathbb{C}\) \\
+				\(\Re{\lambda_{1}}=\Re{\lambda_{2}}<0\) \\
+				\(\lambda_{1}=\overline{\lambda_{2}}\) 
+			\end{tabular}
+			& \multirow{2}{*}{
+			\begin{tabular}{c} %(1-2)2
+				\(\lambda_{1}, \lambda_{2}\in\mathbb{C}\) \\
+				\(\Re{\lambda_{1}}=\Re{\lambda_{2}}=0\) \\
+				\(\lambda_{1}=-\lambda_{2}\) 
+			\end{tabular}
+			} & 
+			\begin{tabular}{c} %13
+				\(\lambda_{1}, \lambda_{2}\in\mathbb{C}\) \\
+				\(\Re{\lambda_{1}}=\Re{\lambda_{2}}>0\) \\
+				\(\lambda_{1}=\overline{\lambda_{2}}\) 
+			\end{tabular} 
+			\\ \cline{1-2}\cline{4-4}
+			\(0<\lambda_{1}\lambda_{2}\leq\left(\frac{\lambda_{1}+\lambda_{2}}{2}\right)^{2}\) & 
+			\begin{tabular}{c} %21
+				\(\lambda_{1}, \lambda_{2}\in\mathbb{R}\) \\
+				\(\lambda_{1}, \lambda_{2}<0\) 
+			\end{tabular}
+			& &
+			\begin{tabular}{c} %23
+				\(\lambda_{1}, \lambda_{2}\in\mathbb{R}\) \\
+				\(\lambda_{1}, \lambda_{2}>0\) 
+			\end{tabular}
+			\\ \cline{1-4}
+			\(\lambda_{1}\lambda_{2}=0\) & 
+			\begin{tabular}{c} %31
+				\(\lambda_{1}, \lambda_{2}\in\mathbb{R}\) \\
+				\(\lambda_{1}<\lambda_{2}=0\) 
+			\end{tabular}
+			& 
+			\begin{tabular}{c} %32
+				\(\lambda_{1}, \lambda_{2}\in\mathbb{R}\) \\
+				\(\lambda_{1}=\lambda_{2}=0\) 
+			\end{tabular}
+			& 
+			\begin{tabular}{c} %33
+				\(\lambda_{1}, \lambda_{2}\in\mathbb{R}\) \\
+				\(0=\lambda_{1}<\lambda_{2}\) 
+			\end{tabular}
+			\\ \cline{1-4}
+			\(\lambda_{1}\lambda_{2}<0\) & 
+			\begin{tabular}{c} %41
+				\(\lambda_{1}, \lambda_{2}\in\mathbb{R}\) \\
+				\(0<\lambda_{2}<-\lambda_{1}\) 
+			\end{tabular}
+			& 
+			\begin{tabular}{c} %42
+				\(\lambda_{1}, \lambda_{2}\in\mathbb{R}\) \\
+				\(0<\lambda_{2}=-\lambda_{1}\) 
+			\end{tabular}
+			&
+			\begin{tabular}{c} %43
+				\(\lambda_{1}, \lambda_{2}\in\mathbb{R}\) \\
+				\(0>\lambda_{1}>-\lambda_{2}\) 
+			\end{tabular}
+			\\ \cline{1-4}
+		\end{tabular}
+		\caption{Warunki stabilności}
+	\end{table}
+	
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|}\cline{1-4}
+			& \(\lambda_{1}+\lambda_{2}<0\) & \(\lambda_{1}+\lambda_{2}=0\) & \(\lambda_{1}+\lambda_{2}>0\) \\ \cline{1-4}
+			\(\left(\frac{\lambda_{1}+\lambda_{2}}{2}\right)^{2}<\lambda_{1}\lambda_{2}\) & 
+			\begin{tabular}{c} %11
+				\(0<a<4\)
+			\end{tabular}
+			& \multirow{2}{*}{
+				\begin{tabular}{c} %(1-2)2
+					-
+				\end{tabular}
+			} & 
+			\begin{tabular}{c} %13
+				-
+			\end{tabular} 
+			\\ \cline{1-2}\cline{4-4}
+			\(0<\lambda_{1}\lambda_{2}\leq\left(\frac{\lambda_{1}+\lambda_{2}}{2}\right)^{2}\) & 
+			\begin{tabular}{c} %21
+				\(4\leq a\)
+			\end{tabular}
+			& &
+			\begin{tabular}{c} %23
+				-
+			\end{tabular}
+			\\ \cline{1-4}
+			\(\lambda_{1}\lambda_{2}=0\) & 
+			\begin{tabular}{c} %31
+				-
+			\end{tabular}
+			& 
+			\begin{tabular}{c} %32
+				\(a=0\)
+			\end{tabular}
+			& 
+			\begin{tabular}{c} %33
+				-
+			\end{tabular}
+			\\ \cline{1-4}
+			\(\lambda_{1}\lambda_{2}<0\) & 
+			\begin{tabular}{c} %41
+				-
+			\end{tabular}
+			& 
+			\begin{tabular}{c} %42
+				-
+			\end{tabular}
+			&
+			\begin{tabular}{c} %43
+				\(a<0\)
+			\end{tabular}
+			\\ \cline{1-4}
+		\end{tabular}
+		\caption{Warunki dla modelu Lotki}
+	\end{table}
+
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|}\cline{1-4}
+			& \(\lambda_{1}+\lambda_{2}<0\) & \(\lambda_{1}+\lambda_{2}=0\) & \(\lambda_{1}+\lambda_{2}>0\) \\ \cline{1-4}
+			\(\left(\frac{\lambda_{1}+\lambda_{2}}{2}\right)^{2}<\lambda_{1}\lambda_{2}\) & 
+			\begin{tabular}{c} %11
+				-
+			\end{tabular}
+			& \multirow{2}{*}{
+				\begin{tabular}{c} %(1-2)2
+					\(0<a\)
+				\end{tabular}
+			} & 
+			\begin{tabular}{c} %13
+				-
+			\end{tabular} 
+			\\ \cline{1-2}\cline{4-4}
+			\(0<\lambda_{1}\lambda_{2}\leq\left(\frac{\lambda_{1}+\lambda_{2}}{2}\right)^{2}\) & 
+			\begin{tabular}{c} %21
+				-
+			\end{tabular}
+			& &
+			\begin{tabular}{c} %23
+				-
+			\end{tabular}
+			\\ \cline{1-4}
+			\(\lambda_{1}\lambda_{2}=0\) & 
+			\begin{tabular}{c} %31
+				-
+			\end{tabular}
+			& 
+			\begin{tabular}{c} %32
+				\(a=0\) 
+			\end{tabular}
+			& 
+			\begin{tabular}{c} %33
+				-
+			\end{tabular}
+			\\ \cline{1-4}
+			\(\lambda_{1}\lambda_{2}<0\) & 
+			\begin{tabular}{c} %41
+				-
+			\end{tabular}
+			& 
+			\begin{tabular}{c} %42
+				\(a<0\)
+			\end{tabular}
+			&
+			\begin{tabular}{c} %43
+				-
+			\end{tabular}
+			\\ \cline{1-4}
+		\end{tabular}
+		\caption{Warunki dla modelu Lotki-Volterry}
+	\end{table}
+
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|}\cline{1-4}
+			& \(\lambda_{1}+\lambda_{2}<0\) & \(\lambda_{1}+\lambda_{2}=0\) & \(\lambda_{1}+\lambda_{2}>0\) \\ \cline{1-4}
+			\(\left(\frac{\lambda_{1}+\lambda_{2}}{2}\right)^{2}<\lambda_{1}\lambda_{2}\) & 
+			\begin{tabular}{c} %11
+				\(b+1-2\sqrt{b}<a<b+1\) \\
+				\(0<b\)
+			\end{tabular}
+			& \multirow{2}{*}{
+				\begin{tabular}{c} %(1-2)2
+					 \(a=b+1\) \\
+					 \(0<b\)
+				\end{tabular}
+			} & 
+			\begin{tabular}{c} %13
+				\(b+1<a<b+1+2\sqrt{b}\) \\
+				\(0<b\)
+			\end{tabular} 
+			\\ \cline{1-2}\cline{4-4}
+			\(0<\lambda_{1}\lambda_{2}\leq\left(\frac{\lambda_{1}+\lambda_{2}}{2}\right)^{2}\) & 
+			\begin{tabular}{c} %21
+				\(a\leq b+1-2\sqrt{b}\) \\
+				\(0<b\)
+			\end{tabular}
+			& &
+			\begin{tabular}{c} %23
+				\(b+1+2\sqrt{b}\leq a\) \\
+				\(0<b\)
+			\end{tabular}
+			\\ \cline{1-4}
+			\(\lambda_{1}\lambda_{2}=0\) & 
+			\begin{tabular}{c} %31
+				\(a<1\) \\
+				\(b=0\)
+			\end{tabular}
+			& 
+			\begin{tabular}{c} %32
+				\(a=1\) \\
+				\(b=0\) 
+			\end{tabular}
+			& 
+			\begin{tabular}{c} %33
+				\(1<a\) \\
+				\(b=0\)
+			\end{tabular}
+			\\ \cline{1-4}
+			\(\lambda_{1}\lambda_{2}<0\) & 
+			\begin{tabular}{c} %41
+				\(a<b+1\) \\
+				\(b<0\)
+			\end{tabular}
+			& 
+			\begin{tabular}{c} %42
+				\(a=b+1\) \\
+				\(b<0\)
+			\end{tabular}
+			&
+			\begin{tabular}{c} %43
+				\(b+1<a\) \\
+				\(b<0\)
+			\end{tabular}
+			\\ \cline{1-4}
+		\end{tabular}
+		\caption{Warunki dla modelu brusselator}
+	\end{table}
 	\subsection{metody różniczkowe}
 	Układ równań liniowych pierwszego rzędu o stałych współczynnikach ma w ogólności rozwiązanie analityczne \cite{palczewski}
 	\begin{gather}
@@ -479,4 +822,17 @@
 		\left(\pdv{H}{p}\right)_{T, \xi}=V-T\left(\pdv{V}{T}\right)_{p, \xi}
 	\end{gather}
 	\pagebreak
+	\section{Dodatek C}
+	\subsection{Definicje i prawa}
+	\begin{description}
+		\item[Energia wewnętrzna] U; suma wszytkich energii kinetycznych oraz potencjalnych cząstek składających się na ciało
+		\item[Praca] W; energia dostarczona do układu poprzez siły makroskopowe
+		\item[Ciepło] Q; energia dostarczona do układu poprzez oddziaływania inne niż praca
+		\item[Entropia (termodynamika klasyczna)] S; funkcja stanu układu; wielkość opisująca samorzutność przemian w systemie; wprowadzona po raz pierwszy przez Clausiusa jako \(dS=\frac{\dbar Q^\circ}{T}\) \cite{orlik}
+		\item[Entropia (termodynamika statystyczna)] S; wielkość opisująca ilość mikrostanów przypisanych danemu makrostanowi; wprowadzona przez Boltzmanna: \(S=k_B\ln{\Omega}\) \cite{landau}
+		\item[0 Zasada Termodynamiki] Jeżeli układy A i C są w równowadze termodynamicznej oraz B i C to A i B są w równowadze termodynamicznej
+		\item[I Zasada Termodynamiki] Zwiększenie energii wewnętrznej może nastąpić poprzez pracę lub ciepło; \(dU=\dbar Q+\dbar W\)
+		\item[II Zasada Termodynamiki] w układach izolowanych następuje wzrost entropii lub pozostaje ona stała (poza wyjątkiem fluktuacji); entropia podukładu może maleć \cite{landau}
+		\item[III Zasada Termodynamiki] entropia kryształów doskonałych dąży do zera, gdy temperatura dąży do zera
+	\end{description}
 \end{document}
