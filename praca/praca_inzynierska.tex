@@ -127,19 +127,67 @@
 	
 	% Wkleić przypadki struktur
 	
-	
-	\subsection{Zarys historyczny}
-	Termodynamika równowagowa zajmuje się procesami, w których ignoruje się upływ czasu, a przemiana jest kwazistatyczna. Oznacza to, że każdy stan pośredni można traktować jako stan równowagi termodynamicznej. Model taki jest wystarczający do opisu większości procesów. Można więc powiedzieć, że termodynamikę równowagową interesuje stan początkowy oraz końcowy. \par
-	Termodynamika nierównowagowa jednak zajmuje się dokładnie tym, co się dzieje w trakcie rzeczywistej przemiany i jest ona konieczna do opisu reakcji oscylacyjnych. Pierwsze przesłanki o istnieniu takowych sięgają końca XIX wieku. Były to reakcje w układach heterogenicznych, jak na przykład pierścienie Lieseganga lub oscylacje prądu płynącego przez ogniwo galwaniczne. Wyjaśnienie tych zjawisk wymagało, aby układ byl heterogeniczny i było w zgodzie z entropią Boltzmanna, według której spontaniczna organizacja jest niemożliwa. \cite{orlik}\par
-	Pierwszy model teoretyczny został przedstawiony przez Alfreda Lotka \cite{lotka}. Przez długi czas uważano, że nie mogą one przedstawiać rzeczywistych reakcji, ponieważ łamią II Z.T. według Boltzmanna. Jednak w 1921r. pokazano w reakcji Bray'a-Liebhafky'ego, że reakcje oscylacyjne w układach homogenicznych są możliwę. Jest to reakcja rokładu nadtlenku wodoru katalizowana jodanem (V). Jeszcze większy wpływ na rozwój termodynamiki nierównowagowej w kinetyce chemicznej były reakcje Biełousowa-Żabotyńskiego. Pierwszą reakcją z tej grupy została zaobserwowanaw 1959 w mieszaninie bromianu (V) potasu, siarczanie (VI) ceru (IV), kwasu malonowego oraz kwasu cytrynowego w rozcieńczonym kwasie siarkowym (VI). Została ona odkryta jako nieorganiczny analog cyklu Krebsa \cite{belousov_hist}. Istnienie takich reakcji jest jednak niezgodne z oryginalną definicją entropii Boltzmanna. \par
-	Innym zjawiskiem wyjaśnionym dzięki rozwoju termodynamiki nierównowagowej jest życie i ewolucja. Niepoprawne użycie II Z.T. może doprowadzić do wniosku, że powstanie złożonej struktury z chaosu powinno być niemożliwe. Wyjaśnienie takie błędnie wykorzystuje to prawo ignorując fakt, że układy biologiczne jak i cała Ziemia nie są układami izolowanymi. \par
+	Wyjaśnienie tych oscylacji z punktu widzenia termodynamiki wymaga wyjścia poza termodynamikę równowagową. Termodynamika równowagowa zajmuje się procesami, w których ignoruje się upływ czasu, a przemiana jest kwazistatyczna. Oznacza to, że każdy stan pośredni można traktować jako stan równowagi termodynamicznej. Model taki jest wystarczający do opisu większości procesów. Można więc powiedzieć, że termodynamikę równowagową interesuje stan początkowy oraz końcowy. \par
+	Dopiero termodynamika nierównowagowa jest teorią, która obejmuje to, co dzieje się w trakcie rzeczywistych przemian i jest ona konieczna do opisu reakcji oscylacyjnych. Pierwsze przesłanki o istnieniu takowych sięgają końca XIX wieku. Były to reakcje w układach heterogenicznych, jak na przykład pierścienie Lieseganga lub oscylacje prądu płynącego przez ogniwo galwaniczne. Wyjaśnienie tych zjawisk wymagało, aby układ byl heterogeniczny i było w zgodzie z entropią Boltzmanna, według której spontaniczna organizacja jest niemożliwa. \cite{orlik}\par
+	Pierwszy model teoretyczny został przedstawiony przez Alfreda Lotka \cite{lotka}. Przez długi czas uważano, że nie mogą one przedstawiać rzeczywistych reakcji, ponieważ łamią II Z.T. według Boltzmanna. Jednak w 1921r. pokazano w reakcji Bray'a-Liebhafky'ego, że reakcje oscylacyjne w układach homogenicznych są możliwę. Jest to reakcja rokładu nadtlenku wodoru katalizowana jodanem (V). Jeszcze większy wpływ na rozwój termodynamiki nierównowagowej w kinetyce chemicznej były reakcje Biełousowa-Żabotyńskiego. Pierwszą reakcją z tej grupy została zaobserwowanaw 1959 w mieszaninie bromianu (V) potasu, siarczanie (VI) ceru (IV), kwasu malonowego oraz kwasu cytrynowego w rozcieńczonym kwasie siarkowym (VI). Została ona odkryta jako nieorganiczny analog cyklu Krebsa \cite{belousov_hist}. \par
+	Innym zjawiskiem wyjaśnionym dzięki rozwoju termodynamiki nierównowagowej jest życie i ewolucja. Niepoprawne użycie II Z.T. może doprowadzić do wniosku, że powstanie złożonej struktury z chaosu powinno być niemożliwe. Wyjaśnienie takie błędnie wykorzystuje to prawo ignorując fakt, że układy biologiczne jak i cała Ziemia nie są układami izolowanymi. 
 	
 	\subsection{Generacja entropii}
-	II Zasada Termodynamiki odnosi się do układów zamkniętych.
-	\begin{equation}\label{entropia_izolowany}
-		dS_{uk}\geq 0
+	Wszystkie procesy rzeczywiste podlegają drugiej zasadzie termodynamiki, która określa różniczkową zmianę entropii \(\dd{S}\), w danych procesie nierównością
+	\begin{equation}\label{II_Zasada_Termodynamiki}
+		\dd{S}>0
 	\end{equation}
-	Wynika z niego, że w układach izolowanych entropia zawsze rośnie, a zatem spontaniczne uporządkowanie stabilnych struktur nie jest możliwe. \par
+	W powyższym zapisie pod symbolem \(\dd{S}\) kryje się suma różniczkowych zmian entropii otoczenia \(\dd{S_{ot}}\) i układu \(\dd{S_{uk}}\)
+	\begin{equation}
+		\dd{S}=\dd{S_{uk}}+\dd{S_{ot}}
+	\end{equation}.
+	W przyapadku układów izolowanych \(\dd{S}=\dd{S_{uk}}\), 
+	więc w układach izolowanych entropia zawsze rośnie, a zatem spontaniczne uporządkowanie stabilnych struktur nie jest możliwe. \par
+	Druga zasada termodynamiki dana wzorem \eqref{II_Zasada_Termodynamiki} rozstrzyga czy dany proces jest możliwy. Aby dodać tej zasadzie ilościowy charakter wprowadza się pojęcie produkcji entropii. W przypadku układu zamkniętego, w którym przebiega proces rzeczywisty drugą zasadę termodynamiki zapiszemy następującą nierównością: 
+	\begin{equation}\label{II_Zasada_Termodynamiki_uklad}
+		\dd{S_{uk}}>\frac{\dbar Q}{T_{ot}}
+	\end{equation},
+	gdzie \(\dd{S_{uk}}\) to różniczkowa zmiana entropii układu, \(\dbar Q\) to elementarne ciepło dostarczone do układu ze źródła o temperaturze \(T_{ot}\). Jeśli wymiana \(\dbar Q\) odbywa się w temperaturze \(T\) to 
+	\begin{equation}
+		\dd{S_{uk}}>\frac{\dbar Q}{T}
+	\end{equation}.
+	Z równania \eqref{II_Zasada_Termodynamiki} lub \eqref{II_Zasada_Termodynamiki_uklad} wynika, że w układach izolowanych % dokonczyc
+	
+	Z nierówności \eqref{II_Zasada_Termodynamiki} lub \eqref{II_Zasada_Termodynamiki_uklad} wynika, że różnicową zmianę entropii układu \(\dd{s_{uk}}\) możemy przedstawić jako sumę dwóch wkładów:
+	\begin{equation}
+		\dd{S_{uk}}=\dd_{e}S+\dd_{i}S
+	\end{equation},
+	gdzie \(\dd_{e}S=\frac{\dbar Q}{T}\), stanowi wkład do \(\dd{S_{uk}}\) wynikający tylko z wymiany ciepła, \(\dd_{i}S\) jest równy:
+	\begin{equation}
+		\dd_{i}S=\dd{S_{uk}}-\frac{\dbar Q}{T}
+	\end{equation}.
+	Składnik \(\dd_{i}S\) nazywany jest produkcją entropii. Warto zaznaczyć, że dla układu izolowanego \(\dd_{e}S=0\), stąd \(\dd{S_{uk}}=\dd_{i}S\). Natomiast na podstawie nierówności \eqref{II_Zasada_Termodynamiki} lub \eqref{II_Zasada_Termodynamiki_uklad} wynika, że \(\dd_{i}S>0\) w przemianach samorzutnych. \par
+	Rozpatrzmy teraz drugą zasadę termodynamiki z punktu widzenia układu i otoczenia, która przyjmuje postać:
+	\begin{equation}\label{II_Zasada_Termodynamiki_uklad_i_otoczenie}
+		\dd{S_{ot}}+\dd{S_{ot}}>0
+	\end{equation}, 
+	gdzie symbolem \(\dd{S_{ot}}\) oznaczono różniczkową zmianę entropii otoczenia. Do nierówności \eqref{II_Zasada_Termodynamiki_uklad_i_otoczenie} wykorzystamy pojęcia zmieny entropii wynikającej z wymiany ciepła pomiędzy układem i otoczeniem oraz produkcji entropii, która może pojawić się w układzie i otoczeniu. Z nierówności \eqref{II_Zasada_Termodynamiki_uklad_i_otoczenie} otrzymujemy:
+	\begin{equation}\label{II_Zasada_Termodynamiki_uklad_i_otoczenie_rozpisane}
+		\dd_{e}S_{uk}+\dd_{i}S_{uk}+\dd_{e}S_{ot}+\dd_{i}S_{ot}>0
+	\end{equation}.
+	Jeśli wymiana ciepła zachodzi w temperaturze \(T\) to wówczas: \(\dd_{e}S_{uk}=-\dd_{e}S_{ot}\), otrzymujemy z \eqref{II_Zasada_Termodynamiki_uklad_i_otoczenie_rozpisane} 
+	\begin{equation}\label{}
+		\dd_{i}S_{uk}+\dd_{i}S_{ot}>0
+	\end{equation}.
+	Warunek obejmuje przypadek, w którym produkcja entropii \(\dd_{i}S_{uk}\) zmaleje na tyle, że \(\dd_{i}S_{ot}\) skompensuje ten niedostatek. W innym przypadku \(\dd_{i}S_{ot}\) może na tyle zmaleć, że \(\dd_{i}S_{uk}\) będzie kompensować ten niedostatek. W termodynamice nierównowagowej dokonujemy dodatkowo założenia:
+	\begin{equation*}
+		\dd_{i}S_{uk}>0
+	\end{equation*}
+	oraz
+	\begin{equation*}
+		\dd_{i}S_{ot}>0
+	\end{equation*}.
+	Z punkty widzenia pojedynczej komórki, dla której pozostałe stanowią otoczenie, oznacza to, że produkcja entropii w jej wnętrzu ma być nieujemna i podobnie dla pozostałych. To oznacza dalej, że w każdym dowolnie małym obszarze układu, w którym zachodzą procesy samorzutne następuje związane z nimi tworzenie entropii. To stwierdzenie stanowi treść drugiej hipotezy termodynamiki nierównowagowej, nazywaną lokalnym sformuowaniem drugiej zasady termodynamiki. Lokalne sformuowanie drugiej zasady termodynamiki nie wyklucza takiego przypadku, w którym w jednym i tym samym miejscu zachodzi kilka procesów, z których niektóre zmniejszają entropię \((\dd_{i}S<0)\), pod warunkiem, że oprócz nich obecne są procesy produkujące entropię \((\dd_{i}S>0)\), które z naddatkiem zwiększa entropię w tym miejscu. 
+	
+
+
+
+
 	Zmianę entropii układu można zapisać jako wynikającą z przepływu ciepła oraz samorzutnej generacji entropii: 
 	\begin{equation}
 		dS_{uk}=d_{e}S+d_{i}S_{uk}
@@ -708,7 +756,7 @@
 	\end{gather}
 	Podstawiając \eqref{dod A: 4}, \eqref{dod A: 6} oraz \eqref{dod A: 8} do \eqref{dod A: 5} otrzymujemy: 
 	\begin{equation} \label{dod A: 9}
-		\dv{s}{t}=\frac{1}{T}\dv{u}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}+\left[\vb{J}_{u}\vdot\grad{\frac{1}{T}}-\sum_{i}\vb{J}_{i}\cdot\grad{\frac{\mu_{i}}{T}}-\frac{1}{T}\sum_{r}\sum_{i}\nu_{ir}\mu_{i}\dv{\xi_{r}}{t}\right]+\sigma
+		\dv{s}{t}=\frac{1}{T}\dv{u}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}-\left[\vb{J}_{u}\vdot\grad{\frac{1}{T}}-\sum_{i}\vb{J}_{i}\cdot\grad{\frac{\mu_{i}}{T}}-\frac{1}{T}\sum_{r}\sum_{i}\nu_{ir}\mu_{i}\dv{\xi_{r}}{t}\right]+\sigma
 	\end{equation}
 	Wprowadzamy pojęcie powinowactwa chemicznego: 
 	\begin{equation}
@@ -716,7 +764,7 @@
 	\end{equation}
 	Równanie \eqref{dod A: 9} przybiera postać:
 	\begin{equation}
-		\dv{s}{t}=\frac{1}{T}\dv{u}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}+\left[\vb{J}_{u}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}\right]+\sigma
+		\dv{s}{t}=\frac{1}{T}\dv{u}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}-\left[\vb{J}_{u}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}\right]+\sigma
 	\end{equation}
 	Otrzymujemy z porównania tego wzoru z \eqref{dod A: 3}:
 	\begin{equation}
@@ -823,16 +871,42 @@
 	\end{gather}
 	\pagebreak
 	\section{Dodatek C}
-	\subsection{Definicje i prawa}
-	\begin{description}
-		\item[Energia wewnętrzna] U; suma wszytkich energii kinetycznych oraz potencjalnych cząstek składających się na ciało
-		\item[Praca] W; energia dostarczona do układu poprzez siły makroskopowe
-		\item[Ciepło] Q; energia dostarczona do układu poprzez oddziaływania inne niż praca
-		\item[Entropia (termodynamika klasyczna)] S; funkcja stanu układu; wielkość opisująca samorzutność przemian w systemie; wprowadzona po raz pierwszy przez Clausiusa jako \(dS=\frac{\dbar Q^\circ}{T}\) \cite{orlik}
-		\item[Entropia (termodynamika statystyczna)] S; wielkość opisująca ilość mikrostanów przypisanych danemu makrostanowi; wprowadzona przez Boltzmanna: \(S=k_B\ln{\Omega}\) \cite{landau}
-		\item[0 Zasada Termodynamiki] Jeżeli układy A i C są w równowadze termodynamicznej oraz B i C to A i B są w równowadze termodynamicznej
-		\item[I Zasada Termodynamiki] Zwiększenie energii wewnętrznej może nastąpić poprzez pracę lub ciepło; \(dU=\dbar Q+\dbar W\)
-		\item[II Zasada Termodynamiki] w układach izolowanych następuje wzrost entropii lub pozostaje ona stała (poza wyjątkiem fluktuacji); entropia podukładu może maleć \cite{landau}
-		\item[III Zasada Termodynamiki] entropia kryształów doskonałych dąży do zera, gdy temperatura dąży do zera
-	\end{description}
+	%
+	%\begin{description}
+	%	\item[Energia wewnętrzna] U; suma wszytkich energii kinetycznych oraz potencjalnych cząstek składających się na ciało
+	%	\item[Praca] W; energia dostarczona do układu poprzez siły makroskopowe
+	%	\item[Ciepło] Q; energia dostarczona do układu poprzez oddziaływania inne niż praca
+	%	\item[Entropia (termodynamika klasyczna)] S; funkcja stanu układu; wielkość opisująca samorzutność przemian w systemie; wprowadzona po raz pierwszy przez Clausiusa jako \(dS=\frac{\dbar Q^\circ}{T}\) \cite{orlik}
+	%	\item[Entropia (termodynamika statystyczna)] S; wielkość opisująca ilość mikrostanów przypisanych danemu makrostanowi; wprowadzona przez Boltzmanna: \(S=k_B\ln{\Omega}\) \cite{landau}
+	%	\item[0 Zasada Termodynamiki] Jeżeli układy A i C są w równowadze termodynamicznej oraz B i C to A i B są w równowadze termodynamicznej
+	%	\item[I Zasada Termodynamiki] Zwiększenie energii wewnętrznej może nastąpić poprzez pracę lub ciepło; \(dU=\dbar Q+\dbar W\)
+	%	\item[II Zasada Termodynamiki] w układach izolowanych następuje wzrost entropii lub pozostaje ona stała (poza wyjątkiem fluktuacji); entropia podukładu może maleć \cite{landau}
+	%	\item[III Zasada Termodynamiki] entropia kryształów doskonałych dąży do zera, gdy temperatura dąży do zera
+	%\end{description}
+	%\subsection{Zarys historyczny}
+	%Termodynamika równowagowa zajmuje się procesami, w których ignoruje się upływ czasu, a przemiana jest kwazistatyczna. Oznacza to, że każdy stan pośredni można traktować jako stan równowagi termodynamicznej. Model taki jest wystarczający do opisu większości procesów. Można więc powiedzieć, że termodynamikę równowagową interesuje stan początkowy oraz końcowy. \par
+	%Termodynamika nierównowagowa jednak zajmuje się dokładnie tym, co się dzieje w trakcie rzeczywistej przemiany i jest ona konieczna do opisu reakcji oscylacyjnych. Pierwsze przesłanki o istnieniu takowych sięgają końca XIX wieku. Były to reakcje w układach heterogenicznych, jak na przykład pierścienie Lieseganga lub oscylacje prądu płynącego przez ogniwo galwaniczne. Wyjaśnienie tych zjawisk wymagało, aby układ byl heterogeniczny i było w zgodzie z entropią Boltzmanna, według której spontaniczna organizacja jest niemożliwa. \cite{orlik}\par
+	%Pierwszy model teoretyczny został przedstawiony przez Alfreda Lotka \cite{lotka}. Przez długi czas uważano, że nie mogą one przedstawiać rzeczywistych reakcji, ponieważ łamią II Z.T. według Boltzmanna. Jednak w 1921r. pokazano w reakcji Bray'a-Liebhafky'ego, że reakcje oscylacyjne w układach homogenicznych są możliwę. Jest to reakcja rokładu nadtlenku wodoru katalizowana jodanem (V). Jeszcze większy wpływ na rozwój termodynamiki nierównowagowej w kinetyce chemicznej były reakcje Biełousowa-Żabotyńskiego. Pierwszą reakcją z tej grupy została zaobserwowanaw 1959 w mieszaninie bromianu (V) potasu, siarczanie (VI) ceru (IV), kwasu malonowego oraz kwasu cytrynowego w rozcieńczonym kwasie siarkowym (VI). Została ona odkryta jako nieorganiczny analog cyklu Krebsa \cite{belousov_hist}. Istnienie takich reakcji jest jednak niezgodne z oryginalną definicją entropii Boltzmanna. \par
+	%Innym zjawiskiem wyjaśnionym dzięki rozwoju termodynamiki nierównowagowej jest życie i ewolucja. Niepoprawne użycie II Z.T. może doprowadzić do wniosku, że powstanie złożonej struktury z chaosu powinno być niemożliwe. Wyjaśnienie takie błędnie wykorzystuje to prawo ignorując fakt, że układy biologiczne jak i cała Ziemia nie są układami izolowanymi.
+	%\subsection{Generacja entropii}
+	%II Zasada Termodynamiki odnosi się do układów zamkniętych.
+	%\begin{equation}\label{entropia_izolowany}
+	%	dS_{uk}\geq 0
+	%\end{equation}
+	%Wynika z niego, że w układach izolowanych entropia zawsze rośnie, a zatem spontaniczne uporządkowanie stabilnych struktur nie jest możliwe. \par
+	%Zmianę entropii układu można zapisać jako wynikającą z przepływu ciepła oraz samorzutnej generacji entropii: 
+	%\begin{equation}
+	%	dS_{uk}=d_{e}S+d_{i}S_{uk}
+	%\end{equation}
+	%Dla układu zamkniętego: \(d_{e}S=0\), stąd wykorzystując \eqref{entropia_izolowany}:
+	%\begin{equation}
+	%	dS_{uk}=d_{i}S_{uk}
+	%\end{equation}
+	%gdzie
+	%\begin{description}
+	%	\item[\(dS_{uk}\)] całkowita zmiana entropii układu
+	%	\item[\(d_{e}S=\frac{\dbar Q}{T_{uk}}\)] zmiana wynikająca z przepływu ciepła
+	%	\item[\(d_{i}S_{uk}\geq 0\)] zmiana wynikająca z produkcji entropii
+	%\end{description}
+	%Dla każdego układu produkcja entropii jest dodatnia. Wynika z tego argumentu także, że jest to prawdziłe dla każdego podukładu należącego do danego układu niezależnie od jego wielkości. Zasada ta ma więc charakter lokalny.
 \end{document}
