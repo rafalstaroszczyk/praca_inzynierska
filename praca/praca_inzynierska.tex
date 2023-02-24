@@ -203,13 +203,16 @@
 		\item[\(d_{i}S_{uk}\geq 0\)] zmiana wynikająca z produkcji entropii
 	\end{description}
 	Dla każdego układu produkcja entropii jest dodatnia. Wynika z tego argumentu także, że jest to prawdziłe dla każdego podukładu należącego do danego układu niezależnie od jego wielkości. Zasada ta ma więc charakter lokalny. 
+	
+	
+	
 	\subsection{Termodynamika liniowa i nieliniowa}
 	W ogólności natężenie przepływów termodynamicznych jest dowolną funkcją bodźców termodynamicznych: 
 	\[J=f\left(X\right)\]
 	Rozwinięcie w szereg Taylora tej funkcji wokół \(X_{0}\) jest
 	\begin{equation}\label{ogolne_natezenie}
 		J_{i}=J_{i}^{eq}+\sum_{k=1}^{n}\left[\frac{\partial J_{i}}{\partial X_{k}}\left(X_{k}-X_{k}^{eq}\right)\right]+\sum_{k=1}^{n}\left[\frac{1}{2}\frac{\partial^{2} J_{i}}{\partial X_{k}^{2}}\left(X_{k}-X_{k}^{eq}\right)^{2}\right]+\ldots
-	\end{equation}
+	\end{equation} % dodac elementy mieszane
 	gdzie:
 	\begin{description}
 		\item[\(J\), \(J^{eq}\)] natężenie przepływów termodynamicznych oraz to natężenie w stanie równowagi
@@ -235,6 +238,27 @@
 	Jednak w chemii termodynamika liniowa nie opisuje dobrze szybkości zachodzenia reakcji chemicznych, których prędkość zazwyczaj zależy od wyższych potęg stężenia związków. \par
 	
 	Termodynamika liniowa ma zastosowanie w większości przypadków technicznych, jednak nie są one w stanie opisać reakcji chemicznych, których szybkość zależy od wyższych niż 1 potęg stężenia składników. \par
+	Istnieje kilka podejść w próbie wyjścia poza zakres liniowej termodynamiki nierównowagowej. Jedno z nich zakłada, że współczynniki \(L_{ij}\) zależą od bodźców i przepływów, a więc
+	\begin{align}
+		& \pdv{L_{ij}}{X_{k}}\neq 0, && \pdv{L_{ij}}{J_{k}}\neq 0
+	\end{align}. 
+	Równanie 
+	% "f..."?
+	zostaje zachowane, ale ten zabieg powoduje, że teoria staje się nieliniowa. \par
+	Kolejne podejscie zakłada, że w rozwinięciu \eqref{ogolne_natezenie} uwzględnia większą liczbę wyrazów, przy zachowaniu niezależności współczynników rozwinięcia. Postuluje się jednocześnie, aby spełnione były relacje przemienności:
+	\begin{align}
+		L_{ij} &= L_{ji} \\
+		L_{ijk} &= L_{jki} = L_{kij}
+	\end{align}
+	Jednak próby nie były owocne, a przemienność współczynników \(L_{ij}, L_{ijk}, \ldots\) trudna do uzależnienia. \par
+	Bardziej owocne podejście do problemu wyjścia poza liniową termodynamikę nierównowagową, głównie w kontekście oscylacyjnych reakcji chemicznych, polegało na wykorzyskiwaniu metod stosowanych z teorii układów dynamicznych. Autorzy tej koncepcji pozostawiają postulat o istnieniu równowagi lokalnej. Hipoteza ta zakłada, że cały układ możemy podzielić na mniejsze podukłady (zwane niekiedy komórkami), w których parametry termodynamiczne są ściśle zdefiniowane, tak jak to mamy w zagadnieniach równowagowych. Parametry te w innych komórkach, mogą mieć inne wartości. \par
+	Zakłada się tutaj, że te komórki są na tyle małe, iż możemy przyjąć, że parametry zmieniają się w sposób ciągły. Jednak z drugiej strony trzeba przyjąć, iż nie mogą one mieć bardzo małych rozmiarów. Ich makroskopowy charakter musi być zachowany przy założeniu dodatkowym, iż w każdej z nich panuje stan wewnętrznej równowagi. 
+	
+	
+	
+	
+	
+	
 	Po zaprzestaniu wymuszania nierównowagi układ dąży do stanu równowagi z minimalną zerową produkcją entropii. Przy utrzymaniu stałego bodźca termodynamicznego układ dąży do stanu stacjonarnego o minimalnej dodatniej produkcji entropii. \par
 	Rozwijając entropię \(s\left(E\right)\) po zakłóceniu \(\delta E\)w szereg Taylora otrzymujemy:
 	\begin{equation}
