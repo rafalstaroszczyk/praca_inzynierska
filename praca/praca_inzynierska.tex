@@ -70,6 +70,9 @@
 	\begin{center}
 		\textbf{Strona 3}
 	\end{center}
+	Termodynamika równowagowe wymaga założenia pewnych wyidealizowanych założeń, na przykład jednorodność parametrów intensywnych, maksimum entropii w układach izolowanych, minimum energii swobodnej Helmholtza w układach izotermiczno-izochorycznych, mininum entalpii swobodnej Gibbsa w układach izotermiczno-izobarycznych \cite{pudlik}. Takie założenie nie zawsze są możliwe, przykładowo dla szybko zachodzących zmian jak w przypadku eksplozji, albo dla układów, w których interesuje nas nie tylko stan układu po osiągnięciu przez niego stanu równowagi, ale też jego zachowania podczas tej przemiany. \par
+	W pracy zająłem się głównie reakcjami chemicznymi oscylacyjnymi, które są przykładem czasowej struktury dyssypatywnej. Struktur takich nie można rozpatrywać w ramach termodynamiki liniowej, ponieważ są one typowe jedynie dla stanów nierównowagowych. Pierwsze takie reakcje odkryto w pierwszej połowie XX w., jednak jednym z nich jest organizm żywy, który można rozpatrywać jako bardzo skomplikowany układ termodynamiczny, w którym zachodzą cykliczne zmiany, na przykład stężenie hormonów oraz bicie serca. Najważniejszą reakcją dla rozwoju teorii reakcji oscylacyjnych jest reakcja Biełousowa-Żabotyńskiego. \par
+	W pracy udało się zasymulować reakcje oscylacyjne wykorzystując modele Lotki, Lotki-Volterry oraz bruskelatora. Przeprowadzono teoretyczną analizę stabilności w stanach stacjonarnych oraz sprawdzono jej prawdziwość przy użyciu symulacji. 
 	%\blindtext \par
 	%\blindtext \par
 	%\blindtext \par
@@ -933,4 +936,59 @@
 	%	\item[\(d_{i}S_{uk}\geq 0\)] zmiana wynikająca z produkcji entropii
 	%\end{description}
 	%Dla każdego układu produkcja entropii jest dodatnia. Wynika z tego argumentu także, że jest to prawdziłe dla każdego podukładu należącego do danego układu niezależnie od jego wielkości. Zasada ta ma więc charakter lokalny.
+	\section{Dodatek D}
+	\begin{center}
+		\ce{A <=>[k_{1}][k_{-1}] X} \\
+		\ce{2X + Y <=>[k_{2}][k_{-2}] 3X} \\
+		\ce{B + X <=>[k_{3}][k_{-3}] D + Y} \\
+		\ce{X <=>[k_{4}][k_{-4}] E}
+	\end{center}
+	D i E są dowolne przyjmuję, więc:
+	\begin{align}
+		[D] &= \frac{k_{1}^{4}k_{2}k_{-2}[A]^{4}}{k_{3}k_{-3}k_{4}^{4}} \\
+		[E] &= \frac{k_{1}k_{-1}[A]}{k_{4}k_{-4}}
+	\end{align}
+	Wprowadzam oznaczenia: 
+	\begin{align}
+		\tau &= k_{4}t \\
+		[X] &= x\frac{k_{1}[A]}{k_{4}} \\
+		[Y] &= y\frac{k_{3}k_{4}[B]}{k_{1}k_{2}[A]} \\
+		a &= \frac{k_{3}[B]}{k_{4}} \\
+		b &= \frac{k_{1}^{2}k_{2}[A]^{2}}{k_{4}^{3}} \\
+		c &= \frac{k_{-1}}{k_{4}} \\
+		d &= \frac{k_{1}^{4}k_{2}k_{-2}[A]^{4}}{k_{3}k_{4}^{5}[B]}
+	\end{align}
+	Równania różniczkowe mają wtedy postać:
+	\begin{align}
+		\dv{x}{\tau} = 1 + ax^{2}y - ax - x - cx - bc^{3} + by + c \\
+		\dv{y}{\tau} = -bx^{2}y + bx + dx^{3} - dy
+	\end{align}
+	Po wprowadzeniu podstawienia:
+	\begin{gather*}
+		\gamma = x - 1 \\
+		\vartheta = y - 1
+	\end{gather*}
+	i linearyzacji
+	\begin{align}
+		\dv{\gamma}{\tau} &= (a - c - 3b - 1)\gamma + (a + b)\vartheta \\
+		\dv{\vartheta}{\tau} &= (- b + 3d)\gamma + (- b - d)\vartheta
+	\end{align}
+	Równanie charakterystyczne:
+	\begin{equation}
+		\lambda^{2} - (a - c - 4b - d - 1)\lambda + (-4ad + bc + cd + 4b^{2} + b + d)
+	\end{equation}
+	Powinowactwo chemiczne przyjmując \(A=0\) w stanie równowagi danego równania:
+	\begin{align}
+		1: & \ln(\frac{1}{cx}) \\
+		2: & \ln(\frac{by}{dx}) \\
+		3: & \ln(\frac{bx}{dy}) \\
+		4: & \ln(\frac{x}{c})
+	\end{align}
+	Liczby postępu reakcji:
+	\begin{align}
+		\dv{\xi_{1}}{\tau} &= [X]_{st}(1 - cx) \\
+		\dv{\xi_{2}}{\tau} &= [X]_{st}(ax^{2}y - \frac{ad}{b}x^{3}) \\
+		\dv{\xi_{3}}{\tau} &= \\
+		\dv{\xi_{4}}{\tau} &= [X]_{st}(x - c)
+	\end{align}
 \end{document}
