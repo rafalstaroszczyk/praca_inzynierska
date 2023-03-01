@@ -73,10 +73,6 @@
 	Termodynamika równowagowe wymaga założenia pewnych wyidealizowanych założeń, na przykład jednorodność parametrów intensywnych, maksimum entropii w układach izolowanych, minimum energii swobodnej Helmholtza w układach izotermiczno-izochorycznych, mininum entalpii swobodnej Gibbsa w układach izotermiczno-izobarycznych \cite{pudlik}. Takie założenie nie zawsze są możliwe, przykładowo dla szybko zachodzących zmian jak w przypadku eksplozji, albo dla układów, w których interesuje nas nie tylko stan układu po osiągnięciu przez niego stanu równowagi, ale też jego zachowania podczas tej przemiany. \par
 	W pracy zająłem się głównie reakcjami chemicznymi oscylacyjnymi, które są przykładem czasowej struktury dyssypatywnej. Struktur takich nie można rozpatrywać w ramach termodynamiki liniowej, ponieważ są one typowe jedynie dla stanów nierównowagowych. Pierwsze takie reakcje odkryto w pierwszej połowie XX w., jednak jednym z nich jest organizm żywy, który można rozpatrywać jako bardzo skomplikowany układ termodynamiczny, w którym zachodzą cykliczne zmiany, na przykład stężenie hormonów oraz bicie serca. Najważniejszą reakcją dla rozwoju teorii reakcji oscylacyjnych jest reakcja Biełousowa-Żabotyńskiego. \par
 	W pracy udało się zasymulować reakcje oscylacyjne wykorzystując modele Lotki, Lotki-Volterry oraz bruskelatora. Przeprowadzono teoretyczną analizę stabilności w stanach stacjonarnych oraz sprawdzono jej prawdziwość przy użyciu symulacji. 
-	%\blindtext \par
-	%\blindtext \par
-	%\blindtext \par
-	%\blindtext \par
 	\pagebreak
 	
 	\section*{Abstract}
@@ -945,7 +941,7 @@
 	\end{center}
 	D i E są dowolne przyjmuję, więc:
 	\begin{align}
-		[D] &= \frac{k_{1}^{4}k_{2}k_{-2}[A]^{4}}{k_{3}k_{-3}k_{4}^{4}} \\
+		[D] &= \frac{k_{1}^{4}k_{2}k_{-2}[A]^{4}}{k_{3}k_{-3}k_{4}^{4}[B]} \\
 		[E] &= \frac{k_{1}k_{-1}[A]}{k_{4}k_{-4}}
 	\end{align}
 	Wprowadzam oznaczenia: 
@@ -960,8 +956,8 @@
 	\end{align}
 	Równania różniczkowe mają wtedy postać:
 	\begin{align}
-		\dv{x}{\tau} = 1 + ax^{2}y - ax - x - cx - bc^{3} + by + c \\
-		\dv{y}{\tau} = -bx^{2}y + bx + dx^{3} - dy
+		\dv{x}{\tau} &= 1 + ax^{2}y - ax - x - cx - bc^{3} + by + c \\
+		\dv{y}{\tau} &= -bx^{2}y + bx + dx^{3} - dy
 	\end{align}
 	Po wprowadzeniu podstawienia:
 	\begin{gather*}
@@ -988,7 +984,20 @@
 	\begin{align}
 		\dv{\xi_{1}}{\tau} &= [X]_{st}(1 - cx) \\
 		\dv{\xi_{2}}{\tau} &= [X]_{st}(ax^{2}y - \frac{ad}{b}x^{3}) \\
-		\dv{\xi_{3}}{\tau} &= \\
+		\dv{\xi_{3}}{\tau} &= [X]_{st}(ac - \frac{ad}{b}y)\\
 		\dv{\xi_{4}}{\tau} &= [X]_{st}(x - c)
 	\end{align}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{"brusselator_rev1; a=9, b=1, c=1, d=0.1".png}
+		\caption{Wykres fazowy dla a=9, b=1, c=1, d=0,1}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{"brusselator_rev2; a=9, b=1, c=1, d=0.1".png}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{"brusselator_rev3; a=9, b=1, c=1, d=0.1".png}
+	\end{figure}
 \end{document}
