@@ -64,6 +64,7 @@
 % Opisy tabel nad tabela
 % Odpowiednie przerwy miedzy opisem a tabela/rysunkiem
 % Byc moze problemy z numerowaniem tabel, ale chyba jest na razie dobrze
+% Przesunąc przecinki przy równaniach
 
 \begin{document}
 	\section*{Streszczenie}
@@ -933,60 +934,101 @@
 	%\end{description}
 	%Dla każdego układu produkcja entropii jest dodatnia. Wynika z tego argumentu także, że jest to prawdziłe dla każdego podukładu należącego do danego układu niezależnie od jego wielkości. Zasada ta ma więc charakter lokalny.
 	\section{Dodatek D}
+	Uogólniona forma modelu bruskelator ma postać:
 	\begin{center}
 		\ce{A <=>[k_{1}][k_{-1}] X} \\
 		\ce{2X + Y <=>[k_{2}][k_{-2}] 3X} \\
 		\ce{B + X <=>[k_{3}][k_{-3}] D + Y} \\
-		\ce{X <=>[k_{4}][k_{-4}] E}
+		\ce{X <=>[k_{4}][k_{-4}] E}.
 	\end{center}
-	D i E są dowolne przyjmuję, więc:
+	Reakcje w nim są odwracalne i przebiegają przy różncyh stałych prędkości reakcji oznaczonych \(k_{i}\) oraz \(k_{-i}\) dla rekacji odpowiednio w prawą i lewą stronę. \par
+	Całkowita zmiana reagentów \(X\) oraz \(Y\) ma postać:
+	\begin{align}
+		\dv{[X]}{t} &=& k_{1}[A] +& k_{2}[X]^{2}[Y] - k_{3}[B][X] - k_{4}[X] - k_{-1}[X] &-& k_{-2}[X]^{3} + k_{-3}[D][Y] + k_{-4}[E] \\
+		\dv{[Y]}{t} &=& -& k_{2}[X]^{2}[Y] + k_{3}[B][X] &+& k_{-2}[X]^{3} - k_{-3}[D][Y]
+	\end{align}
+	Rozdzielam przyrosty na dwie części, odpowiadające reakcjom w prawą oraz lewą stronę:
+	\begin{align}
+		\dv{[X]_{1}}{t} &= k_{1}[A] + k_{2}[X]^{2}[Y] - k_{3}[B][X] - k_{4}[X] \\
+		\dv{[Y]_{1}}{t} &= - k_{2}[X]^{2}[Y] + k_{3}[B][X] \\
+		\dv{[X]_{2}}{t} &= - k_{-1}[X] - k_{-2}[X]^{3} + k_{-3}[D][Y] + k_{-4}[E] \\
+		\dv{[Y]_{2}}{t} &= + k_{-2}[X]^{3} - k_{-3}[D][Y]
+	\end{align}
+	Stany stacjonarne odpowiadające odpowiednio \([X]_{1}\) i \([Y]_{1}\) oraz \([X]_{2}\) i \([Y]_{2}\) to:
+	\begin{align}
+		\dv{[X]_{st, 1}}{t} &= \frac{k_{1}[A]}{k_{4}}; & \dv{[Y]_{st, 1}}{t} &= \frac{k_{3}k_{4}[B]}{k_{1}k_{2}[A]} \\
+		\dv{[X]_{st, 2}}{t} &= \frac{k_{-4}[E]}{k_{-1}}; & \dv{[Y]_{st, 2}}{t} &= \frac{k_{-2}k_{-4}^{3}[E]^{3}}{k_{-1}^{3}k_{-3}[D]}
+	\end{align}
+	Przyjmuję, że mogę dowolnie kontrolować stężenia reagentów \([A]\), \([B]\), \([D]\) i \([E]\). \([A]\) oraz \([B]\) pozostają dowolnymi parametrami, natomiast \([D]\) i \([E]\) są zależne od innych parametrów. Po przyrównaniu \([X]_{st, 1}\) oraz \([X]_{st, 2}\) i analogicznie dla \([Y]\) otrzymujemy wartości dla \([D]\) oraz \([E]\):
 	\begin{align}
 		[D] &= \frac{k_{1}^{4}k_{2}k_{-2}[A]^{4}}{k_{3}k_{-3}k_{4}^{4}[B]} \\
 		[E] &= \frac{k_{1}k_{-1}[A]}{k_{4}k_{-4}}
 	\end{align}
-	Wprowadzam oznaczenia: 
+	Wspólna wartość stężeń dla stanu stacjonarnego:
 	\begin{align}
+		[X]_{st} &= \frac{k_{1}[A]}{k_{4}} \\
+		[Y]_{st} &= \frac{k_{3}k_{4}[B]}{k_{1}k_{2}[A]}
+	\end{align}
+	Dla zwiększenia przejrzystości równań wprowadzam oznaczenia: 
+	\begin{align}
+		[X] &= x[X]_{st} = x\frac{k_{1}[A]}{k_{4}} \\
+		[Y] &= y[Y]_{st} = y\frac{k_{3}k_{4}[B]}{k_{1}k_{2}[A]} \\
 		\tau &= k_{4}t \\
-		[X] &= x\frac{k_{1}[A]}{k_{4}} \\
-		[Y] &= y\frac{k_{3}k_{4}[B]}{k_{1}k_{2}[A]} \\
 		a &= \frac{k_{3}[B]}{k_{4}} \\
 		b &= \frac{k_{1}^{2}k_{2}[A]^{2}}{k_{4}^{3}} \\
 		c &= \frac{k_{-1}}{k_{4}} \\
 		d &= \frac{k_{1}^{4}k_{2}k_{-2}[A]^{4}}{k_{3}k_{4}^{5}[B]}
 	\end{align}
-	Równania różniczkowe mają wtedy postać:
+	Równania różniczkowe mają wtedy postać
 	\begin{align}
 		\dv{x}{\tau} &= 1 + ax^{2}y - ax - x - cx - bc^{3} + by + c \\
-		\dv{y}{\tau} &= -bx^{2}y + bx + dx^{3} - dy
+		\dv{y}{\tau} &= -bx^{2}y + bx + dx^{3} - dy, 
 	\end{align}
+	a punkt stacjonarny występuje dla \(x=1, y=1\). 
 	Po wprowadzeniu podstawienia:
 	\begin{gather*}
 		\gamma = x - 1 \\
 		\vartheta = y - 1
 	\end{gather*}
-	i linearyzacji
+	i linearyzacji otrzymujemy:
 	\begin{align}
 		\dv{\gamma}{\tau} &= (a - c - 3b - 1)\gamma + (a + b)\vartheta \\
 		\dv{\vartheta}{\tau} &= (- b + 3d)\gamma + (- b - d)\vartheta
 	\end{align}
+
+	% do usuniecia?
 	Równanie charakterystyczne:
 	\begin{equation}
 		\lambda^{2} - (a - c - 4b - d - 1)\lambda + (-4ad + bc + cd + 4b^{2} + b + d)
 	\end{equation}
-	Powinowactwo chemiczne przyjmując \(A=0\) w stanie równowagi danego równania:
+
+	Powinowactwo chemiczne w stanie równowagi każdego z równań z osobna wynosi \(A=0\) \cite{pigon1}. W ogólnej postaci ma ono postać:
+	\begin{equation}
+		A = A_{0} - RT\ln(\prod_{i}c_{i}^{\nu_{i}}), 
+	\end{equation}
+	gdzie \(R\) to uniwersalna stała gazowa, \(T\) - temperatura bezwzględna, \(c_{i}\) - stężenie \(i\)-tego składnika, a \(\nu_{i}\) to współczynnik stechiometryczny reagenta \(i\) (dodatni dla produktów po prawej stronie, ujemny dla substratów po lewej). \(RT\) jest jedynie stałą i na potrzeby symulacji przyjąłem \(RT=1\). Otrzymujemy dla każdej z reakcji odpowiednio:
 	\begin{align}
 		1: & \ln(\frac{1}{cx}) \\
 		2: & \ln(\frac{by}{dx}) \\
 		3: & \ln(\frac{bx}{dy}) \\
-		4: & \ln(\frac{x}{c})
+		4: & \ln(\frac{x}{c}).
 	\end{align}
-	Liczby postępu reakcji:
+	Liczba postępu reakcji wyrażona jest równością: 
+	\begin{equation}
+		\dd{\xi} = \frac{\dd{n_{i}}}{\nu_{i}}
+	\end{equation}
+	dla dowolnego reagenta, lub używając \(\dd{c_{i}} = \frac{\dd{n_{i}}}{V}\), gdzie \(V\) jest objętością, która także mogę przyjąc, że jest równa \(V=1\). Otrzymane liczby postępu reakcji dla poszczególnych reakcji:
 	\begin{align}
 		\dv{\xi_{1}}{\tau} &= [X]_{st}(1 - cx) \\
 		\dv{\xi_{2}}{\tau} &= [X]_{st}(ax^{2}y - \frac{ad}{b}x^{3}) \\
-		\dv{\xi_{3}}{\tau} &= [X]_{st}(ac - \frac{ad}{b}y)\\
-		\dv{\xi_{4}}{\tau} &= [X]_{st}(x - c)
+		\dv{\xi_{3}}{\tau} &= [X]_{st}(ac - \frac{ad}{b}y) \\
+		\dv{\xi_{4}}{\tau} &= [X]_{st}(x - c).
 	\end{align}
+	\([X]_{st}\) można oczywiście przyjąć, że jest równe \([X]_{st}=1\). Z prawa de Dondera \(T\dd_{i}S=\sum_{r}A_{r}\xi_{r}\) przyjmując \(T=1\) otrzymujemy
+	\begin{equation}
+		\dv{_{i}S}{\tau} = \ln(\frac{1}{cx})(1 - cx) + \ln(\frac{by}{dx})(ax^{2}y - \frac{ad}{b}x^{3}) + \ln(\frac{bx}{dy})(ac - \frac{ad}{b}y) + \ln(\frac{x}{c})(x - c)
+	\end{equation}
+	Wykresy otrzymane z przeprowadzonej symulacji dla kroku symulacji \(h = \dd{\tau} = 0,001\) oraz warunku początkowego \(x=1, y=2\):
 	\begin{figure}[H]
 		\centering
 		\includegraphics{"brusselator_rev1; a=9, b=1, c=1, d=0.1".png}
@@ -995,9 +1037,17 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics{"brusselator_rev2; a=9, b=1, c=1, d=0.1".png}
+		\caption{Zależność wielkości \(x\) oraz \(y\) od \(\tau\)}
 	\end{figure}
 	\begin{figure}[H]
 		\centering
 		\includegraphics{"brusselator_rev3; a=9, b=1, c=1, d=0.1".png}
+		\caption{Zależność wielkości \(S\) oraz \(\dv{S}{\tau}\) od \(\tau\)}
 	\end{figure}
+	\section{Dodatek E}
+	\begin{center}
+		Twierdzenie Poincarego-Bendixsona
+	\end{center}
+	"Jeśli w przestrzeni fazowej będącej podzbiorem płaszczyzny \(\mathbb{R}^{2}\) orbita zawiera co najmniej jeden swój punkt graniczny, to jest ona punktem krytycznym albo orbitą zamkniętą" \cite{palczewski} \par
+	Z twierdzenia tego możemy wywnioskować, że punkt krytyczny, zwany również punktem stacjonarnym, jest jedynym punktem zbioru granicznego, co ma miejsce w przypadku wykresu fazowego typu stabilne ognisko, albo istnieje cykl graniczny, co można zaobserwować na wykresach odpowiadającym modelom Lotki-Volterry i klasyczny bruskelator oraz bruskelator z reakcjami odwracalnymi. 
 \end{document}
