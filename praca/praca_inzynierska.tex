@@ -24,6 +24,7 @@
 \usepackage{mathrsfs}
 \usepackage{xfrac}
 \usepackage{array}
+\usepackage{esint}
 
 %\usepackage{titling}
 \usepackage{anyfontsize}
@@ -154,7 +155,7 @@
 	\begin{equation}
 		\dd{S_{uk}}>\frac{\dbar Q}{T}.
 	\end{equation}
-	Z równania \eqref{II_Zasada_Termodynamiki} lub \eqref{II_Zasada_Termodynamiki_uklad} wynika, że w układach izolowanych % dokonczyc
+	Z równania \eqref{II_Zasada_Termodynamiki} lub \eqref{II_Zasada_Termodynamiki_uklad} wynika, że w układach izolowanych entropia zawsze rośnie, a zatem spontaniczne uporządkowanie stabilnych struktur nie jest możliwe.
 	
 	Z nierówności \eqref{II_Zasada_Termodynamiki} lub \eqref{II_Zasada_Termodynamiki_uklad} wynika, że różnicową zmianę entropii układu \(\dd{s_{uk}}\) możemy przedstawić jako sumę dwóch wkładów:
 	\begin{equation}
@@ -236,8 +237,18 @@
 		\boldsymbol{I}=L_{Iq}\Delta T+L_{II}\Delta \phi
 	\end{gather}\cite{Ceynowa2008}
 	Występują w nich procesy krzyżowe; różnica temperatury wywołuje przepływ prądu oraz różnica potencjału elektrycznego wywołuje przepływ ciepła.
-	Okazuje się, że współczynniki krzyżowe są sobie równe: \(L_{qI}=L_{Iq}\). Jest to reguła przemienności Onsagera, która została udowodniona doświadczalnie oraz na podstawie fizyki statystycznej. 
-	% produkcja entropii
+	Okazuje się, że współczynniki krzyżowe są sobie równe: \(L_{qI}=L_{Iq}\). Jest to reguła przemienności Onsagera, która została udowodniona doświadczalnie oraz na podstawie fizyki statystycznej. \par
+	 
+	Wprowadza się wielkość zwaną źródłem entropii \(\sigma\), która oznacza generację entropii w jednostce czasu i objętości
+	\begin{equation}
+		\pdv{S}{t} = \iiint_{V}\sigma\dd{V}
+	\end{equation}
+	i jest wyrażona za pomocą sił termodynamicznych i przepływów jako: 
+	\begin{equation}
+		\sigma = \sum_{i}J_{i}X_{i} = \sum_{i}\sum_{j}^{n}L_{ij}X_{i}X_{j}
+	\end{equation}
+	co zostało wyprowadzone w Dodatku A na stronie \pageref{sec: dodatek A}. \par
+	
 	Jednak w chemii termodynamika liniowa nie opisuje dobrze szybkości zachodzenia reakcji chemicznych, których prędkość zazwyczaj zależy od wyższych potęg stężenia związków. \par
 	
 	Termodynamika liniowa ma zastosowanie w większości przypadków technicznych, jednak nie są one w stanie opisać reakcji chemicznych, których szybkość zależy od wyższych niż 1 potęg stężenia składników. \par
@@ -245,9 +256,7 @@
 	\begin{align}
 		& \pdv{L_{ij}}{X_{k}}\neq 0, && \pdv{L_{ij}}{J_{k}}\neq 0.
 	\end{align}
-	Równanie 
-	% "f..."?
-	zostaje zachowane, ale ten zabieg powoduje, że teoria staje się nieliniowa. \par
+	Równanie fenomenologiczne \eqref{natezenie_liniowe} zostaje zachowane, ale ten zabieg powoduje, że teoria staje się nieliniowa. \par
 	Kolejne podejscie zakłada, że w rozwinięciu \eqref{ogolne_natezenie} uwzględnia większą liczbę wyrazów, przy zachowaniu niezależności współczynników rozwinięcia. Postuluje się jednocześnie, aby spełnione były relacje przemienności:
 	\begin{align}
 		L_{ij} &= L_{ji} \\
@@ -327,8 +336,7 @@
 		\ce{RCOOC2H5 + 2H2O ->[H3O+] RCOO- + C2H5OH + H3O+}
 	\end{center}
 	
-	\section{praca wlasna}
-	\subsection{modele}
+	\section{Praca własna}
 	Pierwszym modelem istotnym dla rozważanych zagadnień jest model Lotki podany przez niego w roku 1910. Mimo, że oryginalnie miał on zastosowanie w badaniu wielkości populacji zwierząt ma on również pewne znaczenie dla reakcji chemicznych. W 1920 Lotka, a w 1931 niezależnie Volterra, zaproponowali zmodyfikowany model nazywany modelem Lotki-Volterry. Trzecim rozpatrywanym modelem jest bruskelator opracowany przez szkołę Prigogine'a w Brukseli. Jest on analizowant w postaci uproszczonej, jak i ogólnej z reakcjami odwracalnymi. 
 	\subsubsection{Model Lotki}
 	\begin{center}
@@ -719,7 +727,7 @@
 			\end{tabular}
 			\\ \cline{1-4}
 		\end{tabular}
-		\caption{Warunki dla modelu brusselator}
+		\caption{Warunki dla modelu bruskelator}
 	\end{table}
 	Przykładowe wykresy fazowe:
 	\begin{figure}[H]\label{stabilny wezel}
@@ -862,13 +870,14 @@
 		\caption{Zależność wielkości \(S\) oraz \(\dv{S}{\tau}\) od \(\tau\)}
 	\end{figure}
 	
-	\subsection{metody różniczkowe}
+	\subsection{Metody Eóżniczkowe}
 	Układ równań liniowych pierwszego rzędu o stałych współczynnikach ma w ogólności rozwiązanie analityczne \cite{palczewski}
 	\begin{gather}
 		\dv{X(t)}{t}=RX(t) \\
 		X(t)=\exp(Rt)X(0)
 	\end{gather}
 	Rozpatrywane układy jednak nie mają rozwiązania analitycznego i należy je rozwiązać metodami numerycznymi. \par
+	W poniższej tabeli podano wybrane wzory różnicowe wykorzystywane podczas symulacji. Wzory \ref{tab:schematy}.1 - \ref{tab:schematy}.4 są typu Adamsa-Bashfortha, natomiast wzór \ref{tab:schematy}.5 typu Milne'a \cite{fortuna}. Wzory o wyższym rzędzie wymagają znajomości wartości większej ilości poprzednich kroków, więc nie mogą być one wykorzystane dla kroków początkowych. W symulacji wykorzystano progresywnie schemat \ref{tab:schematy}.1 dla pierwszego kroku, następnie \ref{tab:schematy}.2 dla drugiego, \ref{tab:schematy}.3 dla trzeciego oraz \ref{tab:schematy}.5 dla każdego kolejnego. 
 	\begin{table}[H]\label{tab:schematy}
 		\centering
 		\begin{tabular}{|l|l|c|c|}
@@ -907,7 +916,7 @@
 	\section*{Wykaz tabel}
 	\addcontentsline{toc}{section}{Wykaz tabel}
 	\pagebreak
-	\section*{Dodatek A}
+	\section*{Dodatek A}\label{sec: dodatek A}
 	\addcontentsline{toc}{section}{Dodatek A}
 	\begin{gather}
 		\dd{u}=T\dd{s}-p\dd{V}+\sum_{i}\mu_{i}\dd{n_{i}}; \dd{V}=0 \label{dod A: 1} \\
