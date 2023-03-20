@@ -68,14 +68,18 @@
 % Opisy tabel nad tabela
 % Odpowiednie przerwy miedzy opisem a tabela/rysunkiem
 % Byc moze problemy z numerowaniem tabel, ale chyba jest na razie dobrze
-% Przesunąc przecinki przy równaniach
 
 \begin{document}
 	\section*{Streszczenie}
 	\begin{center}
 		\textbf{Strona 3}
 	\end{center}
-	Termodynamika równowagowe wymaga założenia pewnych wyidealizowanych założeń, na przykład jednorodność parametrów intensywnych, maksimum entropii w układach izolowanych, minimum energii swobodnej Helmholtza w układach izotermiczno-izochorycznych, mininum entalpii swobodnej Gibbsa w układach izotermiczno-izobarycznych \cite{pudlik}. Takie założenie nie zawsze są możliwe, przykładowo dla szybko zachodzących zmian jak w przypadku eksplozji, albo dla układów, w których interesuje nas nie tylko stan układu po osiągnięciu przez niego stanu równowagi, ale też jego zachowania podczas tej przemiany. \par
+	Termodynamika równowagowe wymaga założenia pewnych wyidealizowanych założeń, na przykład jednorodność parametrów intensywnych, maksimum entropii w układach izolowanych, minimum energii swobodnej Helmholtza w układach izotermiczno-izochorycznych, mininum entalpii swobodnej Gibbsa w układach izotermiczno-izobarycznych \cite{pudlik}. \par
+	Termodynamika równowagowa opisuje procesy, którym podlega dany układ, tak, jakby zachodziły w sposób kwazi-statyczny. To oznacza, że proces jest ciągiem stanów równowagi, a więc na każdym etapie procesu układ jest w równowadze termodynamicznej. W takim opisie nie sposób zdefiniować prędkości procesu, gdyż sam jego czas zmierza do nieskończoności. \par
+	
+	 
+	
+	Takie założenia nie zawsze są możliwe, przykładowo dla szybko zachodzących zmian jak w przypadku eksplozji, albo dla układów, w których interesuje nas nie tylko stan układu po osiągnięciu przez niego stanu równowagi, ale też jego zachowania podczas tej przemiany. \par
 	W pracy zająłem się głównie reakcjami chemicznymi oscylacyjnymi, które są przykładem czasowej struktury dyssypatywnej. Struktur takich nie można rozpatrywać w ramach termodynamiki liniowej, ponieważ są one typowe jedynie dla stanów nierównowagowych. Pierwsze takie reakcje odkryto w pierwszej połowie XX w., jednak jednym z nich jest organizm żywy, który można rozpatrywać jako bardzo skomplikowany układ termodynamiczny, w którym zachodzą cykliczne zmiany, na przykład stężenie hormonów oraz bicie serca. Najważniejszą reakcją dla rozwoju teorii reakcji oscylacyjnych jest reakcja Biełousowa-Żabotyńskiego. \par
 	W pracy udało się zasymulować reakcje oscylacyjne wykorzystując modele Lotki, Lotki-Volterry oraz bruskelatora. Przeprowadzono teoretyczną analizę stabilności w stanach stacjonarnych oraz sprawdzono jej prawdziwość przy użyciu symulacji. 
 	\pagebreak
@@ -127,16 +131,38 @@
 	\section{Wstęp}
 	
 	Oscylacyjne reakcje chemiczne są przykładem procesu samoorganizacji w układach z reakcją chemiczną. W trakcie przebiegu takiej reakcji możemy zaobserwować oscylacyjne zmiany stężenia niektórych reagentów pojawiających się w czasie jej przebiegu. Zwykle są to przejściowe związki chemiczne, które pojawiają się w mechanizmie reakcji pomiędzy substratami a produktami. Zjawisko takiej samoorganizacji obserwujemy tylko wówczas, gdy układ z reakcją chemiczną jest w stanie dalekim od stanu równowagi termodynamicznej. \par
-	Te oscylacyjne zmiany stężenia niektórych reagentów w oscylacyjnej reakcji chemicznej mogą odbywać się jednocześnie i tak samo w całej objętości układu, wówczas mówimy o powstaniu czasowej struktury dyssypatywnej. Jeśli stężenia tych reagentów zmieniają się zarówno w czasie jak i przestrzeni, wówczas mówimy o czasowo-przestrzennych strukturach dyssypatywnych. W tym drugim przypadku zaobserwujemy falę stężenia reagenta, która będzie przemieszczać się poprzez cała objętość układu. W trzecim przypadku te zmiany stężeń dotyczą tylko objętości układu, wówczas mówimy o przestrzennej strukturze dyssypatywnej. Wraz z osiągnięciem równowagi termodynamicznej w układzie opisane struktury zanikają. 
+	Te oscylacyjne zmiany stężenia niektórych reagentów w oscylacyjnej reakcji chemicznej mogą odbywać się jednocześnie i tak samo w całej objętości układu, wówczas mówimy o powstaniu czasowej struktury dyssypatywnej. Jeśli stężenia tych reagentów zmieniają się zarówno w czasie jak i przestrzeni, wówczas mówimy o czasowo-przestrzennych strukturach dyssypatywnych. W tym drugim przypadku zaobserwujemy falę stężenia reagenta, która będzie przemieszczać się poprzez całą objętość układu. W trzecim przypadku te zmiany stężeń dotyczą tylko objętości układu, wówczas mówimy o przestrzennej strukturze dyssypatywnej. Wraz z osiągnięciem równowagi termodynamicznej w układzie opisane struktury zanikają. 
 	
 	% Wkleić przypadki struktur
 	
 	Wyjaśnienie tych oscylacji z punktu widzenia termodynamiki wymaga wyjścia poza termodynamikę równowagową. Termodynamika równowagowa zajmuje się procesami, w których ignoruje się upływ czasu, a przemiana jest kwazistatyczna. Oznacza to, że każdy stan pośredni można traktować jako stan równowagi termodynamicznej. Model taki jest wystarczający do opisu większości procesów. Można więc powiedzieć, że termodynamikę równowagową interesuje stan początkowy oraz końcowy. \par
-	Dopiero termodynamika nierównowagowa jest teorią, która obejmuje to, co dzieje się w trakcie rzeczywistych przemian i jest ona konieczna do opisu reakcji oscylacyjnych. Pierwsze przesłanki o istnieniu takowych sięgają końca XIX wieku. Były to reakcje w układach heterogenicznych, jak na przykład pierścienie Lieseganga lub oscylacje prądu płynącego przez ogniwo galwaniczne. Wyjaśnienie tych zjawisk wymagało, aby układ byl heterogeniczny i było w zgodzie z entropią Boltzmanna, według której spontaniczna organizacja jest niemożliwa. \cite{orlik}\par
-	Pierwszy model teoretyczny został przedstawiony przez Alfreda Lotka \cite{lotka}. Przez długi czas uważano, że nie mogą one przedstawiać rzeczywistych reakcji, ponieważ łamią II Z.T. według Boltzmanna. Jednak w 1921r. pokazano w reakcji Bray'a-Liebhafky'ego, że reakcje oscylacyjne w układach homogenicznych są możliwę. Jest to reakcja rokładu nadtlenku wodoru katalizowana jodanem (V). Jeszcze większy wpływ na rozwój termodynamiki nierównowagowej w kinetyce chemicznej były reakcje Biełousowa-Żabotyńskiego. Pierwszą reakcją z tej grupy została zaobserwowanaw 1959 w mieszaninie bromianu (V) potasu, siarczanie (VI) ceru (IV), kwasu malonowego oraz kwasu cytrynowego w rozcieńczonym kwasie siarkowym (VI). Została ona odkryta jako nieorganiczny analog cyklu Krebsa \cite{belousov_hist}. \par
-	Innym zjawiskiem wyjaśnionym dzięki rozwoju termodynamiki nierównowagowej jest życie i ewolucja. Niepoprawne użycie II Z.T. może doprowadzić do wniosku, że powstanie złożonej struktury z chaosu powinno być niemożliwe. Wyjaśnienie takie błędnie wykorzystuje to prawo ignorując fakt, że układy biologiczne jak i cała Ziemia nie są układami izolowanymi. 
+	Dopiero termodynamika nierównowagowa jest teorią, która obejmuje to, co dzieje się w trakcie rzeczywistych przemian i jest ona konieczna do opisu reakcji oscylacyjnych. Pierwsze odkrycia sięgają końca XIX wieku. Były to reakcje w układach heterogenicznych, jak na przykład pierścienie Lieseganga lub oscylacje prądu płynącego przez ogniwo galwaniczne. 
 	
-	\subsection{Generacja entropii}
+	% Wyjaśnienie tych zjawisk wymagało, aby układ byl heterogeniczny i było w zgodzie z entropią Boltzmanna, według której spontaniczna organizacja jest niemożliwa. \cite{orlik}
+	\par
+	Pierwszy model teoretyczny został przedstawiony przez Alfreda Lotka \cite{lotka}. Przez długi czas uważano, że nie mogą one przedstawiać rzeczywistych reakcji, ponieważ ówcześnie interpretowano, że łamią II Zasadę Termodynamiki. Jednak w 1921r. pokazano w reakcji Bray'a-Liebhafky'ego, że reakcje oscylacyjne w układach homogenicznych są możliwę. Jest to reakcja rokładu nadtlenku wodoru katalizowana jodanem (V). Zachodzą reakcje oscylacyjne z naprzemienną dominacją dwóch procesów: \cite{orlik}
+	\begin{center}
+		\ce{5H2O2 + 2H+ +2IO3- -> I2 + 5O2 + 6H2O} \\
+		\ce{I2 + 5H2O2 -> 2H+ + 2IO3- + 4H2O}
+	\end{center}
+	z reakcją sumaryczną: 
+	\begin{center}
+		\ce{2H2O2 -> 2H2O + O2}.
+	\end{center}
+	Jeszcze większy wpływ na rozwój termodynamiki nierównowagowej w kinetyce chemicznej były reakcje Biełousowa-Żabotyńskiego. Pierwszą reakcją z tej grupy została zaobserwowanaw 1959 w mieszaninie bromianu (V) potasu, siarczanie (VI) ceru (IV), kwasu malonowego oraz kwasu cytrynowego w rozcieńczonym kwasie siarkowym (VI). Reakcje te są dużo bardziej złożone i w uproszczonej formie mają postac: \cite{orlik}
+	\begin{center}
+		\ce{2Br- + BrO3- + 3CH2(COOH)2 + 3H+ -> 3BrCH(COOH)2 + 3H2O} \\
+		BrO3- + 4Ce(III) + 5H+ -> 4Ce(IV) + HOBr + 2H2O \\
+		4Ce(IV) + 6CH2(COOH)2 +BrCH(COOH)2 + HOBr + 8BrO3- -> 4Ce(III) + 10Br- + 21CO2 + 6H+ + 11H2O
+	\end{center}
+	z reakcją sumaryczna: 
+	\begin{center}
+		\ce{2BrO3- + 3CH2(COOH)2 + 2H+ ->[kat] 2BrCH(COOH)2 + 4H2O + 3CO2}.
+	\end{center}
+	Została ona odkryta jako nieorganiczny analog cyklu Krebsa \cite{belousov_hist}. \par
+	Odkrycie reakcji oscylacyjnych przyczyniło się do rozwoju termodynamiki nierównowagowej, a w konsekwencji do użycia jej aparatu teoretycznego do opisu procesów życiowych. Niepoprawne interpretacja II Z.T. może doprowadzić do wniosku, że powstanie złożonej struktury z molekularnego chaosu powinno być niemożliwe. Wyjaśnienie takie błędnie wykorzystuje to prawo ignorując fakt, że układy biologiczne jak i cała Ziemia nie są układami izolowanymi. 
+	
+	\subsection{Produkcja entropii}
 	Wszystkie procesy rzeczywiste podlegają drugiej zasadzie termodynamiki, która określa różniczkową zmianę entropii \(\dd{S}\), w danych procesie nierównością
 	\begin{equation}\label{II_Zasada_Termodynamiki}
 		\dd{S}>0.
@@ -155,9 +181,10 @@
 	\begin{equation}
 		\dd{S_{uk}}>\frac{\dbar Q}{T}.
 	\end{equation}
-	Z równania \eqref{II_Zasada_Termodynamiki} lub \eqref{II_Zasada_Termodynamiki_uklad} wynika, że w układach izolowanych entropia zawsze rośnie, a zatem spontaniczne uporządkowanie stabilnych struktur nie jest możliwe.
 	
-	Z nierówności \eqref{II_Zasada_Termodynamiki} lub \eqref{II_Zasada_Termodynamiki_uklad} wynika, że różnicową zmianę entropii układu \(\dd{s_{uk}}\) możemy przedstawić jako sumę dwóch wkładów:
+	% Z równania \eqref{II_Zasada_Termodynamiki} lub \eqref{II_Zasada_Termodynamiki_uklad} wynika, że w układach izolowanych entropia zawsze rośnie, a zatem spontaniczne uporządkowanie stabilnych struktur nie jest możliwe.
+	
+	Z nierówności \eqref{II_Zasada_Termodynamiki} lub \eqref{II_Zasada_Termodynamiki_uklad} wynika, że różnicową zmianę entropii układu \(\dd{S_{uk}}\) możemy przedstawić jako sumę dwóch wkładów:
 	\begin{equation}
 		\dd{S_{uk}}=\dd_{e}S+\dd_{i}S,
 	\end{equation}
@@ -165,12 +192,15 @@
 	\begin{equation}
 		\dd_{i}S=\dd{S_{uk}}-\frac{\dbar Q}{T}.
 	\end{equation}
-	Składnik \(\dd_{i}S\) nazywany jest produkcją entropii. Warto zaznaczyć, że dla układu izolowanego \(\dd_{e}S=0\), stąd \(\dd{S_{uk}}=\dd_{i}S\). Natomiast na podstawie nierówności \eqref{II_Zasada_Termodynamiki} lub \eqref{II_Zasada_Termodynamiki_uklad} wynika, że \(\dd_{i}S>0\) w przemianach samorzutnych. \par
+	Składnik \(\dd_{i}S\) nazywany jest produkcją entropii. Na podstawie nierówności \eqref{II_Zasada_Termodynamiki} lub \eqref{II_Zasada_Termodynamiki_uklad} wynika, że \(\dd_{i}S>0\) w przemianach samorzutnych. \par
 	Rozpatrzmy teraz drugą zasadę termodynamiki z punktu widzenia układu i otoczenia, która przyjmuje postać:
 	\begin{equation}\label{II_Zasada_Termodynamiki_uklad_i_otoczenie}
-		\dd{S_{ot}}+\dd{S_{ot}}>0,
+		\dd{S_{uk}}+\dd{S_{ot}}>0,
 	\end{equation}
-	gdzie symbolem \(\dd{S_{ot}}\) oznaczono różniczkową zmianę entropii otoczenia. Do nierówności \eqref{II_Zasada_Termodynamiki_uklad_i_otoczenie} wykorzystamy pojęcia zmieny entropii wynikającej z wymiany ciepła pomiędzy układem i otoczeniem oraz produkcji entropii, która może pojawić się w układzie i otoczeniu. Z nierówności \eqref{II_Zasada_Termodynamiki_uklad_i_otoczenie} otrzymujemy:
+	gdzie symbolem \(\dd{S_{ot}}\) oznaczono różniczkową zmianę entropii otoczenia. Zmiany entropii \(\dd{S_{ot}}\) i \(\dd{S_{uk}}\) mogą wynikać z wymiany ciepła \(\dbar Q\) jak i produkcji entropii. Dlatego możemy zapisać
+	
+	
+	% Do nierówności \eqref{II_Zasada_Termodynamiki_uklad_i_otoczenie} wykorzystamy pojęcia zmieny entropii wynikającej z wymiany ciepła pomiędzy układem i otoczeniem oraz produkcji entropii, która może pojawić się w układzie i otoczeniu. Z nierówności \eqref{II_Zasada_Termodynamiki_uklad_i_otoczenie} otrzymujemy:
 	\begin{equation}\label{II_Zasada_Termodynamiki_uklad_i_otoczenie_rozpisane}
 		\dd_{e}S_{uk}+\dd_{i}S_{uk}+\dd_{e}S_{ot}+\dd_{i}S_{ot}>0.
 	\end{equation}
@@ -178,7 +208,7 @@
 	\begin{equation}\label{}
 		\dd_{i}S_{uk}+\dd_{i}S_{ot}>0.
 	\end{equation}
-	Warunek obejmuje przypadek, w którym produkcja entropii \(\dd_{i}S_{uk}\) zmaleje na tyle, że \(\dd_{i}S_{ot}\) skompensuje ten niedostatek. W innym przypadku \(\dd_{i}S_{ot}\) może na tyle zmaleć, że \(\dd_{i}S_{uk}\) będzie kompensować ten niedostatek. W termodynamice nierównowagowej dokonujemy dodatkowo założenia:
+	Warunek obejmuje również przypadek, w którym produkcja entropii \(\dd_{i}S_{uk}\) zmaleje na tyle, że \(\dd_{i}S_{ot}\) skompensuje ten niedostatek. W innym przypadku \(\dd_{i}S_{ot}\) może na tyle zmaleć, że \(\dd_{i}S_{uk}\) będzie kompensować ten niedostatek. W termodynamice nierównowagowej dokonujemy jednak dodatkowo założenia:
 	\begin{equation*}
 		\dd_{i}S_{uk}>0
 	\end{equation*}
@@ -186,31 +216,35 @@
 	\begin{equation*}
 		\dd_{i}S_{ot}>0.
 	\end{equation*}
-	Z punkty widzenia pojedynczej komórki, dla której pozostałe stanowią otoczenie, oznacza to, że produkcja entropii w jej wnętrzu ma być nieujemna i podobnie dla pozostałych. To oznacza dalej, że w każdym dowolnie małym obszarze układu, w którym zachodzą procesy samorzutne następuje związane z nimi tworzenie entropii. To stwierdzenie stanowi treść drugiej hipotezy termodynamiki nierównowagowej, nazywaną lokalnym sformuowaniem drugiej zasady termodynamiki. Lokalne sformuowanie drugiej zasady termodynamiki nie wyklucza takiego przypadku, w którym w jednym i tym samym miejscu zachodzi kilka procesów, z których niektóre zmniejszają entropię \((\dd_{i}S<0)\), pod warunkiem, że oprócz nich obecne są procesy produkujące entropię \((\dd_{i}S>0)\), które z naddatkiem zwiększa entropię w tym miejscu. 
+	Założenie to możemy przenieść na sytuację, gdy układ dzielimy na mniejsze podukłady (komórki). Z punkty widzenia pojedynczej komórki, dla której pozostałe stanowią otoczenie, oznacza to, że produkcja entropii w jej wnętrzu ma być nieujemna i podobnie dla pozostałych. To oznacza dalej, że w każdym dowolnie małym obszarze układu, w którym zachodzą procesy samorzutne następuje związane z nimi tworzenie entropii. To stwierdzenie stanowi treść drugiej hipotezy termodynamiki nierównowagowej, nazywaną lokalnym sformuowaniem drugiej zasady termodynamiki. Lokalne sformuowanie drugiej zasady termodynamiki nie wyklucza jednak takiego przypadku, w którym w jednym i tym samym miejscu zachodzi kilka procesów, z których niektóre zmniejszają entropię \((\dd_{i}S<0)\), pod warunkiem, że oprócz nich obecne są procesy produkujące entropię \((\dd_{i}S>0)\), które z naddatkiem zwiększa entropię w tym miejscu. 
 	
 
 
 
 
-	Zmianę entropii układu można zapisać jako wynikającą z przepływu ciepła oraz samorzutnej generacji entropii: 
+	Zmianę entropii układu można zapisać jako wynikającą z przepływu ciepła oraz samorzutnej produkcji entropii: 
 	\begin{equation}
 		dS_{uk}=d_{e}S+d_{i}S_{uk}.
 	\end{equation}
-	Dla układu zamkniętego: \(d_{e}S=0\), stąd wykorzystując \eqref{entropia_izolowany}:
+	Dla układu izolowanego: \(d_{e}S=0\):
 	\begin{equation}
-		dS_{uk}=d_{i}S_{uk},
+		dS_{uk}=d_{i}S_{uk}.
 	\end{equation}
-	gdzie
-	\begin{description}
-		\item[\(dS_{uk}\)] całkowita zmiana entropii układu
-		\item[\(d_{e}S=\frac{\dbar Q}{T_{uk}}\)] zmiana wynikająca z przepływu ciepła
-		\item[\(d_{i}S_{uk}\geq 0\)] zmiana wynikająca z produkcji entropii
-	\end{description}
-	Dla każdego układu produkcja entropii jest dodatnia. Wynika z tego argumentu także, że jest to prawdziwe dla każdego podukładu należącego do danego układu niezależnie od jego wielkości. Zasada ta ma więc charakter lokalny. 
+	% gdzie
+	% \begin{description}
+	% 	\item[\(dS_{uk}\)] całkowita zmiana entropii układu
+	% 	\item[\(d_{e}S=\frac{\dbar Q}{T_{uk}}\)] zmiana wynikająca z przepływu ciepła
+	% 	\item[\(d_{i}S_{uk}\geq 0\)] zmiana wynikająca z produkcji entropii
+	% \end{description}
+	% Dla każdego układu produkcja entropii jest dodatnia. Wynika z tego argumentu także, że jest to prawdziwe dla każdego podukładu należącego do danego układu niezależnie od jego wielkości. Zasada ta ma więc charakter lokalny. 
 	
 	
 	
 	\subsection{Termodynamika liniowa i nieliniowa}
+	Wprowadza się wielkość zwaną źródłem entropii \(\sigma\), która oznacza produkcję entropii w jednostce czasu i objętości
+	\begin{equation}
+		\pdv{_{i}S}{t} = \iiint_{V}\sigma\dd{V}.
+	\end{equation}
 	W ogólności natężenie przepływów termodynamicznych jest dowolną funkcją bodźców termodynamicznych: 
 	\[J=f\left(X\right)\]
 	Rozwinięcie w szereg Taylora tej funkcji wokół \(X_{0}\) jest
@@ -220,13 +254,14 @@
 	gdzie:
 	\begin{description}
 		\item[\(J\), \(J^{eq}\)] natężenie przepływów termodynamicznych oraz to natężenie w stanie równowagi
-		\item[\(X\), \(X^{eq}\)] bodziec termodynamiczny i bodziec w stanie równowagi
+		\item[\(X\), \(X^{eq}\)] bodziec termodynamiczny i bodziec w stanie równowagi; 
 	\end{description}
 	Wiadomo, że \(J_{i}^{eq}=0\) oraz \(X_{j}^{eq}=0\), ponieważ jest to stan równowagi. \par
 	W stanach zbliżonych do stanu równowagi można ograniczyć równanie \eqref{ogolne_natezenie} do następującego: 
 	\begin{equation}\label{natezenie_liniowe}
 		J_{i}=\sum_{j=1}^{n}\left[\pdv{J_{i}}{X_{j}}X_{j}\right].
 	\end{equation}
+	Zasada symetrii Curie-Prigogine'a mówi, że przepływy i siły termodynamiczne muszą mieć taki sam charakter tensorowy, na przykład dyfuzja (wektorowy) i przepływ ciepła (wektorowy) jest dozwolony, jednak dyfuzja (wektorowy)  oraz reakcja chemiczna (skalarny) jest niedozwolony. Zasada ta może być jednak złamana w przypadku procesów nieliniowych \cite{orlik}. \par
 	Zapiszmy \(\frac{\partial J_{i}}{\partial X_{j}}\) jako \(L_{ij}\)
 	\begin{equation}
 		J_{i}=\sum_{j=1}^{n}L_{ij}X_{j}.
@@ -238,12 +273,7 @@
 	\end{gather}\cite{Ceynowa2008}
 	Występują w nich procesy krzyżowe; różnica temperatury wywołuje przepływ prądu oraz różnica potencjału elektrycznego wywołuje przepływ ciepła.
 	Okazuje się, że współczynniki krzyżowe są sobie równe: \(L_{qI}=L_{Iq}\). Jest to reguła przemienności Onsagera, która została udowodniona doświadczalnie oraz na podstawie fizyki statystycznej. \par
-	 
-	Wprowadza się wielkość zwaną źródłem entropii \(\sigma\), która oznacza generację entropii w jednostce czasu i objętości
-	\begin{equation}
-		\pdv{S}{t} = \iiint_{V}\sigma\dd{V}
-	\end{equation}
-	i jest wyrażona za pomocą sił termodynamicznych i przepływów jako: 
+	Produkcja entropii jest wyrażona za pomocą sił termodynamicznych i przepływów jako: 
 	\begin{equation}
 		\sigma = \sum_{i}J_{i}X_{i} = \sum_{i}\sum_{j}^{n}L_{ij}X_{i}X_{j}
 	\end{equation}
@@ -265,13 +295,7 @@
 	Jednak próby nie były owocne, a przemienność współczynników \(L_{ij}, L_{ijk}, \ldots\) trudna do uzależnienia. \par
 	Bardziej owocne podejście do problemu wyjścia poza liniową termodynamikę nierównowagową, głównie w kontekście oscylacyjnych reakcji chemicznych, polegało na wykorzyskiwaniu metod stosowanych z teorii układów dynamicznych. Autorzy tej koncepcji pozostawiają postulat o istnieniu równowagi lokalnej. Hipoteza ta zakłada, że cały układ możemy podzielić na mniejsze podukłady (zwane niekiedy komórkami), w których parametry termodynamiczne są ściśle zdefiniowane, tak jak to mamy w zagadnieniach równowagowych. Parametry te w innych komórkach, mogą mieć inne wartości. \par
 	Zakłada się tutaj, że te komórki są na tyle małe, iż możemy przyjąć, że parametry zmieniają się w sposób ciągły. Jednak z drugiej strony trzeba przyjąć, iż nie mogą one mieć bardzo małych rozmiarów. Ich makroskopowy charakter musi być zachowany przy założeniu dodatkowym, iż w każdej z nich panuje stan wewnętrznej równowagi. \par
-	
-	
-	
-	
-	
-	
-	Po zaprzestaniu wymuszania nierównowagi układ dąży do stanu równowagi z minimalną zerową produkcją entropii. Przy utrzymaniu stałego bodźca termodynamicznego układ dąży do stanu stacjonarnego o minimalnej dodatniej produkcji entropii. \par
+	Zasada minnimalnej produkcji entropii mówi, że dla danego układu stacjonarnego produkcja entropii ma wartość minimalną. W układzie równowagowym produkcja entropii jest równa 0. Po wprowadzeniu siły termodynamicznej układ zostaje wytrącony z równowagi. Po zaprzestaniu wymuszania nierównowagi układ dąży do stanu równowagi \cite{orlik}. \par
 	Rozwijając entropię \(S\) w szereg Taylora otrzymujemy:
 	\begin{equation}
 		S = S^\circ + \left(\var{S}\right)^\circ + \frac{1}{2!}\left(\var^{2}S\right)^\circ + \ldots
@@ -281,7 +305,7 @@
 		S - S^\circ = \frac{1}{2!}\left(\var^{2}S\right)^\circ
 	\end{equation}
 	Ze względu na maksimum entropii w stanie równowagi: \(\left(\var^{2}S\right)^\circ<0\)
-	Można powiązać tą zależność z generacją entropii: 
+	Można powiązać tą zależność z produkcją entropii: 
 	\begin{equation}
 		\pdv{t}\left(S - S^\circ\right) = \frac{1}{2!}\left(\var^{2}S\right)^\circ = \sum_{i=1}^{n}J_{i}X_{i}=\sigma\geq0
 	\end{equation}
@@ -295,10 +319,16 @@
 	Jest to wielkość niezależna od konkretnego reagenta. Można tak zdefiniowaną szybkość reakcji powiązać z szybkością zmiany liczby postępu reakcji:
 	\begin{gather}
 		v=\frac{1}{\nu_{i}}\dv{c_{i}}{t} \\
-		\dd{c_{i}}=\frac{\dd{n_{i}}}{V} \\
-		\dd{n_{i}}=\nu_{i}\dd{\xi} \\
-		v=\frac{1}{V}\dv{\xi}{t}.
+		\dd{c_{i}}=\frac{\dd{n_{i}}}{V}
 	\end{gather}
+	gdzie \(\nu_{i}\) to współczynnik stechiometryczny (ujemny dla substratów, a dodatni dla produktów), \(c_{i}\) to stężenia molowe składników. Wprowadzamy oznaczenie:
+	\begin{equation}
+		\dd{\xi}=\frac{\dd{n_{i}}}{\nu_{i}},
+	\end{equation}
+	gdzie \(\xi\) to liczba postępu reakcji i jest niezależna od wyboru składnika. Wykorzystując tą zależność otrzymujemy: 
+	\begin{equation}
+		v=\frac{1}{V}\dv{\xi}{t},
+	\end{equation}
 	Dla reacji chemicznej w postaci ogólnej
 	\begin{equation*}
 		x_{1}X_{1}+x_{2}X_{2}+\ldots \rightarrow y_{1}Y_{1}+y_{2}Y_{2}+\ldots
@@ -328,49 +358,98 @@
 	\begin{align*}
 		&\ce{H2 + I2 -> 2HI}
 	\end{align*}
-	co oznacza, że każdą reakcję należy rozpatrywać osobno i nie ma jednego uniwersalnego schematu. \cite{pigon1}
+	co oznacza, że każdą reakcję należy rozpatrywać osobno i nie ma jednego uniwersalnego schematu \cite{pigon1}. \par
 	
-	\subsection{Kataliza i autokataliza}
+	% \subsection{Kataliza i autokataliza}
 	Według równania \eqref{szybkosc reakcji} szybkość reakcji można zmienić przez zmianę stężenia reagentów lub zmianę stałej szybkości reakcji. Katalizatorami nazywamy związki zwiększające tą stała, natomiast związki zmniejszające katalizatorem ujemnym lub inhibitorem. Nie występują one w reakcji sumarycznej, ale występują w reakcjach elementarnych. Podobnie jak reakcje możemy podzielić katalizę na homogeniczną (zachodzącej w jednej fazie) oraz heterogeniczną (zachodząca na granicy faz). Szczególnym rodzajem reakcji katalitycznych jest autokataliza, w której produkt reakcji jest jednocześnie katalizatorem. Przykładem takiej reakcji jest hydroliza estrów w środowisku kwasowym: \cite{pigon1}
 	\begin{center}
 		\ce{RCOOC2H5 + 2H2O ->[H3O+] RCOO- + C2H5OH + H3O+}
 	\end{center}
 	
 	\section{Praca własna}
-	Pierwszym modelem istotnym dla rozważanych zagadnień jest model Lotki podany przez niego w roku 1910. Mimo, że oryginalnie miał on zastosowanie w badaniu wielkości populacji zwierząt ma on również pewne znaczenie dla reakcji chemicznych. W 1920 Lotka, a w 1931 niezależnie Volterra, zaproponowali zmodyfikowany model nazywany modelem Lotki-Volterry. Trzecim rozpatrywanym modelem jest bruskelator opracowany przez szkołę Prigogine'a w Brukseli. Jest on analizowant w postaci uproszczonej, jak i ogólnej z reakcjami odwracalnymi. 
-	\subsubsection{Model Lotki}
+	W tym rozdziale przeprowadzono analizę teoretyczną oraz numeryczną modeli stosowanych w opisie reakcji oscylacyjnych. Pierwszym modelem istotnym dla rozważanych zagadnień jest model Lotki podany przez niego w roku 1910. Mimo, że oryginalnie miał on zastosowanie w badaniu wielkości populacji zwierząt, a dokładnie zależności między drapieżnikami oraz ofiarami, ma on również pewne znaczenie dla reakcji chemicznych. W 1920 Lotka, a w 1931 niezależnie Volterra, zaproponowali zmodyfikowany model nazywany modelem Lotki-Volterry. Trzecim rozpatrywanym modelem jest bruskelator opracowany przez szkołę Prigogine'a w Brukseli. Jest on analizowany w postaci uproszczonej, jak i ogólnej z reakcjami odwracalnymi. Szybkości reakcji przyjmujemy zależą jedynie od współczynników stechiometrycznych substratów, tj.:
+	\begin{center}
+		\ce{aA + bB + ... + jJ ->[k] kK + lL + } \\
+		\(v = k[A]^{a}[B]^{b}\ldots[J]^{j}\)
+	\end{center}
+	%\subsubsection{Model Lotki}
 	\begin{center}
 		\ce{A ->[k_1] X} \\
 		\ce{X + Y ->[k_2] 2Y} \\
 		\ce{Y ->[k_3] produkty}
 	\end{center}
+	Jest to najprostszy model zawierający autokatalizę. W modelu tym przyjmujemy, że \(A\) jest stałe. Może to być osiągnięte poprzez wykorzystanie reaktora przepływowego, w którym kontroluje się dopływ składnika \(A\). W pierwszym kroku \(A\) zostaje przekształcone w \(X\), które w drugim kroku w reakcji z \(Y\) tworzy więcej składnika \(Y\). Układ taki wymaga więc zapoczątkowania reakcji pewną ilością \(Y\). W końcowym kroku \(Y\) zostaje przekształcone w produkty końcowe. Reakcja sumaryczna ma postać:
+	\begin{center}
+		\ce{A -> produkty}.
+	\end{center}
+	Szybkość zmiany stężeń składników 
 	\begin{gather}
 		\dv{[X]}{t}=k_{1}[A]-k_{2}[X][Y] \\
-		\dv{[Y]}{t}=k_{2}[X][Y]-k_{3}[Y]
+		\dv{[Y]}{t}=k_{2}[X][Y]-k_{3}[Y].
 	\end{gather}
-	\subsubsection{Model Lotki-Volterry}
+	% \subsubsection{Model Lotki-Volterry}
 	\begin{center}
 		\ce{A + X ->[k_1] 2X} \\
 		\ce{X + Y ->[k_2] 2Y} \\
 		\ce{Y ->[k_3] produkty}
 	\end{center}
+	W modelu tym zmodyfikowano pierwszy krok poprzez wprowadzenie autokatalizy. Zmienia to zachowanie się układu co zostało przeanalizowane poniżej. Konsekwencją dodania autokatalizy jest dodatkowe wprowadzenie początkowego składnika \(X\), a więc jednym z ze stanów stacjonarnych jest \(X=Y=0\). Jest to jednak rozwiązanie trywialne i układ taki jest martwy, więc nie będzie to rozpatrywane. Reakcja sumaryczna:
+	\begin{center}
+		\ce{A -> produkty}.
+	\end{center}
+	Odpowiednie szybkości zmian stężeń mają postac:
 	\begin{gather}
 		\dv{[X]}{t}=k_{1}[A][X]-k_{2}[X][Y] \\
 		\dv{[Y]}{t}=k_{2}[X][Y]-k_{3}[Y]
 	\end{gather}
-	\subsubsection{Model bruskelator}
+	% \subsubsection{Model bruskelator}
 	\begin{center}
 		\ce{A ->[k_1] X} \\
 		\ce{2X + Y ->[k_2] 3X} \\
 		\ce{B + X ->[k_3] D + Y} \\
 		\ce{X ->[k_4] E}
 	\end{center}
+	Pierwszy krok modelu brukselator jest taki sam jak modelu Lotki. W drugim występuje autokataliza \(Y\) do \(X\). W trzecim tworzenie \(Y\) z \(X\), natomiast w ostatnim przekształcenie \(X\) w produkty końcowe. Reakcja sumaryczna: 
+	\begin{center}
+		\ce{A + B -> C + D}.
+	\end{center}
+	Szybkości zmian stężeń reagentów: 
 	\begin{gather}
 		\dv{[X]}{t}=k_{1}[A]+k_{2}[X]^{2}[Y]-k_{3}[B][X]-k_{4}[X] \\
-		\dv{[Y]}{t}=-k_{2}[X]^{2}[Y]+k_{3}[B][X]
+		\dv{[Y]}{t}=-k_{2}[X]^{2}[Y]+k_{3}[B][X].
 	\end{gather}
+	
+	\subsection{Metody różniczkowe}
+	Układ równań liniowych pierwszego rzędu o stałych współczynnikach ma w ogólności rozwiązanie analityczne \cite{palczewski}
+	\begin{gather}
+		\dv{X(t)}{t}=RX(t) \\
+		X(t)=\exp(Rt)X(0)
+	\end{gather}
+	Rozpatrywane układy jednak nie mają rozwiązania analitycznego i należy je rozwiązać metodami numerycznymi. \par
+	W poniższej tabeli podano wybrane wzory różnicowe wykorzystywane podczas symulacji. Wzory \ref{tab:schematy}.1 - \ref{tab:schematy}.4 są typu Adamsa-Bashfortha, natomiast wzór \ref{tab:schematy}.5 typu Milne'a \cite{fortuna}. Wzory o wyższym rzędzie wymagają znajomości wartości większej ilości poprzednich kroków, więc nie mogą być one wykorzystane dla kroków początkowych. W symulacji wykorzystano progresywnie schemat \ref{tab:schematy}.1 dla pierwszego kroku, następnie \ref{tab:schematy}.2 dla drugiego, \ref{tab:schematy}.3 dla trzeciego oraz \ref{tab:schematy}.5 dla każdego kolejnego. 
+	\begin{table}[H]\label{tab:schematy}
+		\centering
+		\begin{tabular}{|l|l|c|c|}
+			\hline
+			& Wzór & \(p\) & \(A_{p+1}\) \\
+			\hline
+			1 & \(y_{n+1}=y_{n}+hy'_{n}\) & \(1\) & \(\frac{1}{2}\) \\
+			\hline
+			2 & \(y_{n+1}=y_{n}+\frac{h}{2}(3y'_{n}-y'_{n-1})\) & \(2\) & \(\frac{5}{12}\) \\
+			\hline
+			3 & \(y_{n+1}=y_{n}+\frac{h}{12}(23y'_{n}-16y'_{n-1}+5y'_{n-2})\) & \(3\) & \(\frac{3}{8}\) \\
+			\hline
+			4 & \(y_{n+1}=y_{n}+\frac{h}{24}(55y'_{n}-59y'_{n-1}+37y'_{n-2}-9y'_{n-3})\) & \(4\) & \(\frac{251}{720}\) \\
+			\hline
+			5 & \(y_{n+1}=y_{n-3}+\frac{4h}{3}(2y'_{n}-y'_{n-1}+2y'_{n-2})\) & \(4\) & \(\frac{14}{45}\) \\
+			\hline
+		\end{tabular}
+		\caption{Schematy różnicowe}
+	\end{table}
+	gdzie \(h\) jest krokiem czasowym, \(p\) to najwyższa wykładnik potęgi \(h^{s}\), przy których współczynnik wynosi \(0\), a \(A_{p+1}\) jest współczynnikiem przy kolejnej potędze.
+	
 	\subsection{Stabilność rozwiązań}
-	Na potrzeby analizy można zredukować ilość parametrów danych równań różniczkowych stosując odpowiednie podstawienia. Najpierw należy wyznaczyć współrzędne punktu stacjonarnego. Analiza zostanie przedstawiona na przykładzie modelu Lotki, ale analogiczne wyprowadzenie można przeprowadzić dla każdego z tych modeli. W stanie stacjonarnym \(\dv{[X]}{t}=\dv{[Y]}{t}=0\)
+	Na potrzeby analizy można zredukować ilość parametrów danych równań różniczkowych stosując odpowiednie podstawienia. Najpierw należy wyznaczyć współrzędne punktu stacjonarnego, w którym obie pochodne stężeń reagentów są równe zero. Analiza zostanie przedstawiona na przykładzie modelu Lotki, ale analogiczne wyprowadzenie można przeprowadzić dla każdego z tych modeli. W stanie stacjonarnym stężenia reagentów są stałe, więc \(\dv{[X]}{t}=\dv{[Y]}{t}=0\)
 	\begin{gather}
 		k_{1}[A]-k_{2}[X]_{st}[Y]_{st}=0 \\
 		k_{2}[X]_{st}[Y]_{st}-k_{3}[Y]_{st}=0
@@ -389,7 +468,7 @@
 		\dv{x}{\tau}=a-axy \\
 		\dv{y}{\tau}=xy-y
 	\end{gather}
-	Analogicznie dla modelu Lotki-Volterry:
+	Analogiczne wyprowadzenie można przeprowadzić dla modelu Lotki-Volterry:
 	\begin{align}
 		& x=\frac{[X]}{[X]_{st}} && [X]_{st} = \frac{k_{3}}{k_{2}} && y=\frac{[Y]}{[Y]_{st}} && [Y]_{st} = \frac{k_{1}[A]}{k_{2}} && \tau=k_{3}t && a=\frac{k_{1}[A]}{k_{3}}
 	\end{align}
@@ -405,11 +484,12 @@
 		\dv{x}{\tau}=1+ax^{2}y-ax-x \\
 		\dv{y}{\tau}=-bx^{2}y+bx
 	\end{gather}
-	Tak przygotowane równania mają stan stacjonarny w \(x=y=1\), co wynika z definicji. Zostaną one wykorzystane do numerycznego rozwiązania równań, ale na potrzeby analizy wprowadzam podstawienie
+	Tak przygotowane równania mają stan stacjonarny w \(x=y=1\), co wynika z definicji \(x\) oraz \(y\) jako \(x=\frac{[X]}{[X]_{st}}\) oraz \(y=\frac{[Y]}{[Y]_{st}}\), które dla \([X]=[X]_{st}\) oraz \([Y]=[Y]_{st}\) są równe \(1\). Zostaną one wykorzystane do numerycznego rozwiązania równań. \par
+	Na potrzeby dalszej analizy teoretycznej wprowadzam podstawienie:
 	\begin{align*}
 		& \gamma=x-1 && \vartheta=y-1
 	\end{align*}
-	Co przesuwa stan stacjonarny do \(\gamma=\vartheta=0\). Otrzymujemy dla modelu Lotki:
+	To powoduje, że stan stacjonarny przesuwa się do \(\gamma=\vartheta=0\). Otrzymujemy dla modelu Lotki:
 	\begin{gather}
 		\dv{\gamma}{\tau}=-a\gamma\vartheta-a\gamma-a\vartheta \\
 		\dv{\vartheta}{\tau}=\gamma\vartheta+\gamma
@@ -750,7 +830,7 @@
 		"Jeśli w przestrzeni fazowej będącej podzbiorem płaszczyzny \(\mathbb{R}^{2}\) orbita zawiera co najmniej jeden swój punkt graniczny, to jest ona punktem krytycznym albo orbitą zamkniętą" \cite{palczewski}
 	\end{theorem}
 	Z twierdzenia tego możemy wywnioskować, że punkt krytyczny, zwany również punktem stacjonarnym, jest jedynym punktem zbioru granicznego, co ma miejsce w przypadku wykresu fazowego typu stabilne ognisko, albo istnieje cykl graniczny, co można zaobserwować na wykresach odpowiadającym modelowi klasycznego bruskelatora oraz bruskelatora z reakcjami odwracalnymi. Model ten został opisany poniżej. \par
-	Dla układu, którym jedynym żródłem entropii jest zachodząca reakcja chemiczna generacja entropii opisywana jest następującym równaniem de Dondera:
+	Dla układu, którym jedynym żródłem entropii jest zachodząca reakcja chemiczna produkcja entropii opisywana jest następującym równaniem de Dondera:
 	\begin{equation}\label{de donder}
 		T\dd_{i}S=A\dd{\xi}
 	\end{equation}
@@ -870,34 +950,7 @@
 		\caption{Zależność wielkości \(S\) oraz \(\dv{S}{\tau}\) od \(\tau\)}
 	\end{figure}
 	
-	\subsection{Metody Eóżniczkowe}
-	Układ równań liniowych pierwszego rzędu o stałych współczynnikach ma w ogólności rozwiązanie analityczne \cite{palczewski}
-	\begin{gather}
-		\dv{X(t)}{t}=RX(t) \\
-		X(t)=\exp(Rt)X(0)
-	\end{gather}
-	Rozpatrywane układy jednak nie mają rozwiązania analitycznego i należy je rozwiązać metodami numerycznymi. \par
-	W poniższej tabeli podano wybrane wzory różnicowe wykorzystywane podczas symulacji. Wzory \ref{tab:schematy}.1 - \ref{tab:schematy}.4 są typu Adamsa-Bashfortha, natomiast wzór \ref{tab:schematy}.5 typu Milne'a \cite{fortuna}. Wzory o wyższym rzędzie wymagają znajomości wartości większej ilości poprzednich kroków, więc nie mogą być one wykorzystane dla kroków początkowych. W symulacji wykorzystano progresywnie schemat \ref{tab:schematy}.1 dla pierwszego kroku, następnie \ref{tab:schematy}.2 dla drugiego, \ref{tab:schematy}.3 dla trzeciego oraz \ref{tab:schematy}.5 dla każdego kolejnego. 
-	\begin{table}[H]\label{tab:schematy}
-		\centering
-		\begin{tabular}{|l|l|c|c|}
-			\hline
-			 & Wzór & \(p\) & \(A_{p+1}\) \\
-			\hline
-			1 & \(y_{n+1}=y_{n}+hy'_{n}\) & \(1\) & \(\frac{1}{2}\) \\
-			\hline
-			2 & \(y_{n+1}=y_{n}+\frac{h}{2}(3y'_{n}-y'_{n-1})\) & \(2\) & \(\frac{5}{12}\) \\
-			\hline
-			3 & \(y_{n+1}=y_{n}+\frac{h}{12}(23y'_{n}-16y'_{n-1}+5y'_{n-2})\) & \(3\) & \(\frac{3}{8}\) \\
-			\hline
-			4 & \(y_{n+1}=y_{n}+\frac{h}{24}(55y'_{n}-59y'_{n-1}+37y'_{n-2}-9y'_{n-3})\) & \(4\) & \(\frac{251}{720}\) \\
-			\hline
-			5 & \(y_{n+1}=y_{n-3}+\frac{4h}{3}(2y'_{n}-y'_{n-1}+2y'_{n-2})\) & \(4\) & \(\frac{14}{45}\) \\
-			\hline
-		\end{tabular}
-		\caption{Schematy różnicowe}
-	\end{table}
-	gdzie \(h\) jest krokiem czasowym, \(p\) to najwyższa wykładnik potęgi \(h^{s}\), przy których współczynnik wynosi \(0\), a \(A_{p+1}\) jest współczynnikiem przy kolejnej potędze.
+	
 	%\blindtext
 	\section{Sekcja 2}
 	%\blindtext
