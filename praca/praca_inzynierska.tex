@@ -25,6 +25,7 @@
 \usepackage{xfrac}
 \usepackage{array}
 \usepackage{esint}
+\usepackage{tabularx}
 
 %\usepackage{titling}
 \usepackage{anyfontsize}
@@ -61,6 +62,7 @@
 %\newcolumntype{L}{>{\(}l<{\)}}
 %\newcolumntype{C}{>{\(}c<{\)}}
 %\newcolumntype{R}{>{\(}r<{\)}}
+\newcolumntype{Y}{>{\small\centering\arraybackslash}X}
 
 % Problemy:
 % W spisie kropki przy section
@@ -450,78 +452,107 @@
 	
 	\subsection{Stabilność rozwiązań}
 	Na potrzeby analizy można zredukować ilość parametrów danych równań różniczkowych stosując odpowiednie podstawienia. Najpierw należy wyznaczyć współrzędne punktu stacjonarnego, w którym obie pochodne stężeń reagentów są równe zero. Analiza zostanie przedstawiona na przykładzie modelu Lotki, ale analogiczne wyprowadzenie można przeprowadzić dla każdego z tych modeli. W stanie stacjonarnym stężenia reagentów są stałe, więc \(\dv{[X]}{t}=\dv{[Y]}{t}=0\)
-	\begin{gather}
+	\begin{equation}\label{lotka_pods}
+	\begin{split}
 		k_{1}[A]-k_{2}[X]_{st}[Y]_{st}=0 \\
 		k_{2}[X]_{st}[Y]_{st}-k_{3}[Y]_{st}=0
-	\end{gather}
+	\end{split}
+	\end{equation}
 	Rozwiązując ten układ równań otrzymujemy
-	\begin{gather}
+	\begin{equation}\label{lotka_stac}
+	\begin{split}
 		[X]_{st}=\frac{k_{3}}{k_{2}} \\
 		[Y]_{st}=\frac{k_{1}[A]}{k_{3}}
-	\end{gather}
+	\end{split}
+	\end{equation}
 	Wprowadzamy podstawienie
 	\begin{align*}
 		& x=\frac{[X]}{[X]_{st}} && y=\frac{[Y]}{[Y]_{st}} && \tau=k_{3}t && a=\frac{k_{1}k_{2}[A]}{k_{3}^{2}}
 	\end{align*}
 	i otrzymujemy po przekształceniach dla modelu Lotki:
-	\begin{gather}
+	\begin{equation}\label{lotka_prosty}
+	\begin{split}
 		\dv{x}{\tau}=a-axy \\
 		\dv{y}{\tau}=xy-y
-	\end{gather}
+	\end{split}
+	\end{equation}
 	Analogiczne wyprowadzenie można przeprowadzić dla modelu Lotki-Volterry:
-	\begin{align}
+	\begin{align}\label{lotka_volterra_stac}
 		& x=\frac{[X]}{[X]_{st}} && [X]_{st} = \frac{k_{3}}{k_{2}} && y=\frac{[Y]}{[Y]_{st}} && [Y]_{st} = \frac{k_{1}[A]}{k_{2}} && \tau=k_{3}t && a=\frac{k_{1}[A]}{k_{3}}
 	\end{align}
-	\begin{gather}
+	\begin{equation}\label{lotka_volterra_prosty}
+	\begin{split}
 		\dv{x}{\tau}=ax-axy \\
 		\dv{y}{\tau}=xy-y
-	\end{gather}
+	\end{split}
+	\end{equation}
 	oraz modelu bruskelator:
-	\begin{align}
+	\begin{align*}
 		& x=\frac{[X]}{[X]_{st}} && [X]_{st} = \frac{k_{1}[A]}{k_{4}} && y=\frac{[Y]}{[Y]_{st}} && [Y]_{st} = \frac{k_{3}k_{4}[B]}{k_{1}k_{2}[A]} && \tau=k_{4}t && a=\frac{k_{3}[B]}{k_{4}} && b=\frac{k_{1}^{2}k_{2}[A]^{2}}{k_{4}^{3}}
-	\end{align}
-	\begin{gather}
+	\end{align*}
+	\begin{equation}\label{bruskelator_prosty}
+	\begin{split}
 		\dv{x}{\tau}=1+ax^{2}y-ax-x \\
 		\dv{y}{\tau}=-bx^{2}y+bx
-	\end{gather}
+	\end{split}
+	\end{equation}
+	Stałe w powyższych równaniach wynikają z podstawienia odpowiednich \(x\) i \(y\) do odpowiadających równań i grupowanie stałych, aby otrzymać najprostszą formę. \par
 	Tak przygotowane równania mają stan stacjonarny w \(x=y=1\), co wynika z definicji \(x\) oraz \(y\) jako \(x=\frac{[X]}{[X]_{st}}\) oraz \(y=\frac{[Y]}{[Y]_{st}}\), które dla \([X]=[X]_{st}\) oraz \([Y]=[Y]_{st}\) są równe \(1\). Zostaną one wykorzystane do numerycznego rozwiązania równań. \par
 	Na potrzeby dalszej analizy teoretycznej wprowadzam podstawienie:
 	\begin{align*}
 		& \gamma=x-1 && \vartheta=y-1
 	\end{align*}
 	To powoduje, że stan stacjonarny przesuwa się do \(\gamma=\vartheta=0\). Otrzymujemy dla modelu Lotki:
-	\begin{gather}
+	\begin{equation}\label{lotka_0}
+	\begin{split}
 		\dv{\gamma}{\tau}=-a\gamma\vartheta-a\gamma-a\vartheta \\
 		\dv{\vartheta}{\tau}=\gamma\vartheta+\gamma
-	\end{gather}
+	\end{split}
+	\end{equation}
 	Dla modelu Lotki-Volterry:
-	\begin{gather}
+	\begin{equation}\label{lotka_volterra_0}
+	\begin{split}
 		\dv{\gamma}{\tau}=-a\gamma\vartheta-a\vartheta \\
 		\dv{\vartheta}{\tau}=\gamma\vartheta+\gamma
-	\end{gather}
+	\end{split}
+	\end{equation}
 	Dla modelu brusselator:
-	\begin{gather}
+	\begin{equation}\label{bruskelator_0}
+	\begin{split}
 		\dv{\gamma}{\tau}=a\gamma^{2}\vartheta+a\gamma^{2}+2a\gamma\vartheta+a\gamma+a\vartheta-\gamma \\
 		\dv{\vartheta}{\tau}=-b\gamma^{2}\vartheta-b\gamma^{2}-2b\gamma\vartheta-b\gamma-b\vartheta
-	\end{gather}
-	Istnienie punktu stacjonarnego nie oznacza, że jest on atraktorem. Badanie charakteru punktu stacjonarnego układu równań rózniczkowych nieliniowych jest trudne, ale można wprowadzić pewne uproszczenie i zlinearyzować ten układ. Oznacza to rozwiniecie funcji po prawej stronie równań w szereg Taylora i ograniczenie go do elementu liniowego. Działanie to jest uzasadnione tym, że badamy jedynie najbliższe otoczenie i kolejne składniki mają mniejszy wkład im bliżej punktu stacjonarnego. \par
+	\end{split}
+	\end{equation}
+	Istnienie punktu stacjonarnego nie oznacza, że jest on atraktorem. 
+	
+	Układy są badane w stanie oddalonym od stanu stacjonarnego, dlatego wybieramy taki stan jako stan odniesienia, a pozostałe jako wyprowadzone z niego zaburzeniem.
+	
+	Badanie charakteru punktu stacjonarnego układu równań różniczkowych nieliniowych jest trudne, ale można wprowadzić pewne uproszczenie i zlinearyzować ten układ. Oznacza to rozwiniecie funcji po prawej stronie równań w szereg Taylora i ograniczenie go do elementu liniowego. Działanie to jest uzasadnione tym, że badamy jedynie najbliższe otoczenie i kolejne składniki mają mniejszy wkład im bliżej punktu stacjonarnego. \par
 	Po linearyzacji otrzymujemy dla modelu Lotki:
-	\begin{gather}
+	\begin{equation}\label{lotka_lin}
+	\begin{split}
 		\dv{\gamma}{\tau}=-a\gamma-a\vartheta \\
 		\dv{\vartheta}{\tau}=\gamma
-	\end{gather}
-	Dla modelu Lotki-Volterry:
-	\begin{gather}
+	\end{split}
+	\end{equation}
+	Układ równań \eqref{lotka_lin} w porównaniu z \eqref{lotka_0} nie zawiera składników o całkowitej potędze większej niż 1. \\
+	Odpowiednie przekształcenie dla modelu Lotki-Volterry daje układ:
+	\begin{equation}\label{lotka_volterra_lin}
+	\begin{split}
 		\dv{\gamma}{\tau}=-a\vartheta \\
-		\dv{\vartheta}{\tau}=\gamma
-	\end{gather}
-	Dla modelu brusselator:
-	\begin{gather}
+		\dv{\vartheta}{\tau}=\gamma,
+	\end{split}
+	\end{equation}
+	natomiast dla modelu brusselator:
+	\begin{equation}\label{bruskelator_lin}
+	\begin{split}
 		\dv{\gamma}{\tau}=(a-1)\gamma+a\vartheta \\
 		\dv{\vartheta}{\tau}=-b\gamma-b\vartheta
-	\end{gather}
+	\end{split}
+	\end{equation}
 	Można teraz badać stany stabilne metodami równań różniczkowych liniowych. Stabilność zależy od wartości własnych macierzy stałych. Dla modelu Lotki:
-	\begin{gather}
+	\begin{equation}\label{lotka_charakterystyczne}
+	\begin{split}
 		\det
 		\begin{pmatrix}
 			-a-\lambda & -a \\
@@ -530,9 +561,11 @@
 		=\lambda^{2}+a\lambda+a=0 \\
 		\lambda_{1}+\lambda_{2}=-a \\
 		\lambda_{1}\lambda_{2}=a
-	\end{gather}
+	\end{split}
+	\end{equation}
 	Dla modelu Lotki-Volterry:
-	\begin{gather}
+	\begin{equation}\label{lotka_volterra_charakterystyczne}
+	\begin{split}
 		\det
 		\begin{pmatrix}
 			-\lambda & -a \\
@@ -541,9 +574,11 @@
 		=\lambda^{2}+a=0 \\
 		\lambda_{1}+\lambda_{2}=0 \\
 		\lambda_{1}\lambda_{2}=a
-	\end{gather}
+	\end{split}
+	\end{equation}
 	Dla modelu brusselator:
-	\begin{gather}
+	\begin{equation}\label{bruskelator_charakterystyczne}
+	\begin{split}
 		\det
 		\begin{pmatrix}
 			a-1-\lambda & a \\
@@ -552,280 +587,302 @@
 		=\lambda^{2}+(-a+b+1)\lambda+b=0 \\
 		\lambda_{1}+\lambda_{2}=a-b-1 \\
 		\lambda_{1}\lambda_{2}=b
-	\end{gather}
+	\end{split}
+	\end{equation}
+	
 	\begin{table}[H]
 		\centering
-		\begin{tabular}{|c|c|c|c|}\cline{1-4}
+		\begin{tabularx}{\textwidth}{|Y|Y|Y|Y|}\cline{1-4}
 			& \(\lambda_{1}+\lambda_{2}<0\) & \(\lambda_{1}+\lambda_{2}=0\) & \(\lambda_{1}+\lambda_{2}>0\) \\ \cline{1-4}
 			\(\left(\frac{\lambda_{1}+\lambda_{2}}{2}\right)^{2}<\lambda_{1}\lambda_{2}\) & 
-			\begin{tabular}{c} %11
+			{\begin{tabularx}{\columnwidth}{c} %11
 				\(\lambda_{1}, \lambda_{2}\in\mathbb{C}\) \\
 				\(\Re{\lambda_{1}}=\Re{\lambda_{2}}<0\) \\
 				\(\lambda_{1}=\overline{\lambda_{2}}\) \\
 				\textbf{Stabilne ognisko}
-			\end{tabular}
+			\end{tabularx}}
 			& \multirow{2}{*}{
-			\begin{tabular}{c} %(1-2)2
+			{\begin{tabularx}{\columnwidth}{c} %(1-2)2
 				\(\lambda_{1}, \lambda_{2}\in\mathbb{C}\) \\
 				\(\Re{\lambda_{1}}=\Re{\lambda_{2}}=0\) \\
 				\(\lambda_{1}=-\lambda_{2}\) \\
 				\textbf{Centrum}
-			\end{tabular}
+			\end{tabularx}}
 			} & 
-			\begin{tabular}{c} %13
+			{\begin{tabularx}{\columnwidth}{c} %13
 				\(\lambda_{1}, \lambda_{2}\in\mathbb{C}\) \\
 				\(\Re{\lambda_{1}}=\Re{\lambda_{2}}>0\) \\
 				\(\lambda_{1}=\overline{\lambda_{2}}\) \\
 				\textbf{Niestabilne ognisko}
-			\end{tabular} 
+			\end{tabularx}} 
 			\\ \cline{1-2}\cline{4-4}
 			\(0<\lambda_{1}\lambda_{2}\leq\left(\frac{\lambda_{1}+\lambda_{2}}{2}\right)^{2}\) & 
-			\begin{tabular}{c} %21
+			{\begin{tabularx}{\columnwidth}{c} %21
 				\(\lambda_{1}, \lambda_{2}\in\mathbb{R}\) \\
 				\(\lambda_{1}, \lambda_{2}<0\) \\
 				\textbf{Stabilny węzeł}
-			\end{tabular}
+			\end{tabularx}}
 			& &
-			\begin{tabular}{c} %23
+			{\begin{tabularx}{\columnwidth}{c} %23
 				\(\lambda_{1}, \lambda_{2}\in\mathbb{R}\) \\
 				\(\lambda_{1}, \lambda_{2}>0\) \\
 				\textbf{Niestabilny węzeł}
-			\end{tabular}
+			\end{tabularx}}
 			\\ \cline{1-4}
 			\(\lambda_{1}\lambda_{2}=0\) & 
-			\begin{tabular}{c} %31
+			{\begin{tabularx}{\columnwidth}{c} %31
 				\(\lambda_{1}, \lambda_{2}\in\mathbb{R}\) \\
 				\(\lambda_{1}<\lambda_{2}=0\) 
-			\end{tabular}
+			\end{tabularx}}
 			& 
-			\begin{tabular}{c} %32
+			{\begin{tabularx}{\columnwidth}{c} %32
 				\(\lambda_{1}, \lambda_{2}\in\mathbb{R}\) \\
 				\(\lambda_{1}=\lambda_{2}=0\) 
-			\end{tabular}
+			\end{tabularx}}
 			& 
-			\begin{tabular}{c} %33
+			{\begin{tabularx}{\columnwidth}{c} %33
 				\(\lambda_{1}, \lambda_{2}\in\mathbb{R}\) \\
 				\(0=\lambda_{1}<\lambda_{2}\) 
-			\end{tabular}
+			\end{tabularx}}
 			\\ \cline{1-4}
 			\(\lambda_{1}\lambda_{2}<0\) & 
-			\begin{tabular}{c} %41
+			{\begin{tabularx}{\columnwidth}{c} %41
 				\(\lambda_{1}, \lambda_{2}\in\mathbb{R}\) \\
 				\(0<\lambda_{2}<-\lambda_{1}\) \\
-				\textbf{Siodło (zawsze niestabilne)}
-			\end{tabular}
+				\textbf{Siodło} \\
+				\textbf{(zawsze niestabilne)}
+			\end{tabularx}}
 			& 
-			\begin{tabular}{c} %42
+			{\begin{tabularx}{\columnwidth}{c} %42
 				\(\lambda_{1}, \lambda_{2}\in\mathbb{R}\) \\
 				\(0<\lambda_{2}=-\lambda_{1}\) \\
-				\textbf{Siodło (zawsze niestabilne)}
-			\end{tabular}
+				\textbf{Siodło} \\
+				\textbf{(zawsze niestabilne)}
+			\end{tabularx}}
 			&
-			\begin{tabular}{c} %43
+			{\begin{tabularx}{\columnwidth}{c} %43
 				\(\lambda_{1}, \lambda_{2}\in\mathbb{R}\) \\
 				\(0>\lambda_{1}>-\lambda_{2}\) \\
-				\textbf{Siodło (zawsze niestabilne)}
-			\end{tabular}
+				\textbf{Siodło} \\
+				\textbf{(zawsze niestabilne)}
+			\end{tabularx}}
 			\\ \cline{1-4}
-		\end{tabular}
+		\end{tabularx}
 		\caption{Warunki stabilności}
+		\label{tab:warunki_stabilnosci}
 	\end{table}
-	
+	W tabeli \ref{tab:schematy} przedstawiono zależności między pierwiastkami równania kwadratowego, a sumą i iloczynem tych pierwiastków. Suma oraz iloczyn są tutaj wykorzystywane, ponieważ można je w prosty sposów otrzymać ze wzorów Viete'a: 
+	\begin{equation}
+	\begin{split}
+		a\lambda^{2} + b\lambda + c &= 0 \\
+		\lambda_{1} + \lambda_{2} &= -\frac{b}{a} \\
+		\lambda_{1}\lambda_{2} &= \frac{c}{a}
+	\end{split}
+	\end{equation}
+	Charakter wykresu fazowego zależy od zależności między pierwiastkami równania charakterystycznego \cite{orlik}.
 	\begin{table}[H]
 		\centering
-		\begin{tabular}{|c|c|c|c|}\cline{1-4}
+		\begin{tabularx}{\textwidth}{|Y|Y|Y|Y|}\cline{1-4}
 			& \(\lambda_{1}+\lambda_{2}<0\) & \(\lambda_{1}+\lambda_{2}=0\) & \(\lambda_{1}+\lambda_{2}>0\) \\ \cline{1-4}
 			\(\left(\frac{\lambda_{1}+\lambda_{2}}{2}\right)^{2}<\lambda_{1}\lambda_{2}\) & 
-			\begin{tabular}{c} %11
+			{\begin{tabularx}{\columnwidth}{c} %11
 				\(0<a<4\)
-			\end{tabular}
+			\end{tabularx}}
 			& \multirow{2}{*}{
-				\begin{tabular}{c} %(1-2)2
+				{\begin{tabularx}{\columnwidth}{c} %(1-2)2
 					-
-				\end{tabular}
+				\end{tabularx}}
 			} & 
-			\begin{tabular}{c} %13
+			{\begin{tabularx}{\columnwidth}{c} %13
 				-
-			\end{tabular} 
+			\end{tabularx}}
 			\\ \cline{1-2}\cline{4-4}
 			\(0<\lambda_{1}\lambda_{2}\leq\left(\frac{\lambda_{1}+\lambda_{2}}{2}\right)^{2}\) & 
-			\begin{tabular}{c} %21
+			{\begin{tabularx}{\columnwidth}{c} %21
 				\(4\leq a\)
-			\end{tabular}
+			\end{tabularx}}
 			& &
-			\begin{tabular}{c} %23
+			{\begin{tabularx}{\columnwidth}{c} %23
 				-
-			\end{tabular}
+			\end{tabularx}}
 			\\ \cline{1-4}
 			\(\lambda_{1}\lambda_{2}=0\) & 
-			\begin{tabular}{c} %31
+			{\begin{tabularx}{\columnwidth}{c} %31
 				-
-			\end{tabular}
+			\end{tabularx}}
 			& 
-			\begin{tabular}{c} %32
+			{\begin{tabularx}{\columnwidth}{c} %32
 				\(a=0\)
-			\end{tabular}
+			\end{tabularx}}
 			& 
-			\begin{tabular}{c} %33
+			{\begin{tabularx}{\columnwidth}{c} %33
 				-
-			\end{tabular}
+			\end{tabularx}}
 			\\ \cline{1-4}
 			\(\lambda_{1}\lambda_{2}<0\) & 
-			\begin{tabular}{c} %41
+			{\begin{tabularx}{\columnwidth}{c} %41
 				-
-			\end{tabular}
+			\end{tabularx}}
 			& 
-			\begin{tabular}{c} %42
+			{\begin{tabularx}{\columnwidth}{c} %42
 				-
-			\end{tabular}
+			\end{tabularx}}
 			&
-			\begin{tabular}{c} %43
+			{\begin{tabularx}{\columnwidth}{c} %43
 				\(a<0\)
-			\end{tabular}
+			\end{tabularx}}
 			\\ \cline{1-4}
-		\end{tabular}
+		\end{tabularx}
 		\caption{Warunki dla modelu Lotki}
+		\label{tab:warunki_lotka}
 	\end{table}
 
 	\begin{table}[H]
 		\centering
-		\begin{tabular}{|c|c|c|c|}\cline{1-4}
+		\begin{tabularx}{\textwidth}{|Y|Y|Y|Y|}\cline{1-4}
 			& \(\lambda_{1}+\lambda_{2}<0\) & \(\lambda_{1}+\lambda_{2}=0\) & \(\lambda_{1}+\lambda_{2}>0\) \\ \cline{1-4}
 			\(\left(\frac{\lambda_{1}+\lambda_{2}}{2}\right)^{2}<\lambda_{1}\lambda_{2}\) & 
-			\begin{tabular}{c} %11
+			{\begin{tabularx}{\columnwidth}{c} %11
 				-
-			\end{tabular}
+			\end{tabularx}}
 			& \multirow{2}{*}{
-				\begin{tabular}{c} %(1-2)2
+				{\begin{tabularx}{\columnwidth}{c} %(1-2)2
 					\(0<a\)
-				\end{tabular}
+				\end{tabularx}}
 			} & 
-			\begin{tabular}{c} %13
+			{\begin{tabularx}{\columnwidth}{c} %13
 				-
-			\end{tabular} 
+			\end{tabularx}} 
 			\\ \cline{1-2}\cline{4-4}
 			\(0<\lambda_{1}\lambda_{2}\leq\left(\frac{\lambda_{1}+\lambda_{2}}{2}\right)^{2}\) & 
-			\begin{tabular}{c} %21
+			{\begin{tabularx}{\columnwidth}{c} %21
 				-
-			\end{tabular}
+			\end{tabularx}}
 			& &
-			\begin{tabular}{c} %23
+			{\begin{tabularx}{\columnwidth}{c} %23
 				-
-			\end{tabular}
+			\end{tabularx}}
 			\\ \cline{1-4}
 			\(\lambda_{1}\lambda_{2}=0\) & 
-			\begin{tabular}{c} %31
+			{\begin{tabularx}{\columnwidth}{c} %31
 				-
-			\end{tabular}
+			\end{tabularx}}
 			& 
-			\begin{tabular}{c} %32
+			{\begin{tabularx}{\columnwidth}{c} %32
 				\(a=0\) 
-			\end{tabular}
+			\end{tabularx}}
 			& 
-			\begin{tabular}{c} %33
+			{\begin{tabularx}{\columnwidth}{c} %33
 				-
-			\end{tabular}
+			\end{tabularx}}
 			\\ \cline{1-4}
 			\(\lambda_{1}\lambda_{2}<0\) & 
-			\begin{tabular}{c} %41
+			{\begin{tabularx}{\columnwidth}{c} %41
 				-
-			\end{tabular}
+			\end{tabularx}}
 			& 
-			\begin{tabular}{c} %42
+			{\begin{tabularx}{\columnwidth}{c} %42
 				\(a<0\)
-			\end{tabular}
+			\end{tabularx}}
 			&
-			\begin{tabular}{c} %43
+			{\begin{tabularx}{\columnwidth}{c} %43
 				-
-			\end{tabular}
+			\end{tabularx}}
 			\\ \cline{1-4}
-		\end{tabular}
+		\end{tabularx}
 		\caption{Warunki dla modelu Lotki-Volterry}
+		\label{tab:warunki_lotka_volterra}
 	\end{table}
 
 	\begin{table}[H]
 		\centering
-		\begin{tabular}{|c|c|c|c|}\cline{1-4}
+		\begin{tabularx}{\textwidth}{|Y|Y|Y|Y|}\cline{1-4}
 			& \(\lambda_{1}+\lambda_{2}<0\) & \(\lambda_{1}+\lambda_{2}=0\) & \(\lambda_{1}+\lambda_{2}>0\) \\ \cline{1-4}
 			\(\left(\frac{\lambda_{1}+\lambda_{2}}{2}\right)^{2}<\lambda_{1}\lambda_{2}\) & 
-			\begin{tabular}{c} %11
+			{\begin{tabularx}{\columnwidth}{c} %11
 				\(b+1-2\sqrt{b}<a<b+1\) \\
 				\(0<b\)
-			\end{tabular}
+			\end{tabularx}}
 			& \multirow{2}{*}{
-				\begin{tabular}{c} %(1-2)2
+				{\begin{tabularx}{\columnwidth}{c} %(1-2)2
 					 \(a=b+1\) \\
 					 \(0<b\)
-				\end{tabular}
+				\end{tabularx}}
 			} & 
-			\begin{tabular}{c} %13
+			{\begin{tabularx}{\columnwidth}{c} %13
 				\(b+1<a<b+1+2\sqrt{b}\) \\
 				\(0<b\)
-			\end{tabular} 
+			\end{tabularx}} 
 			\\ \cline{1-2}\cline{4-4}
 			\(0<\lambda_{1}\lambda_{2}\leq\left(\frac{\lambda_{1}+\lambda_{2}}{2}\right)^{2}\) & 
-			\begin{tabular}{c} %21
+			{\begin{tabularx}{\columnwidth}{c} %21
 				\(a\leq b+1-2\sqrt{b}\) \\
 				\(0<b\)
-			\end{tabular}
+			\end{tabularx}}
 			& &
-			\begin{tabular}{c} %23
+			{\begin{tabularx}{\columnwidth}{c} %23
 				\(b+1+2\sqrt{b}\leq a\) \\
 				\(0<b\)
-			\end{tabular}
+			\end{tabularx}}
 			\\ \cline{1-4}
 			\(\lambda_{1}\lambda_{2}=0\) & 
-			\begin{tabular}{c} %31
+			{\begin{tabularx}{\columnwidth}{c} %31
 				\(a<1\) \\
 				\(b=0\)
-			\end{tabular}
+			\end{tabularx}}
 			& 
-			\begin{tabular}{c} %32
+			{\begin{tabularx}{\columnwidth}{c} %32
 				\(a=1\) \\
 				\(b=0\) 
-			\end{tabular}
+			\end{tabularx}}
 			& 
-			\begin{tabular}{c} %33
+			{\begin{tabularx}{\columnwidth}{c} %33
 				\(1<a\) \\
 				\(b=0\)
-			\end{tabular}
+			\end{tabularx}}
 			\\ \cline{1-4}
 			\(\lambda_{1}\lambda_{2}<0\) & 
-			\begin{tabular}{c} %41
+			{\begin{tabularx}{\columnwidth}{c} %41
 				\(a<b+1\) \\
 				\(b<0\)
-			\end{tabular}
+			\end{tabularx}}
 			& 
-			\begin{tabular}{c} %42
+			{\begin{tabularx}{\columnwidth}{c} %42
 				\(a=b+1\) \\
 				\(b<0\)
-			\end{tabular}
+			\end{tabularx}}
 			&
-			\begin{tabular}{c} %43
+			{\begin{tabularx}{\columnwidth}{c} %43
 				\(b+1<a\) \\
 				\(b<0\)
-			\end{tabular}
+			\end{tabularx}}
 			\\ \cline{1-4}
-		\end{tabular}
+		\end{tabularx}
 		\caption{Warunki dla modelu bruskelator}
+		\label{tab:warunki_bruskelator}
 	\end{table}
+	W tabelach \ref{tab:warunki_lotka}, \ref{tab:warunki_lotka_volterra} oraz \ref{tab:warunki_bruskelator} przedstawiono warunki z tabeli \ref{tab:warunki_stabilnosci} wykorzystując odpowiednie równania charakterystyczne. Niektóre warunki nie są możliwe do spełnienia dla parametrów rzeczywistych, taka komórka zawiera "-". \par
 	Przykładowe wykresy fazowe:
-	\begin{figure}[H]\label{stabilny wezel}
+	\begin{figure}[H]
 		\centering
 		\includegraphics{"brusselator; a=0.5; b=4".png}
 		\caption{Stabilny węzeł}
+		\label{fig:stabilny_wezel}
 	\end{figure}
-	\begin{figure}[H]\label{stabilne ognisko}
+	\begin{figure}[H]
 		\centering
 		\includegraphics{"brusselator; a=3; b=4".png}
 		\caption{Stabilne ognisko}
+		\label{fig:stabilne_ognisko}
 	\end{figure}
-	\begin{figure}[H]\label{niestabilne ognisko}
+	\begin{figure}[H]
 		\centering
 		\includegraphics{"brusselator; a=7; b=4".png}
 		\caption{Niestabilne ognisko}
+		\label{fig:niestabilne_ognisko}
 	\end{figure}
-	Wykresy fazowe na rysunkach \ref{stabilny wezel} oraz \ref{stabilne ognisko} zachowują się w sposób oczekiwany według poprzednich tabel, jednak na rysunku \ref{niestabilne ognisko} zachodzi coś niespodziewanego. Układ osiąga stabilny cykl graniczny. Jest to niemożliwe w przypadku układów liniowych do których je sprowadziliśmy poprzez linearyzację, jednak linearyzacja jest dobrym przybliżeniem jedynie w najbliższym otoczeniu punktu stacjonarnego, cykl graniczny widoczny na rysunku \ref{niestabilne ognisko} jest więc przejawem nieliniowości układu równań modelu bruskelator \cite{orlik}. Istnieje na szczęście twierdzenie, które wyjaśnia to zjawisko, jest to twierdzenie Poincar\'{e}go-Bendixsona. \par
+	Wykresy fazowe na rysunkach \ref{fig:stabilny_wezel} oraz \ref{fig:stabilne_ognisko} przedstawiają najważniejsze przypadki dla modelu brukselator. Wykorzystano odpowiednio stałe: \(a=0,5; b=4\), \(a=3; b=4\) oraz \(a=7; b=4\). Parametry te dodano tak, aby były one wewnątrz podanych w tabeli \ref{tab:warunki_bruskelator}. \par
+	Wykresy zachowują się w sposób oczekiwany według poprzednich tabel i literatury \cite{orlik}. Na rysunku \ref{fig:niestabilne_ognisko} zachodzi jednak coś niespodziewanego. Układ osiąga stabilny cykl graniczny. Jest to niemożliwe w przypadku układów liniowych do których je sprowadziliśmy poprzez linearyzację, jednak linearyzacja jest dobrym przybliżeniem jedynie w najbliższym otoczeniu punktu stacjonarnego, cykl graniczny widoczny na rysunku \ref{niestabilne ognisko} jest więc przejawem nieliniowości układu równań modelu bruskelator \cite{orlik}. Istnieje na szczęście twierdzenie, które wyjaśnia to zjawisko, jest to twierdzenie Poincar\'{e}go-Bendixsona. \par
 	\begin{theorem}[\textbf{Poincar\'{e}go-Bendixsona}]
 		"Jeśli w przestrzeni fazowej będącej podzbiorem płaszczyzny \(\mathbb{R}^{2}\) orbita zawiera co najmniej jeden swój punkt graniczny, to jest ona punktem krytycznym albo orbitą zamkniętą" \cite{palczewski}
 	\end{theorem}
@@ -839,19 +896,21 @@
 		T\dd_{i}S=\sum_{r}A_{r}\dd{\xi_{r}}.
 	\end{equation}
 	W przypadku reackcji prostych, na przykład \ce{X -> Y}, nie jest możliwe zdefiniowane powinowactwa chemicznego,ponieważ należy narzucić warunek \(A=0\) w stanie równowagi, a taki stan nie występuje w przypadku tego typu reakcji. Możliwe jest jedynie stwierdzenie, że skoro dana reakcja zachodzi, to \(A_{i}>0\) oraz \(\dd{\xi_{i}}>0\). Temperatura bezwzględna jest zawsze dodatnia, stąd \(\dd_{i}S>0\). \par
+	
 	\subsection{Ogólny model bruskelator}
+	Będziemy teraz analizować uogólniony model bruskelatora, w którym reakcje mogą przebiegać w dwie strony z różnymi stałymi szybkości reakcji. Poprzedni model jest szczególnym przypadkiem poniższego przy założeniu \(k_{-1}=k_{-2}=k_{-3}=k_{-4}=0\). 
 	Uogólniona forma modelu bruskelator ma postać:
 	\begin{center}
-		\ce{A <=>[k_{1}][k_{-1}] X} \\
-		\ce{2X + Y <=>[k_{2}][k_{-2}] 3X} \\
-		\ce{B + X <=>[k_{3}][k_{-3}] D + Y} \\
-		\ce{X <=>[k_{4}][k_{-4}] E}.
+		1: \ce{A <=>[k_{1}][k_{-1}] X} \\
+		2: \ce{2X + Y <=>[k_{2}][k_{-2}] 3X} \\
+		3: \ce{B + X <=>[k_{3}][k_{-3}] D + Y} \\
+		4: \ce{X <=>[k_{4}][k_{-4}] E}.
 	\end{center}
-	Reakcje w nim są odwracalne i przebiegają przy różncyh stałych prędkości reakcji oznaczonych \(k_{i}\) oraz \(k_{-i}\) dla rekacji odpowiednio w prawą i lewą stronę. \par
+	Reakcje są odwracalne i przebiegają przy różncyh stałych prędkości reakcji oznaczonych \(k_{i}\) oraz \(k_{-i}\) dla rekacji odpowiednio w prawą i lewą stronę. \par
 	Całkowita zmiana reagentów \(X\) oraz \(Y\) ma postać:
 	\begin{align}
-		\dv{[X]}{t} &=& k_{1}[A] +& k_{2}[X]^{2}[Y] - k_{3}[B][X] - k_{4}[X] - k_{-1}[X] &-& k_{-2}[X]^{3} + k_{-3}[D][Y] + k_{-4}[E] \\
-		\dv{[Y]}{t} &=& -& k_{2}[X]^{2}[Y] + k_{3}[B][X] &+& k_{-2}[X]^{3} - k_{-3}[D][Y]
+		\dv{[X]}{t} &= k_{1}[A] + k_{2}[X]^{2}[Y] - k_{3}[B][X] - k_{4}[X] - k_{-1}[X] - k_{-2}[X]^{3} + k_{-3}[D][Y] + k_{-4}[E] \\
+		\dv{[Y]}{t} &= - k_{2}[X]^{2}[Y] + k_{3}[B][X] + k_{-2}[X]^{3} - k_{-3}[D][Y]
 	\end{align}
 	Rozdzielam przyrosty na dwie części, odpowiadające reakcjom w prawą oraz lewą stronę:
 	\begin{align}
@@ -862,8 +921,8 @@
 	\end{align}
 	Stany stacjonarne odpowiadające odpowiednio \([X]_{1}\) i \([Y]_{1}\) oraz \([X]_{2}\) i \([Y]_{2}\) to:
 	\begin{align}
-		\dv{[X]_{st, 1}}{t} &= \frac{k_{1}[A]}{k_{4}}; & \dv{[Y]_{st, 1}}{t} &= \frac{k_{3}k_{4}[B]}{k_{1}k_{2}[A]} \\
-		\dv{[X]_{st, 2}}{t} &= \frac{k_{-4}[E]}{k_{-1}}; & \dv{[Y]_{st, 2}}{t} &= \frac{k_{-2}k_{-4}^{3}[E]^{3}}{k_{-1}^{3}k_{-3}[D]}
+		[X]_{st, 1} &= \frac{k_{1}[A]}{k_{4}}; & [Y]_{st, 1} &= \frac{k_{3}k_{4}[B]}{k_{1}k_{2}[A]} \\
+		[X]_{st, 2} &= \frac{k_{-4}[E]}{k_{-1}}; & [Y]_{st, 2} &= \frac{k_{-2}k_{-4}^{3}[E]^{3}}{k_{-1}^{3}k_{-3}[D]}
 	\end{align}
 	Przyjmuję, że mogę dowolnie kontrolować stężenia reagentów \([A]\), \([B]\), \([D]\) i \([E]\). \([A]\) oraz \([B]\) pozostają dowolnymi parametrami, natomiast \([D]\) i \([E]\) są zależne od innych parametrów. Po przyrównaniu \([X]_{st, 1}\) oraz \([X]_{st, 2}\) i analogicznie dla \([Y]\) otrzymujemy wartości dla \([D]\) oraz \([E]\):
 	\begin{align}
@@ -913,10 +972,10 @@
 	\end{equation}
 	gdzie \(R\) to uniwersalna stała gazowa, \(T\) - temperatura bezwzględna, \(c_{i}\) - stężenie \(i\)-tego składnika, a \(\nu_{i}\) to współczynnik stechiometryczny reagenta \(i\) (dodatni dla produktów po prawej stronie, ujemny dla substratów po lewej). \(RT\) jest jedynie stałą i na potrzeby symulacji przyjąłem \(RT=1\). Otrzymujemy dla każdej z reakcji odpowiednio:
 	\begin{align}
-		1: & \ln(\frac{1}{cx}) \\
-		2: & \ln(\frac{by}{dx}) \\
-		3: & \ln(\frac{bx}{dy}) \\
-		4: & \ln(\frac{x}{c}).
+		1: & A_{1} = \ln(\frac{1}{cx}) \\
+		2: & A_{2} = \ln(\frac{by}{dx}) \\
+		3: & A_{3} = \ln(\frac{bx}{dy}) \\
+		4: & A_{4} = \ln(\frac{x}{c}).
 	\end{align}
 	Liczba postępu reakcji wyrażona jest równością: 
 	\begin{equation}
@@ -933,6 +992,7 @@
 	\begin{equation}
 		\dv{_{i}S}{\tau} = \ln(\frac{1}{cx})(1 - cx) + \ln(\frac{by}{dx})(ax^{2}y - \frac{ad}{b}x^{3}) + \ln(\frac{bx}{dy})(ac - \frac{ad}{b}y) + \ln(\frac{x}{c})(x - c)
 	\end{equation}
+	Założenia \(R=T=V=[X]_{st}=1\) uargumentowane są tym, że interesuje nas jedynie charakter zmienności entropii w czasie, a nie konkretna wartość entropii. Jest to jedynie model, który nie odpowiada żadnemu rzeczywistemu układowi. Oczywiście wprowadzenie takich założeń zmienia jednostkę entropii, jednak ważna dla nas jest jedynie wartość i możemy ten fakt pominąć. \par
 	Wykresy otrzymane z przeprowadzonej symulacji dla kroku symulacji \(h = \dd{\tau} = 0,001\) oraz warunku początkowego \(x=1, y=2\):
 	\begin{figure}[H]
 		\centering
@@ -1140,6 +1200,8 @@
 	%\end{description}
 	%Dla każdego układu produkcja entropii jest dodatnia. Wynika z tego argumentu także, że jest to prawdziłe dla każdego podukładu należącego do danego układu niezależnie od jego wielkości. Zasada ta ma więc charakter lokalny.
 	\section{Dodatek D}
+	
+	\section{Dodatek E}
 	Uogólniona forma modelu bruskelator ma postać:
 	\begin{center}
 		\ce{A <=>[k_{1}][k_{-1}] X} \\
@@ -1201,7 +1263,7 @@
 		\dv{\gamma}{\tau} &= (a - c - 3b - 1)\gamma + (a + b)\vartheta \\
 		\dv{\vartheta}{\tau} &= (- b + 3d)\gamma + (- b - d)\vartheta
 	\end{align}
-
+	
 	% do usuniecia?
 	Równanie charakterystyczne:
 	\begin{equation}
@@ -1249,6 +1311,4 @@
 		\includegraphics{"brusselator_rev3; a=9, b=1, c=1, d=0.1".png}
 		\caption{Zależność wielkości \(S\) oraz \(\dv{S}{\tau}\) od \(\tau\)}
 	\end{figure}
-	\section{Dodatek E}
-	
 \end{document}
