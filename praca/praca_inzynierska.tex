@@ -544,30 +544,39 @@
 	\end{definition}
 	Jeśli \(\gamma=\omega(y)\) dla każdego punktu z otoczenia $U$, to $\gamma$ jest atraktorem. \cite{palczewski} \par
 	Układy są badane w stanie oddalonym od stanu stacjonarnego, dlatego wybieramy taki stan jako stan odniesienia, a pozostałe jako wyprowadzone z niego zaburzeniem.
-	Badanie charakteru punktu stacjonarnego układu równań różniczkowych nieliniowych jest trudne, ale można wprowadzić pewne uproszczenie i zlinearyzować ten układ. Oznacza to rozwiniecie funcji po prawej stronie równań w szereg Taylora i ograniczenie go do elementu liniowego. Działanie to jest uzasadnione tym, że badamy jedynie najbliższe otoczenie i kolejne składniki mają mniejszy wkład im bliżej punktu stacjonarnego. \par
+	Badanie charakteru punktu stacjonarnego układu równań różniczkowych nieliniowych jest trudne, ale można wprowadzić pewne uproszczenie i zlinearyzować ten układ. Oznacza to rozwiniecie funcji po prawej stronie równań w szereg Taylora i ograniczenie go do elementu liniowego. W rezultacie przeprowadzonej operacji otrzymujemy układ równań liniowych. Działanie to jest uzasadnione tym, że badamy jedynie najbliższe otoczenie i kolejne składniki mają mniejszy wkład im bliżej punktu stacjonarnego. \par
 	Po linearyzacji otrzymujemy dla modelu Lotki:
 	\begin{equation}\label{lotka_lin}
 	\begin{split}
-		\dv{\gamma}{\tau}=-a\gamma-a\vartheta \\
-		\dv{\vartheta}{\tau}=\gamma
+		\dv{\gamma}{\tau} &= -a\gamma-a\vartheta \\
+		\dv{\vartheta}{\tau} &= \gamma
 	\end{split}
 	\end{equation}
 	Układ równań \eqref{lotka_lin} w porównaniu z \eqref{lotka_0} nie zawiera składników o całkowitej potędze większej niż 1. \\
 	Odpowiednie przekształcenie dla modelu Lotki-Volterry daje układ:
 	\begin{equation}\label{lotka_volterra_lin}
 	\begin{split}
-		\dv{\gamma}{\tau}=-a\vartheta \\
-		\dv{\vartheta}{\tau}=\gamma,
+		\dv{\gamma}{\tau} &= -a\vartheta \\
+		\dv{\vartheta}{\tau} &= \gamma,
 	\end{split}
 	\end{equation}
 	natomiast dla modelu brusselator:
 	\begin{equation}\label{bruskelator_lin}
 	\begin{split}
-		\dv{\gamma}{\tau}=(a-1)\gamma+a\vartheta \\
-		\dv{\vartheta}{\tau}=-b\gamma-b\vartheta
+		\dv{\gamma}{\tau} &= (a-1)\gamma+a\vartheta \\
+		\dv{\vartheta}{\tau} &= -b\gamma-b\vartheta
 	\end{split}
 	\end{equation}
-	Można teraz badać stany stabilne metodami równań różniczkowych liniowych. Stabilność zależy od wartości własnych macierzy stałych. Dla modelu Lotki:
+	Można teraz badać stany stabilne metodami równań różniczkowych liniowych. Stabilność zależy od wartości własnych macierzy stałych. W tabeli \ref{tab:schematy} przedstawiono zależności między pierwiastkami równania kwadratowego, a sumą i iloczynem tych pierwiastków. Suma oraz iloczyn są tutaj wykorzystywane, ponieważ można je w prosty sposów otrzymać ze wzorów Viete'a: 
+	\begin{equation}
+		\begin{split}
+			a\lambda^{2} + b\lambda + c &= 0 \\
+			\lambda_{1} + \lambda_{2} &= -\frac{b}{a} \\
+			\lambda_{1}\lambda_{2} &= \frac{c}{a}
+		\end{split}
+	\end{equation}
+	Charakter wykresu fazowego zależy od zależności między pierwiastkami równania charakterystycznego \cite{orlik}.
+	Dla modelu Lotki:
 	\begin{equation}\label{lotka_charakterystyczne}
 	\begin{split}
 		\det
@@ -688,15 +697,7 @@
 		\caption{Warunki stabilności}
 		\label{tab:warunki_stabilnosci}
 	\end{table}
-	W tabeli \ref{tab:schematy} przedstawiono zależności między pierwiastkami równania kwadratowego, a sumą i iloczynem tych pierwiastków. Suma oraz iloczyn są tutaj wykorzystywane, ponieważ można je w prosty sposów otrzymać ze wzorów Viete'a: 
-	\begin{equation}
-	\begin{split}
-		a\lambda^{2} + b\lambda + c &= 0 \\
-		\lambda_{1} + \lambda_{2} &= -\frac{b}{a} \\
-		\lambda_{1}\lambda_{2} &= \frac{c}{a}
-	\end{split}
-	\end{equation}
-	Charakter wykresu fazowego zależy od zależności między pierwiastkami równania charakterystycznego \cite{orlik}.
+	
 	\begin{table}[H]
 		\centering
 		\begin{tabularx}{\textwidth}{|Y|Y|Y|Y|}\cline{1-4}
@@ -878,7 +879,7 @@
 		\caption{Warunki dla modelu bruskelator}
 		\label{tab:warunki_bruskelator}
 	\end{table}
-	W tabelach \ref{tab:warunki_lotka}, \ref{tab:warunki_lotka_volterra} oraz \ref{tab:warunki_bruskelator} przedstawiono warunki z tabeli \ref{tab:warunki_stabilnosci} wykorzystując odpowiednie równania charakterystyczne. Niektóre warunki nie są możliwe do spełnienia dla parametrów rzeczywistych, taka komórka zawiera "-". \par
+	W tabelach \ref{tab:warunki_lotka}, \ref{tab:warunki_lotka_volterra} oraz \ref{tab:warunki_bruskelator} przedstawiono warunki z tabeli \ref{tab:warunki_stabilnosci} wykorzystując odpowiednio równania \eqref{lotka_charakterystyczne}, \eqref{lotka_volterra_charakterystyczne} oraz \eqref{bruskelator_charakterystyczne}. Niektóre warunki nie są możliwe do spełnienia dla parametrów rzeczywistych, taka komórka zawiera '-'. \par
 	Przykładowe wykresy fazowe:
 	\begin{figure}[H]
 		\centering
