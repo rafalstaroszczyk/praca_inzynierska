@@ -104,32 +104,32 @@
 	\tableofcontents
 	\pagebreak
 	
-	\section*{Wykaz oznaczeń}
-	\addcontentsline{toc}{section}{Wykaz oznaczeń}
-	\setlength{\parindent}{0cm}
-	\begin{table}[H]
-	\begin{tabular}{@{} ll}
-		\(T\) & Temperatura \\
-		\(S\) & Entropia \\
-		\(p\) & Ciśnienie \\
-		\(V\) & Objętość \\
-		\(A\) & Powinowactwo chemiczne \\
-		\(\xi\) & Liczba postępu reakcji \\
-		\(s\) & Entropia na jednostkę objętości \\
-		\(\mathscr{S}\) & Entropia na mol \\
-		\(U\) & Energia wewnętrzna \\
-		\(H=U+pV\) & Entalpia \\
-		\(F=U-TS\) & Energia swobodna \\
-		\(G=H-TS\) & Entalpia swobodna \\
-		\(u, h, f, g\) & Energia, Entalpia, Energia swobodna oraz Entalpia swobodna na jednostkę objętości \\
-		\(\mathscr{U, H, F, G}\) & Energia, Entalpia, Energia swobodna oraz Entalpia swobodna na mol \\
-		\(C_{p}, C_{V}\) & Pojemności cieplne (\(c_{p}, c_{V}\) ciepła własciwe) \\
-		\(N\) & Liczba cząsteczek (cząstek) \\
-		\(\mu\) & Potencjał chemiczny
-	\end{tabular}
-	\end{table}
-	\setlength{\parindent}{1.25cm}
-	\pagebreak
+	% \section*{Wykaz oznaczeń}
+	% \addcontentsline{toc}{section}{Wykaz oznaczeń}
+	% \setlength{\parindent}{0cm}
+	% \begin{table}[H]
+	% \begin{tabular}{@{} ll}
+	% 	\(T\) & Temperatura \\
+	% 	\(S\) & Entropia \\
+	% 	\(p\) & Ciśnienie \\
+	% 	\(V\) & Objętość \\
+	% 	\(A\) & Powinowactwo chemiczne \\
+	% 	\(\xi\) & Liczba postępu reakcji \\
+	% 	\(s\) & Entropia na jednostkę objętości \\
+	% 	\(\mathscr{S}\) & Entropia na mol \\
+	% 	\(U\) & Energia wewnętrzna \\
+	% 	\(H=U+pV\) & Entalpia \\
+	% 	\(F=U-TS\) & Energia swobodna \\
+	% 	\(G=H-TS\) & Entalpia swobodna \\
+	% 	\(u, h, f, g\) & Energia, Entalpia, Energia swobodna oraz Entalpia swobodna na jednostkę objętości \\
+	% 	\(\mathscr{U, H, F, G}\) & Energia, Entalpia, Energia swobodna oraz Entalpia swobodna na mol \\
+	% 	\(C_{p}, C_{V}\) & Pojemności cieplne (\(c_{p}, c_{V}\) ciepła własciwe) \\
+	% 	\(N\) & Liczba cząsteczek (cząstek) \\
+	% 	\(\mu\) & Potencjał chemiczny
+	% \end{tabular}
+	% \end{table}
+	% \setlength{\parindent}{1.25cm}
+	% \pagebreak
 	
 	\section{Wstęp}
 	
@@ -139,60 +139,64 @@
 	% Wkleić przypadki struktur
 	
 	Wyjaśnienie tych oscylacji z punktu widzenia termodynamiki wymaga wyjścia poza termodynamikę równowagową. Termodynamika równowagowa zajmuje się procesami, w których ignoruje się upływ czasu, a przemiana jest kwazistatyczna. Oznacza to, że każdy stan pośredni można traktować jako stan równowagi termodynamicznej. Model taki jest wystarczający do opisu większości procesów. Można więc powiedzieć, że termodynamikę równowagową interesuje stan początkowy oraz końcowy. \par
-	Dopiero termodynamika nierównowagowa jest teorią, która obejmuje to, co dzieje się w trakcie rzeczywistych przemian i jest ona konieczna do opisu reakcji oscylacyjnych. Pierwsze odkrycia sięgają końca XIX wieku. Były to reakcje w układach heterogenicznych, jak na przykład pierścienie Lieseganga lub oscylacje prądu płynącego przez ogniwo galwaniczne. 
+	Dopiero termodynamika nierównowagowa jest teorią, która obejmuje to, co dzieje się w trakcie rzeczywistych przemian i jest ona konieczna do opisu reakcji oscylacyjnych. Pierwsze odkrycia tego typu przemian sięgają końca XIX wieku. Były to reakcje w układach heterogenicznych, jak na przykład pierścienie Lieseganga lub oscylacje prądu płynącego przez ogniwo galwaniczne. 
 	
 	% Wyjaśnienie tych zjawisk wymagało, aby układ byl heterogeniczny i było w zgodzie z entropią Boltzmanna, według której spontaniczna organizacja jest niemożliwa. \cite{orlik}
 	\par
-	Pierwszy model teoretyczny został przedstawiony przez Alfreda Lotka \cite{lotka}. Przez długi czas uważano, że nie mogą one przedstawiać rzeczywistych reakcji, ponieważ ówcześnie interpretowano, że łamią II Zasadę Termodynamiki. Jednak w 1921r. pokazano w reakcji Bray'a-Liebhafky'ego, że reakcje oscylacyjne w układach homogenicznych są możliwę. Jest to reakcja rokładu nadtlenku wodoru katalizowana jodanem (V). Zachodzą reakcje oscylacyjne z naprzemienną dominacją dwóch procesów: \cite{orlik}
+	Pierwszy model teoretyczny został przedstawiony przez Alfreda Lotka \cite{lotka}. W modelu tym zakłada się, że reakcje przebiegają w układzie homogenicznym. Przez długi czas uważano, że nie może on przedstawiać rzeczywistych reakcji, ponieważ ówcześnie interpretowano, że łamią II Zasadę Termodynamiki. Jednak w 1921r. pokazano w reakcji Bray'a-Liebhafky'ego, że reakcje oscylacyjne w układach homogenicznych są możliwe. Jest to reakcja rokładu nadtlenku wodoru katalizowana jodanem (V). Zachodzą reakcje oscylacyjne z naprzemienną dominacją dwóch procesów \cite{orlik}:
 	\begin{center}
 		\ce{5H2O2 + 2H+ +2IO3- -> I2 + 5O2 + 6H2O} \\
-		\ce{I2 + 5H2O2 -> 2H+ + 2IO3- + 4H2O}
+		\ce{I2 + 5H2O2 -> 2H+ + 2IO3- + 4H2O}.
 	\end{center}
-
 	Oznacza to między innymi, że będziemy obserwować oscylacyjne zmiany stężenia \ce{I2} oraz szybkości wydzielania \ce{O2}, gdyż w pierwszej reakcji następuje produkcja \ce{I2}, a w drugiej następuje jego zużycie. Reakcja sumaryczna w tej przemianie ma postać: 
 	\begin{center}
 		\ce{2H2O2 -> 2H2O + O2}.
 	\end{center}
-	Jeszcze większy wpływ na rozwój termodynamiki nierównowagowej w kinetyce chemicznej były reakcje Biełousowa-Żabotyńskiego. Pierwszą reakcją z tej grupy została zaobserwowanaw 1959 w wodnym roztworze bromianu (V) potasu, siarczanie (VI) ceru (IV), kwasu malonowego lub kwasu cytrynowego z dodatkiem rozcieńczonego kwasu siarkowego (VI). Reakcje te są dużo bardziej złożone i w uproszczonej formie mają postać \cite{orlik}:
+	
+	Jeszcze większy wpływ na rozwój termodynamiki nierównowagowej w opisie przemian chemicznych były reakcje Biełousowa-Żabotyńskiego. Pierwszą reakcją z tej grupy została zaobserwowanaw 1959 w wodnym roztworze bromianu (V) potasu, siarczanie (VI) ceru (IV), kwasu malonowego lub kwasu cytrynowego z dodatkiem rozcieńczonego kwasu siarkowego (VI). Reakcje te są dużo bardziej złożone i w uproszczonej formie mają postać \cite{orlik}:
 	\begin{center}
 		\ce{2Br- + BrO3- + 3CH2(COOH)2 + 3H+ -> 3BrCH(COOH)2 + 3H2O} \\
-		\ce{BrO3- + 4Ce(III) + 5H+ -> 4Ce(IV) + HOBr + 2H2O} \\
-		\ce{4Ce(IV) + 6CH2(COOH)2 +BrCH(COOH)2 + HOBr + 8BrO3- -> 4Ce(III) + 10Br- + 21CO2 + 6H+ + 11H2O}
+		\ce{BrO3- + 4Ce^3+ + 5H+ -> 4Ce^4+ + HOBr + 2H2O} \\
+		\ce{4Ce^4+ + 6CH2(COOH)2 +BrCH(COOH)2 + HOBr + 8BrO3- -> 4Ce^3+ + 10Br- + 21CO2 + 6H+ + 11H2O}
 	\end{center}
-	W reakcji tej obserwujemy, że stężenia \ce{Br-} zmieniają się oscylacyjnie. Reakcja sumaryczna ma postać: 
+	W reakcji tej obserwujemy, że stężenia \ce{Br-} zmieniają się oscylacyjnie. Równocześnie stężenia \ce{Ce^{3+}} oraz \ce{Ce^{4+}} też podlegają oscylacjom. Reakcja sumaryczna ma postać: 
 	\begin{center}
 		\ce{2BrO3- + 3CH2(COOH)2 + 2H+ ->[kat] 2BrCH(COOH)2 + 4H2O + 3CO2}.
 	\end{center}
-	Została ona odkryta jako nieorganiczny analog cyklu Krebsa \cite{belousov_hist}. W późniejszym okresie znaleziono również inne reagenty, dla których zachodzi reakcja analogowa. Powszechnym takim zamiennikiem jest \ce{Fe(o-phen)3^2+} w miejsce \ce{Ce(III)}. \par
-	Odkrycie reakcji oscylacyjnych przyczyniło się do rozwoju termodynamiki nierównowagowej, a w konsekwencji do użycia jej aparatu teoretycznego do opisu procesów życiowych. Niepoprawne interpretacja II Z.T. może doprowadzić do wniosku, że powstanie złożonej struktury z molekularnego chaosu powinno być niemożliwe. Wyjaśnienie takie błędnie wykorzystuje to prawo ignorując fakt, że układy biologiczne jak i cała Ziemia nie są układami izolowanymi. 
+	% Została ona odkryta jako nieorganiczny analog cyklu Krebsa \cite{belousov_hist}. 
+	W późniejszym okresie znaleziono również inne reagenty, dla których zachodzi reakcja analogowa. Powszechnym takim zamiennikiem jest \ce{Fe(o-phen)3^2+} w miejsce jonów \ce{Ce^3+}. Zmienia to kolory występujące w reakcji z bezbarwnego i żółtego na pomarańczony i niebieski \cite{orlik}. \par
+	Odkrycie reakcji oscylacyjnych przyczyniło się do rozwoju termodynamiki nierównowagowej, a w konsekwencji do użycia jej aparatu teoretycznego do opisu procesów życiowych. 
+	Reakcja Biełousowa-Żabotyńskiego traktowana jest czasem jako analog cyklu Krebsa występującego, będącego głównym źródłem energii organizmów tlenowych. Analogia ta dotyczy systemu reakcji, w których występuje pętla, to oznacza, że produkt pierwszej reakcji jest substratem kolejnej, aż do osiagniecia produktu, który jest substratem tej pierwszej. \cite{belousov_hist}. \par
+	Niepoprawne interpretacja II Z.T. może doprowadzić do wniosku, że powstanie złożonej struktury z molekularnego chaosu powinno być niemożliwe. Tak rzeczywiście się dzieje, ale tylko dla układów izolowanych. Natomiast w przypadku innych układów, które oddziałują z otoczeniem samoorganizacja materii jest możliwa. Przykładem są układy biologiczne. Wyjaśnienie takie błędnie wykorzystuje tę zasadę ignorując fakt, że układy biologiczne jak i cała Ziemia nie są układami izolowanymi. 
 	
 	\subsection{Produkcja entropii}
-	Wszystkie procesy rzeczywiste podlegają drugiej zasadzie termodynamiki, która określa różniczkową zmianę entropii \(\dd{S}\), w danych procesie nierównością
+	Wszystkie procesy rzeczywiste podlegają drugiej zasadzie termodynamiki, która określa różniczkową zmianę entropii \(\dd{S}\), w danych procesie samorzutnym nierównością:
 	\begin{equation}\label{II_Zasada_Termodynamiki}
 		\dd{S}>0.
 	\end{equation}
 	W powyższym zapisie pod symbolem \(\dd{S}\) kryje się suma różniczkowych zmian entropii otoczenia \(\dd{S_{ot}}\) i układu \(\dd{S_{uk}}\)
-	\begin{equation}
+	\begin{equation}\label{entropia_uklad_otoczenie}
 		\dd{S}=\dd{S_{uk}}+\dd{S_{ot}}.
 	\end{equation}
 	W przyapadku układów izolowanych \(\dd{S}=\dd{S_{uk}}\), 
 	więc w układach izolowanych entropia zawsze rośnie, a zatem spontaniczne uporządkowanie stabilnych struktur nie jest możliwe. \par
-	Druga zasada termodynamiki dana wzorem \eqref{II_Zasada_Termodynamiki} rozstrzyga czy dany proces jest możliwy. Aby dodać tej zasadzie ilościowy charakter wprowadza się pojęcie produkcji entropii. W przypadku układu zamkniętego, w którym przebiega proces rzeczywisty drugą zasadę termodynamiki zapiszemy następującą nierównością: 
+	%Druga zasada termodynamiki dana wzorem \eqref{II_Zasada_Termodynamiki} rozstrzyga czy dany proces jest możliwy. 
+	Aby nadać tej zasadzie ilościowy charakter, w której zastąpimy nierówność, wprowadza się pojęcie produkcji entropii, które przeanalizujemy najpierw z punktu widzenia układu. W przypadku układu zamkniętego, w którym przebiega proces samorzutny drugą zasadę termodynamiki zapiszemy następującą nierównością \cite{orlik, pigon1}: 
 	\begin{equation}\label{II_Zasada_Termodynamiki_uklad}
 		\dd{S_{uk}}>\frac{\dbar Q}{T_{ot}},
 	\end{equation}
 	gdzie \(\dd{S_{uk}}\) to różniczkowa zmiana entropii układu, \(\dbar Q\) to elementarne ciepło dostarczone do układu ze źródła o temperaturze \(T_{ot}\). Jeśli wymiana \(\dbar Q\) odbywa się w temperaturze \(T\) to 
-	\begin{equation}
+	\begin{equation}\label{II_zasada_Termodynamiki_uklad_T}
 		\dd{S_{uk}}>\frac{\dbar Q}{T}.
 	\end{equation}
 	
 	% Z równania \eqref{II_Zasada_Termodynamiki} lub \eqref{II_Zasada_Termodynamiki_uklad} wynika, że w układach izolowanych entropia zawsze rośnie, a zatem spontaniczne uporządkowanie stabilnych struktur nie jest możliwe.
 	
-	Z nierówności \eqref{II_Zasada_Termodynamiki} lub \eqref{II_Zasada_Termodynamiki_uklad} wynika, że różnicową zmianę entropii układu \(\dd{S_{uk}}\) możemy przedstawić jako sumę dwóch wkładów:
+	Z nierówności \eqref{II_Zasada_Termodynamiki_uklad} lub \eqref{II_Zasada_Termodynamiki_uklad_T} wynika, że różnicową zmianę entropii układu \(\dd{S_{uk}}\) możemy przedstawić jako sumę dwóch wkładów:
 	\begin{equation}
 		\dd{S_{uk}}=\dd_{e}S+\dd_{i}S,
 	\end{equation}
-	gdzie \(\dd_{e}S=\frac{\dbar Q}{T}\), stanowi wkład do \(\dd{S_{uk}}\) wynikający tylko z wymiany ciepła, \(\dd_{i}S\) jest równy:
+	gdzie \(\dd_{e}S=\frac{\dbar Q}{T}\), stanowi wkład do \(\dd{S_{uk}}\) wynikający tylko z wymiany ciepła \(Q\), \(\dd_{i}S\) jest równy:
 	\begin{equation}
 		\dd_{i}S=\dd{S_{uk}}-\frac{\dbar Q}{T}.
 	\end{equation}
@@ -220,7 +224,8 @@
 	\begin{equation*}
 		\dd_{i}S_{ot}>0.
 	\end{equation*}
-	Założenie to możemy przenieść na sytuację, gdy układ dzielimy na mniejsze podukłady (komórki). Z punkty widzenia pojedynczej komórki, dla której pozostałe stanowią otoczenie, oznacza to, że produkcja entropii w jej wnętrzu ma być nieujemna i podobnie dla pozostałych. To oznacza dalej, że w każdym dowolnie małym obszarze układu, w którym zachodzą procesy samorzutne następuje związane z nimi tworzenie entropii. To stwierdzenie stanowi treść drugiej hipotezy termodynamiki nierównowagowej, nazywaną lokalnym sformuowaniem drugiej zasady termodynamiki. Lokalne sformuowanie drugiej zasady termodynamiki nie wyklucza jednak takiego przypadku, w którym w jednym i tym samym miejscu zachodzi kilka procesów, z których niektóre zmniejszają entropię \((\dd_{i}S<0)\), pod warunkiem, że oprócz nich obecne są procesy produkujące entropię \((\dd_{i}S>0)\), które z naddatkiem zwiększa entropię w tym miejscu. \cite{orlik, pigon1}
+	Założenie to możemy przenieść na sytuację, gdy układ dzielimy na mniejsze podukłady (komórki). Z punkty widzenia pojedynczej komórki, dla której pozostałe stanowią otoczenie, oznacza to, że produkcja entropii w jej wnętrzu ma być nieujemna i podobnie dla pozostałych. To oznacza dalej, że w każdym dowolnie małym obszarze układu, w którym zachodzą procesy samorzutne następuje związane z nimi tworzenie entropii. To stwierdzenie stanowi treść drugiej hipotezy termodynamiki nierównowagowej, nazywaną lokalnym sformuowaniem drugiej zasady termodynamiki. Lokalne sformuowanie drugiej zasady termodynamiki nie wyklucza jednak takiego przypadku, w którym w jednym i tym samym miejscu zachodzi kilka procesów, z których niektóre zmniejszają entropię \((\dd_{i}S<0)\), pod warunkiem, że oprócz nich obecne są procesy produkujące entropię \((\dd_{i}S>0)\), które z naddatkiem zwiększa entropię w tym miejscu \cite{orlik, pigon1}. \par
+	Tego typu sprzężenie procesów jest obserwowane w układach nierównowagowych. przykładem jest tutaj termodyfuzja w gazie. W procesie tym pod wpływem gradientu temperatury dochodzi do przepływu ciepła, co jest procesem nieodwracalnym, wytwarzającym entropię w każdym miejscu. Jednak równocześnie w początkowo jednorodnym układzie zaobserwujemy transport masy, którego rezultatem będzie pojawienie się niejednorodności stężenia gazu w przestrzeni. Z tym drugim procesem związane jest zmniejszenie entropii. Wytwarzanie entropii związane z przepływem ciepła większe niż jej spadek związany z wytworzeniem niejednorodności. 
 	
 
 
@@ -249,6 +254,69 @@
 	\begin{equation}
 		\pdv{_{i}S}{t} = \iiint_{V}\sigma\dd{V}.
 	\end{equation}
+	
+	W poprzednim podrozdziale opisaliśmy zmiany entropii układu, które dokonuje się w trakcie procesu samorzutnego. Jeżeli zmiany te odniesiemy do bardzo krótkiego przedziału czasu \(\dd{t}\), wówczas szybkość zmiany entropii dana będzie za pomocą równania:
+	\begin{equation}
+		\dv{S}{t} = \dv{_{i}S}{t} + \dv{_{e}S}{t},
+	\end{equation}
+	gdzie pierwszy człon po prawej stronie równości opisuje szybkość wymiany entropii układu z otoczeniem, a drugi szybkość produkcji entropii w układzie. Produkcję tę możemy opisać za pomocą pojęcia źródła entropii \(\sigma\). Jest to wielkość produkcji entropii w odniesieniu na jednostkę objętości. W ogólności to funkcja czasu i położenia. Relacja pomiędzy źródłem entropii, a szybkością produkcji entropii określa wzór:
+	\begin{equation}
+		\dv{_{i}S}{t} = \iiint_{V}\sigma\dd{V},
+	\end{equation}
+	w którym \(\sigma>0\). \par
+	Chcąc przenieść wprowadzone pojęcie na poziom opisu, który pojawia się w lokalnym sformuowaniu II Zasady Termodynamiki, rozważmy mały fragment układu. Dla tego fragmentu zmiany entropii również odbywają się poprzez wymianę jej przez ścianki ograniczające rozważany fragment oraz z tworzenia jej wewnątrz tego fragmentu. \par
+	Wymianę entropii z otoczeniem opisuje wektor przepływu entropii \(J_{s}\). Jest on zależny od położenia fragmentu i czasu. \par
+	Biorąc pod uwagę pojęcie źródła entropii \(\sigma\) wzór opisujący zmianę w czasie entropii zapiszemy jako:
+	\begin{equation}
+		\dv{S}{t} = -\div{\vb{J_{s}}} + \sigma.
+	\end{equation}
+	Wyprowadzenie wzoru na źródło entropii:
+	\begin{gather}
+		\dd{U}=T\dd{S}-p\dd{V}+\sum_{i}\mu_{i}\dd{n_{i}}; \dd{V}=0 \label{dod A: 1} \\
+		\dd{S}=\frac{1}{T}\dd{U}-\sum_{i}\frac{\mu_{i}}{T}\dd{n_{i}} \label{dod A: 2} \\
+		\dv{S}{t}=\frac{1}{T}\dv{U}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t} \label{dod A: 3} \\
+		\vb{J}_{S}=\frac{1}{T}\vb{J}_{U}-\sum_{i}\frac{\mu_{i}}{T}\vb{J}_{i} \label{dod A: 4}
+	\end{gather}
+	Równania ciągłości:
+	\begin{gather}
+		\dv{S}{t}=-\div{\vb{J}_{S}}+\sigma \label{dod A: 5} \\
+		\dv{U}{t}=-\div{\vb{J}_{U}} \label{dod A: 6} \\
+		\dv{n_{i}}{t}=-\div{\vb{J}_{i}}+\dv{n_{i;reak}}{t}; \dd{n_{i;reak}}=\sum_{r}\nu_{ir}\dd{\xi_{r}} \label{dod A: 7} \\
+		\dv{n_{i}}{t}=-\div{\vb{J}_{i}}+\sum_{r}\nu_{ir}\dv{\xi_{r}}{t} \label{dod A: 8}
+	\end{gather}
+	Podstawiając \eqref{dod A: 4}, \eqref{dod A: 6} oraz \eqref{dod A: 8} do \eqref{dod A: 5} otrzymujemy: 
+	\begin{equation} \label{dod A: 9}
+		\dv{S}{t}=\frac{1}{T}\dv{U}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}-\left[\vb{J}_{U}\vdot\grad{\frac{1}{T}}-\sum_{i}\vb{J}_{i}\cdot\grad{\frac{\mu_{i}}{T}}-\frac{1}{T}\sum_{r}\sum_{i}\nu_{ir}\mu_{i}\dv{\xi_{r}}{t}\right]+\sigma
+	\end{equation}
+	Wprowadzamy pojęcie powinowactwa chemicznego: 
+	\begin{equation}
+		A_{r}=-\sum_{i}\nu_{ir}\mu_{i} \\
+	\end{equation}
+	Równanie \eqref{dod A: 9} przybiera postać:
+	\begin{equation}
+		\dv{S}{t}=\frac{1}{T}\dv{U}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}-\left[\vb{J}_{U}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}\right]+\sigma
+	\end{equation}
+	Otrzymujemy z porównania tego wzoru z \eqref{dod A: 3}:
+	\begin{equation}
+		\sigma=\vb{J}_{U}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}
+	\end{equation}
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|c|c|}
+		\hline
+		Proces & Przepływ & Siła termodynamiczna \\
+		\hline
+		Transport energii & \(\vb{J_{u}}\) & \(\grad{\left(\frac{1}{T}\right)}\) \\
+		Dyfuzja & \(\vb{J}_i\) & \(-\grad{\left(\frac{\mu_{i}}{T}\right)}\) \\
+		Reakcja chemiczna & \(J_{r}=\dv{\xi_{r}}{t}\) & \(\frac{A_r}{T}\) \\
+		\hline
+	\end{tabular}
+	\end{table}
+	Produkcja entropii jest wyrażona za pomocą sił termodynamicznych i przepływów w ogólności jako: 
+	\begin{equation}
+		\sigma = \sum_{i}J_{i}X_{i} = \sum_{i}\sum_{j}^{n}L_{ij}X_{i}X_{j}.
+	\end{equation}
+	
 	W ogólności natężenie przepływów termodynamicznych jest dowolną funkcją bodźców termodynamicznych: 
 	\[J=f\left(X\right)\]
 	Rozwinięcie w szereg Taylora tej funkcji wokół \(X_{0}\) jest
@@ -279,11 +347,11 @@
 	\end{equation}
 	Występują w nich procesy krzyżowe; różnica temperatury wywołuje przepływ prądu oraz różnica potencjału elektrycznego wywołuje przepływ ciepła.
 	Okazuje się, że współczynniki krzyżowe są sobie równe: \(L_{qI}=L_{Iq}\). Jest to reguła przemienności Onsagera, która została udowodniona doświadczalnie oraz na podstawie fizyki statystycznej. \par
-	Produkcja entropii jest wyrażona za pomocą sił termodynamicznych i przepływów jako: 
-	\begin{equation}
-		\sigma = \sum_{i}J_{i}X_{i} = \sum_{i}\sum_{j}^{n}L_{ij}X_{i}X_{j}
-	\end{equation}
-	co zostało wyprowadzone w Dodatku A na stronie \pageref{sec: dodatek A}. \par
+	% Produkcja entropii jest wyrażona za pomocą sił termodynamicznych i przepływów jako: 
+	% \begin{equation}
+	% 	\sigma = \sum_{i}J_{i}X_{i} = \sum_{i}\sum_{j}^{n}L_{ij}X_{i}X_{j}
+	% \end{equation}
+	% co zostało wyprowadzone w Dodatku A na stronie \pageref{sec: dodatek A}. \par
 	
 	Jednak w chemii termodynamika liniowa nie opisuje dobrze szybkości zachodzenia reakcji chemicznych, których prędkość zazwyczaj zależy od wyższych potęg stężenia związków. \par
 	
@@ -349,24 +417,8 @@
 	\begin{equation}\label{szybkosc reakcji}
 		v=k x_{1}^{\alpha_1}x_{2}^{\alpha_2}\ldots y_{1}^{\beta_1}y_{2}^{\beta_2}\ldots.
 	\end{equation}
-	Przykładowe reakcje i ich szybkości reakcji:
-	\begin{align*}
-		&\ce{2N2O2 -> 4NO2 + O2} &&v=k\left[\ce{N2O2}\right] \\
-		&\ce{CH3COCH3 + I2 -> CH3COCH2I + HI} &&v=k\left[\ce{CH3COCH3}\right] \\
-		&\ce{H2 + Br2 -> 2HBr} &&v=\frac{k_{1}\left[\ce{H2}\right]\left[\ce{Br2}\right]^{\sfrac{1}{2}}}{1+k_{2}\sfrac{\left[\ce{HBr}\right]}{\left[\ce{Br2}\right]}}.
-	\end{align*}
-	Każdą z tych reakcji można rozdzielić na szereg występujących jednocześnie reakcji elementarnych. Przykładowo dla syntezy bromowodoru z cząsteczkowego wodoru i bromu:
-	\begin{align*}
-		&\ce{H2 + Br2 -> 2HBr} &&\text{reakcja sumaryczna} \\
-		&\ce{Br2 -> 2Br^{.}} &&\text{reakcja elementarna} \\
-		&\ce{Br^{.} + H2 -> HBr + H^{.}} &&\text{reakcja elementarna} \\
-		&\ce{H^{.} + Br2 -> HBr + Br^{.}} &&\text{reakcja elementarna}.
-	\end{align*}
-	Jednak analogiczna reakcja syntezy jodowodoru przebiega w sposób bezpośredni: 
-	\begin{align*}
-		&\ce{H2 + I2 -> 2HI}
-	\end{align*}
-	co oznacza, że każdą reakcję należy rozpatrywać osobno i nie ma jednego uniwersalnego schematu \cite{pigon1}. \par
+	Ustalone empirycznie zależności pomiędzy szybkością reakcji, a stężeniami reagentów są podstawą do tworzenia modeli zachodzenia reakcji chemicznych, ich kinetycznego opisu. Przykładowe reakcje i ich szybkości reakcji zostały przedstawione w Dodatku A na stronie \pageref{sec: dodatek A}.
+	
 	
 	% \subsection{Kataliza i autokataliza}
 	Według równania \eqref{szybkosc reakcji} szybkość reakcji można zmienić przez zmianę stężenia reagentów, które w niej uczestniczą lub zmianę stałej szybkości reakcji. Katalizatorami nazywamy związki zwiększające stałą reakcji sumarycznej, natomiast związki zmniejszające katalizatorem ujemnym lub inhibitorem. Mają one działanie selektywne, a więc zwiększają szybkość tylko dla pewnej z wielu możliwych reakcji chemicznych dla danych substratów. Reakcja katalizowana przebiega więc innym mechanizmem niż niekatalizowana. Nie występują one w reakcji sumarycznej, ale występują w reakcjach elementarnych. Podobnie jak reakcje możemy podzielić katalizę na homogeniczną (zachodzącej w jednej fazie) oraz heterogeniczną (zachodząca na granicy faz). Szczególnym rodzajem reakcji katalitycznych jest autokataliza, w której produkt reakcji jest jednocześnie katalizatorem. Przykładem takiej reakcji jest hydroliza estrów w środowisku kwasowym: \cite{pigon1}
@@ -1047,55 +1099,75 @@
 	\section*{Wykaz tabel}
 	\addcontentsline{toc}{section}{Wykaz tabel}
 	\pagebreak
+	
 	\section*{Dodatek A}\label{sec: dodatek A}
 	\addcontentsline{toc}{section}{Dodatek A}
-	\begin{gather}
-		\dd{u}=T\dd{s}-p\dd{V}+\sum_{i}\mu_{i}\dd{n_{i}}; \dd{V}=0 \label{dod A: 1} \\
-		\dd{s}=\frac{1}{T}\dd{u}-\sum_{i}\frac{\mu_{i}}{T}\dd{n_{i}} \label{dod A: 2} \\
-		\dv{s}{t}=\frac{1}{T}\dv{u}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t} \label{dod A: 3} \\
-		\vb{J}_{s}=\frac{1}{T}\vb{J}_{u}-\sum_{i}\frac{\mu_{i}}{T}\vb{J}_{i} \label{dod A: 4}
-	\end{gather}
-	Równania ciągłości:
-	\begin{gather}
-		\dv{s}{t}=-\div{\vb{J}_{s}}+\sigma \label{dod A: 5} \\
-		\dv{u}{t}=-\div{\vb{J}_{u}} \label{dod A: 6} \\
-		\dv{n_{i}}{t}=-\div{\vb{J}_{i}}+\dv{n_{i;reak}}{t}; \dd{n_{i;reak}}=\sum_{r}\nu_{ir}\dd{\xi_{r}} \label{dod A: 7} \\
-		\dv{n_{i}}{t}=-\div{\vb{J}_{i}}+\sum_{r}\nu_{ir}\dv{\xi_{r}}{t} \label{dod A: 8}
-	\end{gather}
-	Podstawiając \eqref{dod A: 4}, \eqref{dod A: 6} oraz \eqref{dod A: 8} do \eqref{dod A: 5} otrzymujemy: 
-	\begin{equation} \label{dod A: 9}
-		\dv{s}{t}=\frac{1}{T}\dv{u}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}-\left[\vb{J}_{u}\vdot\grad{\frac{1}{T}}-\sum_{i}\vb{J}_{i}\cdot\grad{\frac{\mu_{i}}{T}}-\frac{1}{T}\sum_{r}\sum_{i}\nu_{ir}\mu_{i}\dv{\xi_{r}}{t}\right]+\sigma
-	\end{equation}
-	Wprowadzamy pojęcie powinowactwa chemicznego: 
-	\begin{equation}
-		A_{r}=-\sum_{i}\nu_{ir}\mu_{i} \\
-	\end{equation}
-	Równanie \eqref{dod A: 9} przybiera postać:
-	\begin{equation}
-		\dv{s}{t}=\frac{1}{T}\dv{u}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}-\left[\vb{J}_{u}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}\right]+\sigma
-	\end{equation}
-	Otrzymujemy z porównania tego wzoru z \eqref{dod A: 3}:
-	\begin{equation}
-		\sigma=\vb{J}_{u}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}
-	\end{equation}
-	Z analogicznego wyprowadzenia dla entalpii i założenia stałego ciśnienia:
-	\begin{equation}
-		\sigma=\vb{J}_{h}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}
-	\end{equation}
-	\begin{table}[H]
-	\centering
-	\begin{tabular}{|l|c|c|}
-		\hline
-		Proces & Przepływ & Siła termodynamiczna \\
-		\hline
-		Transport energii & \(\vb{J}_u\) & \(\grad{\left(\frac{1}{T}\right)}\) \\
-		Transport entalpii & \(\vb{J}_h\) & \(\grad{\left(\frac{1}{T}\right)}\) \\
-		Dyfuzja & \(\vb{J}_i\) & \(-\grad{\left(\frac{\mu_{i}}{T}\right)}\) \\
-		Reakcja chemiczna & \(J_{r}=\dv{\xi_{r}}{t}\) & \(\frac{A_r}{T}\) \\
-		\hline
-	\end{tabular}
-	\end{table}
-	\pagebreak
+	\begin{align*}
+		&\ce{2N2O2 -> 4NO2 + O2} &&v=k\left[\ce{N2O2}\right] \\
+		&\ce{CH3COCH3 + I2 -> CH3COCH2I + HI} &&v=k\left[\ce{CH3COCH3}\right] \\
+		&\ce{H2 + Br2 -> 2HBr} &&v=\frac{k_{1}\left[\ce{H2}\right]\left[\ce{Br2}\right]^{\sfrac{1}{2}}}{1+k_{2}\sfrac{\left[\ce{HBr}\right]}{\left[\ce{Br2}\right]}}.
+	\end{align*}
+	Każdą z tych reakcji można rozdzielić na szereg występujących jednocześnie reakcji elementarnych. Przykładowo dla syntezy bromowodoru z cząsteczkowego wodoru i bromu:
+	\begin{align*}
+		&\ce{H2 + Br2 -> 2HBr} &&\text{reakcja sumaryczna} \\
+		&\ce{Br2 -> 2Br^{.}} &&\text{reakcja elementarna} \\
+		&\ce{Br^{.} + H2 -> HBr + H^{.}} &&\text{reakcja elementarna} \\
+		&\ce{H^{.} + Br2 -> HBr + Br^{.}} &&\text{reakcja elementarna}.
+	\end{align*}
+	Jednak analogiczna reakcja syntezy jodowodoru przebiega w sposób bezpośredni: 
+	\begin{align*}
+		&\ce{H2 + I2 -> 2HI}
+	\end{align*}
+	co oznacza, że każdą reakcję należy rozpatrywać osobno i nie ma jednego uniwersalnego schematu \cite{pigon1}.
+	% \section*{Dodatek A}\label{sec: dodatek A}
+	% \addcontentsline{toc}{section}{Dodatek A}
+	% \begin{gather}
+	% 	\dd{u}=T\dd{s}-p\dd{V}+\sum_{i}\mu_{i}\dd{n_{i}}; \dd{V}=0 \label{dod A: 1} \\
+	% 	\dd{s}=\frac{1}{T}\dd{u}-\sum_{i}\frac{\mu_{i}}{T}\dd{n_{i}} \label{dod A: 2} \\
+	% 	\dv{s}{t}=\frac{1}{T}\dv{u}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t} \label{dod A: 3} \\
+	% 	\vb{J}_{s}=\frac{1}{T}\vb{J}_{u}-\sum_{i}\frac{\mu_{i}}{T}\vb{J}_{i} \label{dod A: 4}
+	% \end{gather}
+	% Równania ciągłości:
+	% \begin{gather}
+	% 	\dv{s}{t}=-\div{\vb{J}_{s}}+\sigma \label{dod A: 5} \\
+	% 	\dv{u}{t}=-\div{\vb{J}_{u}} \label{dod A: 6} \\
+	% 	\dv{n_{i}}{t}=-\div{\vb{J}_{i}}+\dv{n_{i;reak}}{t}; \dd{n_{i;reak}}=\sum_{r}\nu_{ir}\dd{\xi_{r}} \label{dod A: 7} \\
+	% 	\dv{n_{i}}{t}=-\div{\vb{J}_{i}}+\sum_{r}\nu_{ir}\dv{\xi_{r}}{t} \label{dod A: 8}
+	% \end{gather}
+	% Podstawiając \eqref{dod A: 4}, \eqref{dod A: 6} oraz \eqref{dod A: 8} do \eqref{dod A: 5} otrzymujemy: 
+	% \begin{equation} \label{dod A: 9}
+	% 	\dv{s}{t}=\frac{1}{T}\dv{u}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}-\left[\vb{J}_{u}\vdot\grad{\frac{1}{T}}-\sum_{i}\vb{J}_{i}\cdot\grad{\frac{\mu_{i}}{T}}-\frac{1}{T}\sum_{r}\sum_{i}\nu_{ir}\mu_{i}\dv{\xi_{r}}{t}\right]+\sigma
+	% \end{equation}
+	% Wprowadzamy pojęcie powinowactwa chemicznego: 
+	% \begin{equation}
+	% 	A_{r}=-\sum_{i}\nu_{ir}\mu_{i} \\
+	% \end{equation}
+	% Równanie \eqref{dod A: 9} przybiera postać:
+	% \begin{equation}
+	% 	\dv{s}{t}=\frac{1}{T}\dv{u}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}-\left[\vb{J}_{u}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}\right]+\sigma
+	% \end{equation}
+	% Otrzymujemy z porównania tego wzoru z \eqref{dod A: 3}:
+	% \begin{equation}
+	% 	\sigma=\vb{J}_{u}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}
+	% \end{equation}
+	% Z analogicznego wyprowadzenia dla entalpii i założenia stałego ciśnienia:
+	% \begin{equation}
+	% 	\sigma=\vb{J}_{h}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}
+	% \end{equation}
+	% \begin{table}[H]
+	% \centering
+	% \begin{tabular}{|l|c|c|}
+	% 	\hline
+	% 	Proces & Przepływ & Siła termodynamiczna \\
+	% 	\hline
+	% 	Transport energii & \(\vb{J}_u\) & \(\grad{\left(\frac{1}{T}\right)}\) \\
+	% 	Transport entalpii & \(\vb{J}_h\) & \(\grad{\left(\frac{1}{T}\right)}\) \\
+	% 	Dyfuzja & \(\vb{J}_i\) & \(-\grad{\left(\frac{\mu_{i}}{T}\right)}\) \\
+	% 	Reakcja chemiczna & \(J_{r}=\dv{\xi_{r}}{t}\) & \(\frac{A_r}{T}\) \\
+	% 	\hline
+	% \end{tabular}
+	% \end{table}
+	% \pagebreak
 	%\section{Dodatek B}
 	%\begin{gather}
 	%	U=U\left(S, V, \xi\right) \\
