@@ -980,40 +980,57 @@
 		\label{tab:warunki_bruskelator}
 	\end{table}
 	W tabelach \ref{tab:warunki_lotka}, \ref{tab:warunki_lotka_volterra} oraz \ref{tab:warunki_bruskelator} przedstawiono warunki z tabeli \ref{tab:warunki_stabilnosci} wykorzystując odpowiednio równania \eqref{lotka_charakterystyczne}, \eqref{lotka_volterra_charakterystyczne} oraz \eqref{bruskelator_charakterystyczne}. Niektóre warunki nie są możliwe do spełnienia dla parametrów rzeczywistych, taka komórka zawiera '-'. \par
+	Przejdziemy teraz do badania zachowania trajektorii w przestrzeniach fazowych rozważanych modeli. Do wygenerowania wykresów wykorzystano równania przed linearyzacją \eqref{lotka_prosty}, \eqref{lotka_volterra_prosty} oraz \eqref{bruskelator_prosty} dla odpowiednio \ref{fig:stabilny_wezel}, \ref{fig:stabilne_ognisko} oraz \ref{fig:niestabilne_ognisko}. \par
 	Przykładowe wykresy fazowe:
 	\begin{figure}[H]
 		\centering
 		\includegraphics{"brusselator; a=0.5; b=4".png}
-		\caption{Stabilny węzeł}
+		\caption{Stabilny węzeł; Model bruskelator, a=0.5, b=4}
 		\label{fig:stabilny_wezel}
 	\end{figure}
 	\begin{figure}[H]
 		\centering
 		\includegraphics{"brusselator; a=3; b=4".png}
-		\caption{Stabilne ognisko}
+		\caption{Stabilne ognisko; Model bruskelator, a=3, b=4}
 		\label{fig:stabilne_ognisko}
 	\end{figure}
 	\begin{figure}[H]
 		\centering
 		\includegraphics{"brusselator; a=7; b=4".png}
-		\caption{Niestabilne ognisko}
+		\caption{Niestabilne ognisko; Model bruskelator, a=7, b=4}
 		\label{fig:niestabilne_ognisko}
 	\end{figure}
-	Wykresy fazowe na rysunkach \ref{fig:stabilny_wezel} oraz \ref{fig:stabilne_ognisko} przedstawiają najważniejsze przypadki dla modelu brukselator. Wykorzystano odpowiednio stałe: \(a=0,5; b=4\), \(a=3; b=4\) oraz \(a=7; b=4\). Parametry te dodano tak, aby były one wewnątrz podanych w tabeli \ref{tab:warunki_bruskelator}. \par
-	Wykresy zachowują się w sposób oczekiwany według poprzednich tabel i literatury \cite{orlik}. Na rysunku \ref{fig:niestabilne_ognisko} zachodzi jednak coś niespodziewanego. Układ osiąga stabilny cykl graniczny. Jest to niemożliwe w przypadku układów liniowych do których je sprowadziliśmy poprzez linearyzację, jednak linearyzacja jest dobrym przybliżeniem jedynie w najbliższym otoczeniu punktu stacjonarnego, cykl graniczny widoczny na rysunku \ref{fig:niestabilne_ognisko} jest więc przejawem nieliniowości układu równań modelu bruskelator \cite{orlik}. Istnieje na szczęście twierdzenie, które wyjaśnia to zjawisko, jest to twierdzenie Poincar\'{e}go-Bendixsona. \par
+	Wykresy fazowe na rysunkach \ref{fig:stabilny_wezel} oraz \ref{fig:stabilne_ognisko} przedstawiają najważniejsze przypadki dla modelu brukselator. Wykorzystano odpowiednio stałe: \(a=0,5; b=4\), \(a=3; b=4\) oraz \(a=7; b=4\). Parametry te dobrano tak, aby należały one do przedziałów podanych w tabeli \ref{tab:warunki_bruskelator}. \par
+	Wykresy zachowują się w sposób oczekiwany według tabeli \ref{tab:warunki_bruskelator} i literatury \cite{orlik}. Na rysunku \ref{fig:niestabilne_ognisko} zachodzi jednak coś na pierwszy rzut oka sprzecznego z analizą układu zlinearyzowanego. Układ osiąga stabilny cykl graniczny. Jest to niemożliwe w przypadku układów liniowych do których je sprowadziliśmy poprzez linearyzację, jednak linearyzacja jest dobrym przybliżeniem jedynie w najbliższym otoczeniu punktu stacjonarnego, cykl graniczny widoczny na rysunku \ref{fig:niestabilne_ognisko} jest więc przejawem nieliniowości układu równań modelu bruskelator \cite{orlik}. Istnieje na jednak twierdzenie, które wyjaśnia to zjawisko, jest to twierdzenie Poincar\'{e}go-Bendixsona. \par
 	\begin{theorem}[\textbf{Poincar\'{e}go-Bendixsona}]
 		"Jeśli w przestrzeni fazowej będącej podzbiorem płaszczyzny \(\mathbb{R}^{2}\) orbita zawiera co najmniej jeden swój punkt graniczny, to jest ona punktem krytycznym albo orbitą zamkniętą" \cite{palczewski}
 	\end{theorem}
 	Z twierdzenia tego możemy wywnioskować, że punkt krytyczny, zwany również punktem stacjonarnym, jest jedynym punktem zbioru granicznego, co ma miejsce w przypadku wykresu fazowego typu stabilne ognisko, albo istnieje cykl graniczny, co można zaobserwować na wykresach odpowiadającym modelowi klasycznego bruskelatora oraz bruskelatora z reakcjami odwracalnymi. Model ten został opisany poniżej. \par
-	Dla układu, którym jedynym żródłem entropii jest zachodząca reakcja chemiczna produkcja entropii opisywana jest następującym równaniem de Dondera:
-	\begin{equation}\label{de donder}
+	Produkcja entropii powiązana jest z przebiegiem reakcji chemicznych zależnością:
+	\begin{equation}\label{de_donder}
 		T\dd_{i}S=A\dd{\xi}
 	\end{equation}
 	lub dla wielu reakcji w postaci bardziej uogólnionej: 
-	\begin{equation}\label{de donder ogolny}
+	\begin{equation}\label{de_donder_ogolny}
 		T\dd_{i}S=\sum_{r}A_{r}\dd{\xi_{r}}.
 	\end{equation}
-	W przypadku reackcji prostych, na przykład \ce{X -> Y}, nie jest możliwe zdefiniowane powinowactwa chemicznego,ponieważ należy narzucić warunek \(A=0\) w stanie równowagi, a taki stan nie występuje w przypadku tego typu reakcji. Możliwe jest jedynie stwierdzenie, że skoro dana reakcja zachodzi, to \(A_{i}>0\) oraz \(\dd{\xi_{i}}>0\). Temperatura bezwzględna jest zawsze dodatnia, stąd \(\dd_{i}S>0\). \par
+	Nie można jednak wykorzystać tych modeli do ilościowego symulowania produkcji entropii, ponieważ nie można zdefiniować \(A\) dla reakcji, które nie mają stanu równowagi. Wynika to z zapisu powinowactwa chemicznego \(A\) w roztworze:
+	\begin{equation}
+		A = RT\ln(K) - RT\ln(\prod_{i}c_{i}^{\nu_{i}}), 
+	\end{equation}
+	gdzie \(K\) to stała równowagi. W kinetyce chemicznej jest ona także równa \(K = \frac{k_{1}}{k_{-1}}\) dla reakcji \ce{X <=>[k_{1}][K_{-1}] Y}. W przypadku rozważanych powyżej reakcji \(k_{-1}=0\), występuje więc dzielenie przez \(0\). Można jedynie stwierdzić, że w granicy \(A\) jest dodatnie dla każdych stężeń reagentów \(c_{i}>0\). Stąd jako że reakcja przebiega w powyższych przykładach w stronę prawą to \(\dd{\xi}>0\), a więc ze wzoru \eqref{de_donder_ogolny} można jedynie stwierdzić, że:
+	\begin{equation}
+		\dd_{i}S=\frac{1}{T}\sum_{r}A_{r}\dd{\xi_{r}}>0.
+	\end{equation}
+	% 
+	% \begin{equation}\label{de donder}
+	% 	T\dd_{i}S=A\dd{\xi}
+	% \end{equation}
+	% lub dla wielu reakcji w postaci bardziej uogólnionej: 
+	% \begin{equation}\label{de donder ogolny}
+	% 	T\dd_{i}S=\sum_{r}A_{r}\dd{\xi_{r}}.
+	% \end{equation}
+	% W przypadku reackcji prostych, na przykład \ce{X -> Y}, nie jest możliwe zdefiniowane powinowactwa chemicznego,ponieważ należy narzucić warunek \(A=0\) w stanie równowagi, a taki stan nie występuje w przypadku tego typu reakcji. Możliwe jest jedynie stwierdzenie, że skoro dana reakcja zachodzi, to \(A_{i}>0\) oraz \(\dd{\xi_{i}}>0\). Temperatura bezwzględna jest zawsze dodatnia, stąd \(\dd_{i}S>0\). \par
 	
 	\subsection{Ogólny model bruskelator}
 	Będziemy teraz analizować uogólniony model bruskelatora, w którym reakcje mogą przebiegać w dwie strony z różnymi stałymi szybkości reakcji. Poprzedni model jest szczególnym przypadkiem poniższego przy założeniu \(k_{-1}=k_{-2}=k_{-3}=k_{-4}=0\). 
