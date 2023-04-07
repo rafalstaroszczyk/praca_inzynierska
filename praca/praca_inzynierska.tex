@@ -427,27 +427,32 @@
 	\end{center}
 	
 	\section{Praca własna}
-	W tym rozdziale przeprowadzono analizę teoretyczną oraz numeryczną modeli stosowanych w opisie reakcji oscylacyjnych. Pierwszym modelem istotnym dla rozważanych zagadnień jest model Lotki podany przez niego w roku 1910. Mimo, że oryginalnie miał on zastosowanie w badaniu wielkości populacji zwierząt, a dokładnie zależności między drapieżnikami oraz ofiarami, ma on również pewne znaczenie dla reakcji chemicznych. W 1920 Lotka, a w 1931 niezależnie Volterra, zaproponowali zmodyfikowany model nazywany modelem Lotki-Volterry. Trzecim rozpatrywanym modelem jest bruskelator opracowany przez szkołę Prigogine'a w Brukseli. Jest on analizowany w postaci uproszczonej, jak i ogólnej z reakcjami odwracalnymi. Szybkości reakcji przyjmujemy zależą jedynie od współczynników stechiometrycznych substratów, tj.:
+	W tym rozdziale przeprowadzono analizę teoretyczną oraz numeryczną modeli stosowanych w opisie reakcji oscylacyjnych. Pierwszym modelem istotnym dla rozważanych zagadnień jest model Lotki podany przez niego w roku 1910. Mimo, że oryginalnie miał on zastosowanie w badaniu wielkości populacji zwierząt, a dokładnie zależności między drapieżnikami oraz ofiarami, ma on również pewne znaczenie dla reakcji chemicznych. W 1920 Lotka, a w 1931 niezależnie Volterra, zaproponowali zmodyfikowany model nazywany modelem Lotki-Volterry. Trzecim rozpatrywanym modelem jest bruskelator opracowany przez szkołę Prigogine'a w Brukseli. Jest on analizowany w postaci uproszczonej, jak i ogólnej z reakcjami odwracalnymi. \par
+	W opisie mechanizmów tych reakcji założono, że szybkości reakcji zależą jedynie od współczynników stechiometrycznych substratów, tj.:
 	\begin{center}
 		\ce{aA + bB + ... + jJ ->[k] kK + lL + } \\
 		\(v = k[A]^{a}[B]^{b}\ldots[J]^{j}\)
 	\end{center}
 	%\subsubsection{Model Lotki}
+	Jako pierwszy przeanalizujemy model Lotki: 
 	\begin{center}
 		\ce{A ->[k_1] X} \\
 		\ce{X + Y ->[k_2] 2Y} \\
 		\ce{Y ->[k_3] produkty}
 	\end{center}
-	Jest to najprostszy model zawierający autokatalizę. W modelu tym przyjmujemy, że \(A\) jest stałe. Może to być osiągnięte poprzez wykorzystanie reaktora przepływowego, w którym kontroluje się dopływ składnika \(A\). W pierwszym kroku \(A\) zostaje przekształcone w \(X\), które w drugim kroku w reakcji z \(Y\) tworzy więcej składnika \(Y\). Układ taki wymaga więc zapoczątkowania reakcji pewną ilością \(Y\). W końcowym kroku \(Y\) zostaje przekształcone w produkty końcowe. Reakcja sumaryczna ma postać:
+	W modelu tym przyjmujemy, że \(A\) jest stałe. Może to być osiągnięte poprzez wykorzystanie reaktora przepływowego, w którym kontroluje się dopływ składnika \(A\). W pierwszym kroku \(A\) zostaje przekształcone w \(X\), które w drugim kroku w reakcji z \(Y\) tworzy więcej składnika \(Y\). Jest to najprostszy model zawierający autokatalizę. Układ taki wymaga więc zapoczątkowania reakcji pewną ilością \(Y\). W końcowym kroku \(Y\) zostaje przekształcone w produkty końcowe. Reakcja sumaryczna ma postać:
 	\begin{center}
 		\ce{A -> produkty}.
 	\end{center}
 	Szybkość zmiany stężeń składników 
-	\begin{gather}
+	\begin{equation}
+	\begin{split}
 		\dv{[X]}{t}=k_{1}[A]-k_{2}[X][Y] \\
 		\dv{[Y]}{t}=k_{2}[X][Y]-k_{3}[Y].
-	\end{gather}
+	\end{split}
+	\end{equation}
 	% \subsubsection{Model Lotki-Volterry}
+	Kolejnym modelem jest model Lotki-Volterry, który jest modyfikacją powyższego:
 	\begin{center}
 		\ce{A + X ->[k_1] 2X} \\
 		\ce{X + Y ->[k_2] 2Y} \\
@@ -458,11 +463,14 @@
 		\ce{A -> produkty}.
 	\end{center}
 	Odpowiednie szybkości zmian stężeń mają postac:
-	\begin{gather}
+	\begin{equation}
+	\begin{split}
 		\dv{[X]}{t}=k_{1}[A][X]-k_{2}[X][Y] \\
 		\dv{[Y]}{t}=k_{2}[X][Y]-k_{3}[Y]
-	\end{gather}
+	\end{split}
+	\end{equation}
 	% \subsubsection{Model bruskelator}
+	Model bruskelator ma postać:
 	\begin{center}
 		\ce{A ->[k_1] X} \\
 		\ce{2X + Y ->[k_2] 3X} \\
@@ -474,12 +482,15 @@
 		\ce{A + B -> C + D}.
 	\end{center}
 	Szybkości zmian stężeń reagentów: 
-	\begin{gather}
-		\dv{[X]}{t}=k_{1}[A]+k_{2}[X]^{2}[Y]-k_{3}[B][X]-k_{4}[X] \\
-		\dv{[Y]}{t}=-k_{2}[X]^{2}[Y]+k_{3}[B][X].
-	\end{gather}
+	\begin{equation}\label{bruskelator_pochodne}
+	\begin{split}
+		\dv{[X]}{t} &= k_{1}[A]+k_{2}[X]^{2}[Y]-k_{3}[B][X]-k_{4}[X] \\
+		\dv{[Y]}{t} &= -k_{2}[X]^{2}[Y]+k_{3}[B][X].
+	\end{split}
+	\end{equation}
 	
-	\subsection{Metody różniczkowe}
+	\subsection{Metody rozwiązywania układów nieliniowych równań różniczkowych}
+	W każdym z powyższych modeli otrzymujemy układy nieliniowych równań różniczkowych, które chcemy rozwiązać. 
 	Układ równań liniowych pierwszego rzędu o stałych współczynnikach ma w ogólności rozwiązanie analityczne \cite{palczewski}
 	\begin{equation}
 	\begin{split}
@@ -488,7 +499,40 @@
 	\end{split}
 	\end{equation}
 	Rozpatrywane układy jednak nie mają rozwiązania analitycznego i należy je rozwiązać metodami numerycznymi. \par
-	W poniższej tabeli podano wybrane wzory różnicowe wykorzystywane podczas symulacji, gdzie \(h\) jest krokiem czasowym, \(p\) to najwyższa wykładnik potęgi \(h^{s}\), przy których współczynnik wynosi \(0\), a \(A_{p+1}\) jest współczynnikiem przy kolejnej potędze. Wzory \ref{tab:schematy}.1 - \ref{tab:schematy}.4 są typu Adamsa-Bashfortha, natomiast wzór \ref{tab:schematy}.5 typu Milne'a \cite{fortuna}. Wzory o wyższym rzędzie wymagają znajomości wartości większej ilości poprzednich kroków, więc nie mogą być one wykorzystane dla kroków początkowych. W symulacji wykorzystano progresywnie schemat \ref{tab:schematy}.1 dla pierwszego kroku, następnie \ref{tab:schematy}.2 dla drugiego, \ref{tab:schematy}.3 dla trzeciego oraz \ref{tab:schematy}.5 dla każdego kolejnego. 
+	
+	W pracy tej wykorzystałem algorytmy wielokrokowe, w których jeden krok rozwinięcia numerycznego, to znaczy przejścia z punktu \(y_{n}\) do punktu \(y_{n+1}\), wykorzystywane są wyniki z \(j\) kroków, gdzie \(j\leq n\). Krok jest oznaczony \(h\). \par
+	
+	Ogólna forma metody różnicowej rozwiązującej równanie różniczkowe:
+	\begin{equation}\label{row_rozniczkowe}
+		\dv{\vb{y}}{x}=\vb{f}(x, \vb{y})
+	\end{equation}
+	ma postać:
+	\begin{equation}\label{metoda_roznicowa}
+		\vb{y}_{n+1} = \sum_{i=1}^{k}a_{i}\vb{y}_{n+1-i} + h\sum_{i=0}^{k}b_{i}\vb{f}(x_{n+1-i}, \vb{y}_{n+1-i}), n\geq k-1.
+	\end{equation}
+	Wprowadzamy wielkość \(Y\), która jest dokładnym rozwiązaniem równania \eqref{row_rozniczkowe}. Możemy wtedy zapisać: 
+	\begin{equation}
+		\vb{Y}_{n+1} = \sum_{i=1}^{k}a_{i}\vb{Y}_{n+1-i} + h\sum_{i=0}^{k}b_{i}\vb{f}(x_{n+1-i}, \vb{Y}_{n+1-i}) + \vb{T}_{n},
+	\end{equation}
+	gdzie \(\vb{T}_{n}\) to błąd metody. Możemy to przepisać w postaci:
+	\begin{equation}
+		\vb{T}_{n} = \vb{Y}_{n+1} - \sum_{i=1}^{k}a_{i}\vb{Y}_{n+1-i} - h\sum_{i=0}^{k}b_{i}\vb{f}(x_{n+1-i}, \vb{Y}_{n+1-i}).
+	\end{equation}
+	Po rozpisaniu \(Y_{n+1-i}\) w postaci szeregu Taylora wokół \(x_{n+1-k}\) otrzymujemy:
+	\begin{equation}
+		\vb{T}_{n} = \sum_{j=0}^{\infty}Y_{n+1-k}^{(j)}h^{j}\left[\frac{k^{j}}{j!} - \sum_{i=1}^{k}a_{i}\frac{(k-i)^{j}}{j!} - \sum_{i=0}^{k}b_{i}\frac{(k-i)^{j-1}}{(j-1)!}\right].
+	\end{equation}
+	Niech wielkości \(A_{s}\) określone wzorami
+	\begin{equation}
+	\begin{split}
+		A_{0} &= 1 - \sum_{i=1}^{k}a_{i} \\
+		A_{s} &= \frac{k^{s}}{s!} - \sum_{i=1}^{k}a_{i}\frac{(k-i)^{s}}{s!} - \sum_{i=0}^{k}b_{i}\frac{(k-i)^{s-1}}{(s-1)!}, s\geq 1
+	\end{split}
+	\end{equation}
+	to współczynniki przy \(h^{s}\). \par
+	Jeżeli \(A_{i}=0\) dla \(i=0, 1, \ldots, p\) oraz \(A_{p+1}\neq 0\) to metoda ta jest rzędu \(p\).
+	% W tabeli \ref{tab:schematy} podano wybrane wzory różnicowe wykorzystywane podczas symulacji, gdzie \(h\) jest krokiem czasowym, \(p\) to najwyższa wykładnik potęgi \(h^{s}\), przy których współczynnik wynosi \(0\), a \(A_{p+1}\) jest współczynnikiem przy kolejnej potędze. 
+	W tabeli \ref{tab:schematy} podano wybrane wzory różnicowe wykorzystywane podczas symulacji. Wzory 1 - 4 są typu Adamsa-Bashfortha, natomiast wzór 5 typu Milne'a \cite{fortuna}. Wzory o wyższym rzędzie wymagają znajomości wartości większej ilości poprzednich kroków, więc nie mogą być one wykorzystane dla kroków początkowych. W symulacji wykorzystano progresywnie schemat 1 dla pierwszego kroku, następnie 2 dla drugiego, 3 dla trzeciego oraz 5 dla każdego kolejnego. 
 	\begin{table}[H]
 		\centering
 		\begin{tabular}{|l|l|c|c|}
@@ -539,18 +583,20 @@
 	\end{equation}
 	Analogiczne wyprowadzenie można przeprowadzić dla modelu Lotki-Volterry:
 	\begin{align}\label{lotka_volterra_stac}
-		& x=\frac{[X]}{[X]_{st}} && [X]_{st} = \frac{k_{3}}{k_{2}} && y=\frac{[Y]}{[Y]_{st}} && [Y]_{st} = \frac{k_{1}[A]}{k_{2}} && \tau=k_{3}t && a=\frac{k_{1}[A]}{k_{3}}
+		& x=\frac{[X]}{[X]_{st}} && [X]_{st} = \frac{k_{3}}{k_{2}} && y=\frac{[Y]}{[Y]_{st}} && [Y]_{st} = \frac{k_{1}[A]}{k_{2}} && \tau=k_{3}t && a=\frac{k_{1}[A]}{k_{3}}.
 	\end{align}
+	Model Lotki-Volterry po tych przekształceniach ma postać: 
 	\begin{equation}\label{lotka_volterra_prosty}
 	\begin{split}
 		\dv{x}{\tau} &= ax-axy \\
 		\dv{y}{\tau} &= xy-y
 	\end{split}
 	\end{equation}
-	oraz modelu bruskelator:
+	W przypadku modelu bruskelator:
 	\begin{align*}
 		& x=\frac{[X]}{[X]_{st}} && [X]_{st} = \frac{k_{1}[A]}{k_{4}} && y=\frac{[Y]}{[Y]_{st}} && [Y]_{st} = \frac{k_{3}k_{4}[B]}{k_{1}k_{2}[A]} && \tau=k_{4}t && a=\frac{k_{3}[B]}{k_{4}} && b=\frac{k_{1}^{2}k_{2}[A]^{2}}{k_{4}^{3}}
 	\end{align*}
+	Skutkuje to przekształceniem równania \eqref{bruskelator_pochodne} do postaci: 
 	\begin{equation}\label{bruskelator_prosty}
 	\begin{split}
 		\dv{x}{\tau} &= 1+ax^{2}y-ax-x \\
@@ -567,24 +613,24 @@
 	\begin{equation}\label{lotka_0}
 	\begin{split}
 		\dv{\gamma}{\tau} &= -a\gamma\vartheta-a\gamma-a\vartheta \\
-		\dv{\vartheta}{\tau} &= \gamma\vartheta+\gamma
+		\dv{\vartheta}{\tau} &= \gamma\vartheta+\gamma.
 	\end{split}
 	\end{equation}
 	Dla modelu Lotki-Volterry:
 	\begin{equation}\label{lotka_volterra_0}
 	\begin{split}
 		\dv{\gamma}{\tau} &= -a\gamma\vartheta-a\vartheta \\
-		\dv{\vartheta}{\tau} &= \gamma\vartheta+\gamma
+		\dv{\vartheta}{\tau} &= \gamma\vartheta+\gamma.
 	\end{split}
 	\end{equation}
-	Dla modelu brusselator:
+	Dla modelu bruskelator:
 	\begin{equation}\label{bruskelator_0}
 	\begin{split}
 		\dv{\gamma}{\tau} &= a\gamma^{2}\vartheta+a\gamma^{2}+2a\gamma\vartheta+a\gamma+a\vartheta-\gamma \\
-		\dv{\vartheta}{\tau} &= -b\gamma^{2}\vartheta-b\gamma^{2}-2b\gamma\vartheta-b\gamma-b\vartheta
+		\dv{\vartheta}{\tau} &= -b\gamma^{2}\vartheta-b\gamma^{2}-2b\gamma\vartheta-b\gamma-b\vartheta.
 	\end{split}
 	\end{equation}
-	Istnienie punktu stacjonarnego nie oznacza, że jest on atraktorem. 
+	Istnienie punktu stacjonarnego nie oznacza, że jest on atraktorem. Tutaj pod pojęciem atraktora rozumiemy zbiór \(\omega\)-graniczny, którego definicja ma postać:
 	\begin{definition}[Zbiór $\omega$-graniczny]
 	\begin{equation*}
 		\omega(p) = {y\in\mathbb{R}^{m}: y = \lim_{t\to\infty}}x(t; p),
@@ -593,10 +639,10 @@
 	\end{definition}
 	\begin{definition}[Cykl graniczny]
 		"Jeśli istnieje orbita zamknięta $\gamma$, taka że dla punktów $y$ należących do pewnego otoczenia $U$ zbioru $\gamma$ mamy \(\omega(y)=\gamma\) [\ldots], to $\gamma$ nazywamy \emph{cyklem granicznym}."
-	\end{definition}
+	\end{definition}\noindent
 	Jeśli \(\gamma=\omega(y)\) dla każdego punktu z otoczenia $U$, to $\gamma$ jest atraktorem. \cite{palczewski} \par
 	Układy są badane w stanie oddalonym od stanu stacjonarnego, dlatego wybieramy taki stan jako stan odniesienia, a pozostałe jako wyprowadzone z niego zaburzeniem.
-	Badanie charakteru punktu stacjonarnego układu równań różniczkowych nieliniowych jest trudne, ale można wprowadzić pewne uproszczenie i zlinearyzować ten układ. Oznacza to rozwiniecie funcji po prawej stronie równań w szereg Taylora i ograniczenie go do elementu liniowego. W rezultacie przeprowadzonej operacji otrzymujemy układ równań liniowych. Działanie to jest uzasadnione tym, że badamy jedynie najbliższe otoczenie i kolejne składniki mają mniejszy wkład im bliżej punktu stacjonarnego. \par
+	Badanie charakteru punktu stacjonarnego układu równań różniczkowych nieliniowych jest trudne, ale można wprowadzić pewne uproszczenie i zlinearyzować ten układ \cite{kawczynski, palczewski}. Oznacza to rozwiniecie funcji po prawej stronie równań w szereg Taylora i ograniczenie go do elementu liniowego. W rezultacie przeprowadzonej operacji otrzymujemy układ równań liniowych. Działanie to jest uzasadnione tym, że badamy jedynie najbliższe otoczenie i kolejne składniki mają mniejszy wkład im bliżej punktu stacjonarnego. \par
 	Po linearyzacji otrzymujemy dla modelu Lotki:
 	\begin{equation}\label{lotka_lin}
 	\begin{split}
@@ -619,13 +665,15 @@
 		\dv{\vartheta}{\tau} &= -b\gamma-b\vartheta
 	\end{split}
 	\end{equation}
-	Można teraz badać stany stabilne metodami równań różniczkowych liniowych. Stabilność zależy od wartości własnych macierzy stałych. W tabeli \ref{tab:schematy} przedstawiono zależności między pierwiastkami równania kwadratowego, a sumą i iloczynem tych pierwiastków. Suma oraz iloczyn są tutaj wykorzystywane, ponieważ można je w prosty sposów otrzymać ze wzorów Viete'a: 
+	Można teraz badać stany stabilne metodami stosowanymi do analizy równań różniczkowych liniowych. Stabilność zależy od wartości własnych macierzy stałych oznaczonych symbolami \(lambda_{1}\) i \(lambda_{2}\). Odnajdujemy je rozwiązując równanie kwadratore \eqref{rown_charakterystyczne}. W tabeli \ref{tab:warunki_stabilnosci} przedstawiono zależności między pierwiastkami równania kwadratowego, a sumą i iloczynem tych pierwiastków. Suma oraz iloczyn są tutaj wykorzystywane, ponieważ można je w prosty sposów otrzymać ze wzorów Viete'a, które zostały wyprowadzone w Dodatku B na stronie \pageref{}: 
+	\begin{equation}\label{rown_charakterystyczne}
+		a\lambda^{2} + b\lambda + c = 0
+	\end{equation}
 	\begin{equation}
-		\begin{split}
-			a\lambda^{2} + b\lambda + c &= 0 \\
-			\lambda_{1} + \lambda_{2} &= -\frac{b}{a} \\
-			\lambda_{1}\lambda_{2} &= \frac{c}{a}
-		\end{split}
+	\begin{split}
+		\lambda_{1} + \lambda_{2} &= -\frac{b}{a} \\
+		\lambda_{1}\lambda_{2} &= \frac{c}{a}
+	\end{split}
 	\end{equation}
 	Charakter wykresu fazowego zależy od zależności między pierwiastkami równania charakterystycznego \cite{orlik}.
 	Dla modelu Lotki:
@@ -803,7 +851,7 @@
 			\end{tabularx}}
 			\\ \cline{1-4}
 		\end{tabularx}
-		\caption{Warunki dla modelu Lotki}
+		\caption{Warunki dla zlinearyzowanego modelu Lotki}
 		\label{tab:warunki_lotka}
 	\end{table}
 
@@ -860,7 +908,7 @@
 			\end{tabularx}}
 			\\ \cline{1-4}
 		\end{tabularx}
-		\caption{Warunki dla modelu Lotki-Volterry}
+		\caption{Warunki dla zlinearyzowanego modelu Lotki-Volterry}
 		\label{tab:warunki_lotka_volterra}
 	\end{table}
 
@@ -928,7 +976,7 @@
 			\end{tabularx}}
 			\\ \cline{1-4}
 		\end{tabularx}
-		\caption{Warunki dla modelu bruskelator}
+		\caption{Warunki dla zlinearyzowanego modelu bruskelator}
 		\label{tab:warunki_bruskelator}
 	\end{table}
 	W tabelach \ref{tab:warunki_lotka}, \ref{tab:warunki_lotka_volterra} oraz \ref{tab:warunki_bruskelator} przedstawiono warunki z tabeli \ref{tab:warunki_stabilnosci} wykorzystując odpowiednio równania \eqref{lotka_charakterystyczne}, \eqref{lotka_volterra_charakterystyczne} oraz \eqref{bruskelator_charakterystyczne}. Niektóre warunki nie są możliwe do spełnienia dla parametrów rzeczywistych, taka komórka zawiera '-'. \par
@@ -1119,6 +1167,41 @@
 		&\ce{H2 + I2 -> 2HI}
 	\end{align*}
 	co oznacza, że każdą reakcję należy rozpatrywać osobno i nie ma jednego uniwersalnego schematu \cite{pigon1}.
+	
+	\section*{Dodatek B}\label{sec: dodatek B}
+	\addcontentsline{toc}{section}{Dodatek B}
+	Równanie kwadratowe można przedstawić w dwóch formach:
+	\begin{equation}\label{dodB:kwad_normalne}
+		a\lambda^{2} + b\lambda + c = 0
+	\end{equation}
+	oraz
+	\begin{equation}\label{dodB:kwad_pierwiastki}
+		a(\lambda - \lambda_{1})(\lambda - \lambda_{2}) = 0,
+	\end{equation}
+	gdzie \(\lambda_{1}\) oraz \(\lambda_{2}\) to pierwiastki tego równania. \par
+	Po rozwinięciu równania \eqref{dodB:kwad_pierwiastki} otrzymujemy: 
+	\begin{equation}
+		a\lambda^{2} - a(\lambda_{1} + \lambda_{2})\lambda + a\lambda_{1}\lambda_{2} = 0.
+	\end{equation}
+	Przyrównując tak otrzymane równanie do \eqref{dodB:kwad_normalne}: 
+	\begin{equation}
+		a\lambda^{2} + b\lambda + c = a\lambda^{2} - a(\lambda_{1} + \lambda_{2})\lambda + a\lambda_{1}\lambda_{2}.
+	\end{equation}
+	Aby było to spełnione współczynniki przy tych samych potęgach \(\lambda\) muszą być sobie równe. Z takiego warunku otrzymujemy:
+	\begin{equation}
+	\begin{split}
+		a &= a \\
+		b &= - a(\lambda_{1} + \lambda_{2}) \\
+		c &= a\lambda_{1}\lambda_{2},
+	\end{split}
+	\end{equation}
+	co po przekształceniach daje na wzory Vi\'{e}te'a:
+	\begin{equation}
+	\begin{split}
+		\lambda_{1} + \lambda_{2} &= -\frac{b}{a} \\
+		\lambda_{1}\lambda_{2} &= \frac{c}{a}
+	\end{split}
+	\end{equation}
 	% \section*{Dodatek A}\label{sec: dodatek A}
 	% \addcontentsline{toc}{section}{Dodatek A}
 	% \begin{gather}
