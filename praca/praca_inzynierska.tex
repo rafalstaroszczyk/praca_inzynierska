@@ -980,8 +980,26 @@
 		\label{tab:warunki_bruskelator}
 	\end{table}
 	W tabelach \ref{tab:warunki_lotka}, \ref{tab:warunki_lotka_volterra} oraz \ref{tab:warunki_bruskelator} przedstawiono warunki z tabeli \ref{tab:warunki_stabilnosci} wykorzystując odpowiednio równania \eqref{lotka_charakterystyczne}, \eqref{lotka_volterra_charakterystyczne} oraz \eqref{bruskelator_charakterystyczne}. Niektóre warunki nie są możliwe do spełnienia dla parametrów rzeczywistych, taka komórka zawiera '-'. \par
-	Przejdziemy teraz do badania zachowania trajektorii w przestrzeniach fazowych rozważanych modeli. Do wygenerowania wykresów wykorzystano równania przed linearyzacją \eqref{lotka_prosty}, \eqref{lotka_volterra_prosty} oraz \eqref{bruskelator_prosty} dla odpowiednio \ref{fig:stabilny_wezel}, \ref{fig:stabilne_ognisko} oraz \ref{fig:niestabilne_ognisko}. \par
+	Przejdziemy teraz do badania zachowania trajektorii w przestrzeniach fazowych rozważanych modeli. Do wygenerowania wykresów wykorzystano równania przed linearyzacją \eqref{lotka_prosty}, \eqref{lotka_volterra_prosty} oraz \eqref{bruskelator_prosty} dla odpowiednio \ref{fig:stabilne_ognisko_lotka}, \ref{fig:stabilny_wezel_lotka}, \ref{fig:stabilne_ognisko_lotka_volterra}, \ref{fig:stabilny_wezel}, \ref{fig:stabilne_ognisko} oraz \ref{fig:niestabilne_ognisko}. Wektory na wykresach są znormalizowane. Interesuje nas jedynie ich kierunek, a nie sama wartość. \par
 	Przykładowe wykresy fazowe:
+	\begin{figure}[H]
+		\centering
+		\includegraphics{"lotka3; a=0.1".png}
+		\caption{Stabilne ognisko; Model Lotki, a=0.1}
+		\label{fig:stabilne_ognisko_lotka}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{"lotka; a=5".png}
+		\caption{Stabilny węzeł; Model Lotki, a=5}
+		\label{fig:stabilny_wezel_lotka}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{"lotka_volterra; a=1".png}
+		\caption{Stabilne ognisko; Model Lotki-Volterry, a=1}
+		\label{fig:stabilne_ognisko_lotka_volterra}
+	\end{figure}
 	\begin{figure}[H]
 		\centering
 		\includegraphics{"brusselator; a=0.5; b=4".png}
@@ -1000,7 +1018,7 @@
 		\caption{Niestabilne ognisko; Model bruskelator, a=7, b=4}
 		\label{fig:niestabilne_ognisko}
 	\end{figure}
-	Wykresy fazowe na rysunkach \ref{fig:stabilny_wezel} oraz \ref{fig:stabilne_ognisko} przedstawiają najważniejsze przypadki dla modelu brukselator. Wykorzystano odpowiednio stałe: \(a=0,5; b=4\), \(a=3; b=4\) oraz \(a=7; b=4\). Parametry te dobrano tak, aby należały one do przedziałów podanych w tabeli \ref{tab:warunki_bruskelator}. \par
+	Wykresy fazowe na rysunkach \ref{fig:stabilne_ognisko_lotka} oraz \ref{fig:stabilny_wezel_lotka} przedstawiają typowe wykresy dla modelu Lotki. Należy zwrócić uwagę na fakt, że zawsze jest to tor zbiegający do punktu stacjonalnego. Na rysunku \ref{fig:stabilne_ognisko_lotka_volterra} pokazano typowy wykres dla modelu Lotki-Volterry. Jest to zawsze krzywa zamknięta. Wykresy fazowe na rysunkach \ref{fig:stabilny_wezel}, \ref{fig:stabilne_ognisko} oraz \ref{fig:niestabilne_ognisko} przedstawiają najważniejsze przypadki dla modelu brukselator. Wykorzystano odpowiednio stałe: \(a=0,5; b=4\), \(a=3; b=4\) oraz \(a=7; b=4\). Parametry te dobrano tak, aby należały one do przedziałów podanych w tabeli \ref{tab:warunki_bruskelator}. \par
 	Wykresy zachowują się w sposób oczekiwany według tabeli \ref{tab:warunki_bruskelator} i literatury \cite{orlik}. Na rysunku \ref{fig:niestabilne_ognisko} zachodzi jednak coś na pierwszy rzut oka sprzecznego z analizą układu zlinearyzowanego. Układ osiąga stabilny cykl graniczny. Jest to niemożliwe w przypadku układów liniowych do których je sprowadziliśmy poprzez linearyzację, jednak linearyzacja jest dobrym przybliżeniem jedynie w najbliższym otoczeniu punktu stacjonarnego, cykl graniczny widoczny na rysunku \ref{fig:niestabilne_ognisko} jest więc przejawem nieliniowości układu równań modelu bruskelator \cite{orlik}. Istnieje na jednak twierdzenie, które wyjaśnia to zjawisko, jest to twierdzenie Poincar\'{e}go-Bendixsona. \par
 	\begin{theorem}[\textbf{Poincar\'{e}go-Bendixsona}]
 		"Jeśli w przestrzeni fazowej będącej podzbiorem płaszczyzny \(\mathbb{R}^{2}\) orbita zawiera co najmniej jeden swój punkt graniczny, to jest ona punktem krytycznym albo orbitą zamkniętą" \cite{palczewski}
