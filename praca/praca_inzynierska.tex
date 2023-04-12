@@ -77,14 +77,13 @@
 	\begin{center}
 		\textbf{Strona 3}
 	\end{center}
-	Termodynamika równowagowe wymaga założenia pewnych wyidealizowanych założeń, na przykład jednorodność parametrów intensywnych, maksimum entropii w układach izolowanych, minimum energii swobodnej Helmholtza w układach izotermiczno-izochorycznych, mininum entalpii swobodnej Gibbsa w układach izotermiczno-izobarycznych \cite{pudlik}. \par
+	%Termodynamika równowagowe wymaga założenia pewnych wyidealizowanych założeń, 
+	Termodynamika równowagowa oparta jest na kilku wyidealizowanych założeniach. Są nimi na przykład jednorodność parametrów intensywnych, maksimum entropii w układach izolowanych, minimum energii swobodnej Helmholtza w układach izotermiczno-izochorycznych, mininum entalpii swobodnej Gibbsa w układach izotermiczno-izobarycznych \cite{pudlik}. \par
 	Termodynamika równowagowa opisuje procesy, którym podlega dany układ, tak, jakby zachodziły w sposób kwazi-statyczny. To oznacza, że proces jest ciągiem stanów równowagi, a więc na każdym etapie procesu układ jest w równowadze termodynamicznej. W takim opisie nie sposób zdefiniować prędkości procesu, gdyż sam jego czas zmierza do nieskończoności. \par
-	
-	 
-	
 	Takie założenia nie zawsze są możliwe, przykładowo dla szybko zachodzących zmian jak w przypadku eksplozji, albo dla układów, w których interesuje nas nie tylko stan układu po osiągnięciu przez niego stanu równowagi, ale też jego zachowania podczas tej przemiany. \par
-	W pracy zająłem się głównie reakcjami chemicznymi oscylacyjnymi, które są przykładem czasowej struktury dyssypatywnej. Struktur takich nie można rozpatrywać w ramach termodynamiki liniowej, ponieważ są one typowe jedynie dla stanów nierównowagowych. Pierwsze takie reakcje odkryto w pierwszej połowie XX w., jednak jednym z nich jest organizm żywy, który można rozpatrywać jako bardzo skomplikowany układ termodynamiczny, w którym zachodzą cykliczne zmiany, na przykład stężenie hormonów oraz bicie serca. Najważniejszą reakcją dla rozwoju teorii reakcji oscylacyjnych jest reakcja Biełousowa-Żabotyńskiego. \par
-	W pracy udało się zasymulować reakcje oscylacyjne wykorzystując modele Lotki, Lotki-Volterry oraz bruskelatora. Przeprowadzono teoretyczną analizę stabilności w stanach stacjonarnych oraz sprawdzono jej prawdziwość przy użyciu symulacji. 
+	W pracy zająłem się głównie reakcjami chemicznymi oscylacyjnymi, które są przykładem czasowej struktury dyssypatywnej. Struktur takich nie można rozpatrywać w ramach termodynamiki liniowej, ponieważ są one typowe jedynie dla stanów nierównowagowych. 
+	%Pierwsze takie reakcje odkryto w pierwszej połowie XX w., jednak jednym z nich jest organizm żywy, który można rozpatrywać jako bardzo skomplikowany układ termodynamiczny, w którym zachodzą cykliczne zmiany, na przykład stężenie hormonów oraz bicie serca. Najważniejszą reakcją dla rozwoju teorii reakcji oscylacyjnych jest reakcja Biełousowa-Żabotyńskiego. \par
+	W pracy zasymulowałem reakcje oscylacyjne, których mechanizm opisany jest modelami Lotki, Lotki-Volterry oraz bruskelator. Przeprowadzono teoretyczną analizę stabilności w stanach stacjonarnych oraz sprawdzono jej prawdziwość przy użyciu symulacji. 
 	\pagebreak
 	
 	\section*{Abstract}
@@ -271,19 +270,34 @@
 		\dv{S}{t} = -\div{\vb{J_{s}}} + \sigma.
 	\end{equation}
 	Wyprowadzenie wzoru na źródło entropii:
+	\begin{equation}
+		\dd{U}=T\dd{S}-p\dd{V}+\sum_{i}\mu_{i}\dd{n_{i}}; \dd{V}=0 \label{dod A: 1}
+	\end{equation}
+	Przekształcając równanie \eqref{dod A: 1} otrzymujemy:
+	\begin{equation}
+		\dd{S}=\frac{1}{T}\dd{U}-\sum_{i}\frac{\mu_{i}}{T}\dd{n_{i}}. \label{dod A: 2}
+	\end{equation}
+	Różniczkowa zmiana \eqref{dod A: 2} na przyrost czasu \(\dd{t}\) oraz infinitezymalnej powierzchni komórki \(\dd{\vb{a}}\) ma postać:
 	\begin{gather}
-		\dd{U}=T\dd{S}-p\dd{V}+\sum_{i}\mu_{i}\dd{n_{i}}; \dd{V}=0 \label{dod A: 1} \\
-		\dd{S}=\frac{1}{T}\dd{U}-\sum_{i}\frac{\mu_{i}}{T}\dd{n_{i}} \label{dod A: 2} \\
 		\dv{S}{t}=\frac{1}{T}\dv{U}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t} \label{dod A: 3} \\
 		\vb{J}_{S}=\frac{1}{T}\vb{J}_{U}-\sum_{i}\frac{\mu_{i}}{T}\vb{J}_{i} \label{dod A: 4}
 	\end{gather}
-	Równania ciągłości:
-	\begin{gather}
-		\dv{S}{t}=-\div{\vb{J}_{S}}+\sigma \label{dod A: 5} \\
-		\dv{U}{t}=-\div{\vb{J}_{U}} \label{dod A: 6} \\
-		\dv{n_{i}}{t}=-\div{\vb{J}_{i}}+\dv{n_{i;reak}}{t}; \dd{n_{i;reak}}=\sum_{r}\nu_{ir}\dd{\xi_{r}} \label{dod A: 7} \\
-		\dv{n_{i}}{t}=-\div{\vb{J}_{i}}+\sum_{r}\nu_{ir}\dv{\xi_{r}}{t} \label{dod A: 8}
-	\end{gather}
+	Równania ciągłości dla entropii:
+	\begin{equation}
+		\dv{S}{t}=-\div{\vb{J}_{S}}+\sigma, \label{dod A: 5}
+	\end{equation}
+	energii wewnętrznej:
+	\begin{equation}
+		\dv{U}{t}=-\div{\vb{J}_{U}} \label{dod A: 6}
+	\end{equation}
+	oraz materii:
+	\begin{equation}
+		\dv{n_{i}}{t}=-\div{\vb{J}_{i}}+\dv{n_{i;reak}}{t}. \label{dod A: 7}
+	\end{equation}
+	Podstawiając \(\dd{n_{i;reak}}=\sum_{r}\nu_{ir}\dd{\xi_{r}}\) do równania \eqref{dod A: 7} otrzymujemy:
+	\begin{equation}
+		\dv{n_{i}}{t}=-\div{\vb{J}_{i}}+\sum_{r}\nu_{ir}\dv{\xi_{r}}{t}. \label{dod A: 8}
+	\end{equation}
 	Podstawiając \eqref{dod A: 4}, \eqref{dod A: 6} oraz \eqref{dod A: 8} do \eqref{dod A: 5} otrzymujemy: 
 	\begin{equation} \label{dod A: 9}
 		\dv{S}{t}=\frac{1}{T}\dv{U}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}-\left[\vb{J}_{U}\vdot\grad{\frac{1}{T}}-\sum_{i}\vb{J}_{i}\cdot\grad{\frac{\mu_{i}}{T}}-\frac{1}{T}\sum_{r}\sum_{i}\nu_{ir}\mu_{i}\dv{\xi_{r}}{t}\right]+\sigma
@@ -984,37 +998,37 @@
 	Przykładowe wykresy fazowe:
 	\begin{figure}[H]
 		\centering
-		\includegraphics{"lotka3; a=0.1".png}
+		\includegraphics[scale=0.8]{"lotka3; a=0.1".png}
 		\caption{Stabilne ognisko; Model Lotki, a=0.1}
 		\label{fig:stabilne_ognisko_lotka}
 	\end{figure}
 	\begin{figure}[H]
 		\centering
-		\includegraphics{"lotka; a=5".png}
+		\includegraphics[scale=0.8]{"lotka; a=5".png}
 		\caption{Stabilny węzeł; Model Lotki, a=5}
 		\label{fig:stabilny_wezel_lotka}
 	\end{figure}
 	\begin{figure}[H]
 		\centering
-		\includegraphics{"lotka_volterra; a=1".png}
+		\includegraphics[scale=0.8]{"lotka_volterra; a=1".png}
 		\caption{Stabilne ognisko; Model Lotki-Volterry, a=1}
 		\label{fig:stabilne_ognisko_lotka_volterra}
 	\end{figure}
 	\begin{figure}[H]
 		\centering
-		\includegraphics{"brusselator; a=0.5; b=4".png}
+		\includegraphics[scale=0.8]{"brusselator; a=0.5; b=4".png}
 		\caption{Stabilny węzeł; Model bruskelator, a=0.5, b=4}
 		\label{fig:stabilny_wezel}
 	\end{figure}
 	\begin{figure}[H]
 		\centering
-		\includegraphics{"brusselator; a=3; b=4".png}
+		\includegraphics[scale=0.8]{"brusselator; a=3; b=4".png}
 		\caption{Stabilne ognisko; Model bruskelator, a=3, b=4}
 		\label{fig:stabilne_ognisko}
 	\end{figure}
 	\begin{figure}[H]
 		\centering
-		\includegraphics{"brusselator; a=7; b=4".png}
+		\includegraphics[scale=0.8]{"brusselator; a=7; b=4".png}
 		\caption{Niestabilne ognisko; Model bruskelator, a=7, b=4}
 		\label{fig:niestabilne_ognisko}
 	\end{figure}
@@ -1163,6 +1177,9 @@
 		\caption{Zależność wielkości \(S\) oraz \(\dv{S}{\tau}\) od \(\tau\)}
 	\end{figure}
 	
+	\section{Podsumowanie}
+	W pracy tej przedstawiono podstawy teorii termodynamiki nierównowagowej. Są to pojęcia produkcji entropii, hipotezy lokalnej równowagi. Wykorzystano pewne zagadnienia chemiczne, na przykład mechanizmu reakcji chemicznej oraz jej szybkości z działu kinetyki chemicznej. Wykorzystano popularne modele reakcji chemicznych do ich symulacji, są to modele Lotki, Lotki-Volterry oraz bruskelatora. Miały one duże znaczenie historyczne. Do ich analizy wykorzystano narzędzia matematyczne układów autonomicznych oraz metody numeryczne. \par
+	W wyniku tych symulacji otrzymano wykresy fazowe przedstawiające oscylacje reagentów przejściowych. Pokazuje to, że według modeli reakcje oscylacyjne są możliwe, co jest potwierdzone przez rzeczywiscie reakcje w układach homologicznych. Ważniejszymi przykładami są reakcje Bielousova-Żabotyńskiego oraz Briggsa-Rauschera.
 	
 	%\blindtext
 	%\section{Sekcja 2}
