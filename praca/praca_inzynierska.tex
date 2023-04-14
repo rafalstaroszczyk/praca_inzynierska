@@ -59,6 +59,8 @@
 
 \newtheorem*{theorem}{Twierdzenie}
 \newtheorem*{definition}{Definicja}
+\addto\captionspolish{\renewcommand{\listfigurename}{Wykaz rysunków}}
+\addto\captionspolish{\renewcommand{\listtablename}{Wykaz tabel}}
 
 %\newcolumntype{L}{>{\(}l<{\)}}
 %\newcolumntype{C}{>{\(}c<{\)}}
@@ -81,7 +83,8 @@
 	Termodynamika równowagowa oparta jest na kilku wyidealizowanych założeniach. Są nimi na przykład jednorodność parametrów intensywnych, maksimum entropii w układach izolowanych, minimum energii swobodnej Helmholtza w układach izotermiczno-izochorycznych, mininum entalpii swobodnej Gibbsa w układach izotermiczno-izobarycznych \cite{pudlik}. \par
 	Termodynamika równowagowa opisuje procesy, którym podlega dany układ, tak, jakby zachodziły w sposób kwazi-statyczny. To oznacza, że proces jest ciągiem stanów równowagi, a więc na każdym etapie procesu układ jest w równowadze termodynamicznej. W takim opisie nie sposób zdefiniować prędkości procesu, gdyż sam jego czas zmierza do nieskończoności. \par
 	Takie założenia nie zawsze są możliwe, przykładowo dla szybko zachodzących zmian jak w przypadku eksplozji, albo dla układów, w których interesuje nas nie tylko stan układu po osiągnięciu przez niego stanu równowagi, ale też jego zachowania podczas tej przemiany. \par
-	W pracy zająłem się głównie reakcjami chemicznymi oscylacyjnymi, które są przykładem czasowej struktury dyssypatywnej. Struktur takich nie można rozpatrywać w ramach termodynamiki liniowej, ponieważ są one typowe jedynie dla stanów nierównowagowych. 
+	W pracy zająłem się głównie reakcjami chemicznymi oscylacyjnymi, które są przykładem czasowej struktury dyssypatywnej. Struktur takich nie można rozpatrywać w ramach termodynamiki liniowej, ponieważ są one typowe jedynie dla stanów nierównowagowych. \par
+	Celem pracy jest pokazanie, że reakcje oscylacyjne są możliwe oraz że występuje w nich produkcja entropii.
 	%Pierwsze takie reakcje odkryto w pierwszej połowie XX w., jednak jednym z nich jest organizm żywy, który można rozpatrywać jako bardzo skomplikowany układ termodynamiczny, w którym zachodzą cykliczne zmiany, na przykład stężenie hormonów oraz bicie serca. Najważniejszą reakcją dla rozwoju teorii reakcji oscylacyjnych jest reakcja Biełousowa-Żabotyńskiego. \par
 	W pracy zasymulowałem reakcje oscylacyjne, których mechanizm opisany jest modelami Lotki, Lotki-Volterry oraz bruskelator. Przeprowadzono teoretyczną analizę stabilności w stanach stacjonarnych oraz sprawdzono jej prawdziwość przy użyciu symulacji. 
 	\pagebreak
@@ -1177,6 +1180,25 @@
 		\caption{Zależność wielkości \(S\) oraz \(\dv{S}{\tau}\) od \(\tau\)}
 	\end{figure}
 	
+	\section{Porównanie metod numerycznych}
+	W tej sekcji porównamy wykresy otrzymane przy tym samym kroku, ale innych metodach. 
+	\begin{figure}[H]
+		\centering
+		\includegraphics{"lotka_volterra_porownanie_1000".png}
+		\caption{Porównanie w modelu Lotki-Volterry}
+		\label{lotka_volterra_porownanie_1000}
+	\end{figure}
+	Wykres w kolorze czerwonym odpowiada wykorzystywanej metodzie opisanej wcześniej, natomiast w kolorze zielonym otrzymano wykorzystując jedynie metodę rzędu pierwszego, zwaną metodą Newtona. Wykorzystano metodę Lotki-Volterry dla \(a=1\) oraz krok czasowy \(h=0,001\) przez \(1000000\) kroków. Można zauważyć, że rozwiązanie metodą przeze mnie wykorzystywaną jest zbieżne przez długi czas, natomiast prostsza metoda rozbiega się po czasie. \par
+	Analogiczne rozważania dla modelu bruskelator daje następujące wykresy:
+	\begin{figure}[H]
+		\centering
+		\includegraphics{"bruskelator_porownanie_1000".png}
+		\caption{Porównanie w modelu bruskelator}
+		\label{bruskelator_porownanie_1000}
+	\end{figure}
+	Możemy zaobserwować, że w tym przypadku obie metody są zbieżne. Jest to spowodowane tym, że cykl graniczy jest w modelu bruskelator atraktorem, podczas gdy w modely Lotki-Volterry nim nie jest. Sprawia to, że odstępstwa od cyklu są korygowane, aby znowu ten cykl osiagnąć. \par
+	
+	
 	\section{Podsumowanie}
 	W pracy tej przedstawiono podstawy teorii termodynamiki nierównowagowej. Są to pojęcia produkcji entropii, hipotezy lokalnej równowagi. Wykorzystano pewne zagadnienia chemiczne, na przykład mechanizmu reakcji chemicznej oraz jej szybkości z działu kinetyki chemicznej. Wykorzystano popularne modele reakcji chemicznych do ich symulacji, są to modele Lotki, Lotki-Volterry oraz bruskelatora. Miały one duże znaczenie historyczne. Do ich analizy wykorzystano narzędzia matematyczne układów autonomicznych oraz metody numeryczne. \par
 	W wyniku tych symulacji otrzymano wykresy fazowe przedstawiające oscylacje reagentów przejściowych. Pokazuje to, że według modeli reakcje oscylacyjne są możliwe, co jest potwierdzone przez rzeczywiscie reakcje w układach homologicznych. Ważniejszymi przykładami są reakcje Bielousova-Żabotyńskiego oraz Briggsa-Rauschera.
@@ -1193,11 +1215,13 @@
 	\addcontentsline{toc}{section}{Wykaz literatury}
 	\printbibliography[title=Wykaz literatury]
 	\pagebreak
-	\section*{Wykaz rysunków}
+	%\section*{Wykaz rysunków}
 	\addcontentsline{toc}{section}{Wykaz rysunków}
+	\listoffigures
 	\pagebreak
-	\section*{Wykaz tabel}
+	%\section*{Wykaz tabel}
 	\addcontentsline{toc}{section}{Wykaz tabel}
+	\listoftables
 	\pagebreak
 	
 	\section*{Dodatek A}\label{sec: dodatek A}
