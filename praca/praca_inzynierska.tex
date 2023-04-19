@@ -80,10 +80,10 @@
 		\textbf{Strona 3}
 	\end{center}
 	%Termodynamika równowagowe wymaga założenia pewnych wyidealizowanych założeń, 
-	Termodynamika równowagowa oparta jest na kilku wyidealizowanych założeniach. Są nimi na przykład jednorodność parametrów intensywnych, maksimum entropii w układach izolowanych, minimum energii swobodnej Helmholtza w układach izotermiczno-izochorycznych, mininum entalpii swobodnej Gibbsa w układach izotermiczno-izobarycznych \cite{pudlik}. \par
+	%Termodynamika równowagowa oparta jest na kilku wyidealizowanych założeniach. Są nimi na przykład jednorodność parametrów intensywnych, maksimum entropii w układach izolowanych, minimum energii swobodnej Helmholtza w układach izotermiczno-izochorycznych, mininum entalpii swobodnej Gibbsa w układach izotermiczno-izobarycznych \cite{pudlik}. \par
 	Termodynamika równowagowa opisuje procesy, którym podlega dany układ, tak, jakby zachodziły w sposób kwazi-statyczny. To oznacza, że proces jest ciągiem stanów równowagi, a więc na każdym etapie procesu układ jest w równowadze termodynamicznej. W takim opisie nie sposób zdefiniować prędkości procesu, gdyż sam jego czas zmierza do nieskończoności. \par
 	Takie założenia nie zawsze są możliwe, przykładowo dla szybko zachodzących zmian jak w przypadku eksplozji, albo dla układów, w których interesuje nas nie tylko stan układu po osiągnięciu przez niego stanu równowagi, ale też jego zachowania podczas tej przemiany. \par
-	W pracy zająłem się głównie reakcjami chemicznymi oscylacyjnymi, które są przykładem czasowej struktury dyssypatywnej. Struktur takich nie można rozpatrywać w ramach termodynamiki liniowej, ponieważ są one typowe jedynie dla stanów nierównowagowych. \par
+	W pracy zająłem się głównie reakcjami chemicznymi oscylacyjnymi, które są przykładem czasowej struktury dyssypatywnej. Struktur takich nie można rozpatrywać w ramach nieliniowej termodynamiki liniowej, ponieważ są one typowe jedynie dla stanów nierównowagowych. \par
 	Celem pracy jest pokazanie, że reakcje oscylacyjne są możliwe oraz że występuje w nich produkcja entropii.
 	%Pierwsze takie reakcje odkryto w pierwszej połowie XX w., jednak jednym z nich jest organizm żywy, który można rozpatrywać jako bardzo skomplikowany układ termodynamiczny, w którym zachodzą cykliczne zmiany, na przykład stężenie hormonów oraz bicie serca. Najważniejszą reakcją dla rozwoju teorii reakcji oscylacyjnych jest reakcja Biełousowa-Żabotyńskiego. \par
 	W pracy zasymulowałem reakcje oscylacyjne, których mechanizm opisany jest modelami Lotki, Lotki-Volterry oraz bruskelator. Przeprowadzono teoretyczną analizę stabilności w stanach stacjonarnych oraz sprawdzono jej prawdziwość przy użyciu symulacji. 
@@ -140,12 +140,12 @@
 	
 	% Wkleić przypadki struktur
 	
-	Wyjaśnienie tych oscylacji z punktu widzenia termodynamiki wymaga wyjścia poza termodynamikę równowagową. Termodynamika równowagowa zajmuje się procesami, w których ignoruje się upływ czasu, a przemiana jest kwazistatyczna. Oznacza to, że każdy stan pośredni można traktować jako stan równowagi termodynamicznej. Model taki jest wystarczający do opisu większości procesów. Można więc powiedzieć, że termodynamikę równowagową interesuje stan początkowy oraz końcowy. \par
-	Dopiero termodynamika nierównowagowa jest teorią, która obejmuje to, co dzieje się w trakcie rzeczywistych przemian i jest ona konieczna do opisu reakcji oscylacyjnych. Pierwsze odkrycia tego typu przemian sięgają końca XIX wieku. Były to reakcje w układach heterogenicznych, jak na przykład pierścienie Lieseganga lub oscylacje prądu płynącego przez ogniwo galwaniczne. 
+	Wyjaśnienie tych oscylacji z punktu widzenia termodynamiki wymaga wyjścia poza termodynamikę równowagową. Termodynamika równowagowa zajmuje się procesami, w których ignoruje się upływ czasu, a przemiana jest kwazistatyczna. Oznacza to, że każdy stan pośredni można traktować jako stan równowagi termodynamicznej. Model taki jest wystarczający do opisu większości procesów, %Można więc powiedzieć, że termodynamikę równowagową 
+	w których interesuje nas stan początkowy oraz końcowy. Jest jednak niewystarczający, jeżeli interesuje nas szybkość zachodzenia procesu. Dopiero termodynamika nierównowagowa jest teorią, która obejmuje to, co dzieje się w trakcie rzeczywistych przemian i jest ona konieczna do opisu reakcji oscylacyjnych. Pierwsze odkrycia tego typu przemian sięgają końca XIX wieku. Były to reakcje w układach heterogenicznych, jak na przykład pierścienie Lieseganga lub oscylacje prądu płynącego przez ogniwo galwaniczne. 
 	
 	% Wyjaśnienie tych zjawisk wymagało, aby układ byl heterogeniczny i było w zgodzie z entropią Boltzmanna, według której spontaniczna organizacja jest niemożliwa. \cite{orlik}
 	\par
-	Pierwszy model teoretyczny został przedstawiony przez Alfreda Lotka \cite{lotka}. W modelu tym zakłada się, że reakcje przebiegają w układzie homogenicznym. Przez długi czas uważano, że nie może on przedstawiać rzeczywistych reakcji, ponieważ ówcześnie interpretowano, że łamią II Zasadę Termodynamiki. Jednak w 1921r. pokazano w reakcji Bray'a-Liebhafky'ego, że reakcje oscylacyjne w układach homogenicznych są możliwe. Jest to reakcja rokładu nadtlenku wodoru katalizowana jodanem (V). Zachodzą reakcje oscylacyjne z naprzemienną dominacją dwóch procesów \cite{orlik}:
+	Pierwszy model teoretyczny został przedstawiony przez Alfreda Lotkę \cite{lotka}. W modelu tym zakłada się, że reakcje przebiegają w układzie homogenicznym. Przez długi czas uważano, że nie może on przedstawiać rzeczywistych reakcji, ponieważ ówcześnie interpretowano, że łamie II Zasadę Termodynamiki. Jednak w 1921r. pokazano w reakcji Bray'a-Liebhafky'ego, że reakcje oscylacyjne w układach homogenicznych są możliwe. Jest to reakcja rokładu nadtlenku wodoru katalizowana jodanem (V). Zachodzą reakcje oscylacyjne z naprzemienną dominacją dwóch procesów \cite{orlik}:
 	\begin{center}
 		\ce{5H2O2 + 2H+ +2IO3- -> I2 + 5O2 + 6H2O} \\
 		\ce{I2 + 5H2O2 -> 2H+ + 2IO3- + 4H2O}.
@@ -155,24 +155,25 @@
 		\ce{2H2O2 -> 2H2O + O2}.
 	\end{center}
 	
-	Jeszcze większy wpływ na rozwój termodynamiki nierównowagowej w opisie przemian chemicznych były reakcje Biełousowa-Żabotyńskiego. Pierwszą reakcją z tej grupy została zaobserwowanaw 1959 w wodnym roztworze bromianu (V) potasu, siarczanie (VI) ceru (IV), kwasu malonowego lub kwasu cytrynowego z dodatkiem rozcieńczonego kwasu siarkowego (VI). Reakcje te są dużo bardziej złożone i w uproszczonej formie mają postać \cite{orlik}:
+	Jeszcze większy wpływ na rozwój termodynamiki nierównowagowej w opisie przemian chemicznych były reakcje Biełousowa-Żabotyńskiego. Pierwszą reakcją z tej grupy została zaobserwowanaw 1959 w wodnym roztworze bromianu (V) potasu, siarczanu (VI) ceru (IV), kwasu malonowego lub kwasu cytrynowego z dodatkiem rozcieńczonego kwasu siarkowego (VI). Reakcje te przebiegają według dość skomplikowanego mechanizmu wciąz badanego, ale można podać uproszczone równania tej przemiany \cite{orlik}: %Reakcje te są dużo bardziej złożone i w uproszczonej formie mają postać 
 	\begin{center}
 		\ce{2Br- + BrO3- + 3CH2(COOH)2 + 3H+ -> 3BrCH(COOH)2 + 3H2O} \\
 		\ce{BrO3- + 4Ce^3+ + 5H+ -> 4Ce^4+ + HOBr + 2H2O} \\
 		\ce{4Ce^4+ + 6CH2(COOH)2 +BrCH(COOH)2 + HOBr + 8BrO3- -> 4Ce^3+ + 10Br- + 21CO2 + 6H+ + 11H2O}
 	\end{center}
-	W reakcji tej obserwujemy, że stężenia \ce{Br-} zmieniają się oscylacyjnie. Równocześnie stężenia \ce{Ce^{3+}} oraz \ce{Ce^{4+}} też podlegają oscylacjom. Reakcja sumaryczna ma postać: 
+	W reakcji tej obserwujemy, że stężenia \ce{Br-} oraz \ce{HBrO2}, który nie jest obecny w sumarycznych równaniach, zmieniają się oscylacyjnie. Równocześnie stężenia \ce{Ce^{3+}} oraz \ce{Ce^{4+}} też podlegają oscylacjom. Reakcja sumaryczna ma postać: 
 	\begin{center}
 		\ce{2BrO3- + 3CH2(COOH)2 + 2H+ ->[kat] 2BrCH(COOH)2 + 4H2O + 3CO2}.
 	\end{center}
 	% Została ona odkryta jako nieorganiczny analog cyklu Krebsa \cite{belousov_hist}. 
-	W późniejszym okresie znaleziono również inne reagenty, dla których zachodzi reakcja analogowa. Powszechnym takim zamiennikiem jest \ce{Fe(o-phen)3^2+} w miejsce jonów \ce{Ce^3+}. Zmienia to kolory występujące w reakcji z bezbarwnego i żółtego na pomarańczony i niebieski \cite{orlik}. \par
+	W późniejszym okresie znaleziono również inne reagenty, dla których zachodzi reakcja analogowa. Powszechnym takim zamiennikiem jest \ce{Fe(o-phen)3^2+}, zwana ferroiną, w miejsce jonów \ce{Ce^3+}. Zmienia to kolory występujące w reakcji z bezbarwnego i żółtego na pomarańczony i niebieski \cite{orlik}. \par
 	Odkrycie reakcji oscylacyjnych przyczyniło się do rozwoju termodynamiki nierównowagowej, a w konsekwencji do użycia jej aparatu teoretycznego do opisu procesów życiowych. 
-	Reakcja Biełousowa-Żabotyńskiego traktowana jest czasem jako analog cyklu Krebsa występującego, będącego głównym źródłem energii organizmów tlenowych. Analogia ta dotyczy systemu reakcji, w których występuje pętla, to oznacza, że produkt pierwszej reakcji jest substratem kolejnej, aż do osiagniecia produktu, który jest substratem tej pierwszej. \cite{belousov_hist}. \par
-	Niepoprawne interpretacja II Z.T. może doprowadzić do wniosku, że powstanie złożonej struktury z molekularnego chaosu powinno być niemożliwe. Tak rzeczywiście się dzieje, ale tylko dla układów izolowanych. Natomiast w przypadku innych układów, które oddziałują z otoczeniem samoorganizacja materii jest możliwa. Przykładem są układy biologiczne. Wyjaśnienie takie błędnie wykorzystuje tę zasadę ignorując fakt, że układy biologiczne jak i cała Ziemia nie są układami izolowanymi. 
+	Reakcja Biełousowa-Żabotyńskiego traktowana jest czasem jako analog cyklu Krebsa, będącego głównym źródłem energii organizmów tlenowych. Analogia ta dotyczy mechanizmu reakcji, w których występuje pętla sprzężenia zwrotnego, to oznacza, że produkt pierwszej reakcji jest substratem kolejnej, aż do osiagniecia produktu, który jest substratem tej pierwszej. \cite{belousov_hist, stryer}. \par
+	Niepoprawna interpretacja II Zasady Termodynamiki może doprowadzić do wniosku, że powstanie złożonej struktury z molekularnego chaosu powinno być niemożliwe. Tak rzeczywiście się dzieje, ale tylko dla układów izolowanych. Natomiast w przypadku innych układów, które oddziałują z otoczeniem samoorganizacja materii jest możliwa. Przykładem są procesy zachodzące w układach biologicznych, w którcyh interakcja z otoczeniem jest kluczowa. %Wyjaśnienie takie błędnie wykorzystuje tę zasadę ignorując fakt, że układy biologiczne jak i cała Ziemia nie są układami izolowanymi. 
+	Wspomniana wyżej błędna interpretacja drugiej zasady termodynamiki polega na ekstrapolowaniu wyników z układów izolowanych do wszystkich innych.
 	
-	\subsection{Produkcja entropii}
-	Wszystkie procesy rzeczywiste podlegają drugiej zasadzie termodynamiki, która określa różniczkową zmianę entropii \(\dd{S}\), w danych procesie samorzutnym nierównością:
+	\subsection{Produkcja entropii w układach nierównowagowych}
+	Wszystkie procesy rzeczywiste podlegają drugiej zasadzie termodynamiki, która określa różniczkową zmianę entropii \(\dd{S}\), w danych procesie samorzutnym nierównością \cite{buchowski}:
 	\begin{equation}\label{II_Zasada_Termodynamiki}
 		\dd{S}>0.
 	\end{equation}
@@ -183,18 +184,19 @@
 	W przyapadku układów izolowanych \(\dd{S}=\dd{S_{uk}}\), 
 	więc w układach izolowanych entropia zawsze rośnie, a zatem spontaniczne uporządkowanie stabilnych struktur nie jest możliwe. \par
 	%Druga zasada termodynamiki dana wzorem \eqref{II_Zasada_Termodynamiki} rozstrzyga czy dany proces jest możliwy. 
-	Aby nadać tej zasadzie ilościowy charakter, w której zastąpimy nierówność, wprowadza się pojęcie produkcji entropii, które przeanalizujemy najpierw z punktu widzenia układu. W przypadku układu zamkniętego, w którym przebiega proces samorzutny drugą zasadę termodynamiki zapiszemy następującą nierównością \cite{orlik, pigon1}: 
+	Aby nadać tej zasadzie ilościowy charakter, w której zastąpimy nierówność, wprowadza się pojęcie produkcji entropii, które przeanalizujemy najpierw z punktu widzenia układu. W przypadku układu zamkniętego, w którym przebiega proces samorzutny drugą zasadę termodynamiki zapiszemy następującą nierównością \cite{orlik, pigon1, jaworski}: 
 	\begin{equation}\label{II_Zasada_Termodynamiki_uklad}
 		\dd{S_{uk}}>\frac{\dbar Q}{T_{ot}},
 	\end{equation}
 	gdzie \(\dd{S_{uk}}\) to różniczkowa zmiana entropii układu, \(\dbar Q\) to elementarne ciepło dostarczone do układu ze źródła o temperaturze \(T_{ot}\). Jeśli wymiana \(\dbar Q\) odbywa się w temperaturze \(T\) to 
-	\begin{equation}\label{II_zasada_Termodynamiki_uklad_T}
+	\begin{equation}\label{II_Zasada_Termodynamiki_uklad_T}
 		\dd{S_{uk}}>\frac{\dbar Q}{T}.
 	\end{equation}
+	Nierówności \eqref{II_Zasada_Termodynamiki_uklad} i \eqref{II_Zasada_Termodynamiki_uklad_T} są konsekwencją podstawienia \(\dd{S_{ot}}=-\frac{\dbar Q}{T_{ot}}\) lub \(\dd{S_{ot}}=-\frac{\dbar Q}{T}\) do \eqref{II_Zasada_Termodynamiki} oraz \eqref{entropia_uklad_otoczenie}. 
 	
 	% Z równania \eqref{II_Zasada_Termodynamiki} lub \eqref{II_Zasada_Termodynamiki_uklad} wynika, że w układach izolowanych entropia zawsze rośnie, a zatem spontaniczne uporządkowanie stabilnych struktur nie jest możliwe.
 	
-	Z nierówności \eqref{II_Zasada_Termodynamiki_uklad} lub \eqref{II_Zasada_Termodynamiki_uklad_T} wynika, że różnicową zmianę entropii układu \(\dd{S_{uk}}\) możemy przedstawić jako sumę dwóch wkładów:
+	Z nierówności \eqref{II_Zasada_Termodynamiki_uklad} lub \eqref{II_Zasada_Termodynamiki_uklad_T} wynika, że różniczkową zmianę entropii układu \(\dd{S_{uk}}\) możemy przedstawić jako sumę dwóch wkładów:
 	\begin{equation}
 		\dd{S_{uk}}=\dd_{e}S+\dd_{i}S,
 	\end{equation}
@@ -226,8 +228,9 @@
 	\begin{equation*}
 		\dd_{i}S_{ot}>0.
 	\end{equation*}
-	Założenie to możemy przenieść na sytuację, gdy układ dzielimy na mniejsze podukłady (komórki). Z punkty widzenia pojedynczej komórki, dla której pozostałe stanowią otoczenie, oznacza to, że produkcja entropii w jej wnętrzu ma być nieujemna i podobnie dla pozostałych. To oznacza dalej, że w każdym dowolnie małym obszarze układu, w którym zachodzą procesy samorzutne następuje związane z nimi tworzenie entropii. To stwierdzenie stanowi treść drugiej hipotezy termodynamiki nierównowagowej, nazywaną lokalnym sformuowaniem drugiej zasady termodynamiki. Lokalne sformuowanie drugiej zasady termodynamiki nie wyklucza jednak takiego przypadku, w którym w jednym i tym samym miejscu zachodzi kilka procesów, z których niektóre zmniejszają entropię \((\dd_{i}S<0)\), pod warunkiem, że oprócz nich obecne są procesy produkujące entropię \((\dd_{i}S>0)\), które z naddatkiem zwiększa entropię w tym miejscu \cite{orlik, pigon1}. \par
-	Tego typu sprzężenie procesów jest obserwowane w układach nierównowagowych. przykładem jest tutaj termodyfuzja w gazie. W procesie tym pod wpływem gradientu temperatury dochodzi do przepływu ciepła, co jest procesem nieodwracalnym, wytwarzającym entropię w każdym miejscu. Jednak równocześnie w początkowo jednorodnym układzie zaobserwujemy transport masy, którego rezultatem będzie pojawienie się niejednorodności stężenia gazu w przestrzeni. Z tym drugim procesem związane jest zmniejszenie entropii. Wytwarzanie entropii związane z przepływem ciepła większe niż jej spadek związany z wytworzeniem niejednorodności. 
+	
+	Założenie to możemy przenieść na sytuację, gdy układ dzielimy na mniejsze podukłady (komórki). Z punkty widzenia pojedynczej komórki, dla której pozostałe stanowią otoczenie, oznacza to, że produkcja entropii w jej wnętrzu ma być nieujemna i podobnie dla pozostałych. To oznacza dalej, że w każdym dowolnie małym obszarze układu, w którym zachodzą procesy samorzutne następuje związane z nimi tworzenie entropii. To stwierdzenie stanowi treść drugiej hipotezy termodynamiki nierównowagowej, nazywaną lokalnym sformuowaniem drugiej zasady termodynamiki. Lokalne sformuowanie drugiej zasady termodynamiki nie wyklucza jednak takiego przypadku, w którym w jednym i tym samym miejscu zachodzi kilka procesów, z których niektóre zmniejszają entropię \((\dd_{i}S<0)\), pod warunkiem, że oprócz nich obecne są procesy produkujące entropię \((\dd_{i}S>0)\), które z naddatkiem zwiększa entropię w tym miejscu \cite{orlik, pigon1, guminski}. \par
+	Tego typu sprzężenie procesów jest obserwowane w układach nierównowagowych. przykładem jest tutaj termodyfuzja w gazie. W procesie tym pod wpływem gradientu temperatury dochodzi do przepływu ciepła, co jest procesem nieodwracalnym, wytwarzającym entropię w każdym miejscu. Jednak równocześnie w początkowo jednorodnym układzie zaobserwujemy transport masy, którego rezultatem będzie pojawienie się niejednorodności stężenia gazu w przestrzeni, którą zajmuje. Z tym drugim procesem związane jest zmniejszenie entropii. Wytwarzanie entropii związane z przepływem ciepła większe niż jej spadek związany z wytworzeniem niejednorodności. 
 	
 
 
@@ -251,11 +254,11 @@
 	
 	
 	
-	\subsection{Termodynamika liniowa i nieliniowa}
-	Wprowadza się wielkość zwaną źródłem entropii \(\sigma\), która oznacza produkcję entropii w jednostce czasu i objętości
-	\begin{equation}
-		\pdv{_{i}S}{t} = \iiint_{V}\sigma\dd{V}.
-	\end{equation}
+	\subsection{Termodynamika nierównowagowa liniowa i nieliniowa}
+	%Wprowadza się wielkość zwaną źródłem entropii \(\sigma\), która oznacza produkcję entropii w jednostce czasu i objętości
+	%\begin{equation}
+	%	\pdv{_{i}S}{t} = \iiint_{V}\sigma\dd{V}.
+	%\end{equation}
 	
 	W poprzednim podrozdziale opisaliśmy zmiany entropii układu, które dokonuje się w trakcie procesu samorzutnego. Jeżeli zmiany te odniesiemy do bardzo krótkiego przedziału czasu \(\dd{t}\), wówczas szybkość zmiany entropii dana będzie za pomocą równania:
 	\begin{equation}
@@ -266,17 +269,20 @@
 		\dv{_{i}S}{t} = \iiint_{V}\sigma\dd{V},
 	\end{equation}
 	w którym \(\sigma>0\). \par
-	Chcąc przenieść wprowadzone pojęcie na poziom opisu, który pojawia się w lokalnym sformuowaniu II Zasady Termodynamiki, rozważmy mały fragment układu. Dla tego fragmentu zmiany entropii również odbywają się poprzez wymianę jej przez ścianki ograniczające rozważany fragment oraz z tworzenia jej wewnątrz tego fragmentu. \par
-	Wymianę entropii z otoczeniem opisuje wektor przepływu entropii \(J_{s}\). Jest on zależny od położenia fragmentu i czasu. \par
-	Biorąc pod uwagę pojęcie źródła entropii \(\sigma\) wzór opisujący zmianę w czasie entropii zapiszemy jako:
+	Chcąc przenieść wprowadzone pojęcie na poziom opisu, który pojawia się w lokalnym sformuowaniu II Zasady Termodynamiki, rozważmy mały fragment układu. Dla tego fragmentu zmiany entropii również odbywają się poprzez wymianę jej przez ścianki ograniczające rozważany fragment oraz z tworzenia jej wewnątrz tego fragmentu. Tę wymianę entropii z otoczeniem opisuje wektor przepływu entropii \(\vb{J}_{s}\). Jest on zależny od położenia fragmentu i czasu. Biorąc pod uwagę pojęcie źródła entropii \(\sigma\) wzór opisujący zmianę w czasie entropii zapiszemy jako:
 	\begin{equation}
-		\dv{S}{t} = -\div{\vb{J_{s}}} + \sigma.
+		\dv{S}{t} = -\div{\vb{J}_{s}} + \sigma.
 	\end{equation}
-	Wyprowadzenie wzoru na źródło entropii:
+	% Wyprowadzenie wzoru na źródło entropii:
+	Oprócz zmieniającej się entropii, w układzie, w ogólności, dochodzi do zmiany energii wewnętrznej. Różniczkową jej zmianę $\dd{U}$ zapiszemy poprzez wyrażenie:
 	\begin{equation}
-		\dd{U}=T\dd{S}-p\dd{V}+\sum_{i}\mu_{i}\dd{n_{i}}; \dd{V}=0 \label{dod A: 1}
+		\dd{U}=T\dd{S}-p\dd{V}+\sum_{i}\mu_{i}\dd{n_{i}}, \label{dod A: 1}
 	\end{equation}
-	Przekształcając równanie \eqref{dod A: 1} otrzymujemy:
+	gdzie symbolem $\mu_{i}$ oznaczono potencjał chemiczny $i$-tej substancji. 
+	\begin{equation}
+		\mu_{i}=\left(\pdv{U}{n_{i}}\right)_{S, V, n_{j}: j\neq i}
+	\end{equation}
+	Przekształcając równanie \eqref{dod A: 1}, zakładając że $\dd{V}=0$, otrzymujemy \cite{pigon1}:
 	\begin{equation}
 		\dd{S}=\frac{1}{T}\dd{U}-\sum_{i}\frac{\mu_{i}}{T}\dd{n_{i}}. \label{dod A: 2}
 	\end{equation}
@@ -285,15 +291,15 @@
 		\dv{S}{t}=\frac{1}{T}\dv{U}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t} \label{dod A: 3} \\
 		\vb{J}_{S}=\frac{1}{T}\vb{J}_{U}-\sum_{i}\frac{\mu_{i}}{T}\vb{J}_{i} \label{dod A: 4}
 	\end{gather}
-	Równania ciągłości dla entropii:
-	\begin{equation}
-		\dv{S}{t}=-\div{\vb{J}_{S}}+\sigma, \label{dod A: 5}
-	\end{equation}
-	energii wewnętrznej:
+	%Równania ciągłości dla entropii:
+	%\begin{equation}
+	%	\dv{S}{t}=-\div{\vb{J}_{S}}+\sigma, \label{dod A: 5}
+	%\end{equation}
+	Energia wewnętrzna $U$ jest skalarem, który podlega równaniu ciągłości:
 	\begin{equation}
 		\dv{U}{t}=-\div{\vb{J}_{U}} \label{dod A: 6}
 	\end{equation}
-	oraz materii:
+	natomiast szybkość zmiany $n_{i}$ dana jest wzorem:
 	\begin{equation}
 		\dv{n_{i}}{t}=-\div{\vb{J}_{i}}+\dv{n_{i;reak}}{t}. \label{dod A: 7}
 	\end{equation}
@@ -303,11 +309,11 @@
 	\end{equation}
 	Podstawiając \eqref{dod A: 4}, \eqref{dod A: 6} oraz \eqref{dod A: 8} do \eqref{dod A: 5} otrzymujemy: 
 	\begin{equation} \label{dod A: 9}
-		\dv{S}{t}=\frac{1}{T}\dv{U}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}-\left[\vb{J}_{U}\vdot\grad{\frac{1}{T}}-\sum_{i}\vb{J}_{i}\cdot\grad{\frac{\mu_{i}}{T}}-\frac{1}{T}\sum_{r}\sum_{i}\nu_{ir}\mu_{i}\dv{\xi_{r}}{t}\right]+\sigma
+		\dv{S}{t}=\frac{1}{T}\dv{U}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}-\left[\vb{J}_{U}\vdot\grad{\frac{1}{T}}-\sum_{i}\vb{J}_{i}\cdot\grad{\frac{\mu_{i}}{T}}-\frac{1}{T}\sum_{r}\sum_{i}\nu_{ir}\mu_{i}\dv{\xi_{r}}{t}\right]+\sigma.
 	\end{equation}
 	Wprowadzamy pojęcie powinowactwa chemicznego: 
 	\begin{equation}
-		A_{r}=-\sum_{i}\nu_{ir}\mu_{i} \\
+		A_{r}=-\sum_{i}\nu_{ir}\mu_{i}. \\
 	\end{equation}
 	Równanie \eqref{dod A: 9} przybiera postać:
 	\begin{equation}
@@ -323,7 +329,7 @@
 		\hline
 		Proces & Przepływ & Siła termodynamiczna \\
 		\hline
-		Transport energii & \(\vb{J_{u}}\) & \(\grad{\left(\frac{1}{T}\right)}\) \\
+		Transport energii & \(\vb{J}_{u}\) & \(\grad{\left(\frac{1}{T}\right)}\) \\
 		Dyfuzja & \(\vb{J}_i\) & \(-\grad{\left(\frac{\mu_{i}}{T}\right)}\) \\
 		Reakcja chemiczna & \(J_{r}=\dv{\xi_{r}}{t}\) & \(\frac{A_r}{T}\) \\
 		\hline
@@ -403,7 +409,7 @@
 		\pdv{t}\left(S - S^\circ\right) = \frac{1}{2!}\left(\var^{2}S\right)^\circ = \sum_{i=1}^{n}J_{i}X_{i}=\sigma\geq0
 	\end{equation}
 
-	\subsection{Szybkość reakcji}
+	\subsection{Szybkość reakcji chemicznej}
 	Reakcje chemiczne można podzielić na dwie kategorie. Są to reakcje homogeniczne, czyli takie zachodzące w jednej fazie, oraz reakcje heterogeniczne, czyli między związkami w różnych fazach i zachodzące na granicy między nimi. Szybkość reakcji heterogenicznych jest trudniejsza do opisania, ponieważ zależy od szybkości dyfuzji, powierzchni rozdzielenia i innych czynników. %do uzupelnienia
 	Szybkość reakcji homogenicznej w stałej temperaturze jest funkcją stężeń reagentów. Można ją wyrazić dla stałej objętości jako: 
 	\begin{equation}
@@ -519,7 +525,7 @@
 	
 	W pracy tej wykorzystałem algorytmy wielokrokowe, w których jeden krok rozwinięcia numerycznego, to znaczy przejścia z punktu \(y_{n}\) do punktu \(y_{n+1}\), wykorzystywane są wyniki z \(j\) kroków, gdzie \(j\leq n\). Krok jest oznaczony \(h\). \par
 	
-	Ogólna forma metody różnicowej rozwiązującej równanie różniczkowe:
+	Ogólna forma metody różnicowej rozwiązującej równanie różniczkowe \cite{fortuna}:
 	\begin{equation}\label{row_rozniczkowe}
 		\dv{\vb{y}}{x}=\vb{f}(x, \vb{y})
 	\end{equation}
@@ -572,7 +578,7 @@
 	\end{table}
 	
 	
-	\subsection{Stabilność rozwiązań}
+	\subsection{Stabilność rozwiązań układów równań różniczkowych}
 	Na potrzeby analizy można zredukować ilość parametrów danych równań różniczkowych stosując odpowiednie podstawienia. Najpierw należy wyznaczyć współrzędne punktu stacjonarnego, w którym obie pochodne stężeń reagentów są równe zero. Analiza zostanie przedstawiona na przykładzie modelu Lotki, ale analogiczne wyprowadzenie można przeprowadzić dla każdego z tych modeli. W stanie stacjonarnym stężenia reagentów są stałe, więc \(\dv{[X]}{t}=\dv{[Y]}{t}=0\)
 	\begin{equation}\label{lotka_pods}
 	\begin{split}
@@ -682,7 +688,7 @@
 		\dv{\vartheta}{\tau} &= -b\gamma-b\vartheta
 	\end{split}
 	\end{equation}
-	Można teraz badać stany stabilne metodami stosowanymi do analizy równań różniczkowych liniowych. Stabilność zależy od wartości własnych macierzy stałych oznaczonych symbolami \(lambda_{1}\) i \(lambda_{2}\). Odnajdujemy je rozwiązując równanie kwadratore \eqref{rown_charakterystyczne}. W tabeli \ref{tab:warunki_stabilnosci} przedstawiono zależności między pierwiastkami równania kwadratowego, a sumą i iloczynem tych pierwiastków. Suma oraz iloczyn są tutaj wykorzystywane, ponieważ można je w prosty sposów otrzymać ze wzorów Viete'a, które zostały wyprowadzone w Dodatku B na stronie \pageref{}: 
+	Można teraz badać stany stabilne metodami stosowanymi do analizy równań różniczkowych liniowych. Stabilność zależy od wartości własnych macierzy stałych oznaczonych symbolami \(\lambda_{1}\) i \(\lambda_{2}\). Odnajdujemy je rozwiązując równanie kwadratore \eqref{rown_charakterystyczne}. W tabeli \ref{tab:warunki_stabilnosci} przedstawiono zależności między pierwiastkami równania kwadratowego, a sumą i iloczynem tych pierwiastków. Suma oraz iloczyn są tutaj wykorzystywane, ponieważ można je w prosty sposów otrzymać ze wzorów Viete'a, które zostały wyprowadzone w Dodatku B na stronie \pageref{sec: dodatek B}: 
 	\begin{equation}\label{rown_charakterystyczne}
 		a\lambda^{2} + b\lambda + c = 0
 	\end{equation}
@@ -997,7 +1003,7 @@
 		\label{tab:warunki_bruskelator}
 	\end{table}
 	W tabelach \ref{tab:warunki_lotka}, \ref{tab:warunki_lotka_volterra} oraz \ref{tab:warunki_bruskelator} przedstawiono warunki z tabeli \ref{tab:warunki_stabilnosci} wykorzystując odpowiednio równania \eqref{lotka_charakterystyczne}, \eqref{lotka_volterra_charakterystyczne} oraz \eqref{bruskelator_charakterystyczne}. Niektóre warunki nie są możliwe do spełnienia dla parametrów rzeczywistych, taka komórka zawiera '-'. \par
-	Przejdziemy teraz do badania zachowania trajektorii w przestrzeniach fazowych rozważanych modeli. Do wygenerowania wykresów wykorzystano równania przed linearyzacją \eqref{lotka_prosty}, \eqref{lotka_volterra_prosty} oraz \eqref{bruskelator_prosty} dla odpowiednio \ref{fig:stabilne_ognisko_lotka}, \ref{fig:stabilny_wezel_lotka}, \ref{fig:stabilne_ognisko_lotka_volterra}, \ref{fig:stabilny_wezel}, \ref{fig:stabilne_ognisko} oraz \ref{fig:niestabilne_ognisko}. Wektory na wykresach są znormalizowane. Interesuje nas jedynie ich kierunek, a nie sama wartość. \par
+	Przejdziemy teraz do badania zachowania trajektorii w przestrzeniach fazowych rozważanych modeli. Do wygenerowania wykresów wykorzystano równania przed linearyzacją \eqref{lotka_prosty}, \eqref{lotka_volterra_prosty} oraz \eqref{bruskelator_prosty} dla rysunków odpowiednio \ref{fig:stabilne_ognisko_lotka}, \ref{fig:stabilny_wezel_lotka}, \ref{fig:stabilne_ognisko_lotka_volterra}, \ref{fig:stabilny_wezel}, \ref{fig:stabilne_ognisko} oraz \ref{fig:niestabilne_ognisko}. Wektory na wykresach są znormalizowane. Interesuje nas jedynie ich kierunek, a nie sama wartość. \par
 	Przykładowe wykresy fazowe:
 	\begin{figure}[H]
 		\centering
@@ -1166,21 +1172,21 @@
 	Wykresy otrzymane z przeprowadzonej symulacji dla kroku symulacji \(h = \dd{\tau} = 0,001\) oraz warunku początkowego \(x=1, y=2\):
 	\begin{figure}[H]
 		\centering
-		\includegraphics{"brusselator_rev1; a=9, b=1, c=1, d=0.1".png}
+		\includegraphics[scale=0.8]{"brusselator_rev1; a=9, b=1, c=1, d=0.1".png}
 		\caption{Wykres fazowy dla a=9, b=1, c=1, d=0,1}
 	\end{figure}
 	\begin{figure}[H]
 		\centering
-		\includegraphics{"brusselator_rev2; a=9, b=1, c=1, d=0.1".png}
+		\includegraphics[scale=0.8]{"brusselator_rev2; a=9, b=1, c=1, d=0.1".png}
 		\caption{Zależność wielkości \(x\) oraz \(y\) od \(\tau\)}
 	\end{figure}
 	\begin{figure}[H]
 		\centering
-		\includegraphics{"brusselator_rev3; a=9, b=1, c=1, d=0.1".png}
+		\includegraphics[scale=0.8]{"brusselator_rev3; a=9, b=1, c=1, d=0.1".png}
 		\caption{Zależność wielkości \(S\) oraz \(\dv{S}{\tau}\) od \(\tau\)}
 	\end{figure}
 	
-	\section{Porównanie metod numerycznych}
+	\subsection{Porównanie metod numerycznych}
 	W tej sekcji porównamy wykresy otrzymane przy tym samym kroku, ale innych metodach. 
 	\begin{figure}[H]
 		\centering
