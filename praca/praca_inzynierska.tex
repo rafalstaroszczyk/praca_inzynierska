@@ -93,6 +93,8 @@
 	\begin{center}
 		\textbf{Strona 4}
 	\end{center}
+	\textbf{Usuwam zasadę minimalnej produkcji entropii, ponieważ nie znalazłem satysfakcjonującego wyprowadzenia} \\
+	\textbf{Pracuję nad opisem procesów sprzężonych}
 	%\blindtext \par
 	%\blindtext \par
 	%\blindtext \par
@@ -155,18 +157,18 @@
 		\ce{2H2O2 -> 2H2O + O2}.
 	\end{center}
 	
-	Jeszcze większy wpływ na rozwój termodynamiki nierównowagowej w opisie przemian chemicznych były reakcje Biełousowa-Żabotyńskiego. Pierwszą reakcją z tej grupy została zaobserwowanaw 1959 w wodnym roztworze bromianu (V) potasu, siarczanu (VI) ceru (IV), kwasu malonowego lub kwasu cytrynowego z dodatkiem rozcieńczonego kwasu siarkowego (VI). Reakcje te przebiegają według dość skomplikowanego mechanizmu wciąz badanego, ale można podać uproszczone równania tej przemiany \cite{orlik}: %Reakcje te są dużo bardziej złożone i w uproszczonej formie mają postać 
+	Jeszcze większy wpływ na rozwój termodynamiki nierównowagowej w opisie przemian chemicznych były reakcje Biełousowa-Żabotyńskiego. Pierwszą reakcją z tej grupy została zaobserwowanaw 1959 w wodnym roztworze bromianu (V) potasu, siarczanu (VI) ceru (IV), kwasu malonowego lub kwasu cytrynowego z dodatkiem rozcieńczonego kwasu siarkowego (VI). Reakcje te przebiegają według dość skomplikowanego mechanizmu, wciąż badanego, ale można podać uproszczone równania tej przemiany \cite{orlik}: %Reakcje te są dużo bardziej złożone i w uproszczonej formie mają postać 
 	\begin{center}
 		\ce{2Br- + BrO3- + 3CH2(COOH)2 + 3H+ -> 3BrCH(COOH)2 + 3H2O} \\
 		\ce{BrO3- + 4Ce^3+ + 5H+ -> 4Ce^4+ + HOBr + 2H2O} \\
 		\ce{4Ce^4+ + 6CH2(COOH)2 +BrCH(COOH)2 + HOBr + 8BrO3- -> 4Ce^3+ + 10Br- + 21CO2 + 6H+ + 11H2O}
 	\end{center}
-	W reakcji tej obserwujemy, że stężenia \ce{Br-} oraz \ce{HBrO2}, który nie jest obecny w sumarycznych równaniach, zmieniają się oscylacyjnie. Równocześnie stężenia \ce{Ce^{3+}} oraz \ce{Ce^{4+}} też podlegają oscylacjom. Reakcja sumaryczna ma postać: 
+	W reakcji tej obserwujemy, że stężenia \ce{Br-} oraz \ce{HBrO2}, który nie jest obecny w przedstawionych wyżej sumarycznych równaniach, zmieniają się oscylacyjnie. Równocześnie stężenia \ce{Ce^{3+}} oraz \ce{Ce^{4+}} też podlegają oscylacjom. Całkowita reakcja sumaryczna ma postać: 
 	\begin{center}
 		\ce{2BrO3- + 3CH2(COOH)2 + 2H+ ->[kat] 2BrCH(COOH)2 + 4H2O + 3CO2}.
 	\end{center}
 	% Została ona odkryta jako nieorganiczny analog cyklu Krebsa \cite{belousov_hist}. 
-	W późniejszym okresie znaleziono również inne reagenty, dla których zachodzi reakcja analogowa. Powszechnym takim zamiennikiem jest \ce{Fe(o-phen)3^2+}, zwana ferroiną, w miejsce jonów \ce{Ce^3+}. Zmienia to kolory występujące w reakcji z bezbarwnego i żółtego na pomarańczony i niebieski \cite{orlik}. \par
+	W późniejszym okresie znaleziono również inne reagenty, dla których zachodzi reakcja analogiczna. Powszechnym takim zamiennikiem jest \ce{Fe(o-phen)3^2+}, zwana ferroiną, w miejsce jonów \ce{Ce^3+}. Zmienia to kolory występujące w reakcji z bezbarwnego i żółtego na pomarańczony i niebieski \cite{orlik}. \par
 	Odkrycie reakcji oscylacyjnych przyczyniło się do rozwoju termodynamiki nierównowagowej, a w konsekwencji do użycia jej aparatu teoretycznego do opisu procesów życiowych. 
 	Reakcja Biełousowa-Żabotyńskiego traktowana jest czasem jako analog cyklu Krebsa, będącego głównym źródłem energii organizmów tlenowych. Analogia ta dotyczy mechanizmu reakcji, w których występuje pętla sprzężenia zwrotnego, to oznacza, że produkt pierwszej reakcji jest substratem kolejnej, aż do osiagniecia produktu, który jest substratem tej pierwszej. \cite{belousov_hist, stryer}. \par
 	Niepoprawna interpretacja II Zasady Termodynamiki może doprowadzić do wniosku, że powstanie złożonej struktury z molekularnego chaosu powinno być niemożliwe. Tak rzeczywiście się dzieje, ale tylko dla układów izolowanych. Natomiast w przypadku innych układów, które oddziałują z otoczeniem samoorganizacja materii jest możliwa. Przykładem są procesy zachodzące w układach biologicznych, w którcyh interakcja z otoczeniem jest kluczowa. %Wyjaśnienie takie błędnie wykorzystuje tę zasadę ignorując fakt, że układy biologiczne jak i cała Ziemia nie są układami izolowanymi. 
@@ -262,7 +264,7 @@
 	
 	W poprzednim podrozdziale opisaliśmy zmiany entropii układu, które dokonuje się w trakcie procesu samorzutnego. Jeżeli zmiany te odniesiemy do bardzo krótkiego przedziału czasu \(\dd{t}\), wówczas szybkość zmiany entropii dana będzie za pomocą równania:
 	\begin{equation}
-		\dv{S}{t} = \dv{_{i}S}{t} + \dv{_{e}S}{t},
+		\dv{S}{t} = \dv{_{e}S}{t} + \dv{_{i}S}{t},
 	\end{equation}
 	gdzie pierwszy człon po prawej stronie równości opisuje szybkość wymiany entropii układu z otoczeniem, a drugi szybkość produkcji entropii w układzie. Produkcję tę możemy opisać za pomocą pojęcia źródła entropii \(\sigma\). Jest to wielkość produkcji entropii w odniesieniu na jednostkę objętości. W ogólności to funkcja czasu i położenia. Relacja pomiędzy źródłem entropii, a szybkością produkcji entropii określa wzór:
 	\begin{equation}
@@ -270,7 +272,7 @@
 	\end{equation}
 	w którym \(\sigma>0\). \par
 	Chcąc przenieść wprowadzone pojęcie na poziom opisu, który pojawia się w lokalnym sformuowaniu II Zasady Termodynamiki, rozważmy mały fragment układu. Dla tego fragmentu zmiany entropii również odbywają się poprzez wymianę jej przez ścianki ograniczające rozważany fragment oraz z tworzenia jej wewnątrz tego fragmentu. Tę wymianę entropii z otoczeniem opisuje wektor przepływu entropii \(\vb{J}_{s}\). Jest on zależny od położenia fragmentu i czasu. Biorąc pod uwagę pojęcie źródła entropii \(\sigma\) wzór opisujący zmianę w czasie entropii zapiszemy jako:
-	\begin{equation}
+	\begin{equation} \label{dod A: 5}
 		\dv{S}{t} = -\div{\vb{J}_{s}} + \sigma.
 	\end{equation}
 	% Wyprowadzenie wzoru na źródło entropii:
@@ -303,7 +305,7 @@
 	\begin{equation}
 		\dv{n_{i}}{t}=-\div{\vb{J}_{i}}+\dv{n_{i;reak}}{t}. \label{dod A: 7}
 	\end{equation}
-	Podstawiając \(\dd{n_{i;reak}}=\sum_{r}\nu_{ir}\dd{\xi_{r}}\) do równania \eqref{dod A: 7} otrzymujemy:
+	Różniczkowa zmiana liczby moli $i$-tego składnika \(\dd{n_{i;reak}}\) możemy zapisać poprzez liczbę postępu reakcji $\xi$ oraz współczynnik stechiometryczny $\nu_{i}$. Liczba postępu reakcji jest zdefiniowana jako \(\dd{\xi}=\frac{\dd{n_{i;reak}}}{\nu_{i}}\), a roszerzając to do wielu równoległych reakcji otrzymujemy \(\dd{n_{i;reak}}=\sum_{r}\nu_{ir}\dd{\xi_{r}}\). Zależności tą podstawiamy do równania \eqref{dod A: 7} i otrzymujemy:
 	\begin{equation}
 		\dv{n_{i}}{t}=-\div{\vb{J}_{i}}+\sum_{r}\nu_{ir}\dv{\xi_{r}}{t}. \label{dod A: 8}
 	\end{equation}
@@ -317,12 +319,13 @@
 	\end{equation}
 	Równanie \eqref{dod A: 9} przybiera postać:
 	\begin{equation}
-		\dv{S}{t}=\frac{1}{T}\dv{U}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}-\left[\vb{J}_{U}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}\right]+\sigma
+		\dv{S}{t}=\frac{1}{T}\dv{U}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}-\left[\vb{J}_{U}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}\right]+\sigma.
 	\end{equation}
 	Otrzymujemy z porównania tego wzoru z \eqref{dod A: 3}:
-	\begin{equation}
-		\sigma=\vb{J}_{U}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}
+	\begin{equation} \label{dod A: sigma}
+		\sigma=\vb{J}_{U}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}.
 	\end{equation}
+	Wyrażenie \eqref{dod A: sigma} przedstawia źródło produkcji entropii $\sigma$ jako sumę iloczynu sił termodynamicznych oraz powodowanych przez nie przepływów. Odpowiednie siły oraz związanie z nimi przepływy zestawiono w tabeli \ref{tab: sily i przeplywy}.
 	\begin{table}[H]
 	\centering
 	\begin{tabular}{|l|c|c|}
@@ -334,15 +337,18 @@
 		Reakcja chemiczna & \(J_{r}=\dv{\xi_{r}}{t}\) & \(\frac{A_r}{T}\) \\
 		\hline
 	\end{tabular}
-	\end{table}
-	Produkcja entropii jest wyrażona za pomocą sił termodynamicznych i przepływów w ogólności jako: 
+	\caption{Siły i przepływy}
+	\label{tab: sily i przeplywy}
+	\end{table}\noindent
+	Na podstawie wzoru \eqref{dod A: sigma} źródło produkcji entropii możemy zapisać ogólnym wzorem:
+	%Produkcja entropii jest wyrażona za pomocą sił termodynamicznych i przepływów w ogólności jako: 
 	\begin{equation}
 		\sigma = \sum_{i}J_{i}X_{i} = \sum_{i}\sum_{j}^{n}L_{ij}X_{i}X_{j}.
 	\end{equation}
 	
 	W ogólności natężenie przepływów termodynamicznych jest dowolną funkcją bodźców termodynamicznych: 
 	\[J=f\left(X\right)\]
-	Rozwinięcie w szereg Taylora tej funkcji wokół \(X_{0}\) jest
+	Rozwinięcie w szereg Taylora tej funkcji wokół \(X^{eq}\) jest
 	\begin{equation}\label{ogolne_natezenie}
 		J_{i}=J_{i}^{eq}+\sum_{j=1}^{n}\left[\pdv{J_{i}}{X_{j}}\left(X_{j}-X_{j}^{eq}\right)\right]+\frac{1}{2!}\sum_{j=1}^{n}\sum_{k=1}^{n}\left[\pdv{J_{i}}{X_{j}}{X_{k}}\left(X_{j}-X_{j}^{eq}\right)\left(X_{k}-X_{k}^{eq}\right)\right]+\ldots,
 	\end{equation}
@@ -351,17 +357,17 @@
 		\item[\(J\), \(J^{eq}\)] natężenie przepływów termodynamicznych oraz to natężenie w stanie równowagi
 		\item[\(X\), \(X^{eq}\)] bodziec termodynamiczny i bodziec w stanie równowagi; 
 	\end{description}
-	Wiadomo, że \(J_{i}^{eq}=0\) oraz \(X_{j}^{eq}=0\), ponieważ jest to stan równowagi. \par
-	W stanach zbliżonych do stanu równowagi można ograniczyć równanie \eqref{ogolne_natezenie} do następującego: 
+	Wiadomo, że \(J_{i}^{eq}=0\) oraz \(X_{j}^{eq}=0\), ponieważ jest to stan równowagi. W stanach zbliżonych do stanu równowagi można ograniczyć równanie \eqref{ogolne_natezenie} do następującego: 
 	\begin{equation}\label{natezenie_liniowe}
 		J_{i}=\sum_{j=1}^{n}\left[\pdv{J_{i}}{X_{j}}X_{j}\right].
 	\end{equation}
-	Zasada symetrii Curie-Prigogine'a mówi, że przepływy i siły termodynamiczne muszą mieć taki sam charakter tensorowy, na przykład dyfuzja (wektorowy) i przepływ ciepła (wektorowy) jest dozwolony, jednak dyfuzja (wektorowy)  oraz reakcja chemiczna (skalarny) jest niedozwolony. Zasada ta może być jednak złamana w przypadku procesów nieliniowych \cite{orlik}. \par
+	Zasada symetrii Curie-Prigogine'a mówi, że przepływy i siły termodynamiczne muszą mieć taki sam charakter tensorowy \cite{orlik}.
+	% na przykład dyfuzja (wektorowy) i przepływ ciepła (wektorowy) jest dozwolony, jednak dyfuzja (wektorowy)  oraz reakcja chemiczna (skalarny) jest niedozwolony. Zasada ta może być jednak złamana w przypadku procesów nieliniowych . \par
 	Zapiszmy \(\frac{\partial J_{i}}{\partial X_{j}}\) jako \(L_{ij}\)
 	\begin{equation}
 		J_{i}=\sum_{j=1}^{n}L_{ij}X_{j}.
 	\end{equation}
-	Natężenie przepływu może zależeć tylko od bodźca sprzężonego jak w prawie Fouriera \(\left(\boldsymbol{J}_{q}=-k\nabla T\right)\), Ficka \(\left(\boldsymbol{J}_{C}=-D\nabla C\right)\), są to wtedy procesy proste \cite{orlik}. Mogą one też zależeć od innych bodźców, przykładowo efekt Seebecka oraz Peltiera: \cite{Ceynowa2008}
+	Natężenie przepływu może zależeć tylko od bodźca skoniungowanego jak w prawie Fouriera \(\left(\boldsymbol{J}_{q}=-k\nabla T\right)\), są to wtedy procesy proste \cite{orlik}. Mogą one też zależeć od innych bodźców, przykładowo efekt Seebecka oraz Peltiera: \cite{Ceynowa2008}
 	\begin{equation}
 	\begin{split}
 		\boldsymbol{Q} &= L_{qq}\Delta T+L_{qI}\Delta \phi \\
@@ -376,9 +382,9 @@
 	% \end{equation}
 	% co zostało wyprowadzone w Dodatku A na stronie \pageref{sec: dodatek A}. \par
 	
-	Jednak w chemii termodynamika liniowa nie opisuje dobrze szybkości zachodzenia reakcji chemicznych, których prędkość zazwyczaj zależy od wyższych potęg stężenia związków. \par
+	%Jednak w chemii termodynamika liniowa nie opisuje dobrze szybkości zachodzenia reakcji chemicznych, których prędkość zazwyczaj zależy od wyższych potęg stężenia związków. \par
 	
-	Termodynamika liniowa ma zastosowanie w większości przypadków technicznych, jednak nie są one w stanie opisać reakcji chemicznych, których szybkość zależy od wyższych niż 1 potęg stężenia składników. \par
+	%Termodynamika liniowa ma zastosowanie w większości przypadków technicznych, jednak nie są one w stanie opisać reakcji chemicznych, których szybkość zależy od wyższych niż 1 potęg stężenia składników. \par
 	Istnieje kilka podejść w próbie wyjścia poza zakres liniowej termodynamiki nierównowagowej. Jedno z nich zakłada, że współczynniki \(L_{ij}\) zależą od bodźców i przepływów, a więc
 	\begin{align}
 		& \pdv{L_{ij}}{X_{k}}\neq 0, && \pdv{L_{ij}}{J_{k}}\neq 0.
@@ -394,45 +400,49 @@
 	Jednak próby nie były owocne, a przemienność współczynników \(L_{ij}, L_{ijk}, \ldots\) trudna do uzależnienia. \par
 	Bardziej owocne podejście do problemu wyjścia poza liniową termodynamikę nierównowagową, głównie w kontekście oscylacyjnych reakcji chemicznych, polegało na wykorzyskiwaniu metod stosowanych z teorii układów dynamicznych. Autorzy tej koncepcji pozostawiają postulat o istnieniu równowagi lokalnej. Hipoteza ta zakłada, że cały układ możemy podzielić na mniejsze podukłady (zwane niekiedy komórkami), w których parametry termodynamiczne są ściśle zdefiniowane, tak jak to mamy w zagadnieniach równowagowych. Parametry te w innych komórkach, mogą mieć inne wartości. \par
 	Zakłada się tutaj, że te komórki są na tyle małe, iż możemy przyjąć, że parametry zmieniają się w sposób ciągły. Jednak z drugiej strony trzeba przyjąć, iż nie mogą one mieć bardzo małych rozmiarów. Ich makroskopowy charakter musi być zachowany przy założeniu dodatkowym, iż w każdej z nich panuje stan wewnętrznej równowagi. \par
-	Zasada minimalnej produkcji entropii mówi, że dla danego układu stacjonarnego produkcja entropii ma wartość minimalną. W układzie równowagowym produkcja entropii jest równa 0. Po wprowadzeniu siły termodynamicznej układ zostaje wytrącony z równowagi. Po zaprzestaniu wymuszania nierównowagi układ dąży do stanu równowagi \cite{orlik}. \par
-	Rozwijając entropię \(S\) w szereg Taylora otrzymujemy:
-	\begin{equation}
-		S = S^\circ + \left(\var{S}\right)^\circ + \frac{1}{2!}\left(\var^{2}S\right)^\circ + \ldots
-	\end{equation}
-	W stanie równowagi \(\left(\var{S}\right)^\circ=0\). Ograniczając szereg do wyrazu drugiego rzędu mamy:
-	\begin{equation}
-		S - S^\circ = \frac{1}{2!}\left(\var^{2}S\right)^\circ
-	\end{equation}
-	Ze względu na maksimum entropii w stanie równowagi: \(\left(\var^{2}S\right)^\circ<0\)
-	Można powiązać tą zależność z produkcją entropii: 
-	\begin{equation}
-		\pdv{t}\left(S - S^\circ\right) = \frac{1}{2!}\left(\var^{2}S\right)^\circ = \sum_{i=1}^{n}J_{i}X_{i}=\sigma\geq0
-	\end{equation}
+	
+	%Zasada minimalnej produkcji entropii mówi, że dla danego układu stacjonarnego produkcja entropii ma wartość minimalną. W układzie równowagowym produkcja entropii jest równa 0. Po wprowadzeniu siły termodynamicznej układ zostaje wytrącony z równowagi. Po zaprzestaniu wymuszania nierównowagi układ dąży do stanu równowagi \cite{orlik}. \par
+	%Rozwijając entropię \(S\) w szereg Taylora otrzymujemy:
+	%\begin{equation}
+	%	S = S^\circ + \left(\var{S}\right)^\circ + \frac{1}{2!}\left(\var^{2}S\right)^\circ + \ldots
+	%\end{equation}
+	%W stanie równowagi \(\left(\var{S}\right)^\circ=0\). Ograniczając szereg do wyrazu drugiego rzędu mamy:
+	%\begin{equation}
+	%	S - S^\circ = \frac{1}{2!}\left(\var^{2}S\right)^\circ
+	%\end{equation}
+	%Ze względu na maksimum entropii w stanie równowagi: \(\left(\var^{2}S\right)^\circ<0\)
+	%Można powiązać tą zależność z produkcją entropii: 
+	%\begin{equation}
+	%	\pdv{t}\left(S - S^\circ\right) = \frac{1}{2!}\left(\var^{2}S\right)^\circ = \sum_{i=1}^{n}J_{i}X_{i}=\sigma\geq0
+	%\end{equation}
 
 	\subsection{Szybkość reakcji chemicznej}
-	Reakcje chemiczne można podzielić na dwie kategorie. Są to reakcje homogeniczne, czyli takie zachodzące w jednej fazie, oraz reakcje heterogeniczne, czyli między związkami w różnych fazach i zachodzące na granicy między nimi. Szybkość reakcji heterogenicznych jest trudniejsza do opisania, ponieważ zależy od szybkości dyfuzji, powierzchni rozdzielenia i innych czynników. %do uzupelnienia
-	Szybkość reakcji homogenicznej w stałej temperaturze jest funkcją stężeń reagentów. Można ją wyrazić dla stałej objętości jako: 
-	\begin{equation}
+	Reakcje chemiczne można podzielić na dwie kategorie. Pierwsza z nich to reakcje homogeniczne, czyli takie zachodzące w jednej fazie. Druga to reakcje heterogeniczne, czyli zachodzące między związkami chemicznymi w różnych fazach i zachodzące na granicy między nimi. Szybkość reakcji heterogenicznych jest trudniejsza do opisania, ponieważ zależy od szybkości dyfuzji, powierzchni rozdzielenia i innych czynników. %do uzupelnienia
+	Szybkość reakcji homogenicznej w stałej temperaturze jest funkcją stężeń reagentów. Można ją wyrazić poprzez szybkość zmiany stężenia pojedynczego reagenta $c_{i}$ dla stałej objętości jako: 
+	\begin{equation}\label{szybkosc_reakcji_def}
 		v=\frac{1}{\nu_i}\dv{c_i}{t}.
 	\end{equation}
-	Jest to wielkość niezależna od konkretnego reagenta. Można tak zdefiniowaną szybkość reakcji powiązać z szybkością zmiany liczby postępu reakcji:
-	\begin{gather}
-		v=\frac{1}{\nu_{i}}\dv{c_{i}}{t} \\
+	Jest to wielkość niezależna od konkretnego reagenta. Różniczkową zmianę $c_{i}$ opisuje wyrażenie
+	\begin{equation}
+		%v=\frac{1}{\nu_{i}}\dv{c_{i}}{t} \\
 		\dd{c_{i}}=\frac{\dd{n_{i}}}{V}
-	\end{gather}
-	gdzie \(\nu_{i}\) to współczynnik stechiometryczny (ujemny dla substratów, a dodatni dla produktów), \(c_{i}\) to stężenia molowe składników. Wprowadzamy oznaczenie:
+	\end{equation}
+	gdzie \(\nu_{i}\) to współczynnik stechiometryczny (ujemny dla substratów, a dodatni dla produktów), \(c_{i}\) to stężenia molowe składników. \par
+	Można tak zdefiniowaną szybkość reakcji powiązać z szybkością zmiany liczby postępu reakcji:
 	\begin{equation}
 		\dd{\xi}=\frac{\dd{n_{i}}}{\nu_{i}},
 	\end{equation}
-	gdzie \(\xi\) to liczba postępu reakcji i jest niezależna od wyboru składnika. Wykorzystując tą zależność otrzymujemy: 
+	gdzie \(\xi\) to liczba postępu reakcji i jest niezależna od wyboru składnika. Wykorzystując tą zależność do \eqref{szybkosc_reakcji_def} otrzymujemy: 
 	\begin{equation}
-		v=\frac{1}{V}\dv{\xi}{t},
+		v=\frac{1}{V}\dv{\xi}{t}.
 	\end{equation}
-	Dla reacji chemicznej w postaci ogólnej
+	%Dla reacji chemicznej w postaci ogólnej
+	Szybkość reakcji chemicznej zapisanej w postaci ogólnej
 	\begin{equation*}
 		x_{1}X_{1}+x_{2}X_{2}+\ldots \rightarrow y_{1}Y_{1}+y_{2}Y_{2}+\ldots
 	\end{equation*}
-	szybkość ta ma ogólną postać:
+	w ogólności jest funkcją stężeń wszystkich reagentów biorących udział w reakcji chemicznej: 
+	%szybkość ta ma ogólną postać:
 	\begin{equation*}
 		v=f\left(x_{1}, x_{2}, \ldots, y_{1}, y_{2}, \ldots\right).
 	\end{equation*}
@@ -440,28 +450,25 @@
 	\begin{equation}\label{szybkosc reakcji}
 		v=k x_{1}^{\alpha_1}x_{2}^{\alpha_2}\ldots y_{1}^{\beta_1}y_{2}^{\beta_2}\ldots.
 	\end{equation}
-	Ustalone empirycznie zależności pomiędzy szybkością reakcji, a stężeniami reagentów są podstawą do tworzenia modeli zachodzenia reakcji chemicznych, ich kinetycznego opisu. Przykładowe reakcje i ich szybkości reakcji zostały przedstawione w Dodatku A na stronie \pageref{sec: dodatek A}.
+	Ustalone empirycznie zależności pomiędzy szybkością reakcji, a stężeniami reagentów są podstawą do tworzenia modeli zachodzenia reakcji chemicznych, ich kinetycznego opisu. Przykładowe reakcje i ich szybkości reakcji zostały przedstawione w Dodatku A na stronie \pageref{sec: dodatek A}.Według równania \eqref{szybkosc reakcji} szybkość reakcji można zmienić przez zmianę stężenia reagentów, które w niej uczestniczą lub zmianę stałej szybkości reakcji. \par Katalizatorami nazywamy związki zwiększające stałą reakcji sumarycznej, natomiast związki zmniejszające katalizatorem ujemnym lub inhibitorem. Mają one działanie selektywne, a więc zwiększają szybkość tylko dla pewnej z wielu możliwych reakcji chemicznych dla danych substratów. Reakcja katalizowana przebiega więc innym mechanizmem niż niekatalizowana. Mechanizmem reakcji chemicznej nazywamy ciąg reakcji elementarnych wyjaśniający dokładny przebieg tej reakcji. Katalizatory nie występują w reakcji sumarycznej, ale występują w reakcjach elementarnych. Podobnie jak reakcje możemy podzielić katalizę na homogeniczną (zachodzącej w jednej fazie) oraz heterogeniczną (zachodząca na granicy faz). 
+	Szczególnym rodzajem reakcji katalitycznych jest autokataliza, w której produkt reakcji bierze w niej udział, przez co zwiększa jej szybkość \cite{pigon1, atkins_por}. 
+	%Przykładem takiej reakcji jest hydroliza estrów w środowisku kwasowym: 
+	%\begin{center}
+	%	\ce{RCOOC2H5 + 2H2O ->[H3O+] RCOO- + C2H5OH + H3O+}
+	%\end{center}
 	
-	
-	% \subsection{Kataliza i autokataliza}
-	Według równania \eqref{szybkosc reakcji} szybkość reakcji można zmienić przez zmianę stężenia reagentów, które w niej uczestniczą lub zmianę stałej szybkości reakcji. Katalizatorami nazywamy związki zwiększające stałą reakcji sumarycznej, natomiast związki zmniejszające katalizatorem ujemnym lub inhibitorem. Mają one działanie selektywne, a więc zwiększają szybkość tylko dla pewnej z wielu możliwych reakcji chemicznych dla danych substratów. Reakcja katalizowana przebiega więc innym mechanizmem niż niekatalizowana. Nie występują one w reakcji sumarycznej, ale występują w reakcjach elementarnych. Podobnie jak reakcje możemy podzielić katalizę na homogeniczną (zachodzącej w jednej fazie) oraz heterogeniczną (zachodząca na granicy faz). Szczególnym rodzajem reakcji katalitycznych jest autokataliza, w której produkt reakcji jest jednocześnie katalizatorem. Przykładem takiej reakcji jest hydroliza estrów w środowisku kwasowym: \cite{pigon1}
-	\begin{center}
-		\ce{RCOOC2H5 + 2H2O ->[H3O+] RCOO- + C2H5OH + H3O+}
-	\end{center}
-	
-	\section{Praca własna}
-	W tym rozdziale przeprowadzono analizę teoretyczną oraz numeryczną modeli stosowanych w opisie reakcji oscylacyjnych. Pierwszym modelem istotnym dla rozważanych zagadnień jest model Lotki podany przez niego w roku 1910. Mimo, że oryginalnie miał on zastosowanie w badaniu wielkości populacji zwierząt, a dokładnie zależności między drapieżnikami oraz ofiarami, ma on również pewne znaczenie dla reakcji chemicznych. W 1920 Lotka, a w 1931 niezależnie Volterra, zaproponowali zmodyfikowany model nazywany modelem Lotki-Volterry. Trzecim rozpatrywanym modelem jest bruskelator opracowany przez szkołę Prigogine'a w Brukseli. Jest on analizowany w postaci uproszczonej, jak i ogólnej z reakcjami odwracalnymi. \par
-	W opisie mechanizmów tych reakcji założono, że szybkości reakcji zależą jedynie od współczynników stechiometrycznych substratów, tj.:
+	\section{Numeryczna i teoretyczna analiza modeli reakcji chemicznych}
+	W tym rozdziale przeprowadzono analizę teoretyczną oraz numeryczną modeli stosowanych w opisie reakcji oscylacyjnych. Pierwszym modelem istotnym dla rozważanych zagadnień jest model Lotki podany przez niego w roku 1910. Mimo, że oryginalnie miał on zastosowanie w badaniu wielkości populacji zwierząt, a dokładnie zależności między drapieżnikami oraz ofiarami, ma on również pewne znaczenie dla reakcji chemicznych. W 1920 Lotka, a w 1931 niezależnie Volterra, zaproponowali zmodyfikowany model nazywany modelem Lotki-Volterry. Trzecim rozpatrywanym modelem jest bruskelator opracowany przez szkołę Prigogine'a w Brukseli. Jest on analizowany w postaci uproszczonej, jak i ogólnej z reakcjami odwracalnymi. W opisie mechanizmów tych reakcji założono, że szybkości reakcji zależą jedynie od współczynników stechiometrycznych substratów, tj.:
 	\begin{center}
 		\ce{aA + bB + ... + jJ ->[k] kK + lL + } \\
-		\(v = k[A]^{a}[B]^{b}\ldots[J]^{j}\)
-	\end{center}
+		\(v = k[A]^{a}[B]^{b}\ldots[J]^{j}\).
+	\end{center}\par
 	%\subsubsection{Model Lotki}
 	Jako pierwszy przeanalizujemy model Lotki: 
 	\begin{center}
 		\ce{A ->[k_1] X} \\
 		\ce{X + Y ->[k_2] 2Y} \\
-		\ce{Y ->[k_3] produkty}
+		\ce{Y ->[k_3] produkty}.
 	\end{center}
 	W modelu tym przyjmujemy, że \(A\) jest stałe. Może to być osiągnięte poprzez wykorzystanie reaktora przepływowego, w którym kontroluje się dopływ składnika \(A\). W pierwszym kroku \(A\) zostaje przekształcone w \(X\), które w drugim kroku w reakcji z \(Y\) tworzy więcej składnika \(Y\). Jest to najprostszy model zawierający autokatalizę. Układ taki wymaga więc zapoczątkowania reakcji pewną ilością \(Y\). W końcowym kroku \(Y\) zostaje przekształcone w produkty końcowe. Reakcja sumaryczna ma postać:
 	\begin{center}
@@ -473,7 +480,7 @@
 		\dv{[X]}{t}=k_{1}[A]-k_{2}[X][Y] \\
 		\dv{[Y]}{t}=k_{2}[X][Y]-k_{3}[Y].
 	\end{split}
-	\end{equation}
+	\end{equation}\par
 	% \subsubsection{Model Lotki-Volterry}
 	Kolejnym modelem jest model Lotki-Volterry, który jest modyfikacją powyższego:
 	\begin{center}
@@ -491,7 +498,7 @@
 		\dv{[X]}{t}=k_{1}[A][X]-k_{2}[X][Y] \\
 		\dv{[Y]}{t}=k_{2}[X][Y]-k_{3}[Y]
 	\end{split}
-	\end{equation}
+	\end{equation}\par
 	% \subsubsection{Model bruskelator}
 	Model bruskelator ma postać:
 	\begin{center}
@@ -511,6 +518,7 @@
 		\dv{[Y]}{t} &= -k_{2}[X]^{2}[Y]+k_{3}[B][X].
 	\end{split}
 	\end{equation}
+	W rozdziale \ref{sec:ogolny_model_bruskelator} na stronie \pageref{sec:ogolny_model_bruskelator} będziemy analizować zmodyfikowany model bruskelatora, w którym reakcje zachodzą w obie strony. 
 	
 	\subsection{Metody rozwiązywania układów nieliniowych równań różniczkowych}
 	W każdym z powyższych modeli otrzymujemy układy nieliniowych równań różniczkowych, które chcemy rozwiązać. 
@@ -522,16 +530,15 @@
 	\end{split}
 	\end{equation}
 	Rozpatrywane układy jednak nie mają rozwiązania analitycznego i należy je rozwiązać metodami numerycznymi. \par
+	W pracy tej wykorzystałem algorytmy wielokrokowe, w których jeden krok schematu numerycznego, to znaczy przejścia z punktu \(y_{n}\) do punktu \(y_{n+1}\), wykorzystuje wyniki z \(j\) kroków, gdzie \(j\leq n\). Krok jest oznaczony \(h=x_{n+1}-x_{n}\). \par
 	
-	W pracy tej wykorzystałem algorytmy wielokrokowe, w których jeden krok rozwinięcia numerycznego, to znaczy przejścia z punktu \(y_{n}\) do punktu \(y_{n+1}\), wykorzystywane są wyniki z \(j\) kroków, gdzie \(j\leq n\). Krok jest oznaczony \(h\). \par
-	
-	Ogólna forma metody różnicowej rozwiązującej równanie różniczkowe \cite{fortuna}:
+	Ogólna forma metody różnicowej rozwiązującej równanie różniczkowe:
 	\begin{equation}\label{row_rozniczkowe}
 		\dv{\vb{y}}{x}=\vb{f}(x, \vb{y})
 	\end{equation}
-	ma postać:
+	ma postać \cite{fortuna}:
 	\begin{equation}\label{metoda_roznicowa}
-		\vb{y}_{n+1} = \sum_{i=1}^{k}a_{i}\vb{y}_{n+1-i} + h\sum_{i=0}^{k}b_{i}\vb{f}(x_{n+1-i}, \vb{y}_{n+1-i}), n\geq k-1.
+		\vb{y}_{n+1} = \sum_{i=1}^{k}a_{i}\vb{y}_{n+1-i} + h\sum_{i=0}^{k}b_{i}\vb{f}(x_{n+1-i}, \vb{y}_{n+1-i}), \quad n\geq k-1.
 	\end{equation}
 	Wprowadzamy wielkość \(Y\), która jest dokładnym rozwiązaniem równania \eqref{row_rozniczkowe}. Możemy wtedy zapisać: 
 	\begin{equation}
@@ -555,7 +562,7 @@
 	to współczynniki przy \(h^{s}\). \par
 	Jeżeli \(A_{i}=0\) dla \(i=0, 1, \ldots, p\) oraz \(A_{p+1}\neq 0\) to metoda ta jest rzędu \(p\).
 	% W tabeli \ref{tab:schematy} podano wybrane wzory różnicowe wykorzystywane podczas symulacji, gdzie \(h\) jest krokiem czasowym, \(p\) to najwyższa wykładnik potęgi \(h^{s}\), przy których współczynnik wynosi \(0\), a \(A_{p+1}\) jest współczynnikiem przy kolejnej potędze. 
-	W tabeli \ref{tab:schematy} podano wybrane wzory różnicowe wykorzystywane podczas symulacji. Wzory 1 - 4 są typu Adamsa-Bashfortha, natomiast wzór 5 typu Milne'a \cite{fortuna}. Wzory o wyższym rzędzie wymagają znajomości wartości większej ilości poprzednich kroków, więc nie mogą być one wykorzystane dla kroków początkowych. W symulacji wykorzystano progresywnie schemat 1 dla pierwszego kroku, następnie 2 dla drugiego, 3 dla trzeciego oraz 4 dla każdego kolejnego. 
+	W tabeli \ref{tab:schematy} podano wybrane wzory różnicowe wykorzystywane podczas symulacji. Wzory 1 - 4 są typu Adamsa-Bashfortha \cite{fortuna}. Wzory o wyższym rzędzie wymagają znajomości wartości większej ilości poprzednich kroków, więc nie mogą być one wykorzystane dla kroków początkowych. W symulacji wykorzystano progresywnie schemat 1 dla pierwszego kroku, następnie 2 dla drugiego, 3 dla trzeciego oraz 4 dla każdego kolejnego. 
 	\begin{table}[H]
 		\centering
 		\begin{tabular}{|l|l|c|c|}
@@ -570,8 +577,8 @@
 			\hline
 			4 & \(y_{n+1}=y_{n}+\frac{h}{24}(55y'_{n}-59y'_{n-1}+37y'_{n-2}-9y'_{n-3})\) & \(4\) & \(\frac{251}{720}\) \\
 			\hline
-			5 & \(y_{n+1}=y_{n-3}+\frac{4h}{3}(2y'_{n}-y'_{n-1}+2y'_{n-2})\) & \(4\) & \(\frac{14}{45}\) \\
-			\hline
+			%5 & \(y_{n+1}=y_{n-3}+\frac{4h}{3}(2y'_{n}-y'_{n-1}+2y'_{n-2})\) & \(4\) & \(\frac{14}{45}\) \\
+			%\hline
 		\end{tabular}.
 		\caption{Schematy różnicowe}
 		\label{tab:schematy}
@@ -1073,7 +1080,7 @@
 	% \end{equation}
 	% W przypadku reackcji prostych, na przykład \ce{X -> Y}, nie jest możliwe zdefiniowane powinowactwa chemicznego,ponieważ należy narzucić warunek \(A=0\) w stanie równowagi, a taki stan nie występuje w przypadku tego typu reakcji. Możliwe jest jedynie stwierdzenie, że skoro dana reakcja zachodzi, to \(A_{i}>0\) oraz \(\dd{\xi_{i}}>0\). Temperatura bezwzględna jest zawsze dodatnia, stąd \(\dd_{i}S>0\). \par
 	
-	\subsection{Ogólny model bruskelator}
+	\subsection{Ogólny model bruskelator}\label{sec:ogolny_model_bruskelator}
 	Będziemy teraz analizować uogólniony model bruskelatora, w którym reakcje mogą przebiegać w dwie strony z różnymi stałymi szybkości reakcji. Poprzedni model jest szczególnym przypadkiem poniższego przy założeniu \(k_{-1}=k_{-2}=k_{-3}=k_{-4}=0\). 
 	Uogólniona forma modelu bruskelator ma postać:
 	\begin{center}
