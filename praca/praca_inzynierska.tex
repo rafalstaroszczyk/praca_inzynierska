@@ -5,7 +5,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[polish]{babel}
 \usepackage{uarial}
-\usepackage[top=2.5cm,bottom=2.5cm,inner=3.5cm,outer=2.5cm, showframe]{geometry}
+\usepackage[top=2.5cm,bottom=2.5cm,inner=3.5cm,outer=2.5cm]{geometry}
 \usepackage{fancyhdr}
 \usepackage{indentfirst}
 \usepackage{graphicx}
@@ -81,7 +81,7 @@
 	\end{center}
 	%Termodynamika równowagowe wymaga założenia pewnych wyidealizowanych założeń, 
 	%Termodynamika równowagowa oparta jest na kilku wyidealizowanych założeniach. Są nimi na przykład jednorodność parametrów intensywnych, maksimum entropii w układach izolowanych, minimum energii swobodnej Helmholtza w układach izotermiczno-izochorycznych, mininum entalpii swobodnej Gibbsa w układach izotermiczno-izobarycznych \cite{pudlik}. \par
-	Termodynamika równowagowa opisuje procesy, którym podlega dany układ, tak, jakby zachodziły w sposób kwazi-statyczny. To oznacza, że proces jest ciągiem stanów równowagi, a więc na każdym etapie procesu układ jest w równowadze termodynamicznej. W takim opisie nie sposób zdefiniować prędkości procesu, gdyż sam jego czas zmierza do nieskończoności. Takie założenia nie zawsze są możliwe, przykładowo dla szybko zachodzących zmian jak w przypadku eksplozji, albo dla układów, w których interesuje nas nie tylko stan układu po osiągnięciu przez niego stanu równowagi, ale też jego zachowania podczas tej przemiany. W pracy zająłem się głównie reakcjami chemicznymi oscylacyjnymi, które są przykładem czasowej struktury dyssypatywnej. Struktur takich nie można rozpatrywać w ramach termodynamiki równowagowej, ponieważ są one typowe jedynie dla stanów nierównowagowych. \par
+	Termodynamika równowagowa opisuje procesy, którym podlega dany układ, tak, jakby zachodziły w sposób kwazistatyczny. To oznacza, że proces jest ciągiem stanów równowagi, a więc na każdym etapie procesu układ jest w równowadze termodynamicznej. W takim opisie nie sposób zdefiniować prędkości procesu, gdyż sam jego czas zmierza do nieskończoności. Takie założenia nie zawsze są możliwe, przykładowo dla szybko zachodzących zmian jak w przypadku eksplozji, albo dla układów, w których interesuje nas nie tylko stan układu po osiągnięciu przez niego stanu równowagi, ale też jego zachowania podczas tej przemiany. W pracy zająłem się głównie reakcjami chemicznymi oscylacyjnymi, które są przykładem czasowej struktury dyssypatywnej. Struktur takich nie można rozpatrywać w ramach termodynamiki równowagowej, ponieważ są one typowe jedynie dla stanów nierównowagowych. \par
 	Celem pracy jest teoretyczna oraz numeryczna analiza oscylacyjnych reakcji chemicznych. W pracy zasymulowałem reakcje oscylacyjne, których mechanizmy opisane są odpowiednio modelami Lotki, Lotki-Volterry oraz bruskelatora. Przeprowadzono teoretyczną analizę stabilności w stanach stacjonarnych oraz sprawdzono jej prawdziwość przy użyciu symulacji. Numerycznie oszacowano produkcję entropii. 
 	
 	%Celem pracy jest pokazanie, że reakcje oscylacyjne są możliwe oraz że występuje w nich produkcja entropii.
@@ -144,13 +144,14 @@
 	% Wkleić przypadki struktur
 	
 	Wyjaśnienie tych oscylacji z punktu widzenia termodynamiki wymaga wyjścia poza termodynamikę równowagową. Termodynamika równowagowa zajmuje się procesami, w których ignoruje się upływ czasu, a przemiana jest kwazistatyczna. Oznacza to, że każdy stan pośredni można traktować jako stan równowagi termodynamicznej. Model taki jest wystarczający do opisu większości procesów, %Można więc powiedzieć, że termodynamikę równowagową 
-	w których interesuje nas stan początkowy oraz końcowy. Jest jednak niewystarczający, jeżeli interesuje nas szybkość zachodzenia procesu. Dopiero termodynamika nierównowagowa jest teorią, która obejmuje to, co dzieje się w trakcie rzeczywistych przemian i jest ona konieczna do opisu reakcji oscylacyjnych. Pierwsze odkrycia tego typu przemian sięgają końca XIX wieku. Były to reakcje w układach heterogenicznych, jak na przykład pierścienie Lieseganga lub oscylacje prądu płynącego przez ogniwo galwaniczne. 
-	
+	w których interesuje nas stan początkowy oraz końcowy. Jest jednak niewystarczający, jeżeli interesuje nas szybkość zachodzenia procesu. Dopiero termodynamika nierównowagowa jest teorią, która obejmuje to, co dzieje się w trakcie rzeczywistych przemian i jest ona konieczna do opisu reakcji oscylacyjnych. Pierwsze odkrycia tego typu przemian sięgają końca XIX wieku. Były to reakcje w układach heterogenicznych, jak na przykład pierścienie Lieseganga lub oscylacje prądu płynącego przez ogniwo galwaniczne. \par
 	% Wyjaśnienie tych zjawisk wymagało, aby układ byl heterogeniczny i było w zgodzie z entropią Boltzmanna, według której spontaniczna organizacja jest niemożliwa. \cite{orlik}
-	\par
-	Pierwszy model teoretyczny został przedstawiony przez Alfreda Lotkę \cite{lotka}. W modelu tym zakłada się, że reakcje przebiegają w układzie homogenicznym. Przez długi czas uważano, że nie może on przedstawiać rzeczywistych reakcji, ponieważ ówcześnie interpretowano, że łamie II Zasadę Termodynamiki. Jednak w 1921r. na przykładzie reakcji Bray'a-Liebhafky'ego pokazano, że reakcje oscylacyjne w układach homogenicznych są możliwe. Jest to reakcja rozkładu nadtlenku wodoru katalizowana jodanem (V). Zachodzą reakcje oscylacyjne z naprzemienną dominacją dwóch procesów \cite{orlik}:
+	Pierwszy model teoretyczny został przedstawiony przez Alfreda Lotkę \cite{lotka}. W modelu tym zakłada się, że reakcje przebiegają w układzie homogenicznym. Przez długi czas uważano, że nie może on przedstawiać rzeczywistych reakcji, ponieważ ówcześnie interpretowano, że łamie II Zasadę Termodynamiki. Jednak w 1921r. na przykładzie reakcji Bray'a-Liebhafky'ego pokazano, że reakcje oscylacyjne w układach homogenicznych są możliwe. Jest to reakcja rozkładu nadtlenku wodoru katalizowana jodanem (V). Zachodzą reakcje oscylacyjne z naprzemienną dominacją dwóch reakcji \cite{orlik}:
 	\begin{center}
-		\ce{5H2O2 + 2H+ +2IO3- -> I2 + 5O2 + 6H2O} \\
+		\ce{5H2O2 + 2H+ +2IO3- -> I2 + 5O2 + 6H2O}
+	\end{center}
+	oraz
+	\begin{center}
 		\ce{I2 + 5H2O2 -> 2H+ + 2IO3- + 4H2O}.
 	\end{center}
 	Oznacza to między innymi, że będziemy obserwować oscylacyjne zmiany stężenia \ce{I2} oraz szybkości wydzielania \ce{O2}, gdyż w pierwszej reakcji następuje produkcja \ce{I2}, a w drugiej następuje jego zużycie. Reakcja sumaryczna w tej przemianie ma postać: 
@@ -160,11 +161,11 @@
 	
 	Jeszcze większy wpływ na rozwój termodynamiki nierównowagowej w opisie przemian chemicznych miało odkrycie reakcji Biełousowa-Żabotyńskiego. Pierwszą reakcją z tej grupy została zaobserwowanaw 1959 w wodnym roztworze bromianu (V) potasu, siarczanu (VI) ceru (IV), kwasu malonowego lub kwasu cytrynowego z dodatkiem rozcieńczonego kwasu siarkowego (VI). Reakcje te przebiegają według dość skomplikowanego mechanizmu, wciąż badanego, ale można podać uproszczone równania tej przemiany \cite{orlik}: %Reakcje te są dużo bardziej złożone i w uproszczonej formie mają postać 
 	\begin{center}
-		\ce{2Br- + BrO3- + 3CH2(COOH)2 + 3H+ -> 3BrCH(COOH)2 + 3H2O} \\
-		\ce{BrO3- + 4Ce^3+ + 5H+ -> 4Ce^4+ + HOBr + 2H2O} \\
-		\ce{4Ce^4+ + 6CH2(COOH)2 +BrCH(COOH)2 + HOBr + 8BrO3- -> 4Ce^3+ + 10Br- + 21CO2 + 6H+ + 11H2O}
+		\ce{2Br- + BrO3- + 3CH2(COOH)2 + 3H+ -> 3BrCH(COOH)2 + 3H2O}, \\
+		\ce{BrO3- + 4Ce^3+ + 5H+ -> 4Ce^4+ + HOBr + 2H2O}, \\
+		\ce{4Ce^4+ + 6CH2(COOH)2 +BrCH(COOH)2 + HOBr + 8BrO3- -> 4Ce^3+ + 10Br- + 21CO2 + 6H+ + 11H2O}.
 	\end{center}
-	W reakcji tej obserwujemy, że stężenia \ce{Br-} oraz \ce{HBrO2}, który nie jest obecny w przedstawionych wyżej sumarycznych równaniach, zmieniają się oscylacyjnie. Równocześnie stężenia \ce{Ce^{3+}} oraz \ce{Ce^{4+}} też podlegają oscylacjom. Oscylacje tego reagenta powoduje widoczne zmiany koloru roztworu w trakcie reakcji z bezbarwnego na żółty, a później ponownie na bezbarwny. Całkowita reakcja sumaryczna ma postać: 
+	W reakcji tej obserwujemy, że stężenia \ce{Br-} oraz \ce{HBrO2}, który nie jest obecny w przedstawionych wyżej sumarycznych równaniach, zmieniają się oscylacyjnie. Równocześnie stężenia \ce{Ce^{3+}} oraz \ce{Ce^{4+}} też podlegają oscylacjom. Oscylacje stężenia tego reagenta powoduje widoczne zmiany koloru roztworu w trakcie reakcji z bezbarwnego na żółty, a później ponownie na bezbarwny. Całkowita reakcja sumaryczna ma postać: 
 	\begin{center}
 		\ce{2BrO3- + 3CH2(COOH)2 + 2H+ ->[kat] 2BrCH(COOH)2 + 4H2O + 3CO2}.
 	\end{center}
@@ -195,10 +196,9 @@
 	\begin{equation}\label{II_Zasada_Termodynamiki_uklad_T}
 		\dd{S_{uk}}>\frac{\dbar Q}{T}.
 	\end{equation}
-	Nierówności \eqref{II_Zasada_Termodynamiki_uklad} i \eqref{II_Zasada_Termodynamiki_uklad_T} są konsekwencją podstawienia \(\dd{S_{ot}}=-\frac{\dbar Q}{T_{ot}}\) lub \(\dd{S_{ot}}=-\frac{\dbar Q}{T}\) do \eqref{II_Zasada_Termodynamiki} oraz \eqref{entropia_uklad_otoczenie}. 
-	
+	Nierówność \eqref{II_Zasada_Termodynamiki_uklad} jest konsekwencją podstawienia \(\dd{S_{ot}}=-\frac{\dbar Q}{T_{ot}}\) oraz \eqref{entropia_uklad_otoczenie} do \eqref{II_Zasada_Termodynamiki}, natomiast \eqref{II_Zasada_Termodynamiki_uklad_T} otrzymujemy podstawiając \(\dd{S_{ot}}=-\frac{\dbar Q}{T}\) do tych samych równań. \par
+	%Nierówności \eqref{II_Zasada_Termodynamiki_uklad} i \eqref{II_Zasada_Termodynamiki_uklad_T} są konsekwencją podstawienia \(\dd{S_{ot}}=-\frac{\dbar Q}{T_{ot}}\) lub \(\dd{S_{ot}}=-\frac{\dbar Q}{T}\) do \eqref{II_Zasada_Termodynamiki} oraz \eqref{entropia_uklad_otoczenie}. 
 	% Z równania \eqref{II_Zasada_Termodynamiki} lub \eqref{II_Zasada_Termodynamiki_uklad} wynika, że w układach izolowanych entropia zawsze rośnie, a zatem spontaniczne uporządkowanie stabilnych struktur nie jest możliwe.
-	
 	Z nierówności \eqref{II_Zasada_Termodynamiki_uklad} lub \eqref{II_Zasada_Termodynamiki_uklad_T} wynika, że różniczkową zmianę entropii układu \(\dd{S_{uk}}\) możemy przedstawić jako sumę dwóch wkładów:
 	\begin{equation}
 		\dd{S_{uk}}=\dd_{e}S+\dd_{i}S,
@@ -212,18 +212,16 @@
 	\begin{equation}\label{II_Zasada_Termodynamiki_uklad_i_otoczenie}
 		\dd{S_{uk}}+\dd{S_{ot}}>0,
 	\end{equation}
-	gdzie symbolem \(\dd{S_{ot}}\) oznaczono różniczkową zmianę entropii otoczenia. Zmiany entropii \(\dd{S_{ot}}\) i \(\dd{S_{uk}}\) mogą wynikać z wymiany ciepła \(\dbar Q\) jak i produkcji entropii. Dlatego możemy zapisać
-	
-	
+	gdzie symbolem \(\dd{S_{ot}}\) oznaczono różniczkową zmianę entropii otoczenia. Zmiany entropii \(\dd{S_{ot}}\) i \(\dd{S_{uk}}\) mogą wynikać z wymiany ciepła \(\dbar Q\) jak i produkcji entropii. Dlatego możemy zapisać:
 	% Do nierówności \eqref{II_Zasada_Termodynamiki_uklad_i_otoczenie} wykorzystamy pojęcia zmieny entropii wynikającej z wymiany ciepła pomiędzy układem i otoczeniem oraz produkcji entropii, która może pojawić się w układzie i otoczeniu. Z nierówności \eqref{II_Zasada_Termodynamiki_uklad_i_otoczenie} otrzymujemy:
 	\begin{equation}\label{II_Zasada_Termodynamiki_uklad_i_otoczenie_rozpisane}
 		\dd_{e}S_{uk}+\dd_{i}S_{uk}+\dd_{e}S_{ot}+\dd_{i}S_{ot}>0.
 	\end{equation}
 	Jeśli wymiana ciepła zachodzi w temperaturze \(T\) to wówczas: \(\dd_{e}S_{uk}=-\dd_{e}S_{ot}\), otrzymujemy z równania \eqref{II_Zasada_Termodynamiki_uklad_i_otoczenie_rozpisane} 
-	\begin{equation}\label{}
+	\begin{equation}\label{II_Zasada_Termodynamiki_tworzenie}
 		\dd_{i}S_{uk}+\dd_{i}S_{ot}>0.
 	\end{equation}
-	Warunek obejmuje również przypadek, w którym produkcja entropii \(\dd_{i}S_{uk}\) zmaleje na tyle, że \(\dd_{i}S_{ot}\) skompensuje ten niedostatek. W innym przypadku \(\dd_{i}S_{ot}\) może na tyle zmaleć, że \(\dd_{i}S_{uk}\) będzie kompensować ten niedostatek. W termodynamice nierównowagowej dokonujemy jednak dodatkowo założenia:
+	Warunek \eqref{II_Zasada_Termodynamiki_tworzenie} obejmuje również przypadek, w którym produkcja entropii \(\dd_{i}S_{uk}\) zmaleje na tyle, że \(\dd_{i}S_{ot}\) skompensuje ten niedostatek. W innym przypadku \(\dd_{i}S_{ot}\) może na tyle zmaleć, że \(\dd_{i}S_{uk}\) będzie kompensować ten niedostatek. W termodynamice nierównowagowej dokonujemy jednak dodatkowo założenia:
 	\begin{equation*}
 		\dd_{i}S_{uk}>0
 	\end{equation*}
@@ -232,13 +230,9 @@
 		\dd_{i}S_{ot}>0.
 	\end{equation*}
 	
-	Założenie to możemy przenieść na sytuację, gdy układ dzielimy na mniejsze podukłady (komórki). Z punkty widzenia pojedynczej komórki, dla której pozostałe stanowią otoczenie, oznacza to, że produkcja entropii w jej wnętrzu ma być nieujemna i podobnie dla pozostałych. To oznacza dalej, że w każdym dowolnie małym obszarze układu, w którym zachodzą procesy samorzutne następuje związane z nimi tworzenie entropii. To stwierdzenie stanowi treść drugiej hipotezy termodynamiki nierównowagowej, nazywaną lokalnym sformuowaniem drugiej zasady termodynamiki. Lokalne sformuowanie drugiej zasady termodynamiki nie wyklucza jednak takiego przypadku, w którym w jednym i tym samym miejscu zachodzi kilka procesów, z których niektóre zmniejszają entropię \((\dd_{i}S<0)\), pod warunkiem, że oprócz nich obecne są procesy produkujące entropię \((\dd_{i}S>0)\), które z naddatkiem zwiększa entropię w tym miejscu \cite{orlik, pigon1, guminski}. \par
+	Założenie to możemy przenieść na sytuację, gdy układ dzielimy na mniejsze podukłady (komórki). Z punkty widzenia pojedynczej komórki, dla której pozostałe stanowią otoczenie, oznacza to, że produkcja entropii w jej wnętrzu ma być nieujemna i podobnie dla pozostałych. To oznacza dalej, że w każdym dowolnie małym obszarze układu, w którym zachodzą procesy samorzutne następuje związane z nimi tworzenie entropii. To stwierdzenie stanowi treść hipotezy termodynamiki nierównowagowej, nazywaną lokalnym sformuowaniem drugiej zasady termodynamiki. %Lokalne sformuowanie drugiej zasady termodynamiki 
+	Nie wyklucza ona jednak takiego przypadku, w którym w jednym i tym samym miejscu zachodzi kilka procesów, z których niektóre zmniejszają entropię \((\dd_{i}S<0)\), pod warunkiem, że oprócz nich obecne są procesy produkujące entropię \((\dd_{i}S>0)\), które z naddatkiem zwiększa entropię w tym miejscu \cite{orlik, pigon1, guminski}. \par
 	Tego typu sprzężenie procesów jest obserwowane w układach nierównowagowych. przykładem jest tutaj termodyfuzja w gazie. W procesie tym pod wpływem gradientu temperatury dochodzi do przepływu ciepła, co jest procesem nieodwracalnym, wytwarzającym entropię w każdym miejscu. Jednak równocześnie w początkowo jednorodnym układzie zaobserwujemy transport masy, którego rezultatem będzie pojawienie się niejednorodności stężenia gazu w przestrzeni, którą zajmuje. Z tym drugim procesem związane jest zmniejszenie entropii. Wytwarzanie entropii związane z przepływem ciepła większe niż jej spadek związany z wytworzeniem niejednorodności. 
-	
-
-
-
-
 	% Zmianę entropii układu można zapisać jako wynikającą z przepływu ciepła oraz samorzutnej produkcji entropii: 
 	% \begin{equation}
 	% 	dS_{uk}=d_{e}S+d_{i}S_{uk}.
@@ -254,9 +248,8 @@
 	% 	\item[\(d_{i}S_{uk}\geq 0\)] zmiana wynikająca z produkcji entropii
 	% \end{description}
 	% Dla każdego układu produkcja entropii jest dodatnia. Wynika z tego argumentu także, że jest to prawdziwe dla każdego podukładu należącego do danego układu niezależnie od jego wielkości. Zasada ta ma więc charakter lokalny. 
-	
 	\subsection{Szybkość reakcji chemicznej}
-	Reakcje chemiczne można podzielić na dwie kategorie. Pierwsza z nich to reakcje homogeniczne, czyli takie zachodzące w jednej fazie. Druga to reakcje heterogeniczne, czyli zachodzące między związkami chemicznymi w różnych fazach i zachodzące na granicy między nimi. Szybkość reakcji heterogenicznych jest trudniejsza do opisania, ponieważ zależy od szybkości dyfuzji, powierzchni rozdzielenia i innych czynników. %do uzupelnienia
+	Reakcje chemiczne można podzielić na dwie kategorie. Pierwsza z nich to reakcje homogeniczne, czyli takie zachodzące w jednej fazie. Druga to reakcje heterogeniczne, czyli reakcje zachodzące między związkami chemicznymi w różnych fazach i na granicy między nimi. Szybkość reakcji heterogenicznych jest trudniejsza do opisania, ponieważ zależy od szybkości dyfuzji, powierzchni rozdzielenia i innych czynników. %do uzupelnienia
 	Szybkość reakcji homogenicznej w stałej temperaturze jest funkcją stężeń reagentów. Można ją wyrazić poprzez szybkość zmiany stężenia pojedynczego reagenta $c_{i}$ dla stałej objętości jako: 
 	\begin{equation}\label{szybkosc_reakcji_def}
 		v=\frac{1}{\nu_i}\dv{c_i}{t}.
@@ -267,20 +260,20 @@
 		\dd{c_{i}}=\frac{\dd{n_{i}}}{V}
 	\end{equation}
 	gdzie \(\nu_{i}\) to współczynnik stechiometryczny (ujemny dla substratów, a dodatni dla produktów), \(c_{i}\) to stężenia molowe składników. \par
-	Można tak zdefiniowaną szybkość reakcji powiązać z szybkością zmiany liczby postępu reakcji:
+	Można tak zdefiniowaną szybkość reakcji powiązać z szybkością zmiany liczby postępu reakcji \cite{atkins_por}:
 	\begin{equation}
 		\dd{\xi}=\frac{\dd{n_{i}}}{\nu_{i}},
 	\end{equation}
-	gdzie \(\xi\) to liczba postępu reakcji i jest niezależna od wyboru składnika. Wykorzystując tą zależność do \eqref{szybkosc_reakcji_def} otrzymujemy: 
+	gdzie \(\xi\) to liczba postępu reakcji i jest niezależna od wyboru składnika. Wstawiając tą zależność do \eqref{szybkosc_reakcji_def} otrzymujemy: 
 	\begin{equation}
 		v=\frac{1}{V}\dv{\xi}{t}.
 	\end{equation}
 	%Dla reacji chemicznej w postaci ogólnej
-	Szybkość reakcji chemicznej zapisanej w postaci ogólnej
+	Szybkość reakcji chemicznej dla reakcji zapisanej wzorem:
 	\begin{equation*}
 		x_{1}X_{1}+x_{2}X_{2}+\ldots \rightarrow y_{1}Y_{1}+y_{2}Y_{2}+\ldots
 	\end{equation*}
-	w ogólności jest funkcją stężeń wszystkich reagentów biorących udział w reakcji chemicznej: 
+	jest w ogólności funkcją stężeń wszystkich reagentów biorących udział w reakcji chemicznej: 
 	%szybkość ta ma ogólną postać:
 	\begin{equation*}
 		v=f\left(x_{1}, x_{2}, \ldots, y_{1}, y_{2}, \ldots\right).
@@ -289,8 +282,9 @@
 	\begin{equation}\label{szybkosc reakcji}
 		v=k x_{1}^{\alpha_1}x_{2}^{\alpha_2}\ldots y_{1}^{\beta_1}y_{2}^{\beta_2}\ldots.
 	\end{equation}
-	Ustalone empirycznie zależności pomiędzy szybkością reakcji, a stężeniami reagentów są podstawą do tworzenia modeli zachodzenia reakcji chemicznych, ich kinetycznego opisu. Przykładowe reakcje i ich szybkości reakcji zostały przedstawione w Dodatku A na stronie \pageref{sec: dodatek A}.Według równania \eqref{szybkosc reakcji} szybkość reakcji można zmienić przez zmianę stężenia reagentów, które w niej uczestniczą lub zmianę stałej szybkości reakcji. \par Katalizatorami nazywamy związki zwiększające stałą reakcji sumarycznej, natomiast \linebreak związki zmniejszające katalizatorem ujemnym lub inhibitorem. Mają one działanie selektywne, a więc zwiększają szybkość tylko dla pewnej z wielu możliwych reakcji chemicznych dla danych substratów. Reakcja katalizowana przebiega więc innym mechanizmem niż niekatalizowana. Mechanizmem reakcji chemicznej nazywamy ciąg reakcji elementarnych wyjaśniający dokładny przebieg tej reakcji. Katalizatory nie występują w reakcji sumarycznej, ale występują w reakcjach elementarnych. Podobnie jak reakcje możemy podzielić katalizę na homogeniczną (zachodzącej w jednej fazie) oraz heterogeniczną (zachodząca na granicy faz). 
-	Szczególnym rodzajem reakcji katalitycznych jest autokataliza, w której produkt reakcji bierze w niej udział, przez co zwiększa jej szybkość \cite{pigon1, atkins_por}. 
+	Ustalone empirycznie zależności pomiędzy szybkością reakcji, a stężeniami reagentów są podstawą do tworzenia modeli zachodzenia reakcji chemicznych, ich kinetycznego opisu. Przykładowe reakcje i ich szybkości reakcji zostały przedstawione w Dodatku A na stronie \pageref{sec: dodatek A}. Według równania \eqref{szybkosc reakcji} szybkość reakcji można zmienić przez zmianę stężenia reagentów, które w niej uczestniczą lub zmianę stałej szybkości reakcji. \par 
+	%Katalizatorami nazywamy związki zwiększające stałą reakcji sumarycznej, natomiast \linebreak związki zmniejszające katalizatorem ujemnym lub inhibitorem. Mają one działanie selektywne, a więc zwiększają szybkość tylko dla pewnej z wielu możliwych reakcji chemicznych dla danych substratów. Reakcja katalizowana przebiega więc innym mechanizmem niż niekatalizowana. Mechanizmem reakcji chemicznej nazywamy ciąg reakcji elementarnych wyjaśniający dokładny przebieg tej reakcji. 
+	Reakcje chemiczne przebiegają według tak zwanego mechanizmu reakcji chemicznej. Opisuje on wszystkie jej etapy. Uwzględnia on procesy, które przebiegają w trakcie reakcji wraz z pojawieniem się i znikaniem reagenta pośredniego. Reakcja katalizowana przebiega jednak innym mechanizmem niż niekatalizowana, choć substraty i produkty obu są identyczne. Katalizator, otwierając nową drogę przemiany, powoduje to, że szybciej i wydajniej otrzymujemy produkty. Katalizatory nie występują w reakcji sumarycznej, ale występują w reakcjach elementarnych. Podobnie jak reakcje możemy podzielić katalizę na homogeniczną (zachodzącej w jednej fazie) oraz heterogeniczną (zachodząca na granicy faz). Szczególnym rodzajem reakcji katalitycznych jest autokataliza, w której produkt reakcji bierze w niej udział, przez co zwiększa jej szybkość \cite{pigon1, atkins_por}. 
 	%Przykładem takiej reakcji jest hydroliza estrów w środowisku kwasowym: 
 	%\begin{center}
 	%	\ce{RCOOC2H5 + 2H2O ->[H3O+] RCOO- + C2H5OH + H3O+}
@@ -388,7 +382,7 @@
 	\begin{equation}
 		\sigma = \sum_{i}J_{i}X_{i} = \sum_{i}\sum_{j}^{n}L_{ij}X_{i}X_{j},
 	\end{equation}
-	gdzie $X_{k}$ i $J_{k}$ są skalarami, składowymi wektorów lub składowymi tensorów (dla przepływu lepkiego). 
+	gdzie $X_{k}$ i $J_{k}$ są skalarami, składowymi wektorów lub składowymi tensorów (dla przepływu lepkiego) \cite{guminski_petelenz}. 
 	
 	W ogólności natężenie przepływów termodynamicznych jest dowolną funkcją sił termodynamicznych: 
 	\[J=f\left(X\right)\]
@@ -477,7 +471,7 @@
 	\end{center}
 	W modelu tym przyjmujemy, że \(A\) jest stałe. Może to być osiągnięte poprzez wykorzystanie reaktora przepływowego, w którym kontroluje się dopływ składnika \(A\). W pierwszym kroku \(A\) zostaje przekształcone w \(X\), które w drugim kroku w reakcji z \(Y\) tworzy więcej składnika \(Y\). Jest to najprostszy model zawierający autokatalizę. Układ taki wymaga więc zapoczątkowania reakcji pewną ilością \(Y\). W końcowym kroku \(Y\) zostaje przekształcone w produkty końcowe. Reakcja sumaryczna w modelu Lotki ma postać:
 	\begin{center}
-		\ce{A -> produkty}z
+		\ce{A -> produkty}
 	\end{center}
 	zaś szybkości zmiann stężeń reagentów pośrednich $X$ oraz $Y$ opisują równania: 
 	\begin{equation}
@@ -1015,7 +1009,7 @@
 	\end{table}
 	W tabelach \ref{tab:warunki_lotka}, \ref{tab:warunki_lotka_volterra} oraz \ref{tab:warunki_bruskelator} przedstawiono warunki z tabeli \ref{tab:warunki_stabilnosci} wykorzystując odpowiednio równania \eqref{lotka_charakterystyczne}, \eqref{lotka_volterra_charakterystyczne} oraz \eqref{bruskelator_charakterystyczne}. Niektóre warunki nie są możliwe do spełnienia dla parametrów rzeczywistych, taka komórka zawiera '-'. \par
 	Przejdziemy teraz do badania zachowania trajektorii w przestrzeniach fazowych rozważanych modeli. Do wygenerowania pól wektorowych i trajektorii na rysunkach odpowiednio \ref{fig:stabilne_ognisko_lotka}, \ref{fig:stabilny_wezel_lotka}, \ref{fig:stabilne_ognisko_lotka_volterra}, \ref{fig:stabilny_wezel}, \ref{fig:stabilne_ognisko} oraz \ref{fig:niestabilne_ognisko} wykorzystano równania przed linearyzacją \eqref{lotka_prosty}, \eqref{lotka_volterra_prosty} oraz \eqref{bruskelator_prosty}. Wektory na wykresach są znormalizowane. Interesuje nas jedynie ich kierunek, a nie sama wartość. \par
-	Przykładowe wykresy fazowe:
+	Na rysunkach \ref{fig:stabilne_ognisko_lotka} oraz \ref{fig:stabilny_wezel_lotka} przedstawiają typowe wykresy dla modelu Lotki. Należy zwrócić uwagę na fakt, że zawsze jest to tor zbiegający do punktu stacjonalnego. Na rysunku \ref{fig:stabilne_ognisko_lotka_volterra} pokazano typowy wykres dla modelu Lotki-Volterry. Jest to zawsze krzywa zamknięta. Wykresy fazowe na rysunkach \ref{fig:stabilny_wezel}, \ref{fig:stabilne_ognisko} oraz \ref{fig:niestabilne_ognisko} przedstawiają najważniejsze przypadki dla modelu brukselator. Wykorzystano odpowiednio stałe: \(a=0,5; b=4\), \(a=3; b=4\) oraz \(a=7; b=4\). Parametry te dobrano tak, aby należały one do przedziałów podanych w tabeli \ref{tab:warunki_bruskelator}. \par
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.8]{"lotka3; a=0.1".png}
@@ -1051,9 +1045,8 @@
 		\includegraphics[scale=0.8]{"brusselator; a=7; b=4".png}
 		\caption{Niestabilne ognisko; Model bruskelator, a=7, b=4}
 		\label{fig:niestabilne_ognisko}
-	\end{figure}
-	Wykresy fazowe na rysunkach \ref{fig:stabilne_ognisko_lotka} oraz \ref{fig:stabilny_wezel_lotka} przedstawiają typowe wykresy dla modelu Lotki. Należy zwrócić uwagę na fakt, że zawsze jest to tor zbiegający do punktu stacjonalnego. Na rysunku \ref{fig:stabilne_ognisko_lotka_volterra} pokazano typowy wykres dla modelu Lotki-Volterry. Jest to zawsze krzywa zamknięta. Wykresy fazowe na rysunkach \ref{fig:stabilny_wezel}, \ref{fig:stabilne_ognisko} oraz \ref{fig:niestabilne_ognisko} przedstawiają najważniejsze przypadki dla modelu brukselator. Wykorzystano odpowiednio stałe: \(a=0,5; b=4\), \(a=3; b=4\) oraz \(a=7; b=4\). Parametry te dobrano tak, aby należały one do przedziałów podanych w tabeli \ref{tab:warunki_bruskelator}. \par
-	Trajektorie zachowują się w sposób oczekiwany według tabeli \ref{tab:warunki_bruskelator} i literatury, co dowodzi poprawnego działania stworzonego programu \cite{orlik}. Na rysunku \ref{fig:niestabilne_ognisko} zachodzi jednak coś na pierwszy rzut oka sprzecznego z analizą układu zlinearyzowanego. Układ osiąga stabilny cykl graniczny. Jest to niemożliwe w przypadku układów liniowych do których je sprowadziliśmy poprzez linearyzację, jednak linearyzacja jest dobrym przybliżeniem jedynie w najbliższym otoczeniu punktu stacjonarnego, cykl graniczny widoczny na rysunku \ref{fig:niestabilne_ognisko} jest więc przejawem nieliniowości układu równań modelu bruskelator \cite{orlik}. Istnieje na jednak twierdzenie, które wyjaśnia to zjawisko, jest to twierdzenie Poincar\'{e}go-Bendixsona. \par
+	\end{figure}\newpage
+	Trajektorie zachowują się w sposób oczekiwany według tabeli \ref{tab:warunki_bruskelator} i literatury, co dowodzi poprawnego działania stworzonego programu \cite{orlik}. Na rysunku \ref{fig:niestabilne_ognisko} zachodzi jednak coś na pierwszy rzut oka sprzecznego z analizą układu zlinearyzowanego. Układ osiąga stabilny cykl graniczny. Jest to niemożliwe w przypadku układów liniowych do których je sprowadziliśmy poprzez linearyzację, jednak linearyzacja jest dobrym przybliżeniem jedynie w najbliższym otoczeniu punktu stacjonarnego, cykl graniczny widoczny na rysunku \ref{fig:niestabilne_ognisko} jest więc przejawem nieliniowości układu równań modelu bruskelator \cite{orlik}. Istnieje na jednak twierdzenie, które wyjaśnia to zachowanie, jest to twierdzenie Poincar\'{e}go-Bendixsona. \par
 	\begin{theorem}[\textbf{Poincar\'{e}go-Bendixsona}]
 		"Jeśli w przestrzeni fazowej będącej podzbiorem płaszczyzny \(\mathbb{R}^{2}\) orbita zawiera co najmniej jeden swój punkt graniczny, to jest ona punktem krytycznym albo orbitą zamkniętą" \cite{palczewski}
 	\end{theorem}
@@ -1198,18 +1191,20 @@
 	\end{figure}
 	
 	\subsection{Porównanie metod numerycznych}
-	W tej sekcji porównamy wykresy otrzymane przy tym samym kroku, ale innych metodach. 
-	\begin{figure}[H]
+	W tej sekcji porównamy wykresy otrzymane przy tym samym kroku, ale innych metodach. Jeden z rezultatów tego porównania został zaprezentowany na rysunku \ref{lotka_volterra_porownanie_1000}.
+	\begin{figure}
 		\centering
-		\includegraphics{"lotka_volterra_porownanie_1000".png}
+		\includegraphics[scale=0.8]{"lotka_volterra_porownanie_1000".png}
 		\caption{Porównanie w modelu Lotki-Volterry}
 		\label{lotka_volterra_porownanie_1000}
 	\end{figure}
-	Wykres w kolorze czerwonym odpowiada wykorzystywanej metodzie opisanej wcześniej, natomiast w kolorze zielonym otrzymano wykorzystując jedynie metodę rzędu pierwszego, zwaną metodą Newtona. Wykorzystano metodę Lotki-Volterry dla \(a=1\) oraz krok czasowy \(h=0,001\) przez \(1000000\) kroków. Można zauważyć, że rozwiązanie metodą przeze mnie wykorzystywaną jest zbieżne przez długi czas, natomiast prostsza metoda rozbiega się po czasie. \par
-	Analogiczne rozważania dla modelu bruskelator daje następujące wykresy:
-	\begin{figure}[H]
+	Wykres w kolorze czerwonym odpowiada wykorzystywanej metodzie opisanej wcześniej, natomiast w kolorze zielonym otrzymano wykorzystując jedynie metodę rzędu pierwszego, zwaną metodą Newtona. Wykorzystano model Lotki-Volterry dla \(a=1\) oraz krok czasowy \(h=0,001\) przez \(1000000\) kroków. Można zauważyć, że rozwiązanie metodą przeze mnie wykorzystywaną jest zbieżne przez długi czas, natomiast prostsza metoda rozbiega się po czasie. \par
+	%Analogiczne rozważania dla modelu bruskelator daje następujące wykresy:
+	Analogiczne porównanie przeprowadzono dla modelu bruskelatora, a przykładowy rezultat dla wybranych warunków początkowych został zaprezentowany na rysunku \ref{bruskelator_porownanie_1000}. Krok czasowy oraz ich ilość jest taka sama jak w poprzednim przypadku dla modulu Lotki-Volterry. Za model posłużył model bruskelator z reakcjami zachodzącymi tylko w jedną stronę przy parametrach \(a=7\) oraz \(b=4\).
+	
+	\begin{figure}
 		\centering
-		\includegraphics{"bruskelator_porownanie_1000".png}
+		\includegraphics[scale=0.8]{"bruskelator_porownanie_1000".png}
 		\caption{Porównanie w modelu bruskelator}
 		\label{bruskelator_porownanie_1000}
 	\end{figure}
