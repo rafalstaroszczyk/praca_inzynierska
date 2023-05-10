@@ -18,6 +18,7 @@
 \usepackage{sectsty}
 \usepackage{etoolbox}
 \usepackage[font=small]{caption}
+\usepackage{subcaption}
 \usepackage{physics}
 \usepackage[version=4]{mhchem}
 \usepackage{gensymb}
@@ -142,11 +143,29 @@
 	Te oscylacyjne zmiany stężenia niektórych reagentów w oscylacyjnej reakcji chemicznej mogą odbywać się jednocześnie i tak samo w całej objętości układu, wówczas mówimy o powstaniu czasowej struktury dyssypatywnej. Jeśli stężenia tych reagentów zmieniają się zarówno w czasie jak i przestrzeni, wówczas mówimy o czasowo-przestrzennych strukturach dyssypatywnych. W tym drugim przypadku zaobserwujemy falę stężenia reagenta, która będzie przemieszczać się poprzez całą objętość układu. W trzecim przypadku te zmiany stężeń dotyczą tylko objętości układu, wówczas mówimy o przestrzennej strukturze dyssypatywnej. Wraz z osiągnięciem równowagi termodynamicznej w układzie opisane struktury zanikają. 
 	
 	% Wkleić przypadki struktur
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{"belousov_zhabotinsky".png}
+			\caption{Fale chemiczne w reakcji Biełousowa-Żabotyńskiego (po lewej) oraz śluzowiec Dictyostelium discoideum (po prawej) \cite{epstein}}
+			\label{fig:bz_disco}
+		\end{subfigure}
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{"benard".png}
+			\caption{Komórki B\'{e}narda \cite{prigogine}}
+			\label{fig:benard}
+		\end{subfigure}
+		\caption{Przykładowe struktury dyssypatywne}
+		\label{fig:struktury_dyssypatywne}
+	\end{figure}
 	
+	Na rysunkach \ref{fig:bz_disco} oraz \ref{fig:benard} przedstawiono przykładowe struktury dyssypatywne. Na rysunku \ref{fig:bz_disco} możemy zobaczyć typowe fale chemiczne w reakcji Biełousova-Żabotyńskiego porównane do śluzowca Dictyostelium discoideum. Pokazuje to, że podobne wizualnie struktury występują zarówno w chemii jak i biologii. Na rysunku \ref{fig:benard} przedstawiono komórki B\'{e}narda, które występują w zjawisku konwekcji po osiągnięciu różnicy temperatur między dwoma płytkami większej od pewnej temperatury krytycznej. \par
 	Wyjaśnienie tych oscylacji z punktu widzenia termodynamiki wymaga wyjścia poza termodynamikę równowagową. Termodynamika równowagowa zajmuje się procesami, w których ignoruje się upływ czasu, a przemiana jest kwazistatyczna. Oznacza to, że każdy stan pośredni można traktować jako stan równowagi termodynamicznej. Model taki jest wystarczający do opisu większości procesów, %Można więc powiedzieć, że termodynamikę równowagową 
 	w których interesuje nas stan początkowy oraz końcowy. Jest jednak niewystarczający, jeżeli interesuje nas szybkość zachodzenia procesu. Dopiero termodynamika nierównowagowa jest teorią, która obejmuje to, co dzieje się w trakcie rzeczywistych przemian i jest ona konieczna do opisu reakcji oscylacyjnych. Pierwsze odkrycia tego typu przemian sięgają końca XIX wieku. Były to reakcje w układach heterogenicznych, jak na przykład pierścienie Lieseganga lub oscylacje prądu płynącego przez ogniwo galwaniczne. \par
 	% Wyjaśnienie tych zjawisk wymagało, aby układ byl heterogeniczny i było w zgodzie z entropią Boltzmanna, według której spontaniczna organizacja jest niemożliwa. \cite{orlik}
-	Pierwszy model teoretyczny został przedstawiony przez Alfreda Lotkę \cite{lotka}. W modelu tym zakłada się, że reakcje przebiegają w układzie homogenicznym. Przez długi czas uważano, że nie może on przedstawiać rzeczywistych reakcji, ponieważ ówcześnie interpretowano, że łamie II Zasadę Termodynamiki. Jednak w 1921r. na przykładzie reakcji Bray'a-Liebhafky'ego pokazano, że reakcje oscylacyjne w układach homogenicznych są możliwe. Jest to reakcja rozkładu nadtlenku wodoru katalizowana jodanem (V). Zachodzą reakcje oscylacyjne z naprzemienną dominacją dwóch reakcji \cite{orlik}:
+	Pierwszy model teoretyczny został przedstawiony przez Alfreda Lotkę \cite{lotka}. W modelu tym zakłada się, że reakcje przebiegają w układzie homogenicznym. Przez długi czas uważano, że nie może on przedstawiać rzeczywistych reakcji, ponieważ ówcześnie interpretowano, że łamie II Zasadę Termodynamiki \cite{orlik_sily_w_przyrodzie}. Jednak w 1921r. na przykładzie reakcji Bray'a-Liebhafky'ego pokazano, że reakcje oscylacyjne w układach homogenicznych są możliwe. Jest to reakcja rozkładu nadtlenku wodoru katalizowana jodanem (V). Zachodzą reakcje oscylacyjne z naprzemienną dominacją dwóch reakcji \cite{orlik}:
 	\begin{center}
 		\ce{5H2O2 + 2H+ +2IO3- -> I2 + 5O2 + 6H2O}
 	\end{center}
@@ -170,7 +189,7 @@
 		\ce{2BrO3- + 3CH2(COOH)2 + 2H+ ->[kat] 2BrCH(COOH)2 + 4H2O + 3CO2}.
 	\end{center}
 	% Została ona odkryta jako nieorganiczny analog cyklu Krebsa \cite{belousov_hist}. 
-	W późniejszym okresie znaleziono również inne reagenty, dla których zachodzi reakcja analogiczna. Jedną z możliwych modyfikacji tej reakcji jest zamiana jonów \ce{Ce^3+} na \ce{Fe(o-phen)3^2+}, zwanych ferroiną. Podmiana ta zmienia efekty wizualne w czasie przebiegu reakcji oscylacyjnej. Zamiast oscylacji między bezbarwnym i żółtym roztworem występuje oscylacja między pomarańczowym oraz niebieskim \cite{orlik}. \par
+	W późniejszym okresie znaleziono również inne reagenty, dla których zachodzi reakcja analogiczna. Jedną z możliwych modyfikacji tej reakcji jest zamiana jonów \ce{Ce^3+} na \ce{Fe(o-phen)3^2+}, zwanych ferroiną. Jej utleniona forma ma wzór \ce{Fe(o-phen)3^2+}. Podmiana ta zmienia efekty wizualne w czasie przebiegu reakcji oscylacyjnej. Zamiast oscylacji między bezbarwnym i żółtym roztworem występuje oscylacja między pomarańczowym oraz niebieskim \cite{orlik}. Jeszcze innym takim katalizatorem może być \ce{Ru(bpy)3^2+} wraz ze swoją formą utlenioną \ce{Ru(bpy)3^3+}. Oscylacje stosunku stężeń tych katalizatorów mogą się też objawiać w inny sposób niż zmiana koloru. \cite{osypova}\par
 	Odkrycie reakcji oscylacyjnych przyczyniło się do rozwoju termodynamiki nierównowagowej, a w konsekwencji do użycia jej aparatu teoretycznego do opisu procesów życiowych. 
 	Reakcja Biełousowa-Żabotyńskiego traktowana jest czasem jako analog cyklu Krebsa, będącego głównym źródłem energii organizmów tlenowych. Analogia ta dotyczy mechanizmu reakcji, w których występuje pętla sprzężenia zwrotnego, to oznacza, że produkt pierwszej reakcji jest substratem kolejnej, aż do osiagniecia produktu, który jest substratem tej pierwszej. \cite{belousov_hist, stryer}. \par
 	Niepoprawna interpretacja II Zasady Termodynamiki może doprowadzić do wniosku, że powstanie opisanych wyżej złożonych struktur z molekularnego chaosu powinno być niemożliwe. Tak rzeczywiście się dzieje, ale tylko dla układów izolowanych. Natomiast w przypadku innych układów, które oddziałują z otoczeniem samoorganizacja materii jest możliwa. Przykładem są procesy zachodzące w układach biologicznych, w którcyh interakcja z otoczeniem jest kluczowa. %Wyjaśnienie takie błędnie wykorzystuje tę zasadę ignorując fakt, że układy biologiczne jak i cała Ziemia nie są układami izolowanymi. 
@@ -188,7 +207,7 @@
 	W przyapadku układów izolowanych \(\dd{S}=\dd{S_{uk}}\), 
 	więc w układach izolowanych entropia zawsze rośnie, a zatem spontaniczne uporządkowanie stabilnych struktur nie jest możliwe. \par
 	%Druga zasada termodynamiki dana wzorem \eqref{II_Zasada_Termodynamiki} rozstrzyga czy dany proces jest możliwy. 
-	Aby nadać tej zasadzie ilościowy charakter, w której zastąpimy nierówność, wprowadza się pojęcie produkcji entropii, które przeanalizujemy najpierw z punktu widzenia układu. W przypadku układu zamkniętego, w którym przebiega proces samorzutny drugą zasadę termodynamiki zapiszemy następującą nierównością \cite{orlik, pigon1, jaworski}: 
+	Aby nadać tej zasadzie ilościowy charakter, w której zastąpimy nierówność równością, wprowadza się pojęcie produkcji entropii, które przeanalizujemy najpierw z punktu widzenia układu. W przypadku układu zamkniętego, w którym przebiega proces samorzutny drugą zasadę termodynamiki zapiszemy następującą nierównością \cite{orlik, pigon1, jaworski}: 
 	\begin{equation}\label{II_Zasada_Termodynamiki_uklad}
 		\dd{S_{uk}}>\frac{\dbar Q}{T_{ot}},
 	\end{equation}
@@ -203,7 +222,7 @@
 	\begin{equation}
 		\dd{S_{uk}}=\dd_{e}S+\dd_{i}S,
 	\end{equation}
-	gdzie \(\dd_{e}S=\frac{\dbar Q}{T}\), stanowi wkład do \(\dd{S_{uk}}\) wynikający tylko z wymiany ciepła \(Q\), \(\dd_{i}S\) jest równy:
+	gdzie \(\dd_{e}S=\frac{\dbar Q}{T}\), stanowi wkład do \(\dd{S_{uk}}\) wynikający tylko z wymiany ciepła \(\dbar Q\), \(\dd_{i}S\) jest równy:
 	\begin{equation}
 		\dd_{i}S=\dd{S_{uk}}-\frac{\dbar Q}{T}.
 	\end{equation}
@@ -232,7 +251,7 @@
 	
 	Założenie to możemy przenieść na sytuację, gdy układ dzielimy na mniejsze podukłady (komórki). Z punkty widzenia pojedynczej komórki, dla której pozostałe stanowią otoczenie, oznacza to, że produkcja entropii w jej wnętrzu ma być nieujemna i podobnie dla pozostałych. To oznacza dalej, że w każdym dowolnie małym obszarze układu, w którym zachodzą procesy samorzutne następuje związane z nimi tworzenie entropii. To stwierdzenie stanowi treść hipotezy termodynamiki nierównowagowej, nazywaną lokalnym sformuowaniem drugiej zasady termodynamiki. %Lokalne sformuowanie drugiej zasady termodynamiki 
 	Nie wyklucza ona jednak takiego przypadku, w którym w jednym i tym samym miejscu zachodzi kilka procesów, z których niektóre zmniejszają entropię \((\dd_{i}S<0)\), pod warunkiem, że oprócz nich obecne są procesy produkujące entropię \((\dd_{i}S>0)\), które z naddatkiem zwiększa entropię w tym miejscu \cite{orlik, pigon1, guminski}. \par
-	Tego typu sprzężenie procesów jest obserwowane w układach nierównowagowych. przykładem jest tutaj termodyfuzja w gazie. W procesie tym pod wpływem gradientu temperatury dochodzi do przepływu ciepła, co jest procesem nieodwracalnym, wytwarzającym entropię w każdym miejscu. Jednak równocześnie w początkowo jednorodnym układzie zaobserwujemy transport masy, którego rezultatem będzie pojawienie się niejednorodności stężenia gazu w przestrzeni, którą zajmuje. Z tym drugim procesem związane jest zmniejszenie entropii. Wytwarzanie entropii związane z przepływem ciepła większe niż jej spadek związany z wytworzeniem niejednorodności. 
+	Tego typu sprzężenie procesów jest obserwowane w układach nierównowagowych. Przykładem jest tutaj termodyfuzja w gazie. W procesie tym pod wpływem gradientu temperatury dochodzi do przepływu ciepła, co jest procesem nieodwracalnym, wytwarzającym entropię w każdym miejscu. Jednak równocześnie w początkowo jednorodnym układzie zaobserwujemy transport masy, którego rezultatem będzie pojawienie się niejednorodności stężenia gazu w przestrzeni, którą zajmuje. Z tym drugim procesem związane jest zmniejszenie entropii. Wytwarzanie entropii związane z przepływem ciepła większe niż jej spadek związany z wytworzeniem niejednorodności. 
 	% Zmianę entropii układu można zapisać jako wynikającą z przepływu ciepła oraz samorzutnej produkcji entropii: 
 	% \begin{equation}
 	% 	dS_{uk}=d_{e}S+d_{i}S_{uk}.
@@ -296,7 +315,7 @@
 	%	\pdv{_{i}S}{t} = \iiint_{V}\sigma\dd{V}.
 	%\end{equation}
 	
-	We wcześniejszym podrozdziale opisaliśmy zmiany entropii układu, które dokonuje się w trakcie procesu samorzutnego. Jeżeli zmiany te odniesiemy do bardzo krótkiego przedziału czasu \(\dd{t}\), wówczas szybkość zmiany entropii dana będzie za pomocą równania \cite{mazur}:
+	We wcześniejszym podrozdziale opisaliśmy zmiany entropii układu, które dokonują się w trakcie procesu samorzutnego. Jeżeli zmiany te odniesiemy do bardzo krótkiego przedziału czasu \(\dd{t}\), wówczas szybkość zmiany entropii dana będzie za pomocą równania \cite{mazur, prigogine}:
 	\begin{equation}
 		\dv{S}{t} = \dv{_{e}S}{t} + \dv{_{i}S}{t},
 	\end{equation}
@@ -350,11 +369,11 @@
 	\begin{equation} \label{dod A: 9}
 		\dv{S}{t}=\frac{1}{T}\dv{U}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}-\left[\vb{J}_{U}\vdot\grad{\frac{1}{T}}-\sum_{i}\vb{J}_{i}\cdot\grad{\frac{\mu_{i}}{T}}-\frac{1}{T}\sum_{r}\sum_{i}\nu_{ir}\mu_{i}\dv{\xi_{r}}{t}\right]+\sigma.
 	\end{equation}
-	Wprowadzamy pojęcie powinowactwa chemicznego: 
+	Wykorzystując pojęcie powinowactwa chemicznego: 
 	\begin{equation}
-		A_{r}=-\sum_{i}\nu_{ir}\mu_{i}. \\
+		A_{r}=-\sum_{i}\nu_{ir}\mu_{i} \\
 	\end{equation}
-	Równanie \eqref{dod A: 9} przybiera postać:
+	równanie \eqref{dod A: 9} przybiera postać:
 	\begin{equation}
 		\dv{S}{t}=\frac{1}{T}\dv{U}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}-\left[\vb{J}_{U}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}\right]+\sigma.
 	\end{equation}
@@ -454,7 +473,7 @@
 	
 	
 	\section{Numeryczna i teoretyczna analiza modeli reakcji chemicznych}
-	W tym rozdziale przeprowadzono analizę teoretyczną oraz numeryczną modeli stosowanych w opisie reakcji oscylacyjnych. Pierwszym modelem istotnym dla rozważanych zagadnień jest model Lotki podany przez niego w roku 1910. Mimo, że oryginalnie miał on zastosowanie w badaniu wielkości populacji zwierząt, a dokładnie zależności między drapieżnikami oraz ofiarami, ma on również pewne znaczenie dla reakcji chemicznych. W 1920 Lotka, a w 1931 niezależnie Volterra, zaproponowali zmodyfikowany model nazywany modelem Lotki-Volterry. Trzecim rozpatrywanym modelem jest bruskelator opracowany przez szkołę Prigogine'a w Brukseli. Jest on analizowany w postaci uproszczonej, jak i ogólnej z reakcjami odwracalnymi. W opisie mechanizmów tych reakcji założono, że szybkości reakcji zależą jedynie od współczynników stechiometrycznych substratów, tj.:
+	W tym rozdziale przeprowadzono analizę teoretyczną oraz numeryczną modeli stosowanych w opisie reakcji oscylacyjnych. Pierwszym modelem istotnym dla rozważanych zagadnień jest model Lotki podany przez niego w roku 1910. Mimo, że oryginalnie miał on zastosowanie w badaniu wielkości populacji zwierząt, a dokładnie zależności między drapieżnikami oraz ofiarami, ma on również pewne znaczenie dla reakcji chemicznych. W 1920 Lotka, a w 1931 niezależnie Volterra, zaproponowali zmodyfikowany model nazywany modelem Lotki-Volterry. Trzecim rozpatrywanym modelem jest bruskelator opracowany przez szkołę Prigogine'a w Brukseli \cite{prigogine}. Jest on analizowany w postaci uproszczonej, jak i ogólnej z reakcjami odwracalnymi. W opisie mechanizmów tych reakcji założono, że szybkości reakcji zależą jedynie od współczynników stechiometrycznych substratów, tj.:
 	\begin{equation}
 		v = k[A]^{a}[B]^{b}\ldots[J]^{j},
 	\end{equation}
@@ -540,25 +559,29 @@
 		\vb{y}_{n+1} = \sum_{i=1}^{k}a_{i}\vb{y}_{n+1-i} + h\sum_{i=0}^{k}b_{i}\vb{f}(x_{n+1-i}, \vb{y}_{n+1-i}), \quad n\geq k-1.
 	\end{equation}
 	Wprowadzamy wielkość \(Y\), która jest dokładnym rozwiązaniem równania \eqref{row_rozniczkowe}. Możemy wtedy zapisać: 
-	\begin{equation}
+	\begin{equation}\label{ogolny_schemat_dokladny}
 		\vb{Y}_{n+1} = \sum_{i=1}^{k}a_{i}\vb{Y}_{n+1-i} + h\sum_{i=0}^{k}b_{i}\vb{f}(x_{n+1-i}, \vb{Y}_{n+1-i}) + \vb{T}_{n},
 	\end{equation}
-	gdzie \(\vb{T}_{n}\) to błąd metody. Możemy to przepisać w postaci:
+	gdzie \(\vb{T}_{n}\) to błąd metody. Równanie \eqref{ogolny_schemat_dokladny} umożliwia napisanie \(T_{n}\) w postaci:
 	\begin{equation}
 		\vb{T}_{n} = \vb{Y}_{n+1} - \sum_{i=1}^{k}a_{i}\vb{Y}_{n+1-i} - h\sum_{i=0}^{k}b_{i}\vb{f}(x_{n+1-i}, \vb{Y}_{n+1-i}).
 	\end{equation}
 	Po rozpisaniu \(Y_{n+1-i}\) w postaci szeregu Taylora wokół \(x_{n+1-k}\) otrzymujemy:
-	\begin{equation}
-		\vb{T}_{n} = \sum_{j=0}^{\infty}Y_{n+1-k}^{(j)}h^{j}\left[\frac{k^{j}}{j!} - \sum_{i=1}^{k}a_{i}\frac{(k-i)^{j}}{j!} - \sum_{i=0}^{k}b_{i}\frac{(k-i)^{j-1}}{(j-1)!}\right].
+	\begin{equation}\label{blad_metody}
+		\vb{T}_{n} = \sum_{j=0}^{\infty}\vb{Y}_{n+1-k}^{(j)}h^{j}\left[\frac{k^{j}}{j!} - \sum_{i=1}^{k}a_{i}\frac{(k-i)^{j}}{j!} - \sum_{i=0}^{k}b_{i}\frac{(k-i)^{j-1}}{(j-1)!}\right].
 	\end{equation}
-	Niech wielkości \(A_{s}\) określone wzorami
+	Prawą stronę równania \eqref{blad_metody} możemy zapisać w nieco innej postaci. W tym celu zdefiniujemy wielkości \(A_{j}\) wzorami:
 	\begin{equation}
 	\begin{split}
 		A_{0} &= 1 - \sum_{i=1}^{k}a_{i} \\
-		A_{s} &= \frac{k^{s}}{s!} - \sum_{i=1}^{k}a_{i}\frac{(k-i)^{s}}{s!} - \sum_{i=0}^{k}b_{i}\frac{(k-i)^{s-1}}{(s-1)!}, s\geq 1
+		A_{j} &= \frac{k^{j}}{j!} - \sum_{i=1}^{k}a_{i}\frac{(k-i)^{j}}{j!} - \sum_{i=0}^{k}b_{i}\frac{(k-i)^{j-1}}{(j-1)!}, j\geq 1
 	\end{split}
 	\end{equation}
-	to współczynniki przy \(h^{s}\). \par
+	to współczynniki przy \(h^{j}\). 
+	Korzystając z tej notacji wzór określający \(T_{n}\) ma postać:
+	\begin{equation}
+		\vb{T}_{n} = \sum_{j=0}^{\infty}A_{j}\vb{Y}_{n+1-k}^{(j)}h^{j}
+	\end{equation}
 	Jeżeli \(A_{i}=0\) dla \(i=0, 1, \ldots, p\) oraz \(A_{p+1}\neq 0\) to metoda ta jest rzędu \(p\).
 	% W tabeli \ref{tab:schematy} podano wybrane wzory różnicowe wykorzystywane podczas symulacji, gdzie \(h\) jest krokiem czasowym, \(p\) to najwyższa wykładnik potęgi \(h^{s}\), przy których współczynnik wynosi \(0\), a \(A_{p+1}\) jest współczynnikiem przy kolejnej potędze. 
 	W tabeli \ref{tab:schematy} podano wybrane wzory różnicowe wykorzystywane podczas symulacji. Wzory 1 - 4 są typu Adamsa-Bashfortha \cite{fortuna}. Wzory o wyższym rzędzie wymagają znajomości wartości większej ilości poprzednich kroków, więc nie mogą być one wykorzystane dla kroków początkowych. W symulacji wykorzystano progresywnie schemat 1 dla pierwszego kroku, następnie 2 dla drugiego, 3 dla trzeciego oraz 4 dla każdego kolejnego. 
