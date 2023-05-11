@@ -1196,21 +1196,25 @@
 		\dv{_{i}S}{\tau} = \ln(\frac{1}{cx})(1 - cx) + \ln(\frac{by}{dx})(ax^{2}y - \frac{ad}{b}x^{3}) + \ln(\frac{bx}{dy})(ac - \frac{ad}{b}y) + \ln(\frac{x}{c})(x - c)
 	\end{equation}
 	Założenia \(R=T=V=[X]_{st}=1\) uargumentowane są tym, że interesuje nas jedynie charakter zmienności entropii w czasie, a nie konkretna wartość entropii. Jest to jedynie model, który nie odpowiada żadnemu rzeczywistemu układowi. Oczywiście wprowadzenie takich założeń zmienia jednostkę entropii, jednak ważna dla nas jest jedynie wartość i możemy ten fakt pominąć. \par
-	Wykresy otrzymane z przeprowadzonej symulacji dla kroku symulacji \(h = \dd{\tau} = 0,001\) oraz warunku początkowego \(x=1, y=2\):
+	%Wykresy otrzymane z przeprowadzonej symulacji dla kroku symulacji \(h = \dd{\tau} = 0,001\) oraz warunku początkowego \(x=1, y=2\):
+	Na rysunku \ref{fig:rev_brus_fazowy} przedstawiony jest wykres fazowy \(y(x)\). Można na nim zaobserwować osiągniecie cyklu granicznego dla stanu początkowego \(x=1, y=2\), który jest poza tym cyklem. Na rysunku \ref{fig:rev_brus_xy_t} pokazano zależności \(x(\tau)\) linią ciagłą oraz \(y(\tau)\) linią przerywaną. Wyraźniej widać tu cykliczne zmiany tych stężeń. Ostatni rysunek \ref{fig:rev_brus_entropia} przedstawia entropię \(S(\tau)\) linią ciagłą oraz szybkość jej przyrostu \(\dv{S}{\tau}(\tau)\) linią przerywaną. Ważną cechą jest fakt, że \(\dv{S}{\tau}(\tau)>0\) dla dowolnego \(\tau\), co pokazuje, że nawet dla struktur dyssypatywnych entropia stale rośnie. Błędna interpretacja II Zasady Termodynamiki sugerowała by jednak jej spadek, ponieważ układ taki jest w pewnym sensie uporządkowany \cite{orlik_sily_w_przyrodzie}.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.8]{"brusselator_rev1; a=9, b=1, c=1, d=0.1".png}
 		\caption{Wykres fazowy dla a=9, b=1, c=1, d=0,1}
+		\label{fig:rev_brus_fazowy}
 	\end{figure}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.8]{"brusselator_rev2; a=9, b=1, c=1, d=0.1".png}
 		\caption{Zależność wielkości \(x\) oraz \(y\) od \(\tau\)}
+		\label{fig:rev_brus_xy_t}
 	\end{figure}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.8]{"brusselator_rev3; a=9, b=1, c=1, d=0.1".png}
 		\caption{Zależność wielkości \(S\) oraz \(\dv{S}{\tau}\) od \(\tau\)}
+		\label{fig:rev_brus_entropia}
 	\end{figure}
 	
 	\subsection{Porównanie metod numerycznych}
