@@ -1,5 +1,5 @@
 \documentclass[10pt, a4paper, twoside, onecolumn]{article}
-\usepackage[backend=biber, sorting=none]{biblatex}
+\usepackage[backend=biber, sorting=none, maxbibnames=99]{biblatex}
 \addbibresource{refs.bib}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -83,7 +83,8 @@
 	%Termodynamika równowagowe wymaga założenia pewnych wyidealizowanych założeń, 
 	%Termodynamika równowagowa oparta jest na kilku wyidealizowanych założeniach. Są nimi na przykład jednorodność parametrów intensywnych, maksimum entropii w układach izolowanych, minimum energii swobodnej Helmholtza w układach izotermiczno-izochorycznych, mininum entalpii swobodnej Gibbsa w układach izotermiczno-izobarycznych \cite{pudlik}. \par
 	Termodynamika równowagowa opisuje procesy, którym podlega dany układ, tak, jakby zachodziły w sposób kwazistatyczny. To oznacza, że proces jest ciągiem stanów równowagi, a więc na każdym etapie procesu układ jest w równowadze termodynamicznej. W takim opisie nie sposób zdefiniować prędkości procesu, gdyż sam jego czas zmierza do nieskończoności. Takie założenia nie zawsze są możliwe, przykładowo dla szybko zachodzących zmian jak w przypadku eksplozji, albo dla układów, w których interesuje nas nie tylko stan układu po osiągnięciu przez niego stanu równowagi, ale też jego zachowania podczas tej przemiany. W pracy zająłem się głównie reakcjami chemicznymi oscylacyjnymi, które są przykładem czasowej struktury dyssypatywnej. Struktur takich nie można rozpatrywać w ramach termodynamiki równowagowej, ponieważ są one typowe jedynie dla stanów nierównowagowych. \par
-	Celem pracy jest teoretyczna oraz numeryczna analiza oscylacyjnych reakcji chemicznych. W pracy zasymulowałem reakcje oscylacyjne, których mechanizmy opisane są odpowiednio modelami Lotki, Lotki-Volterry oraz bruskelatora. Przeprowadzono teoretyczną analizę stabilności w stanach stacjonarnych oraz sprawdzono jej prawdziwość przy użyciu symulacji. Numerycznie oszacowano produkcję entropii. 
+	Celem pracy jest teoretyczna oraz numeryczna analiza oscylacyjnych reakcji chemicznych. W pracy zasymulowałem reakcje oscylacyjne, których mechanizmy opisane są odpowiednio modelami Lotki, Lotki-Volterry oraz bruskelatora. Przeprowadziłem teoretyczną analizę stabilności tych modeli w stanach stacjonarnych oraz zastosowałem różne metody numeryczne, które pozwoliły mi zilustrować trajektorie generowane tymi modelami. Również numerycznie oszacowano produkcję entropii. 
+	%Przeprowadzono teoretyczną analizę stabilności w stanach stacjonarnych oraz sprawdzono jej prawdziwość przy użyciu symulacji. Numerycznie oszacowano produkcję entropii. 
 	
 	%Celem pracy jest pokazanie, że reakcje oscylacyjne są możliwe oraz że występuje w nich produkcja entropii.
 	%W pracy zasymulowałem reakcje oscylacyjne, których mechanizm opisany jest modelami Lotki, Lotki-Volterry oraz bruskelator. Przeprowadzono teoretyczną analizę stabilności w stanach stacjonarnych oraz sprawdzono jej prawdziwość przy użyciu symulacji. 
@@ -95,12 +96,7 @@
 	\begin{center}
 		\textbf{Strona 4}
 	\end{center}
-	\textbf{Usuwam zasadę minimalnej produkcji entropii, ponieważ nie znalazłem satysfakcjonującego wyprowadzenia} \\
-	\textbf{Pracuję nad opisem procesów sprzężonych}
-	%\blindtext \par
-	%\blindtext \par
-	%\blindtext \par
-	%\blindtext \par
+	Equilibrium thermodynamics is the study of system in which every process is treated as a quasistatic process. It means that at every point of that process the system is in equilibrium. Rate of change of any value is impossible to define because for equlibrium process to happen time has to approach infinity. Such assumptions cannot always be met. For example rapidly changing systems like explosions or for cases in which we do not care only about the state of the system in equilibrium after some process, but also its state during said process. 
 	\pagebreak
 	
 	\section*{Spis treści}
@@ -140,7 +136,7 @@
 	\section{Wstęp}
 	
 	Oscylacyjne reakcje chemiczne są przykładem procesu samoorganizacji w układach z reakcją chemiczną. W trakcie przebiegu takiej reakcji możemy zaobserwować oscylacyjne zmiany stężenia niektórych reagentów pojawiających się w czasie jej przebiegu. Zwykle są to przejściowe związki chemiczne, które pojawiają się w mechanizmie reakcji pomiędzy substratami a produktami. Zjawisko takiej samoorganizacji obserwujemy tylko wówczas, gdy układ z reakcją chemiczną jest w stanie dalekim od stanu równowagi termodynamicznej. \par
-	Te oscylacyjne zmiany stężenia niektórych reagentów w oscylacyjnej reakcji chemicznej mogą odbywać się jednocześnie i tak samo w całej objętości układu, wówczas mówimy o powstaniu czasowej struktury dyssypatywnej. Jeśli stężenia tych reagentów zmieniają się zarówno w czasie jak i przestrzeni, wówczas mówimy o czasowo-przestrzennych strukturach dyssypatywnych. W tym drugim przypadku zaobserwujemy falę stężenia reagenta, która będzie przemieszczać się poprzez całą objętość układu. W trzecim przypadku te zmiany stężeń dotyczą tylko objętości układu, wówczas mówimy o przestrzennej strukturze dyssypatywnej. Wraz z osiągnięciem równowagi termodynamicznej w układzie opisane struktury zanikają. 
+	Te oscylacyjne zmiany stężenia niektórych reagentów w oscylacyjnej reakcji chemicznej mogą odbywać się jednocześnie i tak samo w całej objętości układu, wówczas mówimy o powstaniu czasowej struktury dyssypatywnej. Jeśli stężenia tych reagentów zmieniają się zarówno w czasie jak i przestrzeni, wówczas mówimy o czasowo-przestrzennych strukturach dyssypatywnych. W tym drugim przypadku zaobserwujemy falę stężenia reagenta, która będzie przemieszczać się poprzez całą objętość układu. W trzecim przypadku zmiany stężeń dotyczą tylko objętości układu, są niezależne od czasu, wówczas mówimy o pojawieniu się przestrzennej struktury dyssypatywnej. Wraz z osiągnięciem równowagi termodynamicznej w układzie opisane struktury zanikają. 
 	
 	% Wkleić przypadki struktur
 	\begin{figure}[H]
@@ -161,11 +157,11 @@
 		\label{fig:struktury_dyssypatywne}
 	\end{figure}
 	
-	Na rysunkach \ref{fig:bz_disco} oraz \ref{fig:benard} przedstawiono przykładowe struktury dyssypatywne. Na rysunku \ref{fig:bz_disco} po lewej stronie możemy zobaczyć typowe fale chemiczne powstałe w trakcie przebiegu reakcji Biełousova-Żabotyńskiego. Natomiast po prawej stronie rysunku \ref{fig:bz_disco} mamy analogiczną strukturę, lecz stworzoną przez jednokomórkowe śluzowce Dictyostelium discoideum, które są w trakcie formowania swojej wielokomórkowej postaci - superorganizmu. Pokazuje to, że podobne wizualnie struktury występują zarówno w chemii jak i biologii. Na rysunku \ref{fig:benard} przedstawiono komórki B\'{e}narda, które występują w zjawisku konwekcji cieczy lepkiej po osiągnięciu różnicy temperatur między dwoma płytkami większej od pewnej temperatury krytycznej. Płytki są równoległe do siły ciążenia, a cieplejsza z nich jest pod tą zimniejszą. \par
-	Wyjaśnienie tych oscylacji z punktu widzenia termodynamiki wymaga wyjścia poza termodynamikę równowagową. Termodynamika równowagowa zajmuje się procesami, w których ignoruje się upływ czasu, a przemiana jest kwazistatyczna. Oznacza to, że każdy stan pośredni można traktować jako stan równowagi termodynamicznej. Model taki jest wystarczający do opisu większości procesów, %Można więc powiedzieć, że termodynamikę równowagową 
+	Na rysunkach \ref{fig:bz_disco} oraz \ref{fig:benard} przedstawiono przykładowe struktury dyssypatywne. Na rysunku \ref{fig:bz_disco} po lewej stronie możemy zobaczyć typowe fale chemiczne powstałe w trakcie przebiegu reakcji Biełousova-Żabotyńskiego. Natomiast po prawej stronie rysunku \ref{fig:bz_disco} mamy analogiczną strukturę, lecz stworzoną przez jednokomórkowe śluzowce Dictyostelium discoideum, które są w trakcie formowania swojej wielokomórkowej postaci - superorganizmu. Pokazuje to, że podobne wizualnie struktury występują zarówno w chemii jak i biologii. Na rysunku \ref{fig:benard} przedstawiono komórki B\'{e}narda, które występują w zjawisku konwekcji cieczy lepkiej po osiągnięciu różnicy temperatur między dwoma płytkami większej od pewnej temperatury krytycznej. Płytki są prostopadłe do siły ciążenia, a cieplejsza z nich jest pod tą zimniejszą. \par
+	Wyjaśnienie pojawienia się struktur dyssypatywnych z punktu widzenia termodynamiki wymaga wyjścia poza termodynamikę równowagową. Termodynamika równowagowa zajmuje się procesami, w których ignoruje się upływ czasu, a przemiana jest kwazistatyczna. Oznacza to, że każdy stan pośredni można traktować jako stan równowagi termodynamicznej. Model taki jest wystarczający do opisu większości procesów, %Można więc powiedzieć, że termodynamikę równowagową 
 	w których interesuje nas stan początkowy oraz końcowy. Jest jednak niewystarczający, jeżeli interesuje nas szybkość zachodzenia procesu. Dopiero termodynamika nierównowagowa jest teorią, która obejmuje to, co dzieje się w trakcie rzeczywistych przemian i jest ona konieczna do opisu reakcji oscylacyjnych. Pierwsze odkrycia tego typu przemian sięgają końca XIX wieku. Były to reakcje w układach heterogenicznych, jak na przykład pierścienie Lieseganga lub oscylacje prądu płynącego przez ogniwo galwaniczne. \par
 	% Wyjaśnienie tych zjawisk wymagało, aby układ byl heterogeniczny i było w zgodzie z entropią Boltzmanna, według której spontaniczna organizacja jest niemożliwa. \cite{orlik}
-	Pierwszy model teoretyczny został przedstawiony przez Alfreda Lotkę \cite{lotka}. W modelu tym zakłada się, że reakcje przebiegają w układzie homogenicznym. Przez długi czas uważano, że nie może on przedstawiać rzeczywistych reakcji, ponieważ ówcześnie interpretowano, że łamie II Zasadę Termodynamiki \cite{orlik_sily_w_przyrodzie}. Jednak w 1921r. na przykładzie reakcji Bray'a-Liebhafky'ego pokazano, że reakcje oscylacyjne w układach homogenicznych są możliwe. Jest to reakcja rozkładu nadtlenku wodoru katalizowana jodanem (V). Zachodzą reakcje oscylacyjne z naprzemienną dominacją dwóch reakcji \cite{orlik}:
+	Pierwszy model teoretyczny reakcji oscylacyjnej został przedstawiony przez Alfreda Lotkę \cite{lotka}. W modelu tym zakłada się, że reakcje przebiegają w układzie homogenicznym. Przez długi czas uważano, że nie może on przedstawiać rzeczywistych reakcji, ponieważ ówcześnie interpretowano, że łamie II Zasadę Termodynamiki \cite{orlik_sily_w_przyrodzie}. Jednak w 1921r. na przykładzie reakcji Bray'a-Liebhafky'ego pokazano, że reakcje oscylacyjne w układach homogenicznych są możliwe. Jest to reakcja rozkładu nadtlenku wodoru katalizowana jodanem (V). Zachodzą reakcje oscylacyjne z naprzemienną dominacją dwóch reakcji \cite{orlik}:
 	\begin{center}
 		\ce{5H2O2 + 2H+ +2IO3- -> I2 + 5O2 + 6H2O}
 	\end{center}
@@ -190,10 +186,26 @@
 	\end{center}
 	% Została ona odkryta jako nieorganiczny analog cyklu Krebsa \cite{belousov_hist}. 
 	W późniejszym okresie znaleziono również inne reagenty, dla których zachodzi reakcja analogiczna. Jedną z możliwych modyfikacji tej reakcji jest zamiana jonów \ce{Ce^3+} na \ce{Fe(o-phen)3^2+}, zwanych ferroiną. Jej utleniona forma ma wzór \ce{Fe(o-phen)3^3+}. Podmiana ta zmienia efekty wizualne w czasie przebiegu reakcji oscylacyjnej. Zamiast oscylacji między bezbarwnym i żółtym roztworem występuje oscylacja między pomarańczowym oraz niebieskim \cite{orlik}. Jeszcze innym takim katalizatorem może być związek rutenu \ce{Ru(bpy)3^2+} wraz ze swoją formą utlenioną \ce{Ru(bpy)3^3+}. Oscylacje stosunku stężeń tych katalizatorów mogą się też objawiać w inny sposób niż zmiana koloru. \cite{osypova}\par
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{"ferroine".png}
+			\caption{\ce{Fe(o-phen)3^2+}\cite{sigmaaldrich}}
+		\end{subfigure}
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{"ru(bpy)3".png}
+			\caption{\ce{Ru(bpy)3^2+}\cite{sigmaaldrich}}
+		\end{subfigure}
+		\caption{Przykładowe katalizatory w reakcji Biełousowa-Żabotyńskiego}
+	\end{figure}
 	Odkrycie reakcji oscylacyjnych przyczyniło się do rozwoju termodynamiki nierównowagowej, a w konsekwencji do użycia jej aparatu teoretycznego do opisu procesów życiowych. 
 	Reakcja Biełousowa-Żabotyńskiego traktowana jest czasem jako analog cyklu Krebsa, będącego głównym źródłem energii organizmów tlenowych. Analogia ta dotyczy mechanizmu reakcji, w których występuje pętla sprzężenia zwrotnego, to oznacza, że produkt pierwszej reakcji jest substratem kolejnej, aż do osiagniecia produktu, który jest substratem tej pierwszej \cite{belousov_hist, stryer}. W cyklu Krebsa mogą również wystąpić oscylacje tak jak w reakcji Biełousowa-Żabotyńskiego \cite{krebs_oscillations}. \par
 	Niepoprawna interpretacja II Zasady Termodynamiki może doprowadzić do wniosku, że powstanie opisanych wyżej złożonych struktur z molekularnego chaosu powinno być niemożliwe. Tak rzeczywiście się dzieje, ale tylko dla układów izolowanych. Natomiast w przypadku innych układów, które oddziałują z otoczeniem samoorganizacja materii jest możliwa. Przykładem są procesy zachodzące w układach biologicznych, w którcyh interakcja z otoczeniem jest kluczowa. %Wyjaśnienie takie błędnie wykorzystuje tę zasadę ignorując fakt, że układy biologiczne jak i cała Ziemia nie są układami izolowanymi. 
 	Wspomniana wyżej błędna interpretacja drugiej zasady termodynamiki polega na ekstrapolowaniu wyników z układów izolowanych do wszystkich innych.
+	
+	Opisane wyżej struktury dyssypatywne są przykładem samoorganizacji materii, która może się pojawić w warunkach dalekich od stanu równowagi termodynamicznej. Samoorganizująca się materia oddziałując z otoczeniem musi w. Przykładami są tutaj układy biologiczne, dla których
 	
 	\subsection{Produkcja entropii w układach nierównowagowych}
 	Wszystkie procesy rzeczywiste podlegają drugiej zasadzie termodynamiki, która określa różniczkową zmianę entropii \(\dd{S}\), w danych procesie samorzutnym nierównością \cite{buchowski}:
@@ -361,7 +373,7 @@
 	\begin{equation}
 		\dv{n_{i}}{t}=-\div{\vb{J}_{i}}+\dv{n_{i;reak}}{t}. \label{dod A: 7}
 	\end{equation}
-	Różniczkowa zmiana liczby moli $i$-tego składnika \(\dd{n_{i;reak}}\) możemy zapisać poprzez liczbę postępu reakcji $\xi$ oraz współczynnik stechiometryczny $\nu_{i}$. Liczba postępu reakcji jest zdefiniowana jako \(\dd{\xi}=\frac{\dd{n_{i;reak}}}{\nu_{i}}\), a roszerzając to do wielu równoległych reakcji przebiegających w roztworze otrzymujemy \(\dd{n_{i;reak}}=\sum\limits_{r}\nu_{ir}\dd{\xi_{r}}\). Zależności tą podstawiamy do równania \eqref{dod A: 7} i otrzymujemy:
+	Różniczkowa zmiana liczby moli $i$-tego składnika \(\dd{n_{i;reak}}\) możemy zapisać poprzez liczbę postępu reakcji $\xi_{r}$ oraz współczynnik stechiometryczny $\nu_{i}$. Infinitezymalna zmiana liczby postępu reakcji jest zdefiniowana jako \(\dd{\xi_{r}}=\frac{\dd{n_{ir;reak}}}{\nu_{ir}}\), a roszerzając to do wielu równoległych reakcji przebiegających w roztworze otrzymujemy \(\dd{n_{i;reak}}=\sum\limits_{r}\nu_{ir}\dd{\xi_{r}}\). Zależności tą podstawiamy do równania \eqref{dod A: 7} i otrzymujemy:
 	\begin{equation}
 		\dv{n_{i}}{t}=-\div{\vb{J}_{i}}+\sum_{r}\nu_{ir}\dv{\xi_{r}}{t}. \label{dod A: 8}
 	\end{equation}
@@ -1054,7 +1066,7 @@
 			\caption{Stabilne ognisko; Model Lotki-Volterry, a=1}
 			\label{fig:stabilne_ognisko_lotka_volterra}
 		\end{figure}
-	Wykresy fazowe na rysunkach \ref{fig:stabilny_wezel}, \ref{fig:stabilne_ognisko} oraz \ref{fig:niestabilne_ognisko} przedstawiają najważniejsze przypadki dla modelu brukselator. Wykorzystano odpowiednio stałe: \(a=0,5; b=4\), \(a=3; b=4\) oraz \(a=7; b=4\). Parametry te dobrano tak, aby należały one do przedziałów podanych w tabeli \ref{tab:warunki_bruskelator}. \par
+	Wykresy fazowe na rysunkach \ref{fig:stabilny_wezel}, \ref{fig:stabilne_ognisko} oraz \ref{fig:niestabilne_ognisko} przedstawiają przykładowe trajektorie dla najważniejszych przypadków modelu brukselator. Wykorzystano odpowiednio stałe: \(a=0,5; b=4\), \(a=3; b=4\) oraz \(a=7; b=4\). Parametry te dobrano tak, aby należały one do przedziałów podanych w tabeli \ref{tab:warunki_bruskelator}. \par
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.8]{"brusselator; a=0.5; b=4".png}
@@ -1072,7 +1084,7 @@
 		\includegraphics[scale=0.8]{"brusselator; a=7; b=4".png}
 		\caption{Niestabilne ognisko; Model bruskelator, a=7, b=4}
 		\label{fig:niestabilne_ognisko}
-	\end{figure}\newpage
+	\end{figure}
 	Trajektorie zachowują się w sposób oczekiwany według tabeli \ref{tab:warunki_bruskelator} i literatury, co dowodzi poprawnego działania stworzonego programu, którego kod znajduje się w dodatku C na stronie \pageref{sec: dodatek C} \cite{orlik}. Na rysunku \ref{fig:niestabilne_ognisko} zachodzi jednak coś na pierwszy rzut oka sprzecznego z analizą układu zlinearyzowanego według warunku "Niestabilne ognisko" w tabeli \ref{tab:warunki_stabilnosci}. Układ osiąga stabilny cykl graniczny. Jest to niemożliwe w przypadku układów liniowych do których je sprowadziliśmy poprzez linearyzację, jednak linearyzacja jest dobrym przybliżeniem jedynie w najbliższym otoczeniu punktu stacjonarnego, cykl graniczny widoczny na rysunku \ref{fig:niestabilne_ognisko} jest więc przejawem nieliniowości układu równań modelu bruskelator \cite{orlik}. Istnieje na jednak twierdzenie, które wyjaśnia to zachowanie, jest to twierdzenie Poincar\'{e}go-Bendixsona. \par
 	\begin{theorem}[\textbf{Poincar\'{e}go-Bendixsona}]
 		"Jeśli w przestrzeni fazowej będącej podzbiorem płaszczyzny \(\mathbb{R}^{2}\) orbita zawiera co najmniej jeden swój punkt graniczny, to jest ona punktem krytycznym albo orbitą zamkniętą" \cite{palczewski}
@@ -1090,7 +1102,7 @@
 	\begin{equation}
 		A = RT\ln(K) - RT\ln(\prod_{i}c_{i}^{\nu_{i}}), 
 	\end{equation}
-	gdzie \(K\) to stała równowagi. W kinetyce chemicznej jest ona także równa \(K = \frac{k_{1}}{k_{-1}}\) dla reakcji \ce{X <=>[k_{1}][K_{-1}] Y}. W przypadku rozważanych powyżej reakcji \(k_{-1}=0\), występuje więc dzielenie przez \(0\). Można jedynie stwierdzić, że w granicy \(A\) jest dodatnie dla każdych stężeń reagentów \(c_{i}>0\). Stąd jako że reakcja przebiega w powyższych przykładach w stronę prawą to \(\dd{\xi}>0\), a więc ze wzoru \eqref{de_donder_ogolny} można jedynie stwierdzić, że:
+	gdzie \(K\) to stała równowagi reakcji, \(R\) to uniwersalna stała gazowa, \(T\) - temperatura bezwzględna, \(c_{i}\) - stężenie \(i\)-tego składnika, a \(\nu_{i}\) to współczynnik stechiometryczny reagenta \(i\) (dodatni dla produktów po prawej stronie, ujemny dla substratów po lewej). W kinetyce chemicznej stała równowagi jest równa \(K = \frac{k_{1}}{k_{-1}}\) dla reakcji \ce{X <=>[k_{1}][K_{-1}] Y}. W przypadku rozważanych powyżej reakcji \(k_{-1}=0\), występuje więc dzielenie przez \(0\). Można jedynie stwierdzić, że w granicy \(A\) jest dodatnie dla każdych stężeń reagentów \(c_{i}>0\). Stąd jako że reakcja przebiega w powyższych przykładach w stronę prawą to \(\dd{\xi}>0\), a więc ze wzoru \eqref{de_donder_ogolny} można jedynie stwierdzić, że:
 	\begin{equation}
 		\dd_{i}S=\frac{1}{T}\sum_{r}A_{r}\dd{\xi_{r}}>0.
 	\end{equation}
@@ -1177,7 +1189,7 @@
 	\begin{equation}
 		A = A_{0} - RT\ln(\prod_{i}c_{i}^{\nu_{i}}), 
 	\end{equation}
-	gdzie \(R\) to uniwersalna stała gazowa, \(T\) - temperatura bezwzględna, \(c_{i}\) - stężenie \(i\)-tego składnika, a \(\nu_{i}\) to współczynnik stechiometryczny reagenta \(i\) (dodatni dla produktów po prawej stronie, ujemny dla substratów po lewej). \(RT\) jest jedynie stałą i na potrzeby symulacji przyjąłem \(RT=1\). Otrzymujemy dla każdej z reakcji odpowiednio:
+	\(RT\) jest jedynie stałą i na potrzeby symulacji przyjąłem \(RT=1\). Otrzymujemy dla każdej z reakcji odpowiednio:
 	\begin{align}
 		1: & A_{1} = \ln(\frac{1}{cx}) \\
 		2: & A_{2} = \ln(\frac{by}{dx}) \\
