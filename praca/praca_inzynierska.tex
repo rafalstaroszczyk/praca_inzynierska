@@ -82,7 +82,7 @@
 	\end{center}
 	%Termodynamika równowagowe wymaga założenia pewnych wyidealizowanych założeń, 
 	%Termodynamika równowagowa oparta jest na kilku wyidealizowanych założeniach. Są nimi na przykład jednorodność parametrów intensywnych, maksimum entropii w układach izolowanych, minimum energii swobodnej Helmholtza w układach izotermiczno-izochorycznych, mininum entalpii swobodnej Gibbsa w układach izotermiczno-izobarycznych \cite{pudlik}. \par
-	Termodynamika równowagowa opisuje procesy, którym podlega dany układ, tak, jakby zachodziły w sposób kwazistatyczny. To oznacza, że proces jest ciągiem stanów równowagi, a więc na każdym etapie procesu układ jest w równowadze termodynamicznej. W takim opisie nie sposób zdefiniować prędkości procesu, gdyż sam jego czas zmierza do nieskończoności. Takie założenia nie zawsze są możliwe, przykładowo dla szybko zachodzących zmian jak w przypadku eksplozji, albo dla układów, w których interesuje nas nie tylko stan układu po osiągnięciu przez niego stanu równowagi, ale też jego zachowania podczas tej przemiany. W pracy zająłem się głównie reakcjami chemicznymi oscylacyjnymi, które są przykładem czasowej struktury dyssypatywnej. Struktur takich nie można rozpatrywać w ramach termodynamiki równowagowej, ponieważ są one typowe jedynie dla stanów nierównowagowych. \par
+	Termodynamika równowagowa opisuje procesy, którym podlega dany układ, tak, jakby zachodziły w sposób kwazistatyczny. To oznacza, że proces jest ciągiem stanów równowagi, a więc na każdym etapie procesu układ jest w równowadze termodynamicznej. W takim opisie nie sposób zdefiniować prędkości procesu, gdyż sam jego czas przebiegu zmierza do nieskończoności. Takie założenia nie zawsze są możliwe, przykładowo dla szybko zachodzących zmian jak w przypadku eksplozji, albo dla układów, w których interesuje nas nie tylko stan układu po osiągnięciu przez niego stanu równowagi, ale też jego zachowania podczas tej przemiany. W pracy zająłem się głównie reakcjami chemicznymi oscylacyjnymi, które są przykładem czasowej struktury dyssypatywnej. Struktur takich nie można rozpatrywać w ramach termodynamiki równowagowej, ponieważ są one typowe jedynie dla stanów nierównowagowych. \par
 	Celem pracy jest teoretyczna oraz numeryczna analiza oscylacyjnych reakcji chemicznych. W pracy zasymulowałem reakcje oscylacyjne, których mechanizmy opisane są odpowiednio modelami Lotki, Lotki-Volterry oraz bruskelatora. Przeprowadziłem teoretyczną analizę stabilności tych modeli w stanach stacjonarnych oraz zastosowałem różne metody numeryczne, które pozwoliły mi zilustrować trajektorie generowane tymi modelami. Również numerycznie oszacowano produkcję entropii. 
 	%Przeprowadzono teoretyczną analizę stabilności w stanach stacjonarnych oraz sprawdzono jej prawdziwość przy użyciu symulacji. Numerycznie oszacowano produkcję entropii. 
 	
@@ -160,9 +160,9 @@
 	
 	Na rysunkach \ref{fig:bz_disco} oraz \ref{fig:benard} przedstawiono przykładowe struktury dyssypatywne. Na rysunku \ref{fig:bz_disco} po lewej stronie możemy zobaczyć typowe fale chemiczne powstałe w trakcie przebiegu reakcji Biełousova-Żabotyńskiego. Natomiast po prawej stronie rysunku \ref{fig:bz_disco} mamy analogiczną strukturę, lecz stworzoną przez jednokomórkowe śluzowce Dictyostelium discoideum, które są w trakcie formowania swojej wielokomórkowej postaci - superorganizmu. Pokazuje to, że podobne wizualnie struktury występują zarówno w chemii jak i biologii. Na rysunku \ref{fig:benard} przedstawiono komórki B\'{e}narda, które występują w zjawisku konwekcji cieczy lepkiej po osiągnięciu różnicy temperatur między dwoma płytkami większej od pewnej temperatury krytycznej. Płytki są prostopadłe do siły ciążenia, a cieplejsza z nich jest pod tą zimniejszą. \par
 	Wyjaśnienie pojawienia się struktur dyssypatywnych z punktu widzenia termodynamiki wymaga wyjścia poza termodynamikę równowagową. Termodynamika równowagowa zajmuje się procesami, w których ignoruje się upływ czasu, a przemiana jest kwazistatyczna. Oznacza to, że każdy stan pośredni można traktować jako stan równowagi termodynamicznej. Model taki jest wystarczający do opisu większości procesów, %Można więc powiedzieć, że termodynamikę równowagową 
-	w których interesuje nas stan początkowy oraz końcowy. Jest jednak niewystarczający, jeżeli interesuje nas szybkość zachodzenia procesu. Dopiero termodynamika nierównowagowa jest teorią, która obejmuje to, co dzieje się w trakcie rzeczywistych przemian i jest ona konieczna do opisu reakcji oscylacyjnych. Pierwsze odkrycia tego typu przemian sięgają końca XIX wieku. Były to reakcje w układach heterogenicznych, jak na przykład pierścienie Lieseganga lub oscylacje prądu płynącego przez ogniwo galwaniczne. \par
+	w których interesuje nas stan początkowy oraz końcowy. Jest jednak niewystarczający, jeżeli interesuje nas szybkość zachodzenia procesu. Dopiero termodynamika nierównowagowa jest teorią, która obejmuje to, co dzieje się w trakcie rzeczywistych przemian i jest ona konieczna do opisu reakcji oscylacyjnych. Pierwsze odkrycia tego typu przemian sięgają końca XIX wieku. Były to reakcje w układach heterogenicznych, jak na przykład pierścienie Lieseganga lub oscylacje prądu płynącego przez ogniwo galwaniczne \cite{orlik}. \par
 	% Wyjaśnienie tych zjawisk wymagało, aby układ byl heterogeniczny i było w zgodzie z entropią Boltzmanna, według której spontaniczna organizacja jest niemożliwa. \cite{orlik}
-	Pierwszy model teoretyczny reakcji oscylacyjnej został przedstawiony przez Alfreda Lotkę \cite{lotka}. W modelu tym zakłada się, że reakcje przebiegają w układzie homogenicznym. Przez długi czas uważano, że nie może on przedstawiać rzeczywistych reakcji, ponieważ ówcześnie interpretowano, że łamie II Zasadę Termodynamiki \cite{orlik_sily_w_przyrodzie}. Jednak w 1921r. na przykładzie reakcji Bray'a-Liebhafky'ego pokazano, że reakcje oscylacyjne w układach homogenicznych są możliwe. Jest to reakcja rozkładu nadtlenku wodoru katalizowana jodanem (V). Zachodzą reakcje oscylacyjne z naprzemienną dominacją dwóch reakcji \cite{orlik}:
+	Pierwszy model teoretyczny reakcji oscylacyjnej został przedstawiony przez Alfreda Lotkę \cite{lotka}. W modelu tym zakłada się, że reakcje przebiegają w układzie homogenicznym. Przez długi czas uważano, że nie może on przedstawiać rzeczywistych reakcji, ponieważ ówcześnie interpretowano, że łamie II Zasadę Termodynamiki \cite{orlik_sily_w_przyrodzie}. Jednak w 1921r. na przykładzie reakcji Bray'a-Liebhafky'ego pokazano, że reakcje oscylacyjne w układach homogenicznych są możliwe. Jest to reakcja rozkładu nadtlenku wodoru katalizowana jodanem (V). W trakcie jej przebiegu obserwujemy naprzemienną dominację dwóch reakcji \cite{orlik}:
 	\begin{center}
 		\ce{5H2O2 + 2H+ +2IO3- -> I2 + 5O2 + 6H2O}
 	\end{center}
@@ -186,25 +186,27 @@
 		\ce{2BrO3- + 3CH2(COOH)2 + 2H+ ->[kat] 2BrCH(COOH)2 + 4H2O + 3CO2}.
 	\end{center}
 	% Została ona odkryta jako nieorganiczny analog cyklu Krebsa \cite{belousov_hist}. 
-	W późniejszym okresie znaleziono również inne reagenty, dla których zachodzi reakcja analogiczna. Jedną z możliwych modyfikacji tej reakcji jest zamiana jonów \ce{Ce^3+} na \ce{Fe(o-phen)3^2+}, zwanych ferroiną. Jej utleniona forma ma wzór \ce{Fe(o-phen)3^3+}. Podmiana ta zmienia efekty wizualne w czasie przebiegu reakcji oscylacyjnej. Zamiast oscylacji między bezbarwnym i żółtym roztworem występuje oscylacja między pomarańczowym oraz niebieskim \cite{orlik}. Jeszcze innym takim katalizatorem może być związek rutenu \ce{Ru(bpy)3^2+} wraz ze swoją formą utlenioną \ce{Ru(bpy)3^3+}. Oscylacje stosunku stężeń tych katalizatorów mogą się też objawiać w inny sposób niż zmiana koloru. \cite{osypova}\par
+	W późniejszym okresie znaleziono również inne reagenty, dla których zachodzi reakcja analogiczna. Jedną z możliwych modyfikacji tej reakcji jest zamiana jonów \ce{Ce^3+} na \ce{Fe(o-phen)3^2+}, zwanych ferroiną, której wzór strukturalny jest umieszczony na rysunku \ref{fig:ferroine}. Jej utleniona forma ma wzór \ce{Fe(o-phen)3^3+}. Podmiana ta zmienia efekty wizualne w czasie przebiegu reakcji oscylacyjnej. Zamiast oscylacji między bezbarwnym i żółtym roztworem występuje oscylacja między pomarańczowym oraz niebieskim \cite{orlik}. Zamiast ferroiny można użyć również związku rutenu \ce{Ru(bpy)3^2+}, którego formę utlenioną zapiszemy wzorem \ce{Ru(bpy)3^3+}. Wzór strukturalny \ce{Ru(bpy)3^2+} przedstawiono na rysunku \ref{fig:rubpy}. Oscylacje stosunku stężeń tych katalizatorów mogą się też objawiać w inny sposób niż zmiana koloru. \cite{osypova}\par
 	\begin{figure}[H]
 		\centering
 		\begin{subfigure}{0.45\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{"ferroine".png}
 			\caption{\ce{Fe(o-phen)3^2+}\cite{sigmaaldrich}}
+			\label{fig:ferroine}
 		\end{subfigure}
 		\begin{subfigure}{0.45\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{"ru(bpy)3".png}
 			\caption{\ce{Ru(bpy)3^2+}\cite{sigmaaldrich}}
+			\label{fig:rubpy}
 		\end{subfigure}
 		\caption{Przykładowe katalizatory w reakcji Biełousowa-Żabotyńskiego}
 	\end{figure}
 	Odkrycie reakcji oscylacyjnych przyczyniło się do rozwoju termodynamiki nierównowagowej, a w konsekwencji do użycia jej aparatu teoretycznego do opisu procesów życiowych. 
 	Reakcja Biełousowa-Żabotyńskiego traktowana jest czasem jako analog cyklu Krebsa, będącego głównym źródłem energii organizmów tlenowych. Analogia ta dotyczy mechanizmu reakcji, w których występuje pętla sprzężenia zwrotnego, to oznacza, że produkt pierwszej reakcji jest substratem kolejnej, aż do osiagniecia produktu, który jest substratem tej pierwszej \cite{belousov_hist, stryer}. W cyklu Krebsa mogą również wystąpić oscylacje tak jak w reakcji Biełousowa-Żabotyńskiego \cite{krebs_oscillations}. \par
 	Opisane wyżej struktury dyssypatywne są przykładem samoorganizacji materii, która może się pojawić w warunkach dalekich od stanu równowagi termodynamicznej. Niepoprawna interpretacja II Zasady Termodynamiki może doprowadzić do wniosku, że powstanie opisanych wyżej złożonych struktur z molekularnego chaosu powinno być niemożliwe. Tak rzeczywiście się dzieje, ale tylko dla układów izolowanych. Natomiast w przypadku innych układów, które oddziałują z otoczeniem samoorganizacja materii jest możliwa. Przykładem są procesy zachodzące w układach biologicznych, w którcyh interakcja z otoczeniem jest kluczowa. %Wyjaśnienie takie błędnie wykorzystuje tę zasadę ignorując fakt, że układy biologiczne jak i cała Ziemia nie są układami izolowanymi. 
-	Wspomniana wyżej błędna interpretacja drugiej zasady termodynamiki polega na ekstrapolowaniu wyników z układów izolowanych do wszystkich innych.
+	Wspomniana wyżej błędna interpretacja drugiej zasady termodynamiki polega na ekstrapolowaniu wyników z układów izolowanych i przemian równowagowych do wszystkich innych przemian.
 	
 	%Opisane wyżej struktury dyssypatywne są przykładem samoorganizacji materii, która może się pojawić w warunkach dalekich od stanu równowagi termodynamicznej. Samoorganizująca się materia oddziałując z otoczeniem musi w. Przykładami są tutaj układy biologiczne, dla których
 	
@@ -217,7 +219,7 @@
 	\begin{equation}\label{entropia_uklad_otoczenie}
 		\dd{S}=\dd{S_{uk}}+\dd{S_{ot}}.
 	\end{equation}
-	W przyapadku układów izolowanych \(\dd{S}=\dd{S_{uk}}\), 
+	W przypadku układów izolowanych \(\dd{S}=\dd{S_{uk}}\), 
 	więc w układach izolowanych entropia zawsze rośnie, a zatem spontaniczne uporządkowanie stabilnych struktur nie jest możliwe. \par
 	%Druga zasada termodynamiki dana wzorem \eqref{II_Zasada_Termodynamiki} rozstrzyga czy dany proces jest możliwy. 
 	Aby nadać tej zasadzie ilościowy charakter, w której zastąpimy nierówność równością, wprowadza się pojęcie produkcji entropii, które przeanalizujemy najpierw z punktu widzenia układu. W przypadku układu zamkniętego, w którym przebiega proces samorzutny drugą zasadę termodynamiki zapiszemy następującą nierównością \cite{orlik, pigon1, jaworski}: 
@@ -282,7 +284,7 @@
 	% Dla każdego układu produkcja entropii jest dodatnia. Wynika z tego argumentu także, że jest to prawdziwe dla każdego podukładu należącego do danego układu niezależnie od jego wielkości. Zasada ta ma więc charakter lokalny. 
 	\subsection{Szybkość reakcji chemicznej}
 	Reakcje chemiczne można podzielić na dwie kategorie. Pierwsza z nich to reakcje homogeniczne, czyli takie zachodzące w jednej fazie. Druga to reakcje heterogeniczne, czyli reakcje zachodzące między związkami chemicznymi w różnych fazach i na granicy między nimi. Szybkość reakcji heterogenicznych jest trudniejsza do opisania, ponieważ zależy od szybkości dyfuzji, powierzchni rozdzielenia i innych czynników. %do uzupelnienia
-	Szybkość reakcji homogenicznej w stałej temperaturze jest funkcją stężeń reagentów. Można ją wyrazić poprzez szybkość zmiany stężenia pojedynczego reagenta $c_{i}$ dla stałej objętości jako: 
+	Szybkość reakcji homogenicznej w stałej temperaturze jest funkcją stężeń reagentów. Można ją wyrazić poprzez szybkość zmiany stężenia molowego pojedynczego reagenta $c_{i}$ dla stałej objętości jako: 
 	\begin{equation}\label{szybkosc_reakcji_def}
 		v=\frac{1}{\nu_i}\dv{c_i}{t}.
 	\end{equation}
@@ -291,14 +293,14 @@
 		%v=\frac{1}{\nu_{i}}\dv{c_{i}}{t} \\
 		\dd{c_{i}}=\frac{\dd{n_{i}}}{V}
 	\end{equation}
-	gdzie \(\nu_{i}\) to współczynnik stechiometryczny (ujemny dla substratów, a dodatni dla produktów), \(c_{i}\) to stężenia molowe składników. \par
+	gdzie \(\nu_{i}\) to współczynnik stechiometryczny (ujemny dla substratów, a dodatni dla produktów). \par
 	Można tak zdefiniowaną szybkość reakcji powiązać z różniczkową zmianą liczby postępu reakcji \cite{atkins_por}:
 	\begin{equation}
-		\dd{\xi}=\frac{\dd{n_{i}}}{\nu_{i}},
+		\dd{\xi_{r}}=\frac{\dd{n_{ir}}}{\nu_{i}},
 	\end{equation}
-	gdzie \(\xi\) to liczba postępu reakcji i jest niezależna od wyboru składnika. Wstawiając tą zależność do \eqref{szybkosc_reakcji_def} otrzymujemy: 
+	gdzie \(\xi_{r}\) to liczba postępu reakcji i jest niezależna od wyboru składnika. Wstawiając tą zależność do \eqref{szybkosc_reakcji_def} otrzymujemy: 
 	\begin{equation}
-		v=\frac{1}{V}\dv{\xi}{t}.
+		v=\frac{1}{V}\dv{\xi_{r}}{t}.
 	\end{equation}
 	%Dla reacji chemicznej w postaci ogólnej
 	Szybkość reakcji chemicznej dla reakcji zapisanej wzorem:
@@ -316,7 +318,7 @@
 	\end{equation}
 	Ustalone empirycznie zależności pomiędzy szybkością reakcji, a stężeniami reagentów są podstawą do tworzenia modeli zachodzenia reakcji chemicznych, ich kinetycznego opisu. Przykładowe reakcje i ich szybkości reakcji zostały przedstawione w Dodatku A na stronie \pageref{sec: dodatek A}. Według równania \eqref{szybkosc reakcji} szybkość reakcji można zmienić przez zmianę stężenia reagentów, które w niej uczestniczą lub zmianę stałej szybkości reakcji. \par 
 	%Katalizatorami nazywamy związki zwiększające stałą reakcji sumarycznej, natomiast \linebreak związki zmniejszające katalizatorem ujemnym lub inhibitorem. Mają one działanie selektywne, a więc zwiększają szybkość tylko dla pewnej z wielu możliwych reakcji chemicznych dla danych substratów. Reakcja katalizowana przebiega więc innym mechanizmem niż niekatalizowana. Mechanizmem reakcji chemicznej nazywamy ciąg reakcji elementarnych wyjaśniający dokładny przebieg tej reakcji. 
-	Reakcje chemiczne przebiegają według tak zwanego mechanizmu reakcji chemicznej. Opisuje on wszystkie jej etapy. Uwzględnia on procesy, które przebiegają w trakcie reakcji wraz z pojawieniem się i znikaniem reagenta pośredniego. Reakcja katalizowana przebiega jednak innym mechanizmem niż niekatalizowana, choć substraty i produkty obu są identyczne. Katalizator, otwierając nową drogę przemiany, powoduje to, że szybciej i wydajniej otrzymujemy produkty. Katalizatory nie występują w reakcji sumarycznej, ale występują w reakcjach elementarnych. Podobnie jak reakcje możemy podzielić katalizę na homogeniczną (zachodzącej w jednej fazie) oraz heterogeniczną (zachodząca na granicy faz). Szczególnym rodzajem reakcji katalitycznych jest autokataliza, w której produkt reakcji bierze w niej udział, przez co zwiększa jej szybkość \cite{pigon1, atkins_por}. 
+	Reakcje chemiczne przebiegają według tak zwanego mechanizmu reakcji chemicznej. Opisuje on wszystkie jej etapy. Uwzględnia on procesy, które przebiegają w trakcie reakcji wraz z pojawieniem się i znikaniem reagenta pośredniego. Reakcja katalizowana przebiega innym mechanizmem niż niekatalizowana, choć substraty i produkty obu są identyczne. Katalizator, otwierając nową drogę przemiany, powoduje to, że szybciej i wydajniej otrzymujemy produkty. Katalizatory nie występują w reakcji sumarycznej, ale występują w reakcjach elementarnych. Podobnie jak reakcje możemy podzielić katalizę na homogeniczną (zachodzącej w jednej fazie) oraz heterogeniczną (zachodząca na granicy faz). Szczególnym rodzajem reakcji katalitycznych jest autokataliza, w której produkt reakcji bierze w niej udział, przez co zwiększa jej szybkość \cite{pigon1, atkins_por}. 
 	%Przykładem takiej reakcji jest hydroliza estrów w środowisku kwasowym: 
 	%\begin{center}
 	%	\ce{RCOOC2H5 + 2H2O ->[H3O+] RCOO- + C2H5OH + H3O+}
@@ -358,7 +360,7 @@
 	\begin{equation}
 		\dv{S}{t}=\frac{1}{T}\dv{U}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}. \label{dod A: 3}
 	\end{equation}
-	Jeżeli zmiany te odniesiemy do elementarnej ścianki \(\dd{\vb{a}}\), wówczas relację gęstości strumienia opiszemy równaniem:
+	Jeżeli zmiany te odniesiemy do elementarnej ścianki \(\dd{\vb{a}}\), wówczas relacje pomiędzy gęstością strumienia entropii \(\vb{J}_{S}\), gęstością strumienia energii wewnętrznej \(\vb{J}_{U}\) oraz gęstością strumienia liczby moli \(\vb{J}_{i}\) opiszemy równaniem:
 	\begin{equation}
 		\vb{J}_{S}=\frac{1}{T}\vb{J}_{U}-\sum_{i}\frac{\mu_{i}}{T}\vb{J}_{i}. \label{dod A: 4}
 	\end{equation}
@@ -424,11 +426,11 @@
 	\end{equation}
 	gdzie symbolami \(J\), \(J^{eq}\) oznaczono odpowiednio natężenie przepływów termodynamicznych oraz to natężenie w stanie równowagi, natomiast \(X\), \(X^{eq}\) oznaczają odpowiednio bodziec termodynamiczny i bodziec w stanie równowagi.
 	
-	Wiadomo, że \(J_{i}^{eq}=0\) oraz \(X_{j}^{eq}=0\), ponieważ jest to stan równowagi. W stanach zbliżonych do stanu równowagi można ograniczyć równanie \eqref{ogolne_natezenie} do następującego wyrażenia: 
+	W stanie równowagi \(J_{i}^{eq}=0\) oraz \(X_{j}^{eq}=0\). W stanach zbliżonych do tego stanu można ograniczyć równanie \eqref{ogolne_natezenie} do następującego wyrażenia: 
 	\begin{equation}\label{natezenie_liniowe}
 		J_{i}=\sum_{j=1}^{n}\left[\pdv{J_{i}}{X_{j}}X_{j}\right],
 	\end{equation}
-	które nazywane jest równaniem fenomenologicznym. Zasada symetrii Curie-Prigogine'a mówi, że przepływy i siły termodynamiczne muszą mieć taki sam charakter tensorowy \cite{orlik}.
+	które nazywane jest równaniem fenomenologicznym. W odniesieniu do równania \eqref{natezenie_liniowe} trzeba wspomnieć, że stosuje się tutaj zasadę symetrii Curie-Prigogine'a, która mówi, że przepływy i siły termodynamiczne muszą mieć taki sam charakter tensorowy \cite{orlik}.
 	% na przykład dyfuzja (wektorowy) i przepływ ciepła (wektorowy) jest dozwolony, jednak dyfuzja (wektorowy)  oraz reakcja chemiczna (skalarny) jest niedozwolony. Zasada ta może być jednak złamana w przypadku procesów nieliniowych . \par
 	Zapiszmy \(\frac{\partial J_{i}}{\partial X_{j}}\) jako \(L_{ij}\)
 	\begin{equation}
@@ -492,7 +494,7 @@
 	\end{equation}
 	gdy rozpatrujemy reakcje typu: 
 	\begin{center}
-		\ce{aA + bB + ... + jJ ->[k] kK + lL + ...}
+		\ce{aA + bB + ... + jJ ->[k] kK + lL + ... zZ}
 	\end{center}\par
 	%\subsubsection{Model Lotki}
 	Jako pierwszy przeanalizujemy model Lotki: 
@@ -860,7 +862,7 @@
 			\end{tabularx}}
 			\\ \cline{1-4}
 		\end{tabularx}
-		\caption{Warunki stabilności dla liniowego układu dwóch równań różniczkowych}
+		\caption{Warunki stabilności dla liniowego układu dwóch równań różniczkowych. W pierwszej i trzeciej kolumnie \(\lambda_{1}+\lambda_{2}\in\mathbb{R}\)}
 		\label{tab:warunki_stabilnosci}
 	\end{table}
 	
@@ -1257,7 +1259,7 @@
 	
 	\section{Podsumowanie}
 	W pracy tej przedstawiono podstawy teorii termodynamiki nierównowagowej. Są to pojęcia produkcji entropii, hipotezy lokalnej równowagi. Wykorzystano pewne zagadnienia chemiczne, na przykład mechanizmu reakcji chemicznej oraz jej szybkości z działu kinetyki chemicznej. Wykorzystano popularne modele reakcji chemicznych do ich symulacji, są to modele Lotki, Lotki-Volterry oraz bruskelatora. Miały one duże znaczenie historyczne. Do ich analizy wykorzystano narzędzia matematyczne układów autonomicznych oraz metody numeryczne. \par
-	W wyniku tych symulacji otrzymano wykresy fazowe przedstawiające oscylacje reagentów przejściowych. Pokazuje to, że według modeli reakcje oscylacyjne są możliwe, co jest potwierdzone przez rzeczywiscie reakcje w układach homologicznych. Ważniejszymi przykładami są reakcje Bielousova-Żabotyńskiego oraz Briggsa-Rauschera.
+	W wyniku tych symulacji otrzymano wykresy fazowe przedstawiające oscylacje reagentów przejściowych. Pokazuje to, że według modeli reakcje oscylacyjne są możliwe, co jest potwierdzone przez rzeczywiscie reakcje w układach homogenicznych. Ważniejszymi przykładami są reakcje Bielousova-Żabotyńskiego oraz Briggsa-Rauschera.
 	
 	%\blindtext
 	%\section{Sekcja 2}
