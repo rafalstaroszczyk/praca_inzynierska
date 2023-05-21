@@ -1101,11 +1101,12 @@
 	\begin{equation}\label{de_donder_ogolny}
 		T\dd_{i}S=\sum_{r}A_{r}\dd{\xi_{r}}.
 	\end{equation}
-	Nie można jednak wykorzystać tych modeli do ilościowego symulowania produkcji entropii, ponieważ nie można zdefiniować \(A\) dla reakcji, które nie mają stanu równowagi. Wynika to z zapisu powinowactwa chemicznego \(A\) w roztworze:
-	\begin{equation}
-		A = RT\ln(K) - RT\ln(\prod_{i}c_{i}^{\nu_{i}}), 
-	\end{equation}
-	gdzie \(K\) to stała równowagi reakcji, \(R\) to uniwersalna stała gazowa, \(T\) - temperatura bezwzględna, \(c_{i}\) - stężenie \(i\)-tego składnika, a \(\nu_{i}\) to współczynnik stechiometryczny reagenta \(i\) (dodatni dla produktów po prawej stronie, ujemny dla substratów po lewej). W kinetyce chemicznej stała równowagi jest równa \(K = \frac{k_{1}}{k_{-1}}\) dla reakcji \ce{X <=>[k_{1}][K_{-1}] Y}. W przypadku rozważanych powyżej reakcji \(k_{-1}=0\), występuje więc dzielenie przez \(0\). Można jedynie stwierdzić, że w granicy \(A\) jest dodatnie dla każdych stężeń reagentów \(c_{i}>0\). Stąd jako że reakcja przebiega w powyższych przykładach w stronę prawą to \(\dd{\xi}>0\), a więc ze wzoru \eqref{de_donder_ogolny} można jedynie stwierdzić, że:
+	%Nie można jednak wykorzystać tych modeli do ilościowego symulowania produkcji entropii, ponieważ nie można zdefiniować \(A\) dla reakcji, które nie mają stanu równowagi. Wynika to z zapisu powinowactwa chemicznego \(A\) w roztworze:
+	%\begin{equation}
+	%	A = RT\ln(K) - RT\ln(\prod_{i}c_{i}^{\nu_{i}}), 
+	%\end{equation}
+	%gdzie \(K\) to stała równowagi reakcji, \(R\) to uniwersalna stała gazowa, \(T\) - temperatura bezwzględna, \(c_{i}\) - stężenie \(i\)-tego składnika, a \(\nu_{i}\) to współczynnik stechiometryczny reagenta \(i\) (dodatni dla produktów po prawej stronie, ujemny dla substratów po lewej). W kinetyce chemicznej stała równowagi jest równa \(K = \frac{k_{1}}{k_{-1}}\) dla reakcji \ce{X <=>[k_{1}][K_{-1}] Y}. W przypadku rozważanych powyżej reakcji \(k_{-1}=0\), występuje więc dzielenie przez \(0\). Można jedynie stwierdzić, że w granicy \(A\) jest dodatnie
+	W przypadku opisanych powyżej reakcji zakładamy, że zachodzą one tylko w stronę produktów. W takim przypadku powinowactwo chemiczne $A_{r}$ jest dodanie dla każdych stężeń reagentów \(c_{i}>0\). Stąd jako że reakcja przebiega w powyższych przykładach w stronę prawą to \(\dd{\xi}>0\), a więc ze wzoru \eqref{de_donder_ogolny} można jedynie stwierdzić, że:
 	\begin{equation}
 		\dd_{i}S=\frac{1}{T}\sum_{r}A_{r}\dd{\xi_{r}}>0.
 	\end{equation}
