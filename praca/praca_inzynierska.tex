@@ -1,5 +1,5 @@
 \documentclass[10pt, a4paper, twoside, onecolumn]{article}
-\usepackage[backend=biber, sorting=none, maxbibnames=99]{biblatex}
+\usepackage[backend=biber, sorting=none, maxbibnames=999]{biblatex}
 \addbibresource{refs.bib}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -82,7 +82,7 @@
 	\end{center}
 	%Termodynamika równowagowe wymaga założenia pewnych wyidealizowanych założeń, 
 	%Termodynamika równowagowa oparta jest na kilku wyidealizowanych założeniach. Są nimi na przykład jednorodność parametrów intensywnych, maksimum entropii w układach izolowanych, minimum energii swobodnej Helmholtza w układach izotermiczno-izochorycznych, mininum entalpii swobodnej Gibbsa w układach izotermiczno-izobarycznych \cite{pudlik}. \par
-	Termodynamika równowagowa opisuje procesy, którym podlega dany układ, tak, jakby zachodziły w sposób kwazistatyczny. To oznacza, że proces jest ciągiem stanów równowagi, a więc na każdym etapie procesu układ jest w równowadze termodynamicznej. W takim opisie nie sposób zdefiniować prędkości procesu, gdyż sam jego czas przebiegu zmierza do nieskończoności. Takie założenia nie zawsze są możliwe, przykładowo dla szybko zachodzących zmian jak w przypadku eksplozji, albo dla układów, w których interesuje nas nie tylko stan układu po osiągnięciu przez niego stanu równowagi, ale też jego zachowania podczas tej przemiany. W pracy zająłem się głównie reakcjami chemicznymi oscylacyjnymi, które są przykładem czasowej struktury dyssypatywnej. Struktur takich nie można rozpatrywać w ramach termodynamiki równowagowej, ponieważ są one typowe jedynie dla stanów nierównowagowych. \par
+	Termodynamika równowagowa opisuje procesy, którym podlega dany układ, tak, jakby zachodziły w sposób kwazistatyczny. To oznacza, że proces jest postrzegany jako ciąg stanów równowagi. W takim opisie nie sposób zdefiniować prędkości procesu, gdyż sam jego czas przebiegu zmierza do nieskończoności. Takie założenia nie zawsze są możliwe, przykładowo dla szybko zachodzących zmian jak w przypadku eksplozji, albo dla układów, w których interesuje nas nie tylko stan układu po osiągnięciu przez niego stanu równowagi, ale też jego zachowania podczas tej przemiany. W pracy zająłem się głównie reakcjami chemicznymi oscylacyjnymi, które są przykładem czasowej struktury dyssypatywnej. Struktur takich nie można rozpatrywać w ramach termodynamiki równowagowej, ponieważ są one typowe jedynie dla stanów nierównowagowych. \par
 	Celem pracy jest teoretyczna oraz numeryczna analiza oscylacyjnych reakcji chemicznych. W pracy zasymulowałem reakcje oscylacyjne, których mechanizmy opisane są odpowiednio modelami Lotki, Lotki-Volterry oraz bruskelatora. Przeprowadziłem teoretyczną analizę stabilności tych modeli w stanach stacjonarnych oraz zastosowałem różne metody numeryczne, które pozwoliły mi zilustrować trajektorie generowane tymi modelami. Również numerycznie oszacowano produkcję entropii. 
 	%Przeprowadzono teoretyczną analizę stabilności w stanach stacjonarnych oraz sprawdzono jej prawdziwość przy użyciu symulacji. Numerycznie oszacowano produkcję entropii. 
 	
@@ -96,7 +96,7 @@
 	\begin{center}
 		\textbf{Strona 4}
 	\end{center}
-	Equilibrium thermodynamics is the study of system in which every process is treated as a quasistatic process. It means that at every point of that process the system is in equilibrium. Rate of change of any value is impossible to define because for equlibrium process to happen time has to approach infinity. Such assumptions cannot always be met. For example rapidly changing systems like explosions or for cases in which we do not care only about the state of the system in equilibrium after some process, but also its state during said process. In this thesis I mainly focused on oscillating chemical reactions, which are an example of temporal dissipative structures. Those structures cannot be described using equilibrium thermodynamics because they are typical for non-equilibrium systems. \par
+	Equilibrium thermodynamics describes the processes in a system as if they were quasistatic. It means that at every point of the process, the system is in equilibrium. Rate of change of any value is impossible to define because time of equilibrium process approaches infinity. Such assumptions cannot always be met in real cases. For example rapidly changing systems like explosions or for cases in which we do not care only about the state of the system in equilibrium after some process, but also its state during said process. In this thesis I mainly focused on oscillating chemical reactions, which are an example of temporal dissipative structures. Those structures cannot be described using equilibrium thermodynamics because they are typical for non-equilibrium systems. \par
 	The objective of my thesis is theoretical and numerical analysis of oscillating chemical reactions. In this thesis I simulated chemical reactions using Lotka, Lotka-Volterra and brusselator models. I theoretically analysed those systems near their equilibrium states and confirmed those results using simulation. I numerically estimated entropy production. 
 	\pagebreak
 	
@@ -342,8 +342,8 @@
 	Chcąc przenieść wprowadzone pojęcie na poziom opisu, który pojawia się w lokalnym sformuowaniu II Zasady Termodynamiki, rozważmy mały fragment układu. Dla tego fragmentu zmiany entropii również odbywają się poprzez wymianę jej przez ścianki ograniczające rozważany fragment oraz z tworzenia jej wewnątrz tego fragmentu. Tę wymianę entropii z otoczeniem opisuje wektor przepływu entropii \(\vb{J}_{s}\). Jest on zależny od położenia fragmentu i czasu. Biorąc pod uwagę pojęcie źródła entropii \(\sigma\) wzór opisujący zmianę w czasie entropii zapiszemy jako:
 	\begin{equation} \label{dod A: 5}
 		\dv{S}{t} = -\div{\vb{J}_{S}} + \sigma.
-	\end{equation}
-	% Wyprowadzenie wzoru na źródło entropii:
+	\end{equation}\par
+	% Wyprowadzeie wzoru na źródło entropii:
 	Oprócz zmieniającej się entropii, w układzie, w ogólności, dochodzi do zmiany energii wewnętrznej. Różniczkową jej zmianę $\dd{U}$ zapiszemy poprzez wyrażenie \cite{prigogine_modern}:
 	\begin{equation}
 		\dd{U}=T\dd{S}-p\dd{V}+\sum_{i}\mu_{i}\dd{n_{i}}, \label{dod A: 1}
@@ -360,7 +360,7 @@
 	\begin{equation}
 		\dv{S}{t}=\frac{1}{T}\dv{U}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}. \label{dod A: 3}
 	\end{equation}
-	Jeżeli zmiany te odniesiemy do elementarnej ścianki \(\dd{\vb{a}}\), wówczas relacje pomiędzy gęstością strumienia entropii \(\vb{J}_{S}\), gęstością strumienia energii wewnętrznej \(\vb{J}_{U}\) oraz gęstością strumienia liczby moli \(\vb{J}_{i}\) opiszemy równaniem:
+	Jeżeli zmiany te odniesiemy do elementarnej ścianki \(\dd{\vb{a}}\), wówczas otrzymujemy relację pomiędzy gęstością strumienia entropii \(\vb{J}_{S}\), gęstością strumienia energii wewnętrznej \(\vb{J}_{U}\) oraz gęstością strumienia liczby moli \(\vb{J}_{i}\), którą opiszemy równaniem:
 	\begin{equation}
 		\vb{J}_{S}=\frac{1}{T}\vb{J}_{U}-\sum_{i}\frac{\mu_{i}}{T}\vb{J}_{i}. \label{dod A: 4}
 	\end{equation}
@@ -392,7 +392,8 @@
 	\begin{equation}
 		\dv{S}{t}=\frac{1}{T}\dv{U}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t}-\left[\vb{J}_{U}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}\right]+\sigma.
 	\end{equation}
-	Otrzymujemy z porównania tego wzoru z \eqref{dod A: 3}:
+	%Otrzymujemy z porównania tego wzoru z \eqref{dod A: 3}:
+	Porównując otrzymane wyrażenie z równaniem \eqref{dod A: 3} otrzymujemy:
 	\begin{equation} \label{dod A: sigma}
 		\sigma=\vb{J}_{U}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}.
 	\end{equation}
@@ -1061,8 +1062,8 @@
 		\includegraphics[scale=0.8]{"lotka; a=5".png}
 		\caption{Stabilny węzeł; Model Lotki, a=5}
 		\label{fig:stabilny_wezel_lotka}
-	\end{figure}
-	Na rysunku \ref{fig:stabilne_ognisko_lotka_volterra} pokazano typowy wykres dla modelu Lotki-Volterry. Jest to zawsze krzywa zamknięta. 
+	\end{figure}\newpage
+	Na rysunku \ref{fig:stabilne_ognisko_lotka_volterra} pokazano typowy wykres dla modelu Lotki-Volterry, w którym \(a=1\). Jest to zawsze krzywa zamknięta niezależnie od wyboru warunków początkowych. 
 	\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.8]{"lotka_volterra; a=1".png}
@@ -1144,8 +1145,10 @@
 	\end{align}
 	Stany stacjonarne odpowiadające odpowiednio \([X]_{1}\) i \([Y]_{1}\) oraz \([X]_{2}\) i \([Y]_{2}\) to:
 	\begin{align}
-		[X]_{st, 1} &= \frac{k_{1}[A]}{k_{4}}; & [Y]_{st, 1} &= \frac{k_{3}k_{4}[B]}{k_{1}k_{2}[A]} \\
-		[X]_{st, 2} &= \frac{k_{-4}[E]}{k_{-1}}; & [Y]_{st, 2} &= \frac{k_{-2}k_{-4}^{3}[E]^{3}}{k_{-1}^{3}k_{-3}[D]}
+		[X]_{st, 1} &= \frac{k_{1}[A]}{k_{4}} \\
+		[X]_{st, 2} &= \frac{k_{-4}[E]}{k_{-1}} \\
+		[Y]_{st, 1} &= \frac{k_{3}k_{4}[B]}{k_{1}k_{2}[A]} \\
+		[Y]_{st, 2} &= \frac{k_{-2}k_{-4}^{3}[E]^{3}}{k_{-1}^{3}k_{-3}[D]}
 	\end{align}
 	Przyjmuję, że mogę dowolnie kontrolować stężenia reagentów \([A]\), \([B]\), \([D]\) i \([E]\). \([A]\) oraz \([B]\) pozostają dowolnymi parametrami, natomiast \([D]\) i \([E]\) są zależne od innych parametrów. Po przyrównaniu \([X]_{st, 1}\) oraz \([X]_{st, 2}\) i analogicznie dla \([Y]\) otrzymujemy wartości dla \([D]\) oraz \([E]\):
 	\begin{align}
@@ -1168,10 +1171,12 @@
 		d &= \frac{k_{1}^{4}k_{2}k_{-2}[A]^{4}}{k_{3}k_{4}^{5}[B]}
 	\end{align}
 	Równania różniczkowe mają wtedy postać
-	\begin{align}
+	\begin{equation}
+	\begin{split}
 		\dv{x}{\tau} &= 1 + ax^{2}y - ax - x - cx - bc^{3} + by + c \\
 		\dv{y}{\tau} &= -bx^{2}y + bx + dx^{3} - dy, 
-	\end{align}
+	\end{split}
+	\end{equation}
 	a punkt stacjonarny występuje dla \(x=1, y=1\). 
 	Po wprowadzeniu podstawienia:
 	\begin{gather*}
@@ -1179,16 +1184,17 @@
 		\vartheta = y - 1
 	\end{gather*}
 	i linearyzacji otrzymujemy:
-	\begin{align}
+	\begin{equation}\label{brus_rev_lin}
+	\begin{split}
 		\dv{\gamma}{\tau} &= (a - c - 3b - 1)\gamma + (a + b)\vartheta \\
-		\dv{\vartheta}{\tau} &= (- b + 3d)\gamma + (- b - d)\vartheta
-	\end{align}
-	
-	% do usuniecia?
-	Równanie charakterystyczne:
-	\begin{equation}
-		\lambda^{2} - (a - c - 4b - d - 1)\lambda + (-4ad + bc + cd + 4b^{2} + b + d)
+		\dv{\vartheta}{\tau} &= (- b + 3d)\gamma + (- b - d)\vartheta.
+	\end{split}
 	\end{equation}
+	% do usuniecia?
+	Równanie charakterystyczne dla układu \eqref{brus_rev_lin}:
+	\begin{equation}
+		\lambda^{2} - (a - c - 4b - d - 1)\lambda + (-4ad + bc + cd + 4b^{2} + b + d).
+	\end{equation}\par
 	Powinowactwo chemiczne w stanie równowagi każdego z równań z osobna wynosi \(A=0\) \cite{pigon1}. W ogólnej postaci ma ono postać:
 	\begin{equation}
 		A = A_{0} - RT\ln(\prod_{i}c_{i}^{\nu_{i}}), 
