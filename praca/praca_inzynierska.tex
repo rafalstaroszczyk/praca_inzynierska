@@ -528,7 +528,7 @@
 		\ce{X + Y ->[k_2] 2Y} \\
 		\ce{Y ->[k_3] produkty}
 	\end{center}
-	W modelu tym zmodyfikowano pierwszy krok poprzez wprowadzenie autokatalizy. Zmienia to zachowanie się układu co zostało przeanalizowane poniżej. Konsekwencją dodania autokatalizy jest dodatkowe wprowadzenie początkowego składnika \(X\), a więc jednym z ze stanów stacjonarnych jest \(X=Y=0\). Jest to jednak rozwiązanie trywialne i układ taki jest martwy, więc nie będzie to rozpatrywane. Reakcja sumaryczna:
+	W modelu tym zmodyfikowano pierwszy krok poprzez wprowadzenie autokatalizy. Zmienia to zachowanie się układu co zostało przeanalizowane poniżej. Konsekwencją dodania autokatalizy jest dodatkowe wprowadzenie początkowego składnika \(X\), a więc jednym ze stanów stacjonarnych jest \(X=Y=0\). Jest to jednak rozwiązanie trywialne i układ taki jest martwy, więc nie będzie to rozpatrywane. Reakcja sumaryczna:
 	\begin{center}
 		\ce{A -> produkty}.
 	\end{center}
@@ -739,7 +739,7 @@
 		\dv{\vartheta}{\tau} &= -b\gamma-b\vartheta
 	\end{split}
 	\end{equation}\par
-	Można teraz badać stany stabilne metodami stosowanymi do analizy układów równań różniczkowych liniowych. Stabilność zależy od wartości własnych macierzy $R$ stałych oznaczonych symbolami \(\lambda_{1}\) i \(\lambda_{2}\). Odnajdujemy je rozwiązując równanie kwadratore \eqref{rown_charakterystyczne}:
+	Można teraz badać stany stabilne metodami stosowanymi do analizy układów równań różniczkowych liniowych. Stabilność zależy od wartości własnych macierzy $R$ stałych oznaczonych symbolami \(\lambda_{1}\) i \(\lambda_{2}\). Odnajdujemy je rozwiązując równanie kwadratore:
 	\begin{equation}\label{rown_charakterystyczne}
 		a\lambda^{2} + b\lambda + c = 0.
 	\end{equation}
@@ -1095,7 +1095,7 @@
 		\caption{Niestabilne ognisko; Model bruskelator, a=7, b=4}
 		\label{fig:niestabilne_ognisko}
 	\end{figure}
-	Trajektorie zachowują się w sposób oczekiwany według tabeli \ref{tab:warunki_bruskelator} i literatury, co dowodzi poprawnego działania stworzonego programu, którego kod znajduje się w dodatku C na stronie \pageref{sec: dodatek C} \cite{orlik}. Na rysunku \ref{fig:niestabilne_ognisko} zachodzi jednak coś na pierwszy rzut oka sprzecznego z analizą układu zlinearyzowanego według warunku "Niestabilne ognisko" w tabeli \ref{tab:warunki_stabilnosci}. Układ osiąga stabilny cykl graniczny. Jest to niemożliwe w przypadku układów liniowych do których je sprowadziliśmy poprzez linearyzację, jednak linearyzacja jest dobrym przybliżeniem jedynie w najbliższym otoczeniu punktu stacjonarnego, cykl graniczny widoczny na rysunku \ref{fig:niestabilne_ognisko} jest więc przejawem nieliniowości układu równań modelu bruskelator \cite{orlik}. Istnieje na jednak twierdzenie, które wyjaśnia to zachowanie, jest to twierdzenie Poincar\'{e}go-Bendixsona. \par
+	Trajektorie zachowują się w sposób oczekiwany według tabeli \ref{tab:warunki_bruskelator} i literatury, co dowodzi poprawnego działania stworzonego programu, którego kod znajduje się w dodatku C na stronie \pageref{sec: dodatek C} \cite{orlik}. Na rysunku \ref{fig:niestabilne_ognisko} zachodzi jednak coś na pierwszy rzut oka sprzecznego z analizą układu zlinearyzowanego według warunku "'Niestabilne ognisko"' w tabeli \ref{tab:warunki_stabilnosci}. Układ osiąga stabilny cykl graniczny. Jest to niemożliwe w przypadku układów liniowych do których je sprowadziliśmy poprzez linearyzację, jednak linearyzacja jest dobrym przybliżeniem jedynie w najbliższym otoczeniu punktu stacjonarnego, cykl graniczny widoczny na rysunku \ref{fig:niestabilne_ognisko} jest więc przejawem nieliniowości układu równań modelu bruskelator \cite{orlik}. Istnieje na jednak twierdzenie, które wyjaśnia to zachowanie, jest to twierdzenie Poincar\'{e}go-Bendixsona. \par
 	\begin{theorem}[\textbf{Poincar\'{e}go-Bendixsona}]
 		"Jeśli w przestrzeni fazowej będącej podzbiorem płaszczyzny \(\mathbb{R}^{2}\) orbita zawiera co najmniej jeden swój punkt graniczny, to jest ona punktem krytycznym albo orbitą zamkniętą" \cite{palczewski}
 	\end{theorem}
@@ -1136,8 +1136,7 @@
 		3: \ce{B + X <=>[k_{3}][k_{-3}] D + Y} \\
 		4: \ce{X <=>[k_{4}][k_{-4}] E}.
 	\end{center}
-	Powyższe reakcje z lewej strony oznaczono symbolami '1:', '2:', '3:' oraz '4:', aby ponumerować etapy rozpatrywanej reakcji. \newline
-	Reakcje są odwracalne i przebiegają przy różncyh stałych prędkości reakcji oznaczonych \(k_{i}\) oraz \(k_{-i}\) dla rekacji odpowiednio w prawą i lewą stronę. \par
+	Powyższe reakcje z lewej strony oznaczono symbolami '1:', '2:', '3:' oraz '4:', aby ponumerować etapy rozpatrywanej reakcji. Reakcje są odwracalne i przebiegają przy różncyh stałych prędkości reakcji oznaczonych \(k_{i}\) oraz \(k_{-i}\) dla rekacji odpowiednio w prawą i lewą stronę. \par
 	Całkowita zmiana reagentów \(X\) oraz \(Y\) ma postać:
 	\begin{align}
 		\dv{[X]}{t} &= k_{1}[A] + k_{2}[X]^{2}[Y] - k_{3}[B][X] - k_{4}[X] - k_{-1}[X] - k_{-2}[X]^{3} + k_{-3}[D][Y] + k_{-4}[E] \\
@@ -1240,13 +1239,13 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.8]{"brusselator_rev2; a=9, b=1, c=1, d=0.1".png}
-		\caption{Zależność wielkości \(x\) oraz \(y\) od \(\tau\)}
+		\caption{Zależność wielkości \(x\) (linia ciągła) oraz \(y\) (linia przerywana) od \(\tau\)}
 		\label{fig:rev_brus_xy_t}
 	\end{figure}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.8]{"brusselator_rev3; a=9, b=1, c=1, d=0.1".png}
-		\caption{Zależność wielkości \(S\) oraz \(\dv{S}{\tau}\) od \(\tau\)}
+		\caption{Zależność wielkości \(S\) (linia ciągła) oraz \(\dv{S}{\tau}\) (linia przerywana) od \(\tau\)}
 		\label{fig:rev_brus_entropia}
 	\end{figure}
 	
