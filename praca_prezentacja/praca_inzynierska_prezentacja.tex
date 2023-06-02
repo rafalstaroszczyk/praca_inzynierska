@@ -1,0 +1,171 @@
+\documentclass{beamer}
+\usetheme{Warsaw}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage[version=4]{mhchem}
+\usepackage[font=small]{caption}
+\usepackage{subfig}
+
+\graphicspath{ {../praca/} }
+
+\title{Opis wybranych układów fizykochemicznych w stanie nierównowagi termodynamicznej}
+
+\author{Rafał Staroszczyk\\promotor: dr Piotr Weber}
+\institute{Politechnika Gdańska}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Spis treści}
+\tableofcontents
+\end{frame}
+
+\begin{frame}
+\frametitle{Cel pracy}
+\begin{itemize}
+\item Przedstawienie teorii termodynamiki nierównowagowej, kinetyki reakcji chemicznych oraz modeli reakcji oscylacyjnych
+\item Analiza teoretyczna modeli reakcji chemicznych oscylacyjnych
+\item Symulacja numeryczna tych modeli
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Model Lotki}
+\begin{columns}
+\column{0.5\textwidth}
+Historycznie pierwszy model, który można zastosować do reakcji chemicznych oscylacyjnych. Oryginalnie użyty do modelowania populacji. \\
+\begin{figure}
+\includegraphics[width=\textwidth]{"lotka3; a=0.1".png}
+\end{figure}
+\column{0.5\textwidth}
+\begin{block}{Równania reakcji}
+\begin{center}
+	\ce{A ->[k_1] X} \\
+	\ce{X + Y ->[k_2] 2Y} \\
+	\ce{Y ->[k_3] produkty}
+\end{center}
+\end{block}
+\begin{block}{Równania różniczkowe}
+\begin{gather*}
+	\dv{x}{\tau} = a-axy \\
+	\dv{y}{\tau} = xy-y
+\end{gather*}
+\end{block}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Model Lotki-Volterry}
+\begin{columns}
+\column{0.5\textwidth}
+Modyfikacja modelu Lotki z autokatalizą. Wykres fazowy jest zawsze torem zamkniętym.  
+\begin{figure}
+\includegraphics[width=\textwidth]{"lotka_volterra; a=1".png}
+\end{figure}
+\column{0.5\textwidth}
+\begin{block}{Równania reakcji}
+\begin{center}
+	\ce{A + X ->[k_1] 2X} \\
+	\ce{X + Y ->[k_2] 2Y} \\
+	\ce{Y ->[k_3] produkty}
+\end{center}
+\end{block}
+\begin{block}{Równania różniczkowe}
+\begin{gather*}
+	\dv{x}{\tau} = ax-axy \\
+	\dv{y}{\tau} = xy-y
+\end{gather*}
+\end{block}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Model bruskelator}
+\begin{columns}
+\column{0.5\textwidth}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{"brusselator; a=7; b=4".png}
+\end{figure}
+\column{0.5\textwidth}
+\begin{block}{Równania reakcji}
+\begin{center}
+	\ce{A ->[k_1] X} \\
+	\ce{2X + Y ->[k_2] 3X} \\
+	\ce{B + X ->[k_3] D + Y} \\
+	\ce{X ->[k_4] E}
+\end{center}
+\end{block}
+\begin{block}{Równania różniczkowe}
+\begin{gather*}
+	\dv{x}{\tau} = 1+ax^{2}y-ax-x \\
+	\dv{y}{\tau} = -bx^{2}y+bx
+\end{gather*}
+\end{block}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Model bruskelator ogólny}
+\begin{columns}
+\column{0.5\textwidth}
+Uogólniona wersja modelu bruskelator, w których każda z reakcji jest odwracalna. 
+\begin{figure}
+\includegraphics[width=\textwidth]{"brusselator_rev1; a=9, b=1, c=1, d=0.1".png}
+\end{figure}
+\column{0.5\textwidth}
+\begin{block}{Równania reakcji}
+\begin{center}
+	\ce{A <=>[k_{1}][k_{-1}] X} \\
+	\ce{2X + Y <=>[k_{2}][k_{-2}] 3X} \\
+	\ce{B + X <=>[k_{3}][k_{-3}] D + Y} \\
+	\ce{X <=>[k_{4}][k_{-4}] E}
+\end{center}
+\end{block}
+\begin{block}{Równania różniczkowe}
+\begin{gather*}
+	\dv{x}{\tau} = 1 + ax^{2}y - ax - x \\
+	- cx - bc^{3} + by + c \\
+	\dv{y}{\tau} = -bx^{2}y + bx + dx^{3} - dy
+\end{gather*}
+\end{block}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Produkcja entropii}
+\begin{block}{Źródło produkcji entropii}
+\begin{equation*}
+\sigma=\vb{J}_{U}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}
+\end{equation*}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\begin{columns}
+\column{0.5\textwidth}
+
+\column{0.5\textwidth}
+\begin{figure}
+\subfloat[Reakcja Biełousowa-Żabotyńskiego]{\includegraphics[width=0.45\textwidth]{"belousov_zhabotinsky_2".png}}
+\subfloat[Komórki B\'{e}narda]{\includegraphics[width=0.45\textwidth]{"benard".png}}
+\end{figure}
+\end{columns}
+\end{frame}
+
+\subsection{Reakcje chemiczne}
+
+\section{Wyniki}
+
+
+\end{document}
