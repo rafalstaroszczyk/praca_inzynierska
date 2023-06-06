@@ -20,6 +20,7 @@
 \date{\today}
 
 \begin{document}
+\addtobeamertemplate{block begin}{\setlength\abovedisplayskip{0pt}}
 
 \begin{frame}
 \titlepage
@@ -37,6 +38,48 @@
 \item Analiza teoretyczna modeli reakcji chemicznych oscylacyjnych
 \item Symulacja numeryczna tych modeli
 \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Produkcja entropii}
+\begin{block}{Źródło produkcji entropii}
+\begin{equation*}
+\sigma=\vb{J}_{U}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}\geq0
+\end{equation*}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Mechanizm reakcji chemicznej}
+\begin{columns}
+\column{0.5\textwidth}
+Szybkość reakcji chemicznej jest w ogólności dowolną funkcją wszystkich stężeń. Mechanizm reakcji opisuje poszczególne reakcje elementarne.
+\begin{block}{Równania różniczkowe}
+\begin{gather*}
+%\dv{\left[\ce{H2}\right]}{t} = -v_{2} \\
+%\dv{\left[\ce{Br2}\right]}{t} = - v_{1} - v_{3} \\
+%\dv{\left[\ce{H^{.}}\right]}{t} = v_{2} - v_{3} \\
+%\dv{\left[\ce{Br^{.}}\right]}{t} = 2v_{1} - v_{2} + v_{3} \\
+%\dv{\left[\ce{HBr}\right]}{t} = v_{2} + v_{3}
+\dv{c}{t} = \nu v
+\end{gather*}
+\end{block}
+\column{0.5\textwidth}
+\begin{block}{Mechanizm reakcji}
+\begin{center}
+\ce{Br2 -> 2Br^{.}} \\
+\ce{Br^{.} + H2 -> HBr + H^{.}} \\
+\ce{H^{.} + Br2 -> HBr + Br^{.}}
+\end{center}
+\end{block}
+\begin{block}{Szybkość reakcji}
+\begin{gather*}
+v_{1} = k_{1}\left[\ce{Br2}\right] \\
+v_{2} = k_{2}\left[\ce{Br^{.}}\right]\left[\ce{H2}\right] \\
+v_{3} = k_{3}\left[\ce{H^{.}}\right]\left[\ce{Br2}\right]
+\end{gather*}
+\end{block}
+\end{columns}
 \end{frame}
 
 \begin{frame}
@@ -142,14 +185,7 @@ Uogólniona wersja modelu bruskelator, w których każda z reakcji jest odwracal
 \end{columns}
 \end{frame}
 
-\begin{frame}
-\frametitle{Produkcja entropii}
-\begin{block}{Źródło produkcji entropii}
-\begin{equation*}
-\sigma=\vb{J}_{U}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}
-\end{equation*}
-\end{block}
-\end{frame}
+
 
 \begin{frame}
 \begin{columns}

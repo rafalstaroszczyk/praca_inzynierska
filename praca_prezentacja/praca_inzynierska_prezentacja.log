@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.12.4)  2 JUN 2023 22:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.12.4)  6 JUN 2023 12:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1107,7 +1107,7 @@ Overfull \hbox (88.06311pt too wide) in paragraph at lines 22--22
  []
 
 
-Overfull \hbox (88.06311pt too wide) in paragraph at lines 26--26
+Overfull \hbox (88.06311pt too wide) in paragraph at lines 27--27
  [][][][] []  
  []
 
@@ -1119,7 +1119,7 @@ Overfull \hbox (88.06311pt too wide) has occurred while \output is active
 [1
 
 {C:/Users/staro/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Overfull \hbox (88.06311pt too wide) in paragraph at lines 31--31
+Overfull \hbox (88.06311pt too wide) in paragraph at lines 32--32
  [][][][] []  
  []
 
@@ -1131,7 +1131,7 @@ Overfull \hbox (88.06311pt too wide) has occurred while \output is active
 [2
 
 ]
-Overfull \hbox (88.06311pt too wide) in paragraph at lines 40--40
+Overfull \hbox (88.06311pt too wide) in paragraph at lines 41--41
  [][][][] []  
  []
 
@@ -1143,51 +1143,51 @@ Overfull \hbox (88.06311pt too wide) has occurred while \output is active
 [3
 
 ]
-Overfull \hbox (88.06311pt too wide) in paragraph at lines 65--65
+Overfull \hbox (88.06311pt too wide) in paragraph at lines 50--50
  [][][][] []  
  []
 
-<../praca//lotka3; a=0.1.png, id=124, 462.528pt x 346.896pt>
-File: ../praca//lotka3; a=0.1.png Graphic file (type png)
-<use ../praca//lotka3; a=0.1.png>
-Package pdftex.def Info: ../praca//lotka3; a=0.1.png  used on input line 65.
-(pdftex.def)             Requested size: 153.64493pt x 115.23296pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
 
 (C:\Users\staro\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
 
 
 (C:\Users\staro\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 65.
+ut line 50.
 
 (C:\Users\staro\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1mathk
 erncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
+
+LaTeX Font Warning: Font shape `T1/cmss/b/n' undefined
+(Font)              using `T1/cmss/m/n' instead on input line 50.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 50.
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 50.
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 50.
+
 Overfull \hbox (88.06311pt too wide) has occurred while \output is active
  [][][][] []  
  []
 
 [4
 
- <../praca//lotka3; a=0.1.png>]
-Overfull \hbox (88.06311pt too wide) in paragraph at lines 90--90
+]
+Overfull \hbox (88.06311pt too wide) in paragraph at lines 83--83
  [][][][] []  
  []
 
-<../praca//lotka_volterra; a=1.png, id=185, 462.528pt x 346.896pt>
-File: ../praca//lotka_volterra; a=1.png Graphic file (type png)
-<use ../praca//lotka_volterra; a=1.png>
-Package pdftex.def Info: ../praca//lotka_volterra; a=1.png  used on input line 
-90.
-(pdftex.def)             Requested size: 153.64493pt x 115.23296pt.
 
 Overfull \hbox (88.06311pt too wide) has occurred while \output is active
  [][][][] []  
@@ -1195,16 +1195,15 @@ Overfull \hbox (88.06311pt too wide) has occurred while \output is active
 
 [5
 
- <../praca//lotka_volterra; a=1.png>]
-Overfull \hbox (88.06311pt too wide) in paragraph at lines 116--116
+]
+Overfull \hbox (88.06311pt too wide) in paragraph at lines 108--108
  [][][][] []  
  []
 
-<../praca//brusselator; a=7; b=4.png, id=235, 462.528pt x 346.896pt>
-File: ../praca//brusselator; a=7; b=4.png Graphic file (type png)
-<use ../praca//brusselator; a=7; b=4.png>
-Package pdftex.def Info: ../praca//brusselator; a=7; b=4.png  used on input lin
-e 116.
+<../praca//lotka3; a=0.1.png, id=238, 462.528pt x 346.896pt>
+File: ../praca//lotka3; a=0.1.png Graphic file (type png)
+<use ../praca//lotka3; a=0.1.png>
+Package pdftex.def Info: ../praca//lotka3; a=0.1.png  used on input line 108.
 (pdftex.def)             Requested size: 153.64493pt x 115.23296pt.
 
 Overfull \hbox (88.06311pt too wide) has occurred while \output is active
@@ -1213,23 +1212,17 @@ Overfull \hbox (88.06311pt too wide) has occurred while \output is active
 
 [6
 
- <../praca//brusselator; a=7; b=4.png>]
-Overfull \hbox (88.06311pt too wide) in paragraph at lines 143--143
+ <../praca//lotka3; a=0.1.png>]
+Overfull \hbox (88.06311pt too wide) in paragraph at lines 133--133
  [][][][] []  
  []
 
-<../praca//brusselator_rev1; a=9, b=1, c=1, d=0.1.png, id=285, 462.528pt x 346.
-896pt>
-File: ../praca//brusselator_rev1; a=9, b=1, c=1, d=0.1.png Graphic file (type p
-ng)
-<use ../praca//brusselator_rev1; a=9, b=1, c=1, d=0.1.png>
-Package pdftex.def Info: ../praca//brusselator_rev1; a=9, b=1, c=1, d=0.1.png  
-used on input line 143.
+<../praca//lotka_volterra; a=1.png, id=292, 462.528pt x 346.896pt>
+File: ../praca//lotka_volterra; a=1.png Graphic file (type png)
+<use ../praca//lotka_volterra; a=1.png>
+Package pdftex.def Info: ../praca//lotka_volterra; a=1.png  used on input line 
+133.
 (pdftex.def)             Requested size: 153.64493pt x 115.23296pt.
-
-Overfull \vbox (5.1457pt too high) detected at line 143
- []
-
 
 Overfull \hbox (88.06311pt too wide) has occurred while \output is active
  [][][][] []  
@@ -1237,24 +1230,17 @@ Overfull \hbox (88.06311pt too wide) has occurred while \output is active
 
 [7
 
- <../praca//brusselator_rev1; a=9, b=1, c=1, d=0.1.png>]
-Overfull \hbox (88.06311pt too wide) in paragraph at lines 152--152
+ <../praca//lotka_volterra; a=1.png>]
+Overfull \hbox (88.06311pt too wide) in paragraph at lines 159--159
  [][][][] []  
  []
 
-
-LaTeX Font Warning: Font shape `T1/cmss/b/n' undefined
-(Font)              using `T1/cmss/m/n' instead on input line 152.
-
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 152.
-
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 152.
-
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 152.
-
+<../praca//brusselator; a=7; b=4.png, id=343, 462.528pt x 346.896pt>
+File: ../praca//brusselator; a=7; b=4.png Graphic file (type png)
+<use ../praca//brusselator; a=7; b=4.png>
+Package pdftex.def Info: ../praca//brusselator; a=7; b=4.png  used on input lin
+e 159.
+(pdftex.def)             Requested size: 153.64493pt x 115.23296pt.
 
 Overfull \hbox (88.06311pt too wide) has occurred while \output is active
  [][][][] []  
@@ -1262,28 +1248,48 @@ Overfull \hbox (88.06311pt too wide) has occurred while \output is active
 
 [8
 
-]
-Overfull \hbox (88.06311pt too wide) in paragraph at lines 164--164
+ <../praca//brusselator; a=7; b=4.png>]
+Overfull \hbox (88.06311pt too wide) in paragraph at lines 186--186
  [][][][] []  
  []
 
-<../praca//belousov_zhabotinsky_2.png, id=380, 581.92406pt x 581.92406pt>
-File: ../praca//belousov_zhabotinsky_2.png Graphic file (type png)
-<use ../praca//belousov_zhabotinsky_2.png>
-Package pdftex.def Info: ../praca//belousov_zhabotinsky_2.png  used on input li
-ne 164.
-(pdftex.def)             Requested size: 69.13974pt x 69.13527pt.
-<../praca//benard.png, id=381, 252.19218pt x 249.18094pt>
-File: ../praca//benard.png Graphic file (type png)
-<use ../praca//benard.png>
-Package pdftex.def Info: ../praca//benard.png  used on input line 164.
-(pdftex.def)             Requested size: 69.13974pt x 68.31393pt.
+<../praca//brusselator_rev1; a=9, b=1, c=1, d=0.1.png, id=393, 462.528pt x 346.
+896pt>
+File: ../praca//brusselator_rev1; a=9, b=1, c=1, d=0.1.png Graphic file (type p
+ng)
+<use ../praca//brusselator_rev1; a=9, b=1, c=1, d=0.1.png>
+Package pdftex.def Info: ../praca//brusselator_rev1; a=9, b=1, c=1, d=0.1.png  
+used on input line 186.
+(pdftex.def)             Requested size: 153.64493pt x 115.23296pt.
 
 Overfull \hbox (88.06311pt too wide) has occurred while \output is active
  [][][][] []  
  []
 
 [9
+
+ <../praca//brusselator_rev1; a=9, b=1, c=1, d=0.1.png>]
+Overfull \hbox (88.06311pt too wide) in paragraph at lines 200--200
+ [][][][] []  
+ []
+
+<../praca//belousov_zhabotinsky_2.png, id=445, 581.92406pt x 581.92406pt>
+File: ../praca//belousov_zhabotinsky_2.png Graphic file (type png)
+<use ../praca//belousov_zhabotinsky_2.png>
+Package pdftex.def Info: ../praca//belousov_zhabotinsky_2.png  used on input li
+ne 200.
+(pdftex.def)             Requested size: 69.13974pt x 69.13527pt.
+<../praca//benard.png, id=446, 252.19218pt x 249.18094pt>
+File: ../praca//benard.png Graphic file (type png)
+<use ../praca//benard.png>
+Package pdftex.def Info: ../praca//benard.png  used on input line 200.
+(pdftex.def)             Requested size: 69.13974pt x 68.31393pt.
+
+Overfull \hbox (88.06311pt too wide) has occurred while \output is active
+ [][][][] []  
+ []
+
+[10
 
  <../praca//belousov_zhabotinsky_2.png> <../praca//benard.png>]
 \tf@nav=\write6
@@ -1305,31 +1311,33 @@ hanged.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26528 strings out of 475349
- 526396 string characters out of 2775727
- 862824 words of memory out of 3000000
- 47367 multiletter control sequences out of 15000+600000
- 487204 words of font info for 71 fonts, out of 8000000 for 9000
+ 26561 strings out of 475349
+ 527355 string characters out of 2775727
+ 861826 words of memory out of 3000000
+ 47395 multiletter control sequences out of 15000+600000
+ 490085 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,30n,122p,452b,1205s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 128i,30n,122p,452b,1209s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\staro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss
 0900.pk> <C:\Users\staro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ecrm1095.pk> <C:\Users\staro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\ecss0600.pk> <C:\Users\staro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecss0800.pk> <C:\Users\staro\AppData\Local\MiKTeX\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecss1095.pk> <C:\Users\staro\AppData\Local\MiKTeX\fonts/pk/
-ljfour/jknappen/ec/dpi600\ecss1440.pk><C:/Users/staro/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/staro/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/staro/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/sta
-ro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/
-Users/staro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi1
-0.pfb><C:/Users/staro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmssi8.pfb><C:/Users/staro/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb>
-Output written on praca_inzynierska_prezentacja.pdf (9 pages, 1723765 bytes).
+0\ecrm0800.pk> <C:\Users\staro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\ecrm1095.pk> <C:\Users\staro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ecss0600.pk> <C:\Users\staro\AppData\Local\MiKTeX\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecss0800.pk> <C:\Users\staro\AppData\Local\MiKTeX\fonts/pk/
+ljfour/jknappen/ec/dpi600\ecss1095.pk> <C:\Users\staro\AppData\Local\MiKTeX\fon
+ts/pk/ljfour/jknappen/ec/dpi600\ecss1440.pk><C:/Users/staro/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/staro/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/staro/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Use
+rs/staro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pf
+b><C:/Users/staro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmssi10.pfb><C:/Users/staro/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmssi8.pfb><C:/Users/staro/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb><C:/Users/staro/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on praca_inzynierska_prezentacja.pdf (10 pages, 1752364 bytes).
 PDF statistics:
- 636 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
- 457 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 716 PDF objects out of 1000 (max. 8388607)
+ 21 named destinations out of 1000 (max. 500000)
+ 565 words of extra memory for PDF output out of 10000 (max. 10000000)
 
