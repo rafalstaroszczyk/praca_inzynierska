@@ -1,6 +1,8 @@
 \documentclass{beamer}
 \usetheme{Warsaw}
 
+\usepackage[backend=biber, sorting=none, maxbibnames=999]{biblatex}
+\addbibresource{../praca/refs.bib}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[polish]{babel}
@@ -19,7 +21,14 @@
 \institute{Politechnika Gdańska}
 \date{\today}
 
+\setbeamertemplate{headline}{}
+
+\setbeamertemplate{footline}[frame number]{}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+
 \begin{document}
+\beamertemplatenavigationsymbolsempty
 \addtobeamertemplate{block begin}{\setlength\abovedisplayskip{0pt}}
 
 \begin{frame}
@@ -41,13 +50,48 @@
 \end{frame}
 
 \begin{frame}
+\begin{columns}
+\column{0.5\textwidth}
+
+\column{0.5\textwidth}
+\begin{figure}
+\subfloat[Reakcja Biełousowa-Żabotyńskiego]{\includegraphics[width=0.45\textwidth]{"belousov_zhabotinsky_2".png}}
+\subfloat[Komórki B\'{e}narda]{\includegraphics[width=0.45\textwidth]{"benard".png}}
+\end{figure}
+\end{columns}
+\end{frame}
+
+\section{Teoria}
+\subsection{Produkcja entropii}
+
+\begin{frame}
 \frametitle{Produkcja entropii}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{block}{}
+\begin{gather*}
+\dv{S}{t}=\frac{1}{T}\dv{U}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t} \\
+\vb{J}_{S}=\frac{1}{T}\vb{J}_{U}-\sum_{i}\frac{\mu_{i}}{T}\vb{J}_{i} \\
+A_{r}=-\sum_{i}\nu_{ir}\mu_{i}
+\end{gather*}
+\end{block}
+\column{0.5\textwidth}
+\begin{block}{Równania ciągłości}
+\begin{gather*}
+	\dv{U}{t}=-\div{\vb{J}_{U}} \\
+	\dv{S}{t} = -\div{\vb{J}_{S}} + \sigma \\
+	\dv{n_{i}}{t}=-\div{\vb{J}_{i}}+\dv{n_{i;reak}}{t}
+\end{gather*}
+\end{block}
+\end{columns}
 \begin{block}{Źródło produkcji entropii}
 \begin{equation*}
 \sigma=\vb{J}_{U}\vdot\grad{\left(\frac{1}{T}\right)}-\sum_{i}\vb{J}_{i}\cdot\grad{\left(\frac{\mu_{i}}{T}\right)}+\sum_{r}\frac{A_{r}}{T}\dv{\xi_{r}}{t}\geq0
 \end{equation*}
 \end{block}
 \end{frame}
+
+\subsection{Mechanizm i szybkość reakcji chemicznej}
 
 \begin{frame}
 \frametitle{Mechanizm reakcji chemicznej}
@@ -82,6 +126,9 @@ v_{3} = k_{3}\left[\ce{H^{.}}\right]\left[\ce{Br2}\right]
 \end{columns}
 \end{frame}
 
+\section{Modele reakcji chemicznych oscylacyjnych}
+\subsection{Model Lotki}
+
 \begin{frame}
 \frametitle{Model Lotki}
 \begin{columns}
@@ -106,6 +153,8 @@ Historycznie pierwszy model, który można zastosować do reakcji chemicznych os
 \end{block}
 \end{columns}
 \end{frame}
+
+\subsection{Model Lotki-Volterry}
 
 \begin{frame}
 \frametitle{Model Lotki-Volterry}
@@ -132,6 +181,8 @@ Modyfikacja modelu Lotki z autokatalizą. Wykres fazowy jest zawsze torem zamkni
 \end{columns}
 \end{frame}
 
+\subsection{Model bruskelator}
+
 \begin{frame}
 \frametitle{Model bruskelator}
 \begin{columns}
@@ -157,6 +208,8 @@ Model ten osiąga taki sam cykl graniczny niezależnie od stężeń początkowyc
 \end{block}
 \end{columns}
 \end{frame}
+
+\subsection{Model bruskelator ogólny}
 
 \begin{frame}
 \frametitle{Model bruskelator ogólny}
@@ -185,23 +238,23 @@ Uogólniona wersja modelu bruskelator, w których każda z reakcji jest odwracal
 \end{columns}
 \end{frame}
 
-
-
 \begin{frame}
-\begin{columns}
-\column{0.5\textwidth}
+\frametitle{Podsumowanie}
 
-\column{0.5\textwidth}
-\begin{figure}
-\subfloat[Reakcja Biełousowa-Żabotyńskiego]{\includegraphics[width=0.45\textwidth]{"belousov_zhabotinsky_2".png}}
-\subfloat[Komórki B\'{e}narda]{\includegraphics[width=0.45\textwidth]{"benard".png}}
-\end{figure}
-\end{columns}
 \end{frame}
 
-\subsection{Reakcje chemiczne}
+\begin{frame}
+\begin{center}
+Dziękuję za uwagę
+\end{center}
+\end{frame}
 
-\section{Wyniki}
 
+
+\begin{frame}[allowframebreaks]
+\frametitle{Literatura}
+\nocite{*}
+\printbibliography
+\end{frame}
 
 \end{document}

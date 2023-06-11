@@ -1,1 +1,9 @@
 \babel@toc {polish}{}\relax 
+\beamer@sectionintoc {1}{Teoria}{5}{0}{1}
+\beamer@subsectionintoc {1}{1}{Produkcja entropii}{5}{0}{1}
+\beamer@subsectionintoc {1}{2}{Mechanizm i szybkość reakcji chemicznej}{6}{0}{1}
+\beamer@sectionintoc {2}{Modele reakcji chemicznych oscylacyjnych}{7}{0}{2}
+\beamer@subsectionintoc {2}{1}{Model Lotki}{7}{0}{2}
+\beamer@subsectionintoc {2}{2}{Model Lotki-Volterry}{8}{0}{2}
+\beamer@subsectionintoc {2}{3}{Model bruskelator}{9}{0}{2}
+\beamer@subsectionintoc {2}{4}{Model bruskelator ogólny}{10}{0}{2}
