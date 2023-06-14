@@ -17,9 +17,9 @@
 
 \title{Opis wybranych układów fizykochemicznych w stanie nierównowagi termodynamicznej}
 
-\author{Rafał Staroszczyk\\promotor: dr Piotr Weber}
+\author{Rafał Staroszczyk\\\footnotesize promotor: dr Piotr Weber}
 \institute{Politechnika Gdańska}
-\date{\today}
+\date{}
 
 \setbeamertemplate{headline}{}
 
@@ -27,9 +27,12 @@
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}{}
 
+\renewcommand*{\bibfont}{\footnotesize}
+
 \begin{document}
 \beamertemplatenavigationsymbolsempty
 \addtobeamertemplate{block begin}{\setlength\abovedisplayskip{0pt}}
+%\addtobeamertemplate{block begin}{\vspace*{-\baselineskip}\setlength\belowdisplayshortskip{0pt}}
 
 \begin{frame}
 \titlepage
@@ -43,9 +46,9 @@
 \begin{frame}
 \frametitle{Cel pracy}
 \begin{itemize}
-\item Przedstawienie teorii termodynamiki nierównowagowej, kinetyki reakcji chemicznych oraz modeli reakcji oscylacyjnych
-\item Analiza teoretyczna modeli reakcji chemicznych oscylacyjnych
-\item Symulacja numeryczna tych modeli
+\item Przedstawienie teorii termodynamiki nierównowagowej, kinetyki reakcji chemicznych oraz modeli oscylacyjnych reakcji chemicznych
+\item Analiza teoretyczna modeli oscylacyjnych reakcji chemicznych
+\item Symulacja numeryczna modeli oscylacyjnych reakcji chemicznych
 \end{itemize}
 \end{frame}
 
@@ -66,9 +69,12 @@
 
 \begin{frame}
 \frametitle{Produkcja entropii}
+\begin{equation*}
+\dd{U} = T\dd{S} - p\dd{V} + \sum_{i}\mu_{i}\dd{n_{i}} \quad \dd{S} = \dd_{e}S +  \dd_{i}S \geq 0
+\end{equation*}
 \begin{columns}
 \column{0.5\textwidth}
-\begin{block}{}
+\begin{block}{Podstawowe wzory}
 \begin{gather*}
 \dv{S}{t}=\frac{1}{T}\dv{U}{t}-\sum_{i}\frac{\mu_{i}}{T}\dv{n_{i}}{t} \\
 \vb{J}_{S}=\frac{1}{T}\vb{J}_{U}-\sum_{i}\frac{\mu_{i}}{T}\vb{J}_{i} \\
@@ -97,7 +103,10 @@ A_{r}=-\sum_{i}\nu_{ir}\mu_{i}
 \frametitle{Mechanizm reakcji chemicznej}
 \begin{columns}
 \column{0.5\textwidth}
-Szybkość reakcji chemicznej jest w ogólności dowolną funkcją wszystkich stężeń. Mechanizm reakcji opisuje poszczególne reakcje elementarne.
+\begin{itemize}
+\item Mechanizm reakcji opisuje poszczególne reakcje elementarne.
+\item Szybkość reakcji chemicznej jest w ogólności dowolną funkcją wszystkich stężeń.
+\end{itemize}
 \begin{block}{Równania różniczkowe}
 \begin{gather*}
 %\dv{\left[\ce{H2}\right]}{t} = -v_{2} \\
@@ -105,7 +114,8 @@ Szybkość reakcji chemicznej jest w ogólności dowolną funkcją wszystkich st
 %\dv{\left[\ce{H^{.}}\right]}{t} = v_{2} - v_{3} \\
 %\dv{\left[\ce{Br^{.}}\right]}{t} = 2v_{1} - v_{2} + v_{3} \\
 %\dv{\left[\ce{HBr}\right]}{t} = v_{2} + v_{3}
-\dv{c}{t} = \nu v
+v=\frac{1}{V\nu_{i}}\dv{n_{i}}{t} \\
+\dv{c_{i}}{t} = \sum_{r}\nu_{ir}v_r
 \end{gather*}
 \end{block}
 \column{0.5\textwidth}
@@ -131,12 +141,8 @@ v_{3} = k_{3}\left[\ce{H^{.}}\right]\left[\ce{Br2}\right]
 
 \begin{frame}
 \frametitle{Model Lotki}
+\small Historycznie pierwszy model, który można zastosować do reakcji chemicznych oscylacyjnych. Oryginalnie użyty do modelowania populacji. \normalsize
 \begin{columns}
-\column{0.5\textwidth}
-Historycznie pierwszy model, który można zastosować do reakcji chemicznych oscylacyjnych. Oryginalnie użyty do modelowania populacji. \\
-\begin{figure}
-\includegraphics[width=\textwidth]{"lotka3; a=0.1".png}
-\end{figure}
 \column{0.5\textwidth}
 \begin{block}{Równania reakcji}
 \begin{center}
@@ -145,7 +151,17 @@ Historycznie pierwszy model, który można zastosować do reakcji chemicznych os
 	\ce{Y ->[k_3] produkty}
 \end{center}
 \end{block}
-\begin{block}{Równania różniczkowe}
+\begin{figure}
+\includegraphics[width=\textwidth]{"lotka3; a=0.1".png}
+\end{figure}
+\column{0.5\textwidth}
+\begin{block}{Pełne równania różniczkowe}
+\begin{gather*}
+	\dv{[X]}{t}=k_{1}[A]-k_{2}[X][Y] \\
+	\dv{[Y]}{t}=k_{2}[X][Y]-k_{3}[Y]
+\end{gather*}
+\end{block}
+\begin{block}{Uproszczone równania różniczkowe}
 \begin{gather*}
 	\dv{x}{\tau} = a-axy \\
 	\dv{y}{\tau} = xy-y
@@ -158,12 +174,8 @@ Historycznie pierwszy model, który można zastosować do reakcji chemicznych os
 
 \begin{frame}
 \frametitle{Model Lotki-Volterry}
+\small Modyfikacja modelu Lotki z autokatalizą. Wykres fazowy jest zawsze torem zamkniętym. \normalsize
 \begin{columns}
-\column{0.5\textwidth}
-Modyfikacja modelu Lotki z autokatalizą. Wykres fazowy jest zawsze torem zamkniętym.  
-\begin{figure}
-\includegraphics[width=\textwidth]{"lotka_volterra; a=1".png}
-\end{figure}
 \column{0.5\textwidth}
 \begin{block}{Równania reakcji}
 \begin{center}
@@ -172,7 +184,17 @@ Modyfikacja modelu Lotki z autokatalizą. Wykres fazowy jest zawsze torem zamkni
 	\ce{Y ->[k_3] produkty}
 \end{center}
 \end{block}
-\begin{block}{Równania różniczkowe}
+\begin{figure}
+\includegraphics[width=\textwidth]{"lotka_volterra; a=1".png}
+\end{figure}
+\column{0.5\textwidth}
+\begin{block}{Pełne równania różniczkowe}
+\begin{gather*}
+	\dv{[X]}{t}=k_{1}[A][X]-k_{2}[X][Y] \\
+	\dv{[Y]}{t}=k_{2}[X][Y]-k_{3}[Y]
+\end{gather*}
+\end{block}
+\begin{block}{Uproszczone równania różniczkowe}
 \begin{gather*}
 	\dv{x}{\tau} = ax-axy \\
 	\dv{y}{\tau} = xy-y
@@ -185,13 +207,9 @@ Modyfikacja modelu Lotki z autokatalizą. Wykres fazowy jest zawsze torem zamkni
 
 \begin{frame}
 \frametitle{Model bruskelator}
+\small Model ten osiąga taki sam cykl graniczny niezależnie od stężeń początkowych. \normalsize
 \begin{columns}
-\column{0.5\textwidth}
-Model ten osiąga taki sam cykl graniczny niezależnie od stężeń początkowych. 
-\begin{figure}
-\includegraphics[width=\textwidth]{"brusselator; a=7; b=4".png}
-\end{figure}
-\column{0.5\textwidth}
+\column{0.45\textwidth}
 \begin{block}{Równania reakcji}
 \begin{center}
 	\ce{A ->[k_1] X} \\
@@ -200,7 +218,20 @@ Model ten osiąga taki sam cykl graniczny niezależnie od stężeń początkowyc
 	\ce{X ->[k_4] E}
 \end{center}
 \end{block}
-\begin{block}{Równania różniczkowe}
+\begin{figure}
+\includegraphics[width=\textwidth]{"brusselator; a=7; b=4".png}
+\end{figure}
+\column{0.55\textwidth}
+\begin{block}{Pełne równania różniczkowe}
+\small
+\begin{gather*}
+	\dv{[X]}{t} = k_{1}[A]+k_{2}[X]^{2}[Y]-k_{3}[B][X] \\
+	-k_{4}[X] \\
+	\dv{[Y]}{t} = -k_{2}[X]^{2}[Y]+k_{3}[B][X]
+\end{gather*}
+\normalsize
+\end{block}
+\begin{block}{Uproszczone równania różniczkowe}
 \begin{gather*}
 	\dv{x}{\tau} = 1+ax^{2}y-ax-x \\
 	\dv{y}{\tau} = -bx^{2}y+bx
@@ -212,13 +243,9 @@ Model ten osiąga taki sam cykl graniczny niezależnie od stężeń początkowyc
 \subsection{Model bruskelator ogólny}
 
 \begin{frame}
-\frametitle{Model bruskelator ogólny}
+\frametitle{Model bruskelator ogólny I}
+\small Uogólniona wersja modelu bruskelator, w których każda z reakcji jest odwracalna. \normalsize
 \begin{columns}
-\column{0.5\textwidth}
-Uogólniona wersja modelu bruskelator, w których każda z reakcji jest odwracalna. 
-\begin{figure}
-\includegraphics[width=\textwidth]{"brusselator_rev1; a=9, b=1, c=1, d=0.1".png}
-\end{figure}
 \column{0.5\textwidth}
 \begin{block}{Równania reakcji}
 \begin{center}
@@ -228,32 +255,76 @@ Uogólniona wersja modelu bruskelator, w których każda z reakcji jest odwracal
 	\ce{X <=>[k_{4}][k_{-4}] E}
 \end{center}
 \end{block}
-\begin{block}{Równania różniczkowe}
+\column{0.5\textwidth}
+\begin{block}{Pełne równania różniczkowe}
+%\vspace*{-\baselineskip}\setlength\belowdisplayshortskip{0pt}
+\small
+\begin{gather*}
+	\dv{[X]}{t} = k_{1}[A] + k_{2}[X]^{2}[Y] - k_{3}[B][X] \\
+	- k_{4}[X] - k_{-1}[X] - k_{-2}[X]^{3} \\
+	+ k_{-3}[D][Y] + k_{-4}[E] \\
+	\dv{[Y]}{t} = - k_{2}[X]^{2}[Y] + k_{3}[B][X] \\
+	+ k_{-2}[X]^{3} - k_{-3}[D][Y]
+\end{gather*}
+\normalsize
+\end{block}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Model bruskelator ogólny II}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{figure}
+\includegraphics[width=\textwidth]{"brusselator_rev1; a=9, b=1, c=1, d=0.1".png}
+\end{figure}
+\begin{block}{Produkcja entropii}
+\vspace*{-\baselineskip}\setlength\belowdisplayshortskip{0pt}
+\footnotesize
+\begin{gather*}
+	\dv{_{i}S}{\tau} = \ln(\frac{1}{cx})(1 - cx) \\
+	+ \ln(\frac{by}{dx})(ax^{2}y - \frac{ad}{b}x^{3}) \\
+	+ \ln(\frac{bx}{dy})(ac - \frac{ad}{b}y) + \ln(\frac{x}{c})(x - c)
+\end{gather*}
+\normalsize
+\end{block}
+\column{0.5\textwidth}
+\begin{figure}
+\includegraphics[width=\textwidth]{"brusselator_rev3; a=9, b=1, c=1, d=0.1".png}
+\end{figure}
+\begin{block}{Uproszczone równania różniczkowe}
+\vspace*{-\baselineskip}\setlength\belowdisplayshortskip{0pt}
+\small
 \begin{gather*}
 	\dv{x}{\tau} = 1 + ax^{2}y - ax - x \\
 	- cx - bc^{3} + by + c \\
 	\dv{y}{\tau} = -bx^{2}y + bx + dx^{3} - dy
 \end{gather*}
+\normalsize
 \end{block}
 \end{columns}
 \end{frame}
 
 \begin{frame}
 \frametitle{Podsumowanie}
-
+W pracy wyprowadziłem ogólny wzór na źródło produkcji entropii oraz jego zastosowanie dla ogólnego modelu bruskelatora. Przeprowadziłem analizę teoretyczną modeli oscylacyjnych reakcji chemicznych oraz zasymulowałem ich przebieg razem z produkcją entropii. Praca została napisana w środowisku \LaTeX, a symulacja w środowisku Python.
 \end{frame}
 
 \begin{frame}
 \begin{center}
-Dziękuję za uwagę
+\Large
+Dziękuję \\
+za \\
+uwagę
 \end{center}
 \end{frame}
 
 
 
-\begin{frame}[allowframebreaks]
+\begin{frame}
 \frametitle{Literatura}
-\nocite{*}
+\nocite{orlik, pigon1, kawczynski, palczewski, fortuna, orlik_sily_w_przyrodzie}
+\tiny
 \printbibliography
 \end{frame}
 

@@ -19,35 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
-    \entry{kawczynski}{book}{}
-      \name{author}{1}{}{%
-        {{hash=b3429bcda507d01c656f7c9f4228d9a3}{%
-           family={Kawczyński},
-           familyi={K\bibinitperiod},
-           given={A.\bibnamedelimi L.},
-           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Warszawa}%
-      }
-      \list{publisher}{1}{%
-        {Wydawnictwa Naukowo-Techniczne}%
-      }
-      \strng{namehash}{b3429bcda507d01c656f7c9f4228d9a3}
-      \strng{fullhash}{b3429bcda507d01c656f7c9f4228d9a3}
-      \strng{bibnamehash}{b3429bcda507d01c656f7c9f4228d9a3}
-      \strng{authorbibnamehash}{b3429bcda507d01c656f7c9f4228d9a3}
-      \strng{authornamehash}{b3429bcda507d01c656f7c9f4228d9a3}
-      \strng{authorfullhash}{b3429bcda507d01c656f7c9f4228d9a3}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Reakcje Chemiczne od równowagi przez struktury dyssypatywne do chaosu}
-      \field{year}{1990}
-      \field{dateera}{ce}
-      \true{nocite}
-    \endentry
     \entry{orlik}{book}{}
       \name{author}{1}{}{%
         {{hash=f03ccb1fbc510019c2a83707753321af}{%
@@ -69,172 +40,13 @@
       \strng{authornamehash}{f03ccb1fbc510019c2a83707753321af}
       \strng{authorfullhash}{f03ccb1fbc510019c2a83707753321af}
       \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{subtitle}{porządek i chaos}
       \field{title}{Reakcje oscylacyjne}
       \field{year}{1996}
-      \field{dateera}{ce}
-      \true{nocite}
-    \endentry
-    \entry{Ceynowa2008}{book}{}
-      \name{author}{1}{}{%
-        {{hash=fe248ccd2ddd94e1ed2bb40a7441d62c}{%
-           family={Ceynowa},
-           familyi={C\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Toruń}%
-      }
-      \list{publisher}{1}{%
-        {Wydawnictwo Naukowe UMK}%
-      }
-      \strng{namehash}{fe248ccd2ddd94e1ed2bb40a7441d62c}
-      \strng{fullhash}{fe248ccd2ddd94e1ed2bb40a7441d62c}
-      \strng{bibnamehash}{fe248ccd2ddd94e1ed2bb40a7441d62c}
-      \strng{authorbibnamehash}{fe248ccd2ddd94e1ed2bb40a7441d62c}
-      \strng{authornamehash}{fe248ccd2ddd94e1ed2bb40a7441d62c}
-      \strng{authorfullhash}{fe248ccd2ddd94e1ed2bb40a7441d62c}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Zarys Liniowej Termodynamiki Nierównowagowej Układów Ciągłych i Membranowych}
-      \field{year}{2008}
-      \field{dateera}{ce}
-      \true{nocite}
-    \endentry
-    \entry{lotka}{article}{}
-      \name{author}{1}{}{%
-        {{hash=4ae28b5a164a5e3f3fd7476066ac1c1e}{%
-           family={Lotka},
-           familyi={L\bibinitperiod},
-           given={A.\bibnamedelimi J.},
-           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
-      \strng{namehash}{4ae28b5a164a5e3f3fd7476066ac1c1e}
-      \strng{fullhash}{4ae28b5a164a5e3f3fd7476066ac1c1e}
-      \strng{bibnamehash}{4ae28b5a164a5e3f3fd7476066ac1c1e}
-      \strng{authorbibnamehash}{4ae28b5a164a5e3f3fd7476066ac1c1e}
-      \strng{authornamehash}{4ae28b5a164a5e3f3fd7476066ac1c1e}
-      \strng{authorfullhash}{4ae28b5a164a5e3f3fd7476066ac1c1e}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{The Journal of Physical Chemistry}
-      \field{number}{3}
-      \field{title}{Contribution to the Theory of Periodic Reactions}
-      \field{volume}{14}
-      \field{year}{1910}
-      \true{nocite}
-      \field{pages}{271\bibrangedash 274}
-      \range{pages}{4}
-      \verb{doi}
-      \verb 10.1021/j150111a004
-      \endverb
-      \verb{eprint}
-      \verb https://doi.org/10.1021/j150111a004
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1021/j150111a004
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1021/j150111a004
-      \endverb
-    \endentry
-    \entry{__belousov_hist}{article}{}
-      \name{author}{1}{}{%
-        {{hash=7ca9f385706d324dbfcb42cc59a853de}{%
-           family={Pechenkin},
-           familyi={P\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{7ca9f385706d324dbfcb42cc59a853de}
-      \strng{fullhash}{7ca9f385706d324dbfcb42cc59a853de}
-      \strng{bibnamehash}{7ca9f385706d324dbfcb42cc59a853de}
-      \strng{authorbibnamehash}{7ca9f385706d324dbfcb42cc59a853de}
-      \strng{authornamehash}{7ca9f385706d324dbfcb42cc59a853de}
-      \strng{authorfullhash}{7ca9f385706d324dbfcb42cc59a853de}
-      \field{extraname}{1}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Bioscience}
-      \field{title}{B P Belousov and his reaction}
-      \field{year}{2009}
-      \field{dateera}{ce}
-      \true{nocite}
-    \endentry
-    \entry{belousov_hist}{article}{}
-      \name{author}{1}{}{%
-        {{hash=6d76316486ec15cefb11bf16518493bf}{%
-           family={Pechenkin},
-           familyi={P\bibinitperiod},
-           given={Alexander},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{6d76316486ec15cefb11bf16518493bf}
-      \strng{fullhash}{6d76316486ec15cefb11bf16518493bf}
-      \strng{bibnamehash}{6d76316486ec15cefb11bf16518493bf}
-      \strng{authorbibnamehash}{6d76316486ec15cefb11bf16518493bf}
-      \strng{authornamehash}{6d76316486ec15cefb11bf16518493bf}
-      \strng{authorfullhash}{6d76316486ec15cefb11bf16518493bf}
-      \field{extraname}{2}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of biosciences}
-      \field{month}{09}
-      \field{title}{B P Belousov and his reaction}
-      \field{volume}{34}
-      \field{year}{2009}
-      \true{nocite}
-      \field{pages}{365\bibrangedash 71}
-      \range{pages}{7}
-      \verb{doi}
-      \verb 10.1007/s12038-009-0042-2
-      \endverb
-    \endentry
-    \entry{landau}{book}{}
-      \name{author}{2}{}{%
-        {{hash=ab77fc1405f1025268c1fed8c4fe3104}{%
-           family={Landau},
-           familyi={L\bibinitperiod},
-           given={L.\bibnamedelimi D.},
-           giveni={L\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-        {{hash=debbf1eda749ecb12f24b1100212dc79}{%
-           family={Lifszyc},
-           familyi={L\bibinitperiod},
-           given={J.\bibnamedelimi M.},
-           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Warszawa}%
-      }
-      \list{publisher}{1}{%
-        {Wydawnictwo Naukowe PWN}%
-      }
-      \strng{namehash}{1ea89610bf8f00da337a56a8b5ac1a58}
-      \strng{fullhash}{1ea89610bf8f00da337a56a8b5ac1a58}
-      \strng{bibnamehash}{1ea89610bf8f00da337a56a8b5ac1a58}
-      \strng{authorbibnamehash}{1ea89610bf8f00da337a56a8b5ac1a58}
-      \strng{authornamehash}{1ea89610bf8f00da337a56a8b5ac1a58}
-      \strng{authorfullhash}{1ea89610bf8f00da337a56a8b5ac1a58}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{subtitle}{część 1}
-      \field{title}{Fizyka Statystyczna}
-      \field{year}{2011}
       \field{dateera}{ce}
       \true{nocite}
     \endentry
@@ -263,13 +75,72 @@
       \strng{authorbibnamehash}{3e51c8fd413e423d8c6b29f812c64ea6}
       \strng{authornamehash}{3e51c8fd413e423d8c6b29f812c64ea6}
       \strng{authorfullhash}{3e51c8fd413e423d8c6b29f812c64ea6}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{subtitle}{Podstawy fenomenologiczne}
       \field{title}{Chemia Fizyczna}
       \field{year}{2013}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{kawczynski}{book}{}
+      \name{author}{1}{}{%
+        {{hash=b3429bcda507d01c656f7c9f4228d9a3}{%
+           family={Kawczyński},
+           familyi={K\bibinitperiod},
+           given={A.\bibnamedelimi L.},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Warszawa}%
+      }
+      \list{publisher}{1}{%
+        {Wydawnictwa Naukowo-Techniczne}%
+      }
+      \strng{namehash}{b3429bcda507d01c656f7c9f4228d9a3}
+      \strng{fullhash}{b3429bcda507d01c656f7c9f4228d9a3}
+      \strng{bibnamehash}{b3429bcda507d01c656f7c9f4228d9a3}
+      \strng{authorbibnamehash}{b3429bcda507d01c656f7c9f4228d9a3}
+      \strng{authornamehash}{b3429bcda507d01c656f7c9f4228d9a3}
+      \strng{authorfullhash}{b3429bcda507d01c656f7c9f4228d9a3}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Reakcje Chemiczne od równowagi przez struktury dyssypatywne do chaosu}
+      \field{year}{1990}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{palczewski}{book}{}
+      \name{author}{1}{}{%
+        {{hash=61eee1ab504aec1fff52cc0a29d2c955}{%
+           family={Palczewski},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Warszawa}%
+      }
+      \list{publisher}{1}{%
+        {WNT}%
+      }
+      \strng{namehash}{61eee1ab504aec1fff52cc0a29d2c955}
+      \strng{fullhash}{61eee1ab504aec1fff52cc0a29d2c955}
+      \strng{bibnamehash}{61eee1ab504aec1fff52cc0a29d2c955}
+      \strng{authorbibnamehash}{61eee1ab504aec1fff52cc0a29d2c955}
+      \strng{authornamehash}{61eee1ab504aec1fff52cc0a29d2c955}
+      \strng{authorfullhash}{61eee1ab504aec1fff52cc0a29d2c955}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{Teoria i metody numeryczne z wykorzystaniem programu rachunków symbolicznych}
+      \field{title}{Równania Różniczkowe Zwyczajne}
+      \field{year}{2017}
       \field{dateera}{ce}
       \true{nocite}
     \endentry
@@ -303,417 +174,14 @@
       \strng{authorbibnamehash}{c498708ad6bfef625a17f4aef0d38dcd}
       \strng{authornamehash}{c498708ad6bfef625a17f4aef0d38dcd}
       \strng{authorfullhash}{c498708ad6bfef625a17f4aef0d38dcd}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Metody Numeryczne}
       \field{year}{2017}
       \field{dateera}{ce}
       \true{nocite}
-    \endentry
-    \entry{palczewski}{book}{}
-      \name{author}{1}{}{%
-        {{hash=61eee1ab504aec1fff52cc0a29d2c955}{%
-           family={Palczewski},
-           familyi={P\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Warszawa}%
-      }
-      \list{publisher}{1}{%
-        {WNT}%
-      }
-      \strng{namehash}{61eee1ab504aec1fff52cc0a29d2c955}
-      \strng{fullhash}{61eee1ab504aec1fff52cc0a29d2c955}
-      \strng{bibnamehash}{61eee1ab504aec1fff52cc0a29d2c955}
-      \strng{authorbibnamehash}{61eee1ab504aec1fff52cc0a29d2c955}
-      \strng{authornamehash}{61eee1ab504aec1fff52cc0a29d2c955}
-      \strng{authorfullhash}{61eee1ab504aec1fff52cc0a29d2c955}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{subtitle}{Teoria i metody numeryczne z wykorzystaniem programu rachunków symbolicznych}
-      \field{title}{Równania Różniczkowe Zwyczajne}
-      \field{year}{2017}
-      \field{dateera}{ce}
-      \true{nocite}
-    \endentry
-    \entry{pudlik}{book}{}
-      \name{author}{1}{}{%
-        {{hash=8e72dce586a8f6e0cbd4e0d084f64f18}{%
-           family={Pudlik},
-           familyi={P\bibinitperiod},
-           given={W.},
-           giveni={W\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Gdańsk}%
-      }
-      \list{publisher}{1}{%
-        {Wydawnictwo Politechniki Gdańskiej}%
-      }
-      \strng{namehash}{8e72dce586a8f6e0cbd4e0d084f64f18}
-      \strng{fullhash}{8e72dce586a8f6e0cbd4e0d084f64f18}
-      \strng{bibnamehash}{8e72dce586a8f6e0cbd4e0d084f64f18}
-      \strng{authorbibnamehash}{8e72dce586a8f6e0cbd4e0d084f64f18}
-      \strng{authornamehash}{8e72dce586a8f6e0cbd4e0d084f64f18}
-      \strng{authorfullhash}{8e72dce586a8f6e0cbd4e0d084f64f18}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Termodynamika}
-      \field{year}{2020}
-      \field{dateera}{ce}
-      \true{nocite}
-    \endentry
-    \entry{stryer}{book}{}
-      \name{author}{3}{}{%
-        {{hash=3083079506c6ecf3a0898866a83c3070}{%
-           family={Tymoczko},
-           familyi={T\bibinitperiod},
-           given={J.\bibnamedelimi L.},
-           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-        {{hash=eeb3aeb06a82438c5ea444f524363b53}{%
-           family={Berg},
-           familyi={B\bibinitperiod},
-           given={J.\bibnamedelimi M.},
-           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=e37363e8b98b73388adc0d75fe153ade}{%
-           family={Stryer},
-           familyi={S\bibinitperiod},
-           given={L.},
-           giveni={L\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Warszawa}%
-      }
-      \list{publisher}{1}{%
-        {Wydawnictwo Naukowe PWN}%
-      }
-      \strng{namehash}{728162149200621a14cbbd84975e5211}
-      \strng{fullhash}{728162149200621a14cbbd84975e5211}
-      \strng{bibnamehash}{728162149200621a14cbbd84975e5211}
-      \strng{authorbibnamehash}{728162149200621a14cbbd84975e5211}
-      \strng{authornamehash}{728162149200621a14cbbd84975e5211}
-      \strng{authorfullhash}{728162149200621a14cbbd84975e5211}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{subtitle}{Krótki Kurs}
-      \field{title}{Biochemia}
-      \field{year}{2013}
-      \field{dateera}{ce}
-      \true{nocite}
-    \endentry
-    \entry{buchowski}{book}{}
-      \name{author}{2}{}{%
-        {{hash=7d44789dd109bcc913dd0aab7719bd96}{%
-           family={Buchowski},
-           familyi={B\bibinitperiod},
-           given={H.},
-           giveni={H\bibinitperiod}}}%
-        {{hash=538edf6ad3634467336cca2aaeed4b59}{%
-           family={Ufnalski},
-           familyi={U\bibinitperiod},
-           given={W.},
-           giveni={W\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Warszawa}%
-      }
-      \list{publisher}{1}{%
-        {WNT}%
-      }
-      \strng{namehash}{e39c56393d9a492129b652fd484eea54}
-      \strng{fullhash}{e39c56393d9a492129b652fd484eea54}
-      \strng{bibnamehash}{e39c56393d9a492129b652fd484eea54}
-      \strng{authorbibnamehash}{e39c56393d9a492129b652fd484eea54}
-      \strng{authornamehash}{e39c56393d9a492129b652fd484eea54}
-      \strng{authorfullhash}{e39c56393d9a492129b652fd484eea54}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Podstawy Termodynamiki}
-      \field{year}{1998}
-      \field{dateera}{ce}
-      \true{nocite}
-    \endentry
-    \entry{jaworski}{book}{}
-      \name{author}{2}{}{%
-        {{hash=01e83efa3931be4ec21252d7d329c0d9}{%
-           family={Jaworski},
-           familyi={J\bibinitperiod},
-           given={B.\bibnamedelimi M.},
-           giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=27c353f3acba48969d031f9d756ae21a}{%
-           family={Dietław},
-           familyi={D\bibinitperiod},
-           given={A.\bibnamedelimi A.},
-           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Warszawa}%
-      }
-      \list{publisher}{1}{%
-        {Wydawnictwo Naukowe PWN}%
-      }
-      \strng{namehash}{927471fa87a1e9231419748042c43075}
-      \strng{fullhash}{927471fa87a1e9231419748042c43075}
-      \strng{bibnamehash}{927471fa87a1e9231419748042c43075}
-      \strng{authorbibnamehash}{927471fa87a1e9231419748042c43075}
-      \strng{authornamehash}{927471fa87a1e9231419748042c43075}
-      \strng{authorfullhash}{927471fa87a1e9231419748042c43075}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Fizyka. Poradnik encyklopedyczny}
-      \field{year}{2000}
-      \field{dateera}{ce}
-      \true{nocite}
-    \endentry
-    \entry{guminski}{book}{}
-      \name{author}{1}{}{%
-        {{hash=b8d9625412ee76f3fd4f4fbf9e58eeba}{%
-           family={Gumiński},
-           familyi={G\bibinitperiod},
-           given={K.},
-           giveni={K\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Warszawa}%
-      }
-      \list{publisher}{1}{%
-        {Państwowe Wydawnictwo Naukowe}%
-      }
-      \strng{namehash}{b8d9625412ee76f3fd4f4fbf9e58eeba}
-      \strng{fullhash}{b8d9625412ee76f3fd4f4fbf9e58eeba}
-      \strng{bibnamehash}{b8d9625412ee76f3fd4f4fbf9e58eeba}
-      \strng{authorbibnamehash}{b8d9625412ee76f3fd4f4fbf9e58eeba}
-      \strng{authornamehash}{b8d9625412ee76f3fd4f4fbf9e58eeba}
-      \strng{authorfullhash}{b8d9625412ee76f3fd4f4fbf9e58eeba}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Termodynamika procesów nieodwracalnych}
-      \field{year}{1962}
-      \field{dateera}{ce}
-      \true{nocite}
-    \endentry
-    \entry{atkins_por}{book}{}
-      \name{author}{1}{}{%
-        {{hash=1a3d20037747a74f26783ac158aa22ea}{%
-           family={Atkins},
-           familyi={A\bibinitperiod},
-           given={P.\bibnamedelimi W.},
-           giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Warszawa}%
-      }
-      \list{publisher}{1}{%
-        {Wydawnictwo Naukowe PWN}%
-      }
-      \strng{namehash}{1a3d20037747a74f26783ac158aa22ea}
-      \strng{fullhash}{1a3d20037747a74f26783ac158aa22ea}
-      \strng{bibnamehash}{1a3d20037747a74f26783ac158aa22ea}
-      \strng{authorbibnamehash}{1a3d20037747a74f26783ac158aa22ea}
-      \strng{authornamehash}{1a3d20037747a74f26783ac158aa22ea}
-      \strng{authorfullhash}{1a3d20037747a74f26783ac158aa22ea}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Chemia. Przewodnik po chemii fizycznej}
-      \field{year}{1997}
-      \field{dateera}{ce}
-      \true{nocite}
-    \endentry
-    \entry{mazur}{book}{}
-      \name{author}{2}{}{%
-        {{hash=6e1dbbf3fb080fdcb1e4ca38eddd0c33}{%
-           family={Groot},
-           familyi={G\bibinitperiod},
-           given={S.\bibnamedelimi R.},
-           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
-           prefix={de},
-           prefixi={d\bibinitperiod}}}%
-        {{hash=0e56466fc16447721a88658f090845d2}{%
-           family={Mazur},
-           familyi={M\bibinitperiod},
-           given={P.},
-           giveni={P\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Amsterdam}%
-      }
-      \list{publisher}{1}{%
-        {North-Holland Publishing Company}%
-      }
-      \strng{namehash}{b818a9052656e5453dd20da517e1f86a}
-      \strng{fullhash}{b818a9052656e5453dd20da517e1f86a}
-      \strng{bibnamehash}{b818a9052656e5453dd20da517e1f86a}
-      \strng{authorbibnamehash}{b818a9052656e5453dd20da517e1f86a}
-      \strng{authornamehash}{b818a9052656e5453dd20da517e1f86a}
-      \strng{authorfullhash}{b818a9052656e5453dd20da517e1f86a}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Non-equilibrium thermodynamics}
-      \field{year}{1962}
-      \field{dateera}{ce}
-      \true{nocite}
-    \endentry
-    \entry{guminski_petelenz}{book}{}
-      \name{author}{2}{}{%
-        {{hash=b8d9625412ee76f3fd4f4fbf9e58eeba}{%
-           family={Gumiński},
-           familyi={G\bibinitperiod},
-           given={K.},
-           giveni={K\bibinitperiod}}}%
-        {{hash=059d2887bf44ba16553dacd99e44131e}{%
-           family={Petelenz},
-           familyi={P\bibinitperiod},
-           given={P.},
-           giveni={P\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Warszawa}%
-      }
-      \list{publisher}{1}{%
-        {Państwowe Wydawnictwo Naukowe}%
-      }
-      \strng{namehash}{5830fcb688b1bd73f45eb3da0b0efb4d}
-      \strng{fullhash}{5830fcb688b1bd73f45eb3da0b0efb4d}
-      \strng{bibnamehash}{5830fcb688b1bd73f45eb3da0b0efb4d}
-      \strng{authorbibnamehash}{5830fcb688b1bd73f45eb3da0b0efb4d}
-      \strng{authornamehash}{5830fcb688b1bd73f45eb3da0b0efb4d}
-      \strng{authorfullhash}{5830fcb688b1bd73f45eb3da0b0efb4d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Elementy chemii teoretycznej}
-      \field{year}{1989}
-      \field{dateera}{ce}
-      \true{nocite}
-    \endentry
-    \entry{kurzynski}{book}{}
-      \name{author}{1}{}{%
-        {{hash=d8aa018e35c787e1e17a05079cb97708}{%
-           family={Kurzynski},
-           familyi={K\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{d8aa018e35c787e1e17a05079cb97708}
-      \strng{fullhash}{d8aa018e35c787e1e17a05079cb97708}
-      \strng{bibnamehash}{d8aa018e35c787e1e17a05079cb97708}
-      \strng{authorbibnamehash}{d8aa018e35c787e1e17a05079cb97708}
-      \strng{authornamehash}{d8aa018e35c787e1e17a05079cb97708}
-      \strng{authorfullhash}{d8aa018e35c787e1e17a05079cb97708}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{The thermodynamic machinery of life}
-      \field{year}{2006}
-      \field{dateera}{ce}
-      \true{nocite}
-    \endentry
-    \entry{__osypova}{article}{}
-      \name{author}{3}{}{%
-        {{hash=96d08b94fb49b64251951f4405aef0ba}{%
-           family={Osypova},
-           familyi={O\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-        {{hash=4ea83ba59ba76993774a1fda84594a65}{%
-           family={Dübner},
-           familyi={D\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-        {{hash=f708d5616c559111e32ca2c966855a18}{%
-           family={Panzarasa},
-           familyi={P\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod}}}%
-      }
-      \strng{namehash}{e9c748066c25c20e73d9f474bad8ef54}
-      \strng{fullhash}{e9c748066c25c20e73d9f474bad8ef54}
-      \strng{bibnamehash}{e9c748066c25c20e73d9f474bad8ef54}
-      \strng{authorbibnamehash}{e9c748066c25c20e73d9f474bad8ef54}
-      \strng{authornamehash}{e9c748066c25c20e73d9f474bad8ef54}
-      \strng{authorfullhash}{e9c748066c25c20e73d9f474bad8ef54}
-      \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{materials}
-      \field{title}{Oscillating Reactions Meet Polymers at Interfaces}
-      \field{year}{2020}
-      \field{dateera}{ce}
-      \true{nocite}
-    \endentry
-    \entry{osypova}{article}{}
-      \name{author}{3}{}{%
-        {{hash=96d08b94fb49b64251951f4405aef0ba}{%
-           family={Osypova},
-           familyi={O\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-        {{hash=4ea83ba59ba76993774a1fda84594a65}{%
-           family={Dübner},
-           familyi={D\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-        {{hash=f708d5616c559111e32ca2c966855a18}{%
-           family={Panzarasa},
-           familyi={P\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod}}}%
-      }
-      \strng{namehash}{e9c748066c25c20e73d9f474bad8ef54}
-      \strng{fullhash}{e9c748066c25c20e73d9f474bad8ef54}
-      \strng{bibnamehash}{e9c748066c25c20e73d9f474bad8ef54}
-      \strng{authorbibnamehash}{e9c748066c25c20e73d9f474bad8ef54}
-      \strng{authornamehash}{e9c748066c25c20e73d9f474bad8ef54}
-      \strng{authorfullhash}{e9c748066c25c20e73d9f474bad8ef54}
-      \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Chemo-mechanical phenomena, including oscillations and peristaltic motions, are widespread in nature&mdash;just think of heartbeats&mdash;thanks to the ability of living organisms to convert directly chemical energy into mechanical work. Their imitation with artificial systems is still an open challenge. Chemical clocks and oscillators (such as the popular Belousov&ndash;Zhabotinsky (BZ) reaction) are reaction networks characterized by the emergence of peculiar spatiotemporal dynamics. Their application to polymers at interfaces (grafted chains, layer-by-layer assemblies, and polymer brushes) offers great opportunities for developing novel smart biomimetic materials. Despite the wide field of potential applications, limited research has been carried out so far. Here, we aim to showcase the state-of-the-art of this fascinating field of investigation, highlighting the potential for future developments and providing a personal outlook.}
-      \field{issn}{1996-1944}
-      \field{journaltitle}{Materials}
-      \field{number}{13}
-      \field{title}{Oscillating Reactions Meet Polymers at Interfaces}
-      \field{volume}{13}
-      \field{year}{2020}
-      \true{nocite}
-      \verb{doi}
-      \verb 10.3390/ma13132957
-      \endverb
-      \verb{urlraw}
-      \verb https://www.mdpi.com/1996-1944/13/13/2957
-      \endverb
-      \verb{url}
-      \verb https://www.mdpi.com/1996-1944/13/13/2957
-      \endverb
     \endentry
     \entry{orlik_sily_w_przyrodzie}{article}{}
       \name{author}{1}{}{%
@@ -730,8 +198,8 @@
       \strng{authornamehash}{f03ccb1fbc510019c2a83707753321af}
       \strng{authorfullhash}{f03ccb1fbc510019c2a83707753321af}
       \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Wiadomości chemiczne}
@@ -744,258 +212,6 @@
       \range{pages}{34}
       \verb{doi}
       \verb 10.53584/wiadchem.2023.1.1
-      \endverb
-    \endentry
-    \entry{__epstein}{article}{}
-      \name{author}{1}{}{%
-        {{hash=51ac4a71cfacb2c673f0ad96ed358f9c}{%
-           family={Epstein},
-           familyi={E\bibinitperiod},
-           given={I.\bibnamedelimi R.},
-           giveni={I\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-      }
-      \strng{namehash}{51ac4a71cfacb2c673f0ad96ed358f9c}
-      \strng{fullhash}{51ac4a71cfacb2c673f0ad96ed358f9c}
-      \strng{bibnamehash}{51ac4a71cfacb2c673f0ad96ed358f9c}
-      \strng{authorbibnamehash}{51ac4a71cfacb2c673f0ad96ed358f9c}
-      \strng{authornamehash}{51ac4a71cfacb2c673f0ad96ed358f9c}
-      \strng{authorfullhash}{51ac4a71cfacb2c673f0ad96ed358f9c}
-      \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{PNAS}
-      \field{title}{Predicting complex biology with simple chemistry}
-      \field{year}{2006}
-      \field{dateera}{ce}
-      \true{nocite}
-    \endentry
-    \entry{epstein}{article}{}
-      \name{author}{1}{}{%
-        {{hash=51ac4a71cfacb2c673f0ad96ed358f9c}{%
-           family={Epstein},
-           familyi={E\bibinitperiod},
-           given={I.\bibnamedelimi R.},
-           giveni={I\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-      }
-      \strng{namehash}{51ac4a71cfacb2c673f0ad96ed358f9c}
-      \strng{fullhash}{51ac4a71cfacb2c673f0ad96ed358f9c}
-      \strng{bibnamehash}{51ac4a71cfacb2c673f0ad96ed358f9c}
-      \strng{authorbibnamehash}{51ac4a71cfacb2c673f0ad96ed358f9c}
-      \strng{authornamehash}{51ac4a71cfacb2c673f0ad96ed358f9c}
-      \strng{authorfullhash}{51ac4a71cfacb2c673f0ad96ed358f9c}
-      \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Proceedings of the National Academy of Sciences}
-      \field{number}{43}
-      \field{title}{Predicting complex biology with simple chemistry}
-      \field{volume}{103}
-      \field{year}{2006}
-      \true{nocite}
-      \field{pages}{15727\bibrangedash 15728}
-      \range{pages}{2}
-      \verb{doi}
-      \verb 10.1073/pnas.0608026103
-      \endverb
-      \verb{eprint}
-      \verb https://www.pnas.org/doi/pdf/10.1073/pnas.0608026103
-      \endverb
-      \verb{urlraw}
-      \verb https://www.pnas.org/doi/abs/10.1073/pnas.0608026103
-      \endverb
-      \verb{url}
-      \verb https://www.pnas.org/doi/abs/10.1073/pnas.0608026103
-      \endverb
-    \endentry
-    \entry{prigogine}{book}{}
-      \name{author}{1}{}{%
-        {{hash=4a27c9d00244021da5fc207ea2620f6e}{%
-           family={Prigogine},
-           familyi={P\bibinitperiod},
-           given={I.},
-           giveni={I\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {New York}%
-      }
-      \list{publisher}{2}{%
-        {W. H. Freeman}%
-        {Company}%
-      }
-      \strng{namehash}{4a27c9d00244021da5fc207ea2620f6e}
-      \strng{fullhash}{4a27c9d00244021da5fc207ea2620f6e}
-      \strng{bibnamehash}{4a27c9d00244021da5fc207ea2620f6e}
-      \strng{authorbibnamehash}{4a27c9d00244021da5fc207ea2620f6e}
-      \strng{authornamehash}{4a27c9d00244021da5fc207ea2620f6e}
-      \strng{authorfullhash}{4a27c9d00244021da5fc207ea2620f6e}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{From being to becoming}
-      \field{year}{1980}
-      \field{dateera}{ce}
-      \true{nocite}
-    \endentry
-    \entry{__krebs_oscillations}{article}{}
-      \name{author}{5}{}{%
-        {{hash=1735e5938bfecfffadbfec3815a3c90a}{%
-           family={Ahn},
-           familyi={A\bibinitperiod},
-           given={E.},
-           giveni={E\bibinitperiod}}}%
-        {{hash=8aacd22e59b538e218d84bc9cb96c13f}{%
-           family={Kumar},
-           familyi={K\bibinitperiod},
-           given={P.},
-           giveni={P\bibinitperiod}}}%
-        {{hash=1031f4929d3c4c8d831c092187f96004}{%
-           family={Mukha},
-           familyi={M\bibinitperiod},
-           given={D.},
-           giveni={D\bibinitperiod}}}%
-        {{hash=a22f5991f1c43134b6f276e52d2c6143}{%
-           family={Tzur},
-           familyi={T\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-        {{hash=d024a7fe6ef6899eb10bc1618612812f}{%
-           family={Shlomi},
-           familyi={S\bibinitperiod},
-           given={T.},
-           giveni={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{ff9a03ca7dd6ac85577706cc38447f5b}
-      \strng{fullhash}{28e4a1b064587a449c2046ee74bd9be0}
-      \strng{bibnamehash}{28e4a1b064587a449c2046ee74bd9be0}
-      \strng{authorbibnamehash}{28e4a1b064587a449c2046ee74bd9be0}
-      \strng{authornamehash}{ff9a03ca7dd6ac85577706cc38447f5b}
-      \strng{authorfullhash}{28e4a1b064587a449c2046ee74bd9be0}
-      \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Molecular Systems Biology}
-      \field{title}{Temporal fluxomics reveals oscillations in TCA cycle flux throughout the mammalian cell cycle}
-      \field{year}{2017}
-      \field{dateera}{ce}
-      \true{nocite}
-    \endentry
-    \entry{krebs_oscillations}{article}{}
-      \name{author}{5}{}{%
-        {{hash=1735e5938bfecfffadbfec3815a3c90a}{%
-           family={Ahn},
-           familyi={A\bibinitperiod},
-           given={E.},
-           giveni={E\bibinitperiod}}}%
-        {{hash=8aacd22e59b538e218d84bc9cb96c13f}{%
-           family={Kumar},
-           familyi={K\bibinitperiod},
-           given={P.},
-           giveni={P\bibinitperiod}}}%
-        {{hash=1031f4929d3c4c8d831c092187f96004}{%
-           family={Mukha},
-           familyi={M\bibinitperiod},
-           given={D.},
-           giveni={D\bibinitperiod}}}%
-        {{hash=a22f5991f1c43134b6f276e52d2c6143}{%
-           family={Tzur},
-           familyi={T\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-        {{hash=d024a7fe6ef6899eb10bc1618612812f}{%
-           family={Shlomi},
-           familyi={S\bibinitperiod},
-           given={T.},
-           giveni={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{ff9a03ca7dd6ac85577706cc38447f5b}
-      \strng{fullhash}{28e4a1b064587a449c2046ee74bd9be0}
-      \strng{bibnamehash}{28e4a1b064587a449c2046ee74bd9be0}
-      \strng{authorbibnamehash}{28e4a1b064587a449c2046ee74bd9be0}
-      \strng{authornamehash}{ff9a03ca7dd6ac85577706cc38447f5b}
-      \strng{authorfullhash}{28e4a1b064587a449c2046ee74bd9be0}
-      \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Abstract Cellular metabolic demands change throughout the cell cycle. Nevertheless, a characterization of how metabolic fluxes adapt to the changing demands throughout the cell cycle is lacking. Here, we developed a temporal-fluxomics approach to derive a comprehensive and quantitative view of alterations in metabolic fluxes throughout the mammalian cell cycle. This is achieved by combining pulse-chase LC-MS-based isotope tracing in synchronized cell populations with computational deconvolution and metabolic flux modeling. We find that TCA cycle fluxes are rewired as cells progress through the cell cycle with complementary oscillations of glucose versus glutamine-derived fluxes: Oxidation of glucose-derived flux peaks in late G1 phase, while oxidative and reductive glutamine metabolism dominates S phase. These complementary flux oscillations maintain a constant production rate of reducing equivalents and oxidative phosphorylation flux throughout the cell cycle. The shift from glucose to glutamine oxidation in S phase plays an important role in cell cycle progression and cell proliferation.}
-      \field{journaltitle}{Molecular Systems Biology}
-      \field{number}{11}
-      \field{title}{Temporal fluxomics reveals oscillations in TCA cycle flux throughout the mammalian cell cycle}
-      \field{volume}{13}
-      \field{year}{2017}
-      \true{nocite}
-      \field{pages}{953}
-      \range{pages}{1}
-      \verb{doi}
-      \verb https://doi.org/10.15252/msb.20177763
-      \endverb
-      \verb{eprint}
-      \verb https://www.embopress.org/doi/pdf/10.15252/msb.20177763
-      \endverb
-      \verb{urlraw}
-      \verb https://www.embopress.org/doi/abs/10.15252/msb.20177763
-      \endverb
-      \verb{url}
-      \verb https://www.embopress.org/doi/abs/10.15252/msb.20177763
-      \endverb
-      \keyw{cell cycle,cellular metabolism,isotope tracing,LC-MS,metabolic flux analysis}
-    \endentry
-    \entry{prigogine_modern}{book}{}
-      \name{author}{2}{}{%
-        {{hash=b489aa1576518de30f950080e15ced61}{%
-           family={Kondepudi},
-           familyi={K\bibinitperiod},
-           given={D.},
-           giveni={D\bibinitperiod}}}%
-        {{hash=4a27c9d00244021da5fc207ea2620f6e}{%
-           family={Prigogine},
-           familyi={P\bibinitperiod},
-           given={I.},
-           giveni={I\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Chichester}%
-      }
-      \list{publisher}{1}{%
-        {John Wiley \& Sons}%
-      }
-      \strng{namehash}{31523a933c45688c1f6343209f0da132}
-      \strng{fullhash}{31523a933c45688c1f6343209f0da132}
-      \strng{bibnamehash}{31523a933c45688c1f6343209f0da132}
-      \strng{authorbibnamehash}{31523a933c45688c1f6343209f0da132}
-      \strng{authornamehash}{31523a933c45688c1f6343209f0da132}
-      \strng{authorfullhash}{31523a933c45688c1f6343209f0da132}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{subtitle}{From Heat Engines to Dissipative Structures}
-      \field{title}{Modern Thermodynamics}
-      \field{year}{1998}
-      \field{dateera}{ce}
-      \true{nocite}
-    \endentry
-    \entry{sigmaaldrich}{online}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labeltitlesource}{title}
-      \field{title}{Sigma-Aldrich}
-      \field{year}{2023}
-      \field{dateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb www.sigmaaldrich.com
-      \endverb
-      \verb{url}
-      \verb www.sigmaaldrich.com
       \endverb
     \endentry
   \enddatalist

@@ -1,14 +1,14 @@
-[0] Config.pm:306> INFO - This is Biber 2.18
-[0] Config.pm:309> INFO - Logfile is 'praca_inzynierska_prezentacja.blg'
-[209] biber-MSWIN64:340> INFO - === 
-[281] Biber.pm:418> INFO - Reading 'praca_inzynierska_prezentacja.bcf'
-[483] Biber.pm:975> INFO - Using all citekeys in bib section 0
-[514] Biber.pm:4401> INFO - Processing section 0
-[537] Biber.pm:4592> INFO - Looking for bibtex file '../praca/refs.bib' for section 0
+[1] Config.pm:306> INFO - This is Biber 2.18
+[1] Config.pm:309> INFO - Logfile is 'praca_inzynierska_prezentacja.blg'
+[207] biber-MSWIN64:340> INFO - === 
+[267] Biber.pm:418> INFO - Reading 'praca_inzynierska_prezentacja.bcf'
+[474] Biber.pm:978> INFO - Found 6 citekeys in bib section 0
+[504] Biber.pm:4401> INFO - Processing section 0
+[527] Biber.pm:4592> INFO - Looking for bibtex file '../praca/refs.bib' for section 0
 [620] bibtex.pm:1713> INFO - LaTeX decoding ...
-[677] bibtex.pm:1518> INFO - Found BibTeX data source '../praca/refs.bib'
-[967] UCollate.pm:68> INFO - Overriding locale 'pl-PL' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[967] UCollate.pm:68> INFO - Overriding locale 'pl-PL' defaults 'variable = shifted' with 'variable = non-ignorable'
-[967] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'pl-PL'
-[1007] bbl.pm:654> INFO - Writing 'praca_inzynierska_prezentacja.bbl' with encoding 'UTF-8'
-[1028] bbl.pm:757> INFO - Output to praca_inzynierska_prezentacja.bbl
+[680] bibtex.pm:1518> INFO - Found BibTeX data source '../praca/refs.bib'
+[789] UCollate.pm:68> INFO - Overriding locale 'pl-PL' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[789] UCollate.pm:68> INFO - Overriding locale 'pl-PL' defaults 'variable = shifted' with 'variable = non-ignorable'
+[789] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'pl-PL'
+[796] bbl.pm:654> INFO - Writing 'praca_inzynierska_prezentacja.bbl' with encoding 'UTF-8'
+[802] bbl.pm:757> INFO - Output to praca_inzynierska_prezentacja.bbl

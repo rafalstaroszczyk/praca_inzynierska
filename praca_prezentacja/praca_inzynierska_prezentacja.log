@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.12.4)  11 JUN 2023 21:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.12.4)  14 JUN 2023 22:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1174,24 +1174,24 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (praca_inzynierska_prezentacja.aux)
 \openout1 = `praca_inzynierska_prezentacja.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1253,68 +1253,68 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 30.
+Package hyperref Info: Link coloring OFF on input line 32.
  (praca_inzynierska_prezentacja.out) (praca_inzynierska_prezentacja.out)
 \@outlinefile=\write6
 \openout6 = `praca_inzynierska_prezentacja.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 30.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 32.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 30.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 32.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 30.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 30.
+(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 32.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 30.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 30.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 30.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 32.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 30.
+(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 30.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 30.
+(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 32.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 30.
+(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 30.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 30.
+(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 32.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 30.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 30.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 32.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 30.
+(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 32.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 30.
+(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> T1/cmr/b/n on input line 30.
+(Font)                  OT1/cmss/b/n --> T1/cmr/b/n on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/cmss/b/n --> T1/cmss/b/n on input line 30.
+(Font)                  T1/cmss/b/n --> T1/cmss/b/n on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 30.
+(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 30.
+(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 30.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 30.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 32.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 32.
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `normal' on input line 30
+(Font)              `pureletters' in the math version `normal' on input line 32
 .
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 30
+(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 32
 .
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `bold' on input line 30.
+(Font)              `pureletters' in the math version `bold' on input line 32.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 30
+(Font)                  T1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 32
 .
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 30.
+ut line 32.
 
 (C:\Users\staro\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-b
 asic-dictionary-English.dict
@@ -1354,10 +1354,10 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'praca_inzynierska_prezentacja.bbl' found.
  (praca_inzynierska_prezentacja.bbl)
-Package biblatex Info: Reference section=0 on input line 30.
-Package biblatex Info: Reference segment=0 on input line 30.
+Package biblatex Info: Reference section=0 on input line 32.
+Package biblatex Info: Reference segment=0 on input line 32.
 
-Package chemgreek Info: Activating mapping `default' on line 30.
+Package chemgreek Info: Activating mapping `default' on line 32.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
@@ -1371,118 +1371,119 @@ Package caption Info: End \AtBeginDocument code.
 ] [3
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 62.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
 
 
 (C:\Users\staro\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 62.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
 
 
 (C:\Users\staro\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 62.
+ut line 65.
 
 (C:\Users\staro\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1mathk
 erncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-<../praca//belousov_zhabotinsky_2.png, id=105, 581.92406pt x 581.92406pt>
+<../praca//belousov_zhabotinsky_2.png, id=106, 581.92406pt x 581.92406pt>
 File: ../praca//belousov_zhabotinsky_2.png Graphic file (type png)
 <use ../praca//belousov_zhabotinsky_2.png>
 Package pdftex.def Info: ../praca//belousov_zhabotinsky_2.png  used on input li
-ne 62.
+ne 65.
 (pdftex.def)             Requested size: 69.13974pt x 69.13527pt.
-<../praca//benard.png, id=107, 252.19218pt x 249.18094pt>
+<../praca//benard.png, id=108, 252.19218pt x 249.18094pt>
 File: ../praca//benard.png Graphic file (type png)
 <use ../praca//benard.png>
-Package pdftex.def Info: ../praca//benard.png  used on input line 62.
+Package pdftex.def Info: ../praca//benard.png  used on input line 65.
 (pdftex.def)             Requested size: 69.13974pt x 68.31393pt.
  [4
 
  <../praca//belousov_zhabotinsky_2.png> <../praca//benard.png>]
 
 LaTeX Font Warning: Font shape `T1/cmss/b/n' undefined
-(Font)              using `T1/cmss/m/n' instead on input line 92.
+(Font)              using `T1/cmss/m/n' instead on input line 98.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 92.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 98.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 92.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 98.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 92.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 98.
 [5
 
 ] [6
 
 ]
-<../praca//lotka3; a=0.1.png, id=209, 462.528pt x 346.896pt>
+<../praca//lotka3; a=0.1.png, id=221, 462.528pt x 346.896pt>
 File: ../praca//lotka3; a=0.1.png Graphic file (type png)
 <use ../praca//lotka3; a=0.1.png>
-Package pdftex.def Info: ../praca//lotka3; a=0.1.png  used on input line 155.
+Package pdftex.def Info: ../praca//lotka3; a=0.1.png  used on input line 171.
 (pdftex.def)             Requested size: 153.64493pt x 115.23296pt.
  [7
 
  <../praca//lotka3; a=0.1.png>]
-<../praca//lotka_volterra; a=1.png, id=241, 462.528pt x 346.896pt>
+<../praca//lotka_volterra; a=1.png, id=266, 462.528pt x 346.896pt>
 File: ../praca//lotka_volterra; a=1.png Graphic file (type png)
 <use ../praca//lotka_volterra; a=1.png>
 Package pdftex.def Info: ../praca//lotka_volterra; a=1.png  used on input line 
-182.
+204.
 (pdftex.def)             Requested size: 153.64493pt x 115.23296pt.
  [8
 
  <../praca//lotka_volterra; a=1.png>]
-<../praca//brusselator; a=7; b=4.png, id=268, 462.528pt x 346.896pt>
+<../praca//brusselator; a=7; b=4.png, id=302, 462.528pt x 346.896pt>
 File: ../praca//brusselator; a=7; b=4.png Graphic file (type png)
 <use ../praca//brusselator; a=7; b=4.png>
 Package pdftex.def Info: ../praca//brusselator; a=7; b=4.png  used on input lin
-e 210.
-(pdftex.def)             Requested size: 153.64493pt x 115.23296pt.
+e 241.
+(pdftex.def)             Requested size: 138.2795pt x 103.70966pt.
  [9
 
  <../praca//brusselator; a=7; b=4.png>]
-<../praca//brusselator_rev1; a=9, b=1, c=1, d=0.1.png, id=295, 462.528pt x 346.
+Overfull \hbox (5.49486pt too wide) detected at line 272
+[]
+ []
+
+[10
+
+]
+<../praca//brusselator_rev1; a=9, b=1, c=1, d=0.1.png, id=363, 462.528pt x 346.
 896pt>
 File: ../praca//brusselator_rev1; a=9, b=1, c=1, d=0.1.png Graphic file (type p
 ng)
 <use ../praca//brusselator_rev1; a=9, b=1, c=1, d=0.1.png>
 Package pdftex.def Info: ../praca//brusselator_rev1; a=9, b=1, c=1, d=0.1.png  
-used on input line 239.
+used on input line 306.
 (pdftex.def)             Requested size: 153.64493pt x 115.23296pt.
- [10
+<../praca//brusselator_rev3; a=9, b=1, c=1, d=0.1.png, id=376, 462.528pt x 346.
+896pt>
+File: ../praca//brusselator_rev3; a=9, b=1, c=1, d=0.1.png Graphic file (type p
+ng)
+<use ../praca//brusselator_rev3; a=9, b=1, c=1, d=0.1.png>
+Package pdftex.def Info: ../praca//brusselator_rev3; a=9, b=1, c=1, d=0.1.png  
+used on input line 306.
+(pdftex.def)             Requested size: 153.64493pt x 115.23296pt.
+ [11
 
- <../praca//brusselator_rev1; a=9, b=1, c=1, d=0.1.png>] [11
+ <../praca//brusselator_rev1; a=9, b=1, c=1, d=0.1.png> <../praca//brusselator_
+rev3; a=9, b=1, c=1, d=0.1.png>] [12
 
-] [12
+] [13
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
-58.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
+29.
 
 (C:\Users\staro\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-[13
-
-] [14
-
-
-] [15
-
-
-] [16
-
-
-] [17
-
-
-] [18
-
+[14
 
 ]
 \tf@nav=\write7
@@ -1507,36 +1508,47 @@ Package logreq Info: Writing requests to 'praca_inzynierska_prezentacja.run.xml
 
  ) 
 Here is how much of TeX's memory you used:
- 33919 strings out of 475349
- 678857 string characters out of 2775727
- 1406778 words of memory out of 3000000
- 54645 multiletter control sequences out of 15000+600000
- 491226 words of font info for 80 fonts, out of 8000000 for 9000
+ 33868 strings out of 475349
+ 677248 string characters out of 2775727
+ 1407268 words of memory out of 3000000
+ 54614 multiletter control sequences out of 15000+600000
+ 499459 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,30n,122p,1242b,2228s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 128i,30n,122p,704b,2228s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\staro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
-1095.pk> <C:\Users\staro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ecsi1095.pk> <C:\Users\staro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\ecss0600.pk> <C:\Users\staro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecrm0800.pk> <C:\Users\staro\AppData\Local\MiKTeX\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\staro\AppData\Local\MiKTeX\fonts/pk/
-ljfour/jknappen/ec/dpi600\ecss0900.pk> <C:\Users\staro\AppData\Local\MiKTeX\fon
-ts/pk/ljfour/jknappen/ec/dpi600\ecss0800.pk> <C:\Users\staro\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1095.pk> <C:\Users\staro\AppData\Loca
-l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1440.pk><C:/Users/staro/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/sta
-ro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/
-Users/staro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10
-.pfb><C:/Users/staro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmss10.pfb><C:/Users/staro/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmss8.pfb><C:/Users/staro/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmssi10.pfb><C:/Users/staro/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Users/staro/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/staro/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on praca_inzynierska_prezentacja.pdf (18 pages, 1780823 bytes).
+0900.pk> <C:\Users\staro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\ecsi0900.pk> <C:\Users\staro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\ecrm0900.pk> <C:\Users\staro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ecss0700.pk> <C:\Users\staro\AppData\Local\MiKTeX\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\staro\AppData\Local\MiKTeX\fonts/pk/
+ljfour/jknappen/ec/dpi600\ecss0600.pk> <C:\Users\staro\AppData\Local\MiKTeX\fon
+ts/pk/ljfour/jknappen/ec/dpi600\ecss1000.pk> <C:\Users\staro\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\staro\AppData\Loca
+l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\staro\AppDat
+a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0800.pk> <C:\Users\staro\
+AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0900.pk> <C:\Users\
+staro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1095.pk> <C:\
+Users\staro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1440.pk
+><C:/Users/staro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mbsy10.pfb><C:/Users/staro/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmex10.pfb><C:/Users/staro/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cmextra/cmex9.pfb><C:/Users/staro/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/staro/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/staro/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/staro/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/st
+aro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/
+Users/staro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi1
+0.pfb><C:/Users/staro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmssi8.pfb><C:/Users/staro/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmssi9.pfb><C:/Users/staro/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb><C:/Users/staro/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/staro/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/staro/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on praca_inzynierska_prezentacja.pdf (14 pages, 1861648 bytes).
 PDF statistics:
- 764 PDF objects out of 1000 (max. 8388607)
- 75 named destinations out of 1000 (max. 500000)
- 715 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 829 PDF objects out of 1000 (max. 8388607)
+ 44 named destinations out of 1000 (max. 500000)
+ 900 words of extra memory for PDF output out of 10000 (max. 10000000)
 
