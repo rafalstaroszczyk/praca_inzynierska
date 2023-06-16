@@ -38,17 +38,20 @@
 \headcommand {\beamer@framepages {10}{10}}
 \headcommand {\slideentry {2}{4}{2}{11/11}{Model bruskelator ogólny}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\slideentry {2}{4}{3}{12/12}{Model bruskelator ogólny}{0}}
+\headcommand {\beamer@sectionpages {7}{11}}
+\headcommand {\beamer@subsectionpages {10}{11}}
+\headcommand {\sectionentry {3}{Podsumowanie}{12}{Podsumowanie}{0}}
+\headcommand {\slideentry {3}{0}{1}{12/12}{}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\slideentry {2}{4}{4}{13/13}{Model bruskelator ogólny}{0}}
+\headcommand {\slideentry {3}{0}{2}{13/13}{}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\beamer@sectionpages {7}{13}}
-\headcommand {\beamer@subsectionpages {10}{13}}
-\headcommand {\sectionentry {3}{Bibliografia}{14}{Bibliografia}{0}}
-\headcommand {\slideentry {3}{0}{0}{14/14}{Model bruskelator ogólny}{0}}
+\headcommand {\beamer@sectionpages {12}{13}}
+\headcommand {\beamer@subsectionpages {12}{13}}
+\headcommand {\sectionentry {4}{Bibliografia}{14}{Bibliografia}{0}}
+\headcommand {\slideentry {4}{0}{0}{14/14}{}{0}}
 \headcommand {\beamer@framepages {14}{14}}
 \headcommand {\beamer@partpages {1}{14}}
-\headcommand {\beamer@subsectionpages {10}{14}}
-\headcommand {\beamer@sectionpages {7}{14}}
+\headcommand {\beamer@subsectionpages {12}{14}}
+\headcommand {\beamer@sectionpages {12}{14}}
 \headcommand {\beamer@documentpages {14}}
 \headcommand {\gdef \inserttotalframenumber {14}}

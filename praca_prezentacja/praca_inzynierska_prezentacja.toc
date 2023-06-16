@@ -7,3 +7,4 @@
 \beamer@subsectionintoc {2}{2}{Model Lotki-Volterry}{8}{0}{2}
 \beamer@subsectionintoc {2}{3}{Model bruskelator}{9}{0}{2}
 \beamer@subsectionintoc {2}{4}{Model bruskelator ogólny}{10}{0}{2}
+\beamer@sectionintoc {3}{Podsumowanie}{12}{0}{3}
